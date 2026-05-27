@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calm Academia Math Arena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-9aCeAhCr7EUhNQW5N+voh1Pc7+lYDpQKMitdc8XugiSXQ7C+YLVZt6W2owgrqP2Z" crossorigin="anonymous" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-He2QmS8pc6GTYQ0vsk/1/GiXb8q0uUVJvOfp/h7+2e0dPv5x9eKZc3Z7vKxB1v2P" crossorigin="anonymous"></script>
+    <style>
+      :root {
+        color-scheme: light;
+        color: #102a43;
+        background: #fdfbf7;
+        font-family: 'Inter', sans-serif;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background-color: #fdfbf7;
+        background-image:
+          radial-gradient(circle at top left, rgba(46, 139, 87, 0.08), transparent 18%),
+          repeating-linear-gradient(0deg, rgba(15, 23, 42, 0.04) 0, rgba(15, 23, 42, 0.04) 1px, transparent 1px, transparent 42px),
+          repeating-linear-gradient(90deg, rgba(15, 23, 42, 0.04) 0, rgba(15, 23, 42, 0.04) 1px, transparent 1px, transparent 42px);
+      }
+      h1, h2, h3, h4 {
+        font-family: 'Merriweather', serif;
+      }
+      .card {
+        background: rgba(255,255,255,.98);
+        box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+        border: 1px solid rgba(74, 85, 104, 0.08);
+        border-radius: 1.5rem;
+      }
+      .nav-link {
+        transition: color .2s ease, transform .2s ease, text-decoration-color .2s ease;
+      }
+      .nav-link:hover {
+        color: #0f172a;
+        transform: translateY(-1px);
+        text-decoration: underline;
+        text-underline-offset: 6px;
+      }
+      .nav-link.active {
+        color: #2E8B57;
+      }
+      #scratchpad {
+        touch-action: none;
+        border-radius: 1rem;
+        background: #fcfbf8;
+      }
+      .hidden {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body class="text-slate-900">
+    <div class="min-h-screen px-4 py-10 sm:px-6 lg:px-10">
+      <header class="mx-auto max-w-7xl mb-8">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p class="text-sm uppercase tracking-[0.32em] text-slate-600">Calm Academia</p>
+            <h1 class="mt-2 text-3xl font-black tracking-tight text-oxford-blue sm:text-4xl">Pure Math Learning Prototype</h1>
+            <div class="mt-4 inline-flex items-center gap-2 rounded-full bg-[#2E8B57]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-[#2E8B57]">Math that feels composed</div>
+            <p class="mt-3 max-w-2xl text-base leading-7 text-slate-600">A Vanilla JS SPA for student progress, procedural quadratic problems, and a gentle practice arena.</p>
+          </div>
+          <nav class="flex flex-wrap items-center gap-3 text-sm font-medium text-slate-700" id="top-nav">
+            <a href="#home-view" class="nav-link rounded-full px-4 py-2 hover:bg-slate-100" data-link>Home</a>
+            <a href="#about-view" class="nav-link rounded-full px-4 py-2 hover:bg-slate-100" data-link>About</a>
+            <a href="#contact-view" class="nav-link rounded-full px-4 py-2 hover:bg-slate-100" data-link>Contact</a>
+            <a href="#login-view" class="nav-link rounded-full border border-slate-300 bg-white px-4 py-2 text-slate-700 transition hover:bg-slate-50" data-link>Login</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="mx-auto max-w-7xl">
+        <section id="home-view" class="card mx-auto max-w-6xl p-10">
+          <div class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+            <div class="space-y-6">
+              <p class="text-sm uppercase tracking-[0.32em] text-slate-500">Calm Academia</p>
+              <h1 class="text-4xl font-black tracking-tight text-slate-900 sm:text-5xl">Master Pure Mathematics with 100% Procedural Reliability</h1>
+              <p class="max-w-2xl text-lg leading-8 text-slate-600">A gentle, gamified learning environment for learners who want elegant reasoning, structured progress, and a calm study experience.</p>
+              <div class="flex flex-wrap gap-3">
+                <a href="#login-view" data-link class="rounded-full bg-[#2E8B57] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#236d47]">Start Learning</a>
+                <span class="inline-flex items-center rounded-full bg-[#DAA520]/15 px-4 py-2 text-sm font-semibold text-[#7c5c1f]">CAPS-aligned & student-friendly</span>
+              </div>
+            </div>
+            <div class="rounded-3xl border border-slate-200 bg-[#fcfbf8] p-8 shadow-sm">
+              <p class="text-sm uppercase tracking-[0.28em] text-slate-500">What you can expect</p>
+              <ul class="mt-6 space-y-4 text-slate-600">
+                <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-[#2E8B57]"></span> Procedural quadratic practice with instant feedback.</li>
+                <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-[#2E8B57]"></span> Level-based dashboard with XP, streaks, and skill tree visualisation.</li>
+                <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-[#2E8B57]"></span> A calm interface designed for extended focus and lower eye strain.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="about-view" class="hidden card mx-auto max-w-5xl p-10">
+          <div class="space-y-6">
+            <p class="text-sm uppercase tracking-[0.32em] text-slate-500">Our mission</p>
+            <h2 class="text-3xl font-bold text-slate-900">CAPS-aligned maths learning with a calm, premium interface</h2>
+            <p class="max-w-3xl text-slate-600">We build focused experiences for learners who want to understand pure mathematics at a deeper level — without bright distractions or complicated layouts. Every feature is designed to support reasoning, practice, and confidence.</p>
+            <div class="grid gap-5 md:grid-cols-3">
+              <div class="rounded-3xl border border-slate-200 bg-white p-5">
+                <p class="text-sm font-semibold text-slate-900">Concept clarity</p>
+                <p class="mt-3 text-slate-600">Math questions generated procedurally so learners see consistent structure, not random noise.</p>
+              </div>
+              <div class="rounded-3xl border border-slate-200 bg-white p-5">
+                <p class="text-sm font-semibold text-slate-900">Gamified progress</p>
+                <p class="mt-3 text-slate-600">XP, streaks, and a skill tree help learners track momentum and stay motivated.</p>
+              </div>
+              <div class="rounded-3xl border border-slate-200 bg-white p-5">
+                <p class="text-sm font-semibold text-slate-900">Student safety</p>
+                <p class="mt-3 text-slate-600">POPIA consent is required before authentication, so guardians are always involved.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact-view" class="hidden card mx-auto max-w-5xl p-10">
+          <div class="space-y-6">
+            <p class="text-sm uppercase tracking-[0.32em] text-slate-500">Get in touch</p>
+            <h2 class="text-3xl font-bold text-slate-900">Contact Calm Academia</h2>
+            <p class="max-w-3xl text-slate-600">For pilot feedback, education partnership inquiries, or product questions, send us a message through this placeholder contact form.</p>
+            <div class="space-y-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <input type="text" placeholder="Name" class="w-full rounded-3xl border border-slate-200 bg-[#f8fafc] px-4 py-3 text-slate-800 focus:border-[#2E8B57] focus:outline-none" />
+              <input type="email" placeholder="Email" class="w-full rounded-3xl border border-slate-200 bg-[#f8fafc] px-4 py-3 text-slate-800 focus:border-[#2E8B57] focus:outline-none" />
+              <textarea placeholder="Message" rows="4" class="w-full rounded-3xl border border-slate-200 bg-[#f8fafc] px-4 py-3 text-slate-800 focus:border-[#2E8B57] focus:outline-none"></textarea>
+              <button class="rounded-full bg-[#2E8B57] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#236d47]">Send message</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="login-view" class="hidden card mx-auto max-w-2xl p-8">
+          <div class="space-y-6">
+            <div>
+              <p class="text-sm uppercase tracking-[0.28em] text-slate-500">Secure student access</p>
+              <h2 class="mt-3 text-2xl font-bold text-slate-900">Welcome back, Scholar</h2>
+              <p class="mt-2 text-slate-600">Sign in with Google and confirm parental consent to continue into the Pure Mathematics environment.</p>
+            </div>
+            <div class="space-y-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div class="space-y-3">
+                <label class="block text-sm font-semibold text-slate-700" for="popia-consent">Parental / Guardian Consent</label>
+                <div class="flex items-start gap-3">
+                  <input id="popia-consent" type="checkbox" class="mt-1 h-5 w-5 rounded border-slate-300 text-oxford-blue focus:ring-oxford-blue" />
+                  <p class="text-sm leading-6 text-slate-600">I confirm that a parent or guardian has reviewed this educational platform and consent is granted in accordance with POPIA requirements.</p>
+                </div>
+              </div>
+              <button id="google-signin-btn" type="button" aria-disabled="true" class="inline-flex w-full items-center justify-center gap-3 rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-md transition hover:bg-slate-50 opacity-60 cursor-not-allowed pointer-events-none">
+                <svg width="20" height="20" viewBox="0 0 533.5 544.3" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M533.5 278.4c0-17.7-1.6-35.3-4.7-52.4H272v99.3h146.9c-6.3 33.7-25.5 62.4-54.3 81.7v67.9h87.7c51.4-47.4 81.2-117.1 81.2-196.5z" fill="#4285F4"/>
+                  <path d="M272 544.3c73.7 0 135.7-24.5 180.9-66.5l-87.7-67.9c-24.4 16.3-55.5 25.9-93.2 25.9-71.6 0-132.4-48.3-154.1-113.2H28.3v71.1c45.9 90.2 139.5 151.1 243.7 151.1z" fill="#34A853"/>
+                  <path d="M117.9 325.6c-10.2-30.2-10.2-62.8 0-93l-71.1-71.1C20.5 193.5 0 232.7 0 272.1s20.5 78.6 46.8 110.6l71.1-71.1z" fill="#FBBC05"/>
+                  <path d="M272 107.8c39.9 0 75.6 13.7 103.8 40.6l77.6-77.6C405.4 24.3 344.3 0 272 0 167.8 0 74.2 60.9 28.3 151.1l71.1 71.1C139.6 156.2 200.4 107.8 272 107.8z" fill="#EA4335"/>
+                </svg>
+                Sign in with Google
+              </button>
+              <p id="login-feedback" class="text-sm text-rose-500 hidden"></p>
+            </div>
+          </div>
+        </section>
+
+        <section id="dashboard-view" class="hidden space-y-8">
+          <div class="grid gap-6 lg:grid-cols-[1.5fr_1fr]">
+            <article class="card p-8">
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.28em] text-slate-500">Student dashboard</p>
+                  <h2 class="mt-3 text-3xl font-bold text-slate-900">Your current quest</h2>
+                </div>
+                <span class="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700">Level 6</span>
+              </div>
+              <div class="mt-8 grid gap-4 sm:grid-cols-3">
+                <div class="rounded-3xl border border-slate-200 bg-[#fcfbf8] p-5">
+                  <p class="text-sm text-slate-500">Current XP</p>
+                  <p class="mt-3 text-3xl font-semibold text-oxford-blue">2,340</p>
+                </div>
+                <div class="rounded-3xl border border-slate-200 bg-[#fcfbf8] p-5">
+                  <p class="text-sm text-slate-500">Daily Streak</p>
+                  <p class="mt-3 text-3xl font-semibold text-oxford-blue">8 days</p>
+                </div>
+                <div class="rounded-3xl border border-slate-200 bg-[#fcfbf8] p-5">
+                  <p class="text-sm text-slate-500">Focus cadence</p>
+                  <p class="mt-3 text-3xl font-semibold text-oxford-blue">3 sessions</p>
+                </div>
+              </div>
+            </article>
+            <article class="card p-8">
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.28em] text-slate-500">Skill tree</p>
+                  <h3 class="mt-2 text-xl font-semibold text-slate-900">Pure Mathematics modules</h3>
+                </div>
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">Progress view</span>
+              </div>
+              <div class="mt-8 space-y-5">
+                <div class="rounded-3xl border border-slate-200 bg-white p-5">
+                  <div class="flex items-center justify-between gap-4">
+                    <div>
+                      <p class="text-sm font-semibold text-slate-900">Algebra</p>
+                      <p class="mt-1 text-sm text-slate-500">Equations, expressions, and patterns</p>
+                    </div>
+                    <p class="text-sm font-semibold text-oxford-blue">75%</p>
+                  </div>
+                  <div class="mt-4 h-2 overflow-hidden rounded-full bg-slate-100">
+                    <div class="h-full w-3/4 rounded-full bg-[#0f172a]"></div>
+                  </div>
+                </div>
+                <div class="rounded-3xl border border-slate-200 bg-white p-5">
+                  <div class="flex items-center justify-between gap-4">
+                    <div>
+                      <p class="text-sm font-semibold text-slate-900">Geometry</p>
+                      <p class="mt-1 text-sm text-slate-500">Shapes, proofs, and spatial thinking</p>
+                    </div>
+                    <p class="text-sm font-semibold text-oxford-blue">58%</p>
+                  </div>
+                  <div class="mt-4 h-2 overflow-hidden rounded-full bg-slate-100">
+                    <div class="h-full w-3/5 rounded-full bg-[#0f172a]"></div>
+                  </div>
+                </div>
+                <div class="rounded-3xl border border-slate-200 bg-white p-5">
+                  <div class="flex items-center justify-between gap-4">
+                    <div>
+                      <p class="text-sm font-semibold text-slate-900">Trigonometry</p>
+                      <p class="mt-1 text-sm text-slate-500">Angles, functions, and wave reasoning</p>
+                    </div>
+                    <p class="text-sm font-semibold text-oxford-blue">42%</p>
+                  </div>
+                  <div class="mt-4 h-2 overflow-hidden rounded-full bg-slate-100">
+                    <div class="h-full w-2/5 rounded-full bg-[#0f172a]"></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <article class="card p-8">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="text-sm uppercase tracking-[0.28em] text-slate-500">Classroom overview</p>
+                <h2 class="mt-3 text-2xl font-bold text-slate-900">Recent achievements</h2>
+              </div>
+              <span class="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700">Latest</span>
+            </div>
+            <div class="mt-8 grid gap-4 md:grid-cols-3">
+              <div class="rounded-3xl border border-slate-200 bg-[#f8fafc] p-5">
+                <p class="text-sm text-slate-500">Focused problem set</p>
+                <p class="mt-3 text-xl font-semibold text-slate-900">Quadratic mastery</p>
+              </div>
+              <div class="rounded-3xl border border-slate-200 bg-[#f8fafc] p-5">
+                <p class="text-sm text-slate-500">Badge unlocked</p>
+                <p class="mt-3 text-xl font-semibold text-slate-900">Proof Architect</p>
+              </div>
+              <div class="rounded-3xl border border-slate-200 bg-[#f8fafc] p-5">
+                <p class="text-sm text-slate-500">Challenge standing</p>
+                <p class="mt-3 text-xl font-semibold text-slate-900">Top 12%</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section id="arena-view" class="hidden space-y-8">
+          <div class="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
+            <article class="card p-8">
+              <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.28em] text-slate-500">Practice arena</p>
+                  <h2 class="mt-3 text-3xl font-bold text-slate-900">Quadratic challenge</h2>
+                </div>
+                <button id="new-question-btn" class="rounded-full bg-[#2E8B57]/10 px-4 py-2 text-sm font-semibold text-[#2E8B57] transition hover:bg-[#2E8B57]/20">Generate Practice Question</button>
+              </div>
+              <div class="mt-8 rounded-3xl border border-slate-200 bg-[#fcfbf8] p-8">
+                <p class="text-sm uppercase tracking-[0.28em] text-slate-500">Question</p>
+                <div id="question-display" class="mt-6 text-3xl font-semibold text-slate-900"></div>
+                <div class="mt-8 grid gap-4 sm:grid-cols-2">
+                  <button class="answer-btn rounded-3xl border border-slate-200 bg-white p-5 text-left text-slate-800 transition hover:border-oxford-blue" data-choice="0"></button>
+                  <button class="answer-btn rounded-3xl border border-slate-200 bg-white p-5 text-left text-slate-800 transition hover:border-oxford-blue" data-choice="1"></button>
+                  <button class="answer-btn rounded-3xl border border-slate-200 bg-white p-5 text-left text-slate-800 transition hover:border-oxford-blue" data-choice="2"></button>
+                  <button class="answer-btn rounded-3xl border border-slate-200 bg-white p-5 text-left text-slate-800 transition hover:border-oxford-blue" data-choice="3"></button>
+                </div>
+                <p id="answer-feedback" class="mt-5 text-base font-semibold"></p>
+              </div>
+            </article>
+            <article class="card p-8">
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.28em] text-slate-500">Scratchpad</p>
+                  <h3 class="mt-2 text-xl font-semibold text-slate-900">Freehand canvas</h3>
+                </div>
+                <button id="clear-canvas-btn" class="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-200">Clear</button>
+              </div>
+              <div class="mt-6 rounded-[1.5rem] border border-slate-200 bg-white p-4 shadow-sm">
+                <canvas id="scratchpad" width="640" height="420" class="w-full max-w-full"></canvas>
+              </div>
+              <p class="mt-4 text-sm leading-6 text-slate-600">Use your mouse or touch to sketch ideas, factor forms, or trace your reasoning as you work through the quadratic equation.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
