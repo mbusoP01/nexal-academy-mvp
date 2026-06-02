@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Profile | Nexal Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { oxford: '#002147', slate: '#475569', ivory: '#FDFBF7', emerald: '#2E8B57' } } } }</script>
+    <style>body { background-color: #FDFBF7; }</style>
+</head>
+<body class="font-sans text-slate antialiased min-h-screen flex items-center justify-center p-4">
+
+    <div class="max-w-2xl w-full bg-white rounded-3xl shadow-2xl border border-slate/10 overflow-hidden my-8">
+        <div class="bg-oxford p-8 text-center text-white">
+            <span class="text-[10px] font-bold tracking-widest uppercase text-emerald block mb-2">Account Initialization</span>
+            <h1 class="text-3xl font-serif font-black">Complete Your Profile</h1>
+        </div>
+
+        <div class="p-8 md:p-12">
+            <div id="role-selection" class="space-y-6">
+                <h3 class="text-xl font-bold text-oxford text-center mb-6">Are you joining as a Scholar or an Educator?</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <button onclick="selectRole('student')" class="p-6 border-2 border-slate/20 rounded-2xl hover:border-emerald hover:bg-emerald/5 transition-all text-center group">
+                        <div class="text-4xl mb-3">🎓</div>
+                        <h4 class="font-bold text-oxford group-hover:text-emerald">Scholar</h4>
+                        <p class="text-xs text-slate mt-2">I am here to learn and practice.</p>
+                    </button>
+                    <button onclick="selectRole('teacher')" class="p-6 border-2 border-slate/20 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all text-center group">
+                        <div class="text-4xl mb-3">🏫</div>
+                        <h4 class="font-bold text-oxford group-hover:text-blue-600">Educator</h4>
+                        <p class="text-xs text-slate mt-2">I am here to oversee my students.</p>
+                    </button>
+                </div>
+            </div>
+
+            <form id="profile-form" class="hidden space-y-6">
+                <div class="flex items-center space-x-4 mb-8">
+                    <button type="button" onclick="resetRole()" class="text-sm font-bold text-slate hover:text-oxford">&larr; Back</button>
+                    <span id="selected-role-badge" class="px-3 py-1 bg-slate/10 rounded-full text-xs font-bold uppercase tracking-widest text-oxford"></span>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold tracking-widest uppercase text-slate/70 mb-2">Unique Username</label>
+                    <input type="text" id="input-username" required placeholder="e.g. Scholar99" class="w-full bg-slate/5 border border-slate/20 rounded-xl px-4 py-3 text-oxford font-medium focus:border-emerald focus:outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold tracking-widest uppercase text-slate/70 mb-2">Google Email</label>
+                    <input type="email" id="input-email" disabled class="w-full bg-slate/10 border border-transparent rounded-xl px-4 py-3 text-slate font-medium cursor-not-allowed">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold tracking-widest uppercase text-slate/70 mb-2">Country</label>
+                        <select id="input-country" class="w-full bg-slate/5 border border-slate/20 rounded-xl px-4 py-3 text-oxford font-medium focus:border-emerald focus:outline-none">
+                            <option value="ZA" data-code="+27" selected>South Africa</option>
+                            <option value="US" data-code="+1">United States</option>
+                            <option value="GB" data-code="+44">United Kingdom</option>
+                            <option value="AU" data-code="+61">Australia</option>
+                            <option value="CA" data-code="+1">Canada</option>
+                            <option value="NZ" data-code="+64">New Zealand</option>
+                            <option value="IN" data-code="+91">India</option>
+                            <option value="NG" data-code="+234">Nigeria</option>
+                            <option value="KE" data-code="+254">Kenya</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold tracking-widest uppercase text-slate/70 mb-2">Phone Number</label>
+                        <input type="tel" id="input-phone" required value="+27 " class="w-full bg-slate/5 border border-slate/20 rounded-xl px-4 py-3 text-oxford font-medium focus:border-emerald focus:outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold tracking-widest uppercase text-slate/70 mb-2">Institution / School Name</label>
+                    <input type="text" id="input-school" placeholder="e.g. Pretoria High School" class="w-full bg-slate/5 border border-slate/20 rounded-xl px-4 py-3 text-oxford font-medium focus:border-emerald focus:outline-none">
+                    <p class="text-xs text-slate/50 mt-2">Required for institutional leaderboards. Leave blank if independent.</p>
+                </div>
+
+                <div id="student-fields" class="grid grid-cols-1 md:grid-cols-2 gap-6 hidden">
+                    <div>
+                        <label class="block text-xs font-bold tracking-widest uppercase text-slate/70 mb-2">Age</label>
+                        <input type="number" id="input-age" min="13" max="25" class="w-full bg-slate/5 border border-slate/20 rounded-xl px-4 py-3 text-oxford font-medium focus:border-emerald focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold tracking-widest uppercase text-slate/70 mb-2">Grade</label>
+                        <select id="input-grade" class="w-full bg-slate/5 border border-slate/20 rounded-xl px-4 py-3 text-oxford font-medium focus:border-emerald focus:outline-none">
+                            <option value="11">Grade 11</option>
+                            <option value="12">Grade 12 (Matric)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold tracking-widest uppercase text-slate/70 mb-2">Profile Image (Optional)</label>
+                    <input type="file" id="input-avatar" accept="image/*" class="w-full text-sm text-slate file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-emerald/10 file:text-emerald hover:file:bg-emerald/20 transition-all cursor-pointer">
+                </div>
+
+                <button type="submit" id="submit-btn" class="w-full mt-8 bg-oxford text-white py-4 rounded-xl font-bold tracking-wide hover:bg-oxford/90 shadow-lg transition-all">
+                    Initialize Profile
+                </button>
+                <p id="error-msg" class="text-sm font-bold text-red-500 text-center hidden"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-config.js"></script>
+    <script>
+        let currentRole = '';
+        let currentUser = null;
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            const { data: { user } } = await window.supabaseClient.auth.getUser();
+            if (!user) window.location.replace('login.html');
+            currentUser = user;
+            document.getElementById('input-email').value = user.email;
+
+            const countrySelect = document.getElementById('input-country');
+            const phoneInput = document.getElementById('input-phone');
+            countrySelect.addEventListener('change', (e) => {
+                const prefix = e.target.options[e.target.selectedIndex].dataset.code;
+                phoneInput.value = prefix + " ";
+            });
+        });
+
+        function selectRole(role) {
+            currentRole = role;
+            document.getElementById('role-selection').classList.add('hidden');
+            document.getElementById('profile-form').classList.remove('hidden');
+            document.getElementById('selected-role-badge').textContent = role;
+            
+            if (role === 'student') {
+                document.getElementById('student-fields').classList.remove('hidden');
+            } else {
+                document.getElementById('student-fields').classList.add('hidden');
+            }
+        }
+
+        function resetRole() {
+            document.getElementById('role-selection').classList.remove('hidden');
+            document.getElementById('profile-form').classList.add('hidden');
+        }
+
+        function generateTeacherCode() {
+            return 'NX-' + Math.random().toString(36).substring(2, 8).toUpperCase();
+        }
+
+        document.getElementById('profile-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('submit-btn');
+            const errorMsg = document.getElementById('error-msg');
+            btn.disabled = true; btn.textContent = "Saving Profile..."; errorMsg.classList.add('hidden');
+
+            try {
+                const avatarFile = document.getElementById('input-avatar').files[0];
+                let avatarUrl = null;
+                if (avatarFile) {
+                    const fileExt = avatarFile.name.split('.').pop();
+                    const fileName = `${currentUser.id}.${fileExt}`;
+                    const { data: uploadData, error: uploadError } = await window.supabaseClient.storage
+                        .from('avatars')
+                        .upload(fileName, avatarFile, { upsert: true });
+                    if (uploadError) throw uploadError;
+                    const { data: { publicUrl } } = window.supabaseClient.storage.from('avatars').getPublicUrl(fileName);
+                    avatarUrl = publicUrl;
+                }
+
+                // Prepare Data Payload
+                const payload = {
+                    id: currentUser.id,
+                    role: currentRole,
+                    username: document.getElementById('input-username').value.trim(),
+                    country: document.getElementById('input-country').value,
+                    phone: document.getElementById('input-phone').value.trim(),
+                    school_name: document.getElementById('input-school').value.trim() || 'Independent Scholar', // Added School
+                    avatar_url: avatarUrl
+                };
+
+                if (currentRole === 'student') {
+                    payload.age = document.getElementById('input-age').value;
+                    payload.grade = document.getElementById('input-grade').value;
+                    payload.teacher_code = generateTeacherCode();
+                }
+
+                const { error: dbError } = await window.supabaseClient.from('profiles').upsert(payload);
+                if (dbError) {
+                    if(dbError.message.includes('unique constraint')) throw new Error("Username is already taken.");
+                    throw dbError;
+                }
+
+                if (currentRole === 'teacher') window.location.replace('teacher-hub.html');
+                else window.location.replace('dashboard.html');
+
+            } catch (err) {
+                errorMsg.textContent = err.message; errorMsg.classList.remove('hidden');
+                btn.disabled = false; btn.textContent = "Initialize Profile";
+            }
+        });
+    </script>
+</body>
+</html>
