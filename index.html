@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexal Academy | Advanced Sciences & Mathematics</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { theme: { extend: { colors: { oxford: '#002147', slate: '#475569', ivory: '#FDFBF7', emerald: '#2E8B57' }, fontFamily: { serif: ['Merriweather', 'serif'], sans: ['Inter', 'sans-serif'] } } } }</script>
     <style>body { background-color: #FDFBF7; background-image: linear-gradient(to right, rgba(71, 85, 105, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(71, 85, 105, 0.05) 1px, transparent 1px); background-size: 40px 40px; }</style>
@@ -13,7 +16,10 @@
     <nav class="w-full py-6 px-8 flex justify-between items-center bg-ivory/90 backdrop-blur-sm border-b border-slate/10 sticky top-0 z-50">
         <div class="flex flex-col"><span class="text-xs font-bold tracking-widest text-slate uppercase">Calm Academia</span><a href="index.html" class="text-2xl font-serif font-black text-oxford">Nexal Academy.</a></div>
         <div class="flex items-center space-x-8">
-            <a href="index.html" class="text-oxford font-medium border-b-2 border-emerald">Home</a><a href="about.html" class="text-slate hover:text-oxford transition-colors">About</a><a href="contact.html" class="text-slate hover:text-oxford transition-colors">Contact</a><a href="login.html" class="px-6 py-2 bg-white border border-slate/20 rounded-full text-oxford font-medium shadow-sm hover:shadow-md transition-all">Login</a>
+            <a href="index.html" class="text-oxford font-medium border-b-2 border-emerald">Home</a>
+            <a href="about.html" class="text-slate hover:text-oxford transition-colors">About</a>
+            <a href="contact.html" class="text-slate hover:text-oxford transition-colors">Contact</a>
+            <a href="login.html" class="px-6 py-2 bg-white border border-slate/20 rounded-full text-oxford font-medium shadow-sm hover:shadow-md transition-all">Login</a>
         </div>
     </nav>
     <main class="flex-grow flex flex-col justify-center items-center text-center px-4 py-20">
@@ -25,5 +31,24 @@
             <a href="about.html" class="px-8 py-4 bg-white text-oxford border border-slate/20 rounded-lg font-medium shadow-sm hover:bg-slate/5 transition-all">Globally Benchmarked Syllabus</a>
         </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    
+    <script src="js/supabase-config.js"></script>
+    
+    <script>
+        // Check if the user is already logged in. 
+        // If they are, skip the landing page and take them straight to their dashboard.
+        document.addEventListener('DOMContentLoaded', async () => {
+            if (window.supabaseClient) {
+                const { data: { session } } = await window.supabaseClient.auth.getSession();
+                if (session) {
+                    window.location.replace('dashboard.html');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
