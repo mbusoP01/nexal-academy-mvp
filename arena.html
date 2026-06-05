@@ -15,34 +15,42 @@
         /* Modal Transition Styles */
         .modal-active { opacity: 1 !important; pointer-events: auto !important; }
         .modal-scale { transform: scale(1) !important; }
+        /* Force YouTube iframe to respect container */
+        #youtube-container { position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; }
     </style>
 </head>
 <body class="font-sans text-slate antialiased h-screen flex overflow-hidden">
 
-    <div id="theory-modal" class="fixed inset-0 bg-oxford/95 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
-        <div id="theory-modal-content" class="bg-white rounded-3xl shadow-2xl max-w-5xl w-full overflow-hidden flex flex-col border border-white/10 transform scale-95 transition-transform duration-300">
-            <div class="p-6 bg-oxford text-white flex justify-between items-center border-b border-white/10">
+    <!-- THEORY VAULT MODAL -->
+    <div id="theory-modal" class="fixed inset-0 bg-oxford/95 backdrop-blur-md z-50 flex items-center justify-center p-4 md:p-8 opacity-0 pointer-events-none transition-opacity duration-300">
+        <!-- THE FIX: max-w-4xl and max-h-[90vh] prevent it from overflowing the screen -->
+        <div id="theory-modal-content" class="bg-white rounded-3xl shadow-2xl max-w-4xl w-full max-h-[90vh] flex flex-col border border-white/10 transform scale-95 transition-transform duration-300">
+            
+            <div class="p-4 md:p-6 bg-oxford text-white flex justify-between items-center border-b border-white/10 shrink-0">
                 <div>
                     <span class="text-[10px] font-bold tracking-widest text-emerald uppercase mb-1 block">The Theory Vault</span>
-                    <h2 class="text-2xl font-serif font-bold tracking-tight" id="theory-modal-title">Loading Lesson...</h2>
+                    <h2 class="text-xl md:text-2xl font-serif font-bold tracking-tight" id="theory-modal-title">Loading Lesson...</h2>
                 </div>
                 <button id="close-theory-btn" class="text-white/50 hover:text-white transition-colors p-3 bg-white/5 hover:bg-white/10 rounded-xl font-bold text-sm">
-                    Close Vault ✕
+                    Close ✕
                 </button>
             </div>
             
-            <div class="w-full bg-black relative" style="padding-top: 56.25%;" id="youtube-container">
-                </div>
+            <!-- THE FIX: aspect-video wrapper ensures perfect 16:9 scaling -->
+            <div class="w-full bg-black relative aspect-video shrink-0">
+                <div id="youtube-container"></div>
+            </div>
             
-            <div class="p-6 bg-slate/5 flex justify-between items-center">
-                <p class="text-sm font-medium text-slate">Study the theory carefully before attempting the gauntlet.</p>
-                <button id="start-practice-btn" class="px-8 py-3 bg-emerald text-white rounded-xl font-bold hover:bg-emerald/90 transition-all shadow-md tracking-wide">
+            <div class="p-4 md:p-6 bg-slate/5 flex justify-between items-center shrink-0">
+                <p class="text-xs md:text-sm font-medium text-slate">Study the theory carefully before attempting the gauntlet.</p>
+                <button id="start-practice-btn" class="px-6 py-3 bg-emerald text-white rounded-xl font-bold hover:bg-emerald/90 transition-all shadow-md text-sm md:text-base">
                     Return to Arena &rarr;
                 </button>
             </div>
         </div>
     </div>
 
+    <!-- PREMIUM SIDEBAR -->
     <aside class="w-64 bg-oxford text-white/80 flex flex-col h-full shadow-2xl z-20 hidden md:flex">
         <div class="p-8 border-b border-white/10">
             <span class="text-[10px] font-bold tracking-widest uppercase text-emerald">Global Standard</span>
@@ -79,7 +87,6 @@
                     <svg class="w-4 h-4 text-emerald" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                     <span>Watch Theory</span>
                 </button>
-                
                 <div class="hidden lg:block text-right border-l border-slate/20 pl-6">
                     <span class="text-xs font-bold tracking-widest text-slate uppercase block mb-1">Session XP</span>
                     <span class="text-2xl font-black text-emerald" id="session-xp">0</span>
@@ -87,6 +94,7 @@
             </div>
         </header>
 
+        <!-- SPLIT SCREEN INTERFACE -->
         <div class="flex-grow flex flex-col lg:flex-row gap-6 h-full min-h-0 pb-4">
             
             <div class="w-full lg:w-3/5 flex flex-col">
@@ -97,10 +105,10 @@
                     <p class="text-slate mb-6 font-medium text-lg" id="instruction-text">Generating problem scenario...</p>
                     
                     <div id="equation-container" class="mb-8 text-center py-8 bg-slate/5 rounded-xl border border-slate/10 min-h-[140px] flex items-center justify-center px-4 shadow-inner">
-                        </div>
+                    </div>
                     
                     <div id="options-container" class="grid grid-cols-1 gap-3 flex-grow content-start">
-                        </div>
+                    </div>
                     
                     <button id="next-btn" class="mt-6 w-full bg-oxford text-white py-4 rounded-xl font-bold tracking-wide hidden hover:bg-oxford/90 shadow-md transition-all">Next Question &rarr;</button>
                 </div>
@@ -133,11 +141,9 @@
     <script src="js/auth-guard.js"></script>
     <script src="js/curriculum.js"></script>
     <script src="js/scratchpad.js"></script>
-    
     <script src="js/math-engine.js"></script>
     <script src="js/physics-engine.js"></script>
     <script src="js/biology-engine.js"></script>
-    
     <script src="js/arena-engine.js"></script>
 </body>
 </html>
