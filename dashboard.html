@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Nexal Academy</title>
+    <title>Student Hub | Nexal Academy</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { theme: { extend: { colors: { oxford: '#002147', slate: '#475569', ivory: '#FDFBF7', emerald: '#2E8B57', gold: '#DAA520' } } } }</script>
@@ -14,180 +14,220 @@
 </head>
 <body class="font-sans text-slate antialiased h-screen flex overflow-hidden">
 
-    <aside class="w-64 bg-oxford text-white/80 flex flex-col h-full shadow-2xl z-20 hidden md:flex">
+    <aside class="w-64 bg-oxford text-white/80 flex flex-col h-full shadow-2xl z-20 hidden md:flex relative">
         <div class="p-8 border-b border-white/10">
             <span class="text-[10px] font-bold tracking-widest uppercase text-emerald">Global Standard</span>
             <h2 class="text-2xl font-serif font-black text-white mt-1 tracking-tight">Nexal Academy.</h2>
         </div>
-        
-        <nav class="flex-1 p-6 space-y-3 overflow-y-auto">
+        <nav id="sidebar-nav" class="flex-1 p-6 space-y-3 overflow-y-auto">
             <p class="text-xs font-bold tracking-widest uppercase text-white/40 mb-4 ml-2">Learning Hub</p>
             <a href="dashboard.html" class="flex items-center space-x-3 p-3 rounded-xl bg-white text-oxford font-medium shadow-sm transition-all">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
                 <span>Dashboard</span>
             </a>
-            <a href="library.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 text-white/70 hover:text-white transition-all">
+            <a href="library.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
                 <span>Course Library</span>
             </a>
 
             <p class="text-xs font-bold tracking-widest uppercase text-white/40 mb-4 mt-8 ml-2">The Arena</p>
-            <a href="leaderboard.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 text-white/70 hover:text-white transition-all">
+            <a href="leaderboard.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                 <span>Leaderboard</span>
             </a>
-            <a href="challenges.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 text-white/70 hover:text-white transition-all">
+            <a href="challenges.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                 <span>Active Challenges</span>
             </a>
+            
+            <div id="admin-link-container"></div>
         </nav>
-
         <div class="p-6 border-t border-white/10 bg-black/10">
-            <a href="settings.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 text-white/70 hover:text-white transition-all">
+            <a href="settings.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                 <span>Settings</span>
             </a>
         </div>
     </aside>
 
-    <header class="md:hidden w-full bg-oxford text-white p-4 flex justify-between items-center absolute top-0 z-30">
-        <span class="font-serif font-black">Nexal Academy.</span>
-        <div class="space-x-4 text-sm"><a href="dashboard.html">Hub</a><a href="library.html">Library</a><a href="settings.html">Menu</a></div>
+    <header class="md:hidden w-full bg-oxford text-white p-4 flex justify-between items-center absolute top-0 z-30 shadow-md">
+        <span class="font-serif font-black tracking-tight">Nexal Academy.</span>
+        <div class="space-x-4 text-sm font-medium"><a href="library.html">Library</a><a href="settings.html">Settings</a></div>
     </header>
 
-    <main class="flex-1 h-full overflow-y-auto p-8 pt-20 md:pt-12 md:p-16 relative">
-        <div class="max-w-5xl mx-auto">
+    <main class="flex-1 h-full overflow-y-auto p-6 pt-24 md:pt-10 md:p-12 relative z-10">
+        <div class="max-w-6xl mx-auto">
             
-            <header class="mb-8">
-                <h1 class="text-4xl font-serif font-bold text-oxford">Welcome back, <span id="user-display-name">Scholar</span>.</h1>
-                <p class="text-slate mt-2 text-lg">Your personalized syllabus matrix.</p>
+            <header class="mb-12 flex flex-col md:flex-row md:justify-between md:items-end gap-6 bg-white rounded-3xl p-8 border border-slate/10 shadow-lg relative overflow-hidden">
+                <div class="absolute right-0 top-0 w-64 h-64 bg-emerald/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+                
+                <div class="flex items-center space-x-6 relative z-10">
+                    <div id="profile-avatar" class="w-20 h-20 rounded-full bg-slate/10 border-4 border-white shadow-md overflow-hidden flex items-center justify-center text-2xl font-bold text-slate/40">
+                        ?
+                    </div>
+                    <div>
+                        <span class="px-3 py-1 bg-emerald/10 text-emerald text-[10px] font-black tracking-widest rounded-full uppercase" id="user-role-badge">Scholar</span>
+                        <h1 class="text-3xl md:text-4xl font-serif font-black text-oxford mt-2" id="welcome-text">Loading Data...</h1>
+                        <p class="text-slate font-medium text-sm mt-1" id="school-text">Synchronizing records...</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate/5 rounded-2xl p-5 border border-slate/10 w-full md:w-auto min-w-[250px] relative z-10">
+                    <div class="flex justify-between items-end mb-2">
+                        <div>
+                            <span class="text-[10px] font-bold tracking-widest text-slate uppercase">Current Rank</span>
+                            <h3 class="text-xl font-black text-oxford" id="user-level">Level 1</h3>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-sm font-bold text-emerald" id="user-xp">0 XP</span>
+                        </div>
+                    </div>
+                    <div class="w-full bg-slate/20 rounded-full h-2.5 overflow-hidden">
+                        <div id="xp-progress-bar" class="bg-emerald h-2.5 rounded-full transition-all duration-1000 ease-out" style="width: 0%"></div>
+                    </div>
+                    <p class="text-xs text-slate/50 mt-2 text-right" id="xp-to-next">-- XP to next rank</p>
+                </div>
             </header>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div class="bg-white rounded-2xl border border-slate/10 shadow-sm p-6 text-center flex flex-col justify-center">
-                    <span class="text-xs font-bold tracking-widest uppercase text-slate/50 mb-1">Total Mastery XP</span>
-                    <span id="stat-xp" class="text-4xl font-black text-emerald">0</span>
+            <div class="mb-8 flex justify-between items-end">
+                <div>
+                    <h2 class="text-2xl font-serif font-bold text-oxford">Active Syllabus</h2>
+                    <p class="text-slate text-sm mt-1">Your registered modules for the current academic term.</p>
                 </div>
-                <div class="bg-white rounded-2xl border border-slate/10 shadow-sm p-6 text-center flex flex-col justify-center">
-                    <span class="text-xs font-bold tracking-widest uppercase text-slate/50 mb-1">Global Rank</span>
-                    <span id="stat-rank" class="text-4xl font-black text-oxford">-</span>
-                </div>
-                <div class="bg-white rounded-2xl border border-slate/10 shadow-sm p-6 text-center flex flex-col justify-center">
-                    <span class="text-xs font-bold tracking-widest uppercase text-slate/50 mb-1">Current Streak</span>
-                    <span class="text-4xl font-black text-oxford">1 Day</span>
+                <a href="library.html" class="text-sm font-bold text-emerald hover:text-oxford transition-colors hidden md:block">Browse Library &rarr;</a>
+            </div>
+
+            <div id="curriculum-container" class="space-y-12">
+                <div class="text-center py-12">
+                    <div class="w-8 h-8 border-4 border-emerald border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                    <p class="text-slate font-medium">Loading your academic matrix...</p>
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl border border-slate/10 shadow-sm p-8 mb-12">
-                <div class="flex justify-between items-center mb-6 border-b border-slate/10 pb-4">
-                    <h3 class="text-xl font-bold text-oxford">Performance Analytics</h3>
-                    <span class="px-3 py-1 bg-emerald/10 text-emerald text-xs font-bold uppercase tracking-widest rounded-full">Last 7 Days</span>
-                </div>
-                <div class="w-full h-64">
-                    <canvas id="xpChart"></canvas>
-                </div>
-            </div>
-            
-            <h3 class="text-xl font-serif font-bold text-oxford mb-6">Active Curriculum</h3>
-            <div id="dashboard-modules" class="space-y-8">
-                <div id="loading-state" class="text-center py-10 text-slate animate-pulse font-medium">Syncing profile with the Nexal grid...</div>
-            </div>
         </div>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js/supabase-config.js"></script>
     <script src="js/auth-guard.js"></script>
     <script src="js/curriculum.js"></script>
+    
     <script>
-        async function loadDashboard() {
-            const container = document.getElementById('dashboard-modules');
-            try {
-                const { data: { user } } = await window.supabaseClient.auth.getUser();
-                
-                // 1. Fetch Profile Stats
-                const { data: profile } = await window.supabaseClient.from('profiles').select('xp, username').eq('id', user.id).single();
-                let userXP = 0;
-                if (profile) {
-                    userXP = profile.xp || 0;
-                    document.getElementById('user-display-name').textContent = profile.username || "Scholar";
-                    document.getElementById('stat-xp').textContent = userXP.toLocaleString();
-                    
-                    const { count } = await window.supabaseClient.from('profiles').select('*', { count: 'exact', head: true }).gt('xp', userXP);
-                    document.getElementById('stat-rank').textContent = count !== null ? `#${count + 1}` : '-';
+        document.addEventListener('DOMContentLoaded', async () => {
+            const { data: { user } } = await window.supabaseClient.auth.getUser();
+            if (!user) {
+                window.location.replace('login.html');
+                return;
+            }
+
+            // Fetch Profile Data
+            const { data: profile, error } = await window.supabaseClient.from('profiles').select('*').eq('id', user.id).single();
+            if (error || !profile) {
+                window.location.replace('onboarding.html');
+                return;
+            }
+
+            // Populate User Identity
+            document.getElementById('welcome-text').textContent = `Welcome, ${profile.username}.`;
+            document.getElementById('school-text').textContent = profile.school_name || "Independent Scholar";
+            
+            if (profile.avatar_url) {
+                document.getElementById('profile-avatar').innerHTML = `<img src="${profile.avatar_url}" class="w-full h-full object-cover">`;
+            }
+
+            // Admin Link Override
+            if (profile.is_admin) {
+                document.getElementById('admin-link-container').innerHTML = `
+                    <p class="text-xs font-bold tracking-widest uppercase text-red-500 mb-4 mt-8 ml-2">Classified Access</p>
+                    <a href="admin-hub.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-red-500/10 text-red-600 font-bold transition-all shadow-sm">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        <span>System Overlord</span>
+                    </a>
+                `;
+            }
+
+            // Calculate Level based on XP
+            const currentXP = profile.xp || 0;
+            const levelThresholds = [0, 500, 1500, 3000, 5000, 7500, 10000];
+            let currentLevel = 1;
+            let nextLevelXP = levelThresholds[1];
+            let prevLevelXP = 0;
+
+            for (let i = 0; i < levelThresholds.length; i++) {
+                if (currentXP >= levelThresholds[i]) {
+                    currentLevel = i + 1;
+                    prevLevelXP = levelThresholds[i];
+                    nextLevelXP = levelThresholds[i + 1] || levelThresholds[levelThresholds.length - 1];
                 }
+            }
 
-                // 2. Render Chart.js Analytics (Procedural Curve ending in Current XP)
-                const ctx = document.getElementById('xpChart').getContext('2d');
+            document.getElementById('user-level').textContent = `Level ${currentLevel}`;
+            document.getElementById('user-xp').textContent = `${currentXP} XP`;
+            
+            if (currentLevel < levelThresholds.length) {
+                const xpProgress = currentXP - prevLevelXP;
+                const xpRequired = nextLevelXP - prevLevelXP;
+                const percentage = Math.min((xpProgress / xpRequired) * 100, 100);
                 
-                // Create a realistic-looking progression curve leading to their total XP
-                const mockHistory = [
-                    Math.max(0, userXP - 1200),
-                    Math.max(0, userXP - 1000),
-                    Math.max(0, userXP - 850),
-                    Math.max(0, userXP - 500),
-                    Math.max(0, userXP - 450),
-                    Math.max(0, userXP - 150),
-                    userXP
-                ];
+                setTimeout(() => {
+                    document.getElementById('xp-progress-bar').style.width = `${percentage}%`;
+                }, 100);
+                
+                document.getElementById('xp-to-next').textContent = `${nextLevelXP - currentXP} XP to Level ${currentLevel + 1}`;
+            } else {
+                document.getElementById('xp-progress-bar').style.width = `100%`;
+                document.getElementById('xp-to-next').textContent = `Max Level Achieved`;
+            }
 
-                new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Yesterday', 'Today'],
-                        datasets: [{
-                            label: 'Mastery XP',
-                            data: mockHistory,
-                            borderColor: '#2E8B57', // Emerald
-                            backgroundColor: 'rgba(46, 139, 87, 0.1)',
-                            borderWidth: 3,
-                            pointBackgroundColor: '#002147',
-                            pointRadius: 4,
-                            fill: true,
-                            tension: 0.4 // Smooth curves
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        plugins: { legend: { display: false } },
-                        scales: {
-                            y: { beginAtZero: true, grid: { color: 'rgba(71, 85, 105, 0.1)', borderDash: [5, 5] } },
-                            x: { grid: { display: false } }
-                        }
-                    }
+            // Load Curriculum
+            const container = document.getElementById('curriculum-container');
+            container.innerHTML = ''; 
+
+            if (!window.NEXAL_CURRICULUM) {
+                container.innerHTML = `<p class="text-red-500 font-bold">Error: Curriculum Matrix Offline.</p>`;
+                return;
+            }
+
+            // Default to showing Math (Subject 1) and Physics (Subject 2) on the dashboard for now
+            const activeSubjectIds = ["1", "2"]; 
+
+            activeSubjectIds.forEach(subId => {
+                const subject = window.NEXAL_CURRICULUM[subId];
+                if (!subject) return;
+
+                const section = document.createElement('section');
+                section.className = "bg-white rounded-3xl p-8 border border-slate/10 shadow-sm";
+                
+                let modulesHTML = '';
+                subject.syllabus.forEach(chapter => {
+                    chapter.modules.forEach(mod => {
+                        // THE ROUTING FIX: This now points to study-hall.html
+                        modulesHTML += `
+                            <div onclick="window.location.href='study-hall.html?subject=${subId}&module=${mod.id}&name=${encodeURIComponent(mod.name)}'" class="group p-5 rounded-2xl border-2 border-slate/10 hover:border-${subject.color || 'emerald'} hover:bg-${subject.color || 'emerald'}/5 transition-all cursor-pointer shadow-sm hover:shadow-md flex items-center justify-between">
+                                <div>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate/50 mb-1 block">${chapter.title}</span>
+                                    <h4 class="font-bold text-oxford text-lg group-hover:text-${subject.color || 'emerald'} transition-colors">${mod.name}</h4>
+                                </div>
+                                <div class="w-10 h-10 rounded-full bg-slate/5 flex items-center justify-center group-hover:bg-${subject.color || 'emerald'}/10 transition-colors">
+                                    <svg class="w-5 h-5 text-slate/40 group-hover:text-${subject.color || 'emerald'}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                </div>
+                            </div>
+                        `;
+                    });
                 });
 
-                // 3. Fetch Enrolled Subjects
-                const { data: enrollments } = await window.supabaseClient.from('user_enrollments').select('subject_id').eq('user_id', user.id);
-
-                document.getElementById('loading-state').classList.add('hidden');
-
-                if (enrollments.length === 0) {
-                    container.innerHTML = `<div class="p-16 border-2 border-dashed border-slate/30 rounded-2xl text-center bg-white shadow-sm"><p class="text-slate text-lg font-medium mb-6">Your curriculum matrix is empty.</p><a href="library.html" class="inline-block bg-emerald text-white px-8 py-3 rounded-xl font-bold tracking-wide hover:bg-emerald/90 transition-all shadow-md">Browse the Library</a></div>`;
-                } else {
-                    enrollments.forEach(e => {
-                        const subjectData = NEXAL_CURRICULUM[e.subject_id.toString()];
-                        if (!subjectData) return;
-                        
-                        let syllabusHTML = `<div class="bg-white rounded-2xl border border-slate/10 shadow-lg overflow-hidden transition-all hover:shadow-xl"><div class="bg-oxford p-8 flex justify-between items-center"><h2 class="text-3xl font-serif font-bold text-white">${subjectData.title}</h2><span class="px-4 py-1 bg-white/10 text-white rounded-full text-xs font-bold tracking-widest uppercase">${subjectData.badge}</span></div><div class="p-8 space-y-8">`;
-                        
-                        subjectData.syllabus.forEach(chapter => {
-                            syllabusHTML += `<div><h4 class="font-bold text-slate/70 uppercase tracking-widest text-xs mb-4 border-b border-slate/10 pb-2">${chapter.title}</h4><div class="grid grid-cols-1 md:grid-cols-2 gap-4">`;
-                            chapter.modules.forEach(mod => {
-                                syllabusHTML += `<a href="arena.html?subject=${subjectData.id}&module=${mod.id}&name=${encodeURIComponent(mod.name)}" class="group block p-5 bg-slate/5 border border-transparent rounded-xl hover:border-emerald hover:bg-emerald/5 transition-all"><span class="font-semibold text-oxford block group-hover:text-emerald transition-colors">${mod.name}</span><span class="text-xs text-slate/50 font-bold mt-2 flex items-center group-hover:text-emerald transition-colors">Enter Arena <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span></a>`;
-                            });
-                            syllabusHTML += `</div></div>`;
-                        });
-                        
-                        syllabusHTML += `</div></div>`;
-                        container.innerHTML += syllabusHTML;
-                    });
-                }
-            } catch (err) { console.error(err); }
-        }
-        loadDashboard();
+                section.innerHTML = `
+                    <div class="flex items-center space-x-4 mb-8 border-b border-slate/10 pb-4">
+                        <span class="px-3 py-1 bg-${subject.color || 'emerald'}/10 text-${subject.color || 'emerald'} text-xs font-black tracking-widest rounded-full uppercase">${subject.badge || 'Core'}</span>
+                        <h3 class="text-2xl font-serif font-black text-oxford">${subject.title}</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        ${modulesHTML}
+                    </div>
+                `;
+                container.appendChild(section);
+            });
+        });
     </script>
 </body>
 </html>
