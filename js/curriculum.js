@@ -10,27 +10,63 @@ const NEXAL_CURRICULUM = {
                 modules: [
                     { 
                         id: "quadratics", name: "Quadratic Equations", video_id: "-KWsS2FZVTA", 
-                        theory: `<p>A quadratic equation is a second-order polynomial equation in a single variable. It represents a parabola when graphed.</p>
-                                 <div class="math-render my-6 text-center text-xl">ax^2 + bx + c = 0</div>
-                                 <p><strong>Mastery Requirements:</strong></p>
-                                 <ul class="list-disc pl-6 space-y-4 mt-4">
-                                    <li><strong>Factorization:</strong> Decomposing the equation into two binomials.</li>
-                                    <li><strong>The Quadratic Formula:</strong> Used when factorization is impossible.
-                                        <div class="math-render my-3 pl-4">x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}</div>
-                                    </li>
-                                    <li><strong>The Discriminant (<span class="math-render inline-math">\\Delta</span>):</strong> The expression <span class="math-render inline-math">b^2 - 4ac</span> determines the nature of the roots (real, equal, or non-real).</li>
-                                 </ul>`
+                        theory: `
+                            <h4 class="text-xl font-bold text-oxford mb-2">1. The Standard Form</h4>
+                            <p class="mb-4">A quadratic equation is a second-order polynomial equation in a single variable. When graphed on a Cartesian plane, it forms a parabola. To solve any quadratic, it must first be written in standard form:</p>
+                            <div class="math-render my-6 text-center text-2xl">ax^2 + bx + c = 0</div>
+                            <p class="mb-6">Where <span class="math-render inline-math">a \\neq 0</span>. The roots of the equation are the x-intercepts of the parabola.</p>
+
+                            <h4 class="text-xl font-bold text-oxford mb-2">2. Method 1: Factorization</h4>
+                            <p class="mb-2">If the quadratic can be easily decomposed, we factorize it into two binomials. By the Zero Product Property, if <span class="math-render inline-math">A \\times B = 0</span>, then either <span class="math-render inline-math">A = 0</span> or <span class="math-render inline-math">B = 0</span>.</p>
+                            
+                            <div class="bg-slate/5 border border-slate/10 p-6 rounded-2xl my-6">
+                                <p class="font-bold text-emerald uppercase tracking-widest text-xs mb-2">Worked Example 1</p>
+                                <p class="mb-2">Solve for x: <span class="math-render inline-math">x^2 - 5x + 6 = 0</span></p>
+                                <ul class="list-none space-y-2 text-sm text-slate-700">
+                                    <li><strong>Step 1:</strong> Find two numbers that multiply to +6 and add to -5. (Those numbers are -2 and -3).</li>
+                                    <li><strong>Step 2:</strong> Write as binomials: <span class="math-render inline-math">(x - 2)(x - 3) = 0</span></li>
+                                    <li><strong>Step 3:</strong> Solve for x: <span class="math-render inline-math">x = 2 \\text{ or } x = 3</span></li>
+                                </ul>
+                            </div>
+
+                            <h4 class="text-xl font-bold text-oxford mb-2">3. Method 2: The Quadratic Formula</h4>
+                            <p class="mb-4">When a quadratic cannot be factorized easily (resulting in irrational roots), we use the Quadratic Formula. This is derived from completing the square.</p>
+                            <div class="math-render my-6 text-center text-xl">x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}</div>
+                            
+                            <h4 class="text-xl font-bold text-oxford mb-2">4. The Nature of Roots (The Discriminant)</h4>
+                            <p class="mb-2">The expression beneath the square root in the formula is called the Discriminant (<span class="math-render inline-math">\\Delta</span>).</p>
+                            <div class="math-render my-4 text-center text-lg">\\Delta = b^2 - 4ac</div>
+                            <ul class="list-disc pl-6 space-y-2 mt-4">
+                                <li>If <span class="math-render inline-math">\\Delta > 0</span>: The equation has <strong>two distinct real roots</strong>.</li>
+                                <li>If <span class="math-render inline-math">\\Delta = 0</span>: The equation has <strong>one repeated real root</strong> (the parabola touches the x-axis exactly once).</li>
+                                <li>If <span class="math-render inline-math">\\Delta < 0</span>: The equation has <strong>no real roots</strong> (the parabola floats above or below the x-axis).</li>
+                            </ul>
+                        `
                     }, 
                     { 
                         id: "inequalities", name: "Quadratic Inequalities", video_id: "_gWjLKsFOPE", 
-                        theory: `<p>Quadratic inequalities require finding the range of x-values where the parabola lies above (> 0) or below (< 0) the x-axis.</p>
-                                 <p class="mt-4"><strong>Protocol:</strong></p>
-                                 <ol class="list-decimal pl-6 space-y-3 mt-4">
-                                    <li>Rearrange the inequality to standard form: <span class="math-render inline-math">ax^2 + bx + c < 0</span>.</li>
-                                    <li>Find the critical values by treating it as an equation.</li>
-                                    <li>Sketch a quick parabola (concave up if <span class="math-render inline-math">a > 0</span>, concave down if <span class="math-render inline-math">a < 0</span>).</li>
-                                    <li>Read the solution directly from the graph.</li>
-                                 </ol>`
+                        theory: `
+                            <p class="mb-4">Unlike equations that ask "Where does the parabola cross the x-axis?", inequalities ask "Where is the parabola <em>above</em> (> 0) or <em>below</em> (< 0) the x-axis?"</p>
+                            
+                            <h4 class="text-xl font-bold text-oxford mb-2 mt-6">The 4-Step Analytical Protocol</h4>
+                            <ol class="list-decimal pl-6 space-y-3 mt-4">
+                                <li><strong>Standard Form:</strong> Ensure the right side of the inequality is zero (e.g., <span class="math-render inline-math">ax^2 + bx + c > 0</span>). Ensure your <span class="math-render inline-math">x^2</span> term is positive by multiplying by -1 (remember to flip the inequality sign if you do this!).</li>
+                                <li><strong>Critical Values:</strong> Replace the inequality with an equals sign and solve for x. These are your x-intercepts.</li>
+                                <li><strong>Sketch the Parabola:</strong> Draw a quick Cartesian plane. Plot your critical values. Since <span class="math-render inline-math">a > 0</span>, draw a "U-shaped" curve passing through those points.</li>
+                                <li><strong>Read the Graph:</strong> Highlight the section of the graph that satisfies the inequality.</li>
+                            </ol>
+
+                            <div class="bg-slate/5 border border-slate/10 p-6 rounded-2xl my-6">
+                                <p class="font-bold text-emerald uppercase tracking-widest text-xs mb-2">Worked Example</p>
+                                <p class="mb-2">Solve: <span class="math-render inline-math">x^2 - x - 12 < 0</span></p>
+                                <ul class="list-none space-y-3 text-sm text-slate-700 mt-4">
+                                    <li><strong>1. Critical Values:</strong> Factorize to get <span class="math-render inline-math">(x - 4)(x + 3) = 0</span>. Critical values are <span class="math-render inline-math">x = 4</span> and <span class="math-render inline-math">x = -3</span>.</li>
+                                    <li><strong>2. Graphing:</strong> The parabola crosses the x-axis at -3 and 4, dipping below the x-axis in between them.</li>
+                                    <li><strong>3. Solution:</strong> The question asks where the graph is LESS than 0 (below the axis). Looking at the sketch, it is below the axis strictly between -3 and 4.</li>
+                                    <li><strong>Final Answer:</strong> <span class="math-render inline-math">-3 < x < 4</span></li>
+                                </ul>
+                            </div>
+                        `
                     }
                 ]
             },
@@ -38,11 +74,26 @@ const NEXAL_CURRICULUM = {
                 title: "Differential Calculus",
                 modules: [
                     { 
-                        id: "limits", name: "Limits & First Principles", video_id: "5yfhPZZkuM8", 
-                        theory: `<p>Calculus is the mathematical study of continuous change. The foundation of differentiation is the concept of a limit.</p>
-                                 <p class="mt-4"><strong>Differentiation from First Principles:</strong></p>
-                                 <div class="math-render my-6 text-center text-xl">f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}</div>
-                                 <p>This formula calculates the exact gradient of a tangent line to a curve at any given point.</p>`
+                        id: "limits", name: "Limits & First Principles", video_id: "YNstP0ESndU", 
+                        theory: `
+                            <h4 class="text-xl font-bold text-oxford mb-2">1. The Concept of Limits</h4>
+                            <p class="mb-4">A limit evaluates what value a function <em>approaches</em> as the input approaches a specific number, even if the function is undefined at that exact point.</p>
+                            
+                            <div class="bg-slate/5 border border-slate/10 p-6 rounded-2xl my-6">
+                                <p class="font-bold text-emerald uppercase tracking-widest text-xs mb-2">Evaluating Indeterminate Forms</p>
+                                <p class="mb-4">Evaluate: <span class="math-render inline-math">\\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2}</span></p>
+                                <p class="text-sm">If we directly substitute <span class="math-render inline-math">x = 2</span>, we get <span class="math-render inline-math">\\frac{0}{0}</span> (undefined). We must factorize first:</p>
+                                <div class="math-render text-center my-3">\\lim_{x \\to 2} \\frac{(x - 2)(x + 2)}{x - 2}</div>
+                                <p class="text-sm">Cancel the common terms to get <span class="math-render inline-math">\\lim_{x \\to 2} (x + 2)</span>. Now, substitute <span class="math-render inline-math">x = 2</span> to get the final answer: <strong>4</strong>.</p>
+                            </div>
+
+                            <h4 class="text-xl font-bold text-oxford mb-2 mt-8">2. Differentiation from First Principles</h4>
+                            <p class="mb-4">The derivative of a function <span class="math-render inline-math">f(x)</span>, denoted as <span class="math-render inline-math">f'(x)</span>, represents the exact gradient of the tangent to the curve at any point.</p>
+                            <div class="math-render my-6 text-center text-2xl">f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}</div>
+                            
+                            <p class="mt-4 font-bold">Pro Tip for Gauntlet Completion:</p>
+                            <p class="text-sm text-slate-700">When applying first principles to <span class="math-render inline-math">f(x) = ax^2</span>, remember to perfectly expand the binomial <span class="math-render inline-math">(x+h)^2 = x^2 + 2xh + h^2</span> before multiplying by <span class="math-render inline-math">a</span>. Ensure all terms without an <span class="math-render inline-math">h</span> cancel out in the numerator before dividing.</p>
+                        `
                     }
                 ]
             }
@@ -57,18 +108,61 @@ const NEXAL_CURRICULUM = {
                 modules: [
                     { 
                         id: "kinematics", name: "1D & 2D Kinematics", video_id: "ZM8ECpBuQYE", 
-                        theory: `<p>Kinematics is the study of motion without considering the forces that cause it. You must master the equations of linear motion.</p>
-                                 <ul class="list-disc pl-6 space-y-4 mt-4">
-                                    <li><span class="math-render inline-math">v_f = v_i + a \\Delta t</span></li>
-                                    <li><span class="math-render inline-math">\\Delta x = v_i \\Delta t + \\frac{1}{2}a \\Delta t^2</span></li>
-                                    <li><span class="math-render inline-math">v_f^2 = v_i^2 + 2a \\Delta x</span></li>
-                                 </ul>`
+                        theory: `
+                            <h4 class="text-xl font-bold text-oxford mb-2">1. The Fundamentals of Motion</h4>
+                            <p class="mb-4">Kinematics is the mathematical description of motion. To solve any kinematics problem, you must define a positive direction (usually Up or Right) and identify three known variables.</p>
+                            
+                            <ul class="list-none space-y-2 mb-6">
+                                <li><span class="font-bold text-oxford">Displacement ($\\Delta x$ or $\\Delta y$):</span> The straight-line distance from start to finish (Vector, measured in meters).</li>
+                                <li><span class="font-bold text-oxford">Initial Velocity ($v_i$):</span> Speed and direction at $t=0$ (m/s).</li>
+                                <li><span class="font-bold text-oxford">Final Velocity ($v_f$):</span> Speed and direction at the end of the time period (m/s).</li>
+                                <li><span class="font-bold text-oxford">Acceleration ($a$):</span> The rate of change of velocity. For free-falling objects on Earth, <span class="math-render inline-math">a = 9.8 \\text{ m/s}^2</span> downwards.</li>
+                                <li><span class="font-bold text-oxford">Time ($\\Delta t$):</span> Duration of the motion (seconds).</li>
+                            </ul>
+
+                            <h4 class="text-xl font-bold text-oxford mb-2">2. The 4 Equations of Motion</h4>
+                            <p class="mb-4 text-sm text-slate-500">Note: These equations are ONLY valid for constant, uniform acceleration.</p>
+                            <div class="bg-slate/5 border border-slate/10 p-6 rounded-2xl grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                                <div class="math-render text-center">v_f = v_i + a \\Delta t</div>
+                                <div class="math-render text-center">v_f^2 = v_i^2 + 2a \\Delta x</div>
+                                <div class="math-render text-center">\\Delta x = v_i \\Delta t + \\frac{1}{2}a \\Delta t^2</div>
+                                <div class="math-render text-center">\\Delta x = \\left(\\frac{v_i + v_f}{2}\\right) \\Delta t</div>
+                            </div>
+
+                            <div class="bg-oxford text-white p-6 rounded-2xl my-6 shadow-lg">
+                                <p class="font-bold text-emerald uppercase tracking-widest text-xs mb-2">Worked Example</p>
+                                <p class="mb-2">A sports car accelerates uniformly from rest to 30 m/s over a distance of 150m. Calculate the acceleration.</p>
+                                <ul class="list-none space-y-3 text-sm text-white/80 mt-4">
+                                    <li><strong>Data Extraction:</strong> <span class="math-render inline-math text-white">v_i = 0</span>, <span class="math-render inline-math text-white">v_f = 30</span>, <span class="math-render inline-math text-white">\\Delta x = 150</span>. We need <span class="math-render inline-math text-white">a</span>.</li>
+                                    <li><strong>Equation Selection:</strong> We don't have time ($t$), so we must use <span class="math-render inline-math text-white">v_f^2 = v_i^2 + 2a\\Delta x</span>.</li>
+                                    <li><strong>Substitution:</strong> <span class="math-render inline-math text-white">30^2 = 0^2 + 2a(150)</span></li>
+                                    <li><strong>Solve:</strong> <span class="math-render inline-math text-white">900 = 300a \\implies a = 3 \\text{ m/s}^2</span></li>
+                                </ul>
+                            </div>
+                        `
                     },
                     { 
                         id: "newton", name: "Newton's Laws of Motion", video_id: "kKKM8Y-u7ds", 
-                        theory: `<p><strong>Newton's Second Law:</strong> When a net force acts on an object, the object will accelerate in the direction of the net force.</p>
-                                 <div class="math-render my-6 text-center text-xl">F_{net} = ma</div>
-                                 <p>Acceleration is directly proportional to the net force and inversely proportional to the mass of the object.</p>`
+                        theory: `
+                            <h4 class="text-xl font-bold text-oxford mb-2">1. Newton's First Law (Inertia)</h4>
+                            <p class="mb-4">An object will remain at rest or continue moving at a constant velocity unless acted upon by a net external force. If velocity is constant, Acceleration = 0, therefore <span class="math-render inline-math">F_{net} = 0</span>.</p>
+
+                            <h4 class="text-xl font-bold text-oxford mb-2 mt-8">2. Newton's Second Law</h4>
+                            <p class="mb-4">When a net force acts on an object, the object accelerates in the direction of the net force.</p>
+                            <div class="math-render my-6 text-center text-2xl">F_{net} = ma</div>
+                            
+                            <h4 class="text-xl font-bold text-oxford mb-2 mt-8">3. Frictional Forces</h4>
+                            <p class="mb-4">Friction always acts parallel to the surface and opposite to the direction of motion.</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-6 text-slate-700">
+                                <li><strong>Static Friction ($f_s$):</strong> The force that prevents a stationary object from moving. It increases to match the applied force until it reaches a maximum limit (<span class="math-render inline-math">f_{s}^{max} = \\mu_s N</span>).</li>
+                                <li><strong>Kinetic Friction ($f_k$):</strong> The constant force opposing an object that is already sliding (<span class="math-render inline-math">f_k = \\mu_k N</span>).</li>
+                            </ul>
+
+                            <div class="bg-slate/5 border border-slate/10 p-6 rounded-2xl my-6">
+                                <p class="font-bold text-emerald uppercase tracking-widest text-xs mb-2">Free Body Diagram Protocol</p>
+                                <p class="text-sm">Before doing any calculations, draw a dot representing the object. Draw arrows originating from the dot for: Gravity ($F_g$ downwards), Normal Force ($N$ perpendicular to the surface), Applied Force ($F_A$), and Friction ($f_k$ opposing motion). Resolve any angled forces into horizontal and vertical components using trigonometry.</p>
+                            </div>
+                        `
                     }
                 ]
             }
@@ -83,12 +177,33 @@ const NEXAL_CURRICULUM = {
                 modules: [
                     { 
                         id: "dna_rna", name: "DNA, RNA & Replication", video_id: "8kK2zwjRV0M", 
-                        theory: `<p>Deoxyribonucleic Acid (DNA) is a double-helix molecule carrying genetic instructions. Ribonucleic Acid (RNA) translates these instructions into proteins.</p>
-                                 <p class="mt-4"><strong>Base Pairing Rules:</strong></p>
-                                 <ul class="list-disc pl-6 space-y-3 mt-4">
-                                    <li>In DNA: Adenine (A) pairs with Thymine (T), and Cytosine (C) pairs with Guanine (G).</li>
-                                    <li>In Transcription (DNA to mRNA): Adenine (A) pairs with Uracil (U).</li>
-                                 </ul>`
+                        theory: `
+                            <h4 class="text-xl font-bold text-oxford mb-2">1. The Structure of Nucleic Acids</h4>
+                            <p class="mb-4">DNA (Deoxyribonucleic Acid) is the blueprint of life. It is a polymer made up of monomers called nucleotides. Every single nucleotide consists of three parts:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-6 text-slate-700">
+                                <li>A central 5-carbon sugar (Deoxyribose in DNA, Ribose in RNA).</li>
+                                <li>A phosphate group.</li>
+                                <li>A nitrogenous base.</li>
+                            </ul>
+
+                            <h4 class="text-xl font-bold text-oxford mb-2 mt-8">2. Base Pairing (Watson-Crick Model)</h4>
+                            <p class="mb-4">The DNA ladder is held together by weak hydrogen bonds between complementary bases.</p>
+                            <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl text-center font-bold text-blue-900 mb-6">
+                                Adenine (A) always pairs with Thymine (T) <br>
+                                Cytosine (C) always pairs with Guanine (G)
+                            </div>
+
+                            <h4 class="text-xl font-bold text-oxford mb-2 mt-8">3. Transcription (DNA $\\rightarrow$ mRNA)</h4>
+                            <p class="mb-4">DNA is trapped inside the nucleus. To get instructions to the ribosomes, a messenger RNA (mRNA) copy is made. <strong>Crucially, RNA does not have Thymine. It uses Uracil (U) instead.</strong></p>
+                            
+                            <div class="bg-slate/5 border border-slate/10 p-6 rounded-2xl my-6">
+                                <p class="font-bold text-emerald uppercase tracking-widest text-xs mb-2">Transcription Example</p>
+                                <p class="mb-2">If a DNA template strand reads: <strong>3' - T A C G C A - 5'</strong></p>
+                                <p class="text-sm">The complementary mRNA transcript built off this template will be:</p>
+                                <p class="mt-2 font-black text-lg text-oxford">5' - A U G C G U - 3'</p>
+                                <p class="text-xs text-slate-500 mt-2">Notice how the 'A' on the DNA paired with a 'U' on the RNA, not a 'T'.</p>
+                            </div>
+                        `
                     }
                 ]
             }
