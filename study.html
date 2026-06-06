@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Hub | Nexal Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { oxford: '#002147', slate: '#475569', ivory: '#FDFBF7', emerald: '#2E8B57', gold: '#DAA520' } } } }</script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <style>
+        body { background-color: #FDFBF7; background-image: linear-gradient(to right, rgba(71, 85, 105, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(71, 85, 105, 0.05) 1px, transparent 1px); background-size: 40px 40px; }
+        ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: transparent; } ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .katex { font-size: 1.15em; }
+        /* Active state for the table of contents */
+        .toc-active { background-color: rgba(46, 139, 87, 0.1); border-color: #2E8B57; color: #2E8B57; font-weight: bold; }
+    </style>
+</head>
+<body class="font-sans text-slate antialiased h-screen flex overflow-hidden">
+
+    <aside class="w-64 bg-oxford text-white/80 flex flex-col h-full shadow-2xl z-20 hidden md:flex relative shrink-0">
+        <div class="p-8 border-b border-white/10">
+            <span class="text-[10px] font-bold tracking-widest uppercase text-emerald">Global Standard</span>
+            <h2 class="text-2xl font-serif font-black text-white mt-1 tracking-tight">Nexal Academy.</h2>
+        </div>
+        <nav id="sidebar-nav" class="flex-1 p-6 space-y-3 overflow-y-auto">
+            <p class="text-xs font-bold tracking-widest uppercase text-white/40 mb-4 ml-2">Learning Hub</p>
+            <a href="dashboard.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                <span>Dashboard</span>
+            </a>
+            <a href="study.html" class="flex items-center space-x-3 p-3 rounded-xl bg-white text-oxford font-medium shadow-sm transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                <span>Study</span>
+            </a>
+            <a href="library.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                <span>Course Library</span>
+            </a>
+
+            <p class="text-xs font-bold tracking-widest uppercase text-white/40 mb-4 mt-8 ml-2">The Arena</p>
+            <a href="leaderboard.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                <span>Leaderboard</span>
+            </a>
+            <a href="challenges.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                <span>Active Challenges</span>
+            </a>
+            
+            <div id="admin-link-container"></div>
+        </nav>
+        <div class="p-6 border-t border-white/10 bg-black/10">
+            <a href="settings.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                <span>Settings</span>
+            </a>
+        </div>
+    </aside>
+
+    <header class="md:hidden w-full bg-oxford text-white p-4 flex justify-between items-center absolute top-0 z-30 shadow-md">
+        <span class="font-serif font-black tracking-tight">Nexal Academy.</span>
+        <div class="space-x-4 text-sm font-medium"><a href="dashboard.html">Home</a><a href="settings.html">Settings</a></div>
+    </header>
+
+    <main class="flex-1 h-full flex flex-col pt-16 md:pt-0 relative z-10">
+        
+        <header class="p-6 md:p-10 border-b border-slate/10 bg-white shadow-sm shrink-0">
+            <h1 class="text-3xl md:text-4xl font-serif font-black text-oxford">Digital Textbook</h1>
+            <p class="text-slate mt-2 text-sm md:text-base">Comprehensive theoretical notes, formulas, and principles across all registered disciplines.</p>
+        </header>
+
+        <div class="flex-1 flex flex-col md:flex-row overflow-hidden">
+            
+            <div class="w-full md:w-1/3 lg:w-1/4 bg-slate/5 border-r border-slate/10 overflow-y-auto p-4 shrink-0" id="toc-container">
+                <p class="text-xs font-bold tracking-widest uppercase text-slate/50 mb-4 ml-2">Table of Contents</p>
+                </div>
+
+            <div class="w-full md:w-2/3 lg:w-3/4 bg-white overflow-y-auto p-6 md:p-12 relative" id="reading-pane">
+                <div class="max-w-3xl mx-auto">
+                    <div id="welcome-state" class="text-center py-20">
+                        <svg class="w-16 h-16 text-slate/20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <h2 class="text-2xl font-serif font-bold text-slate/50">Select a module from the index to begin reading.</h2>
+                    </div>
+
+                    <div id="content-state" class="hidden">
+                        <span id="reading-badge" class="px-3 py-1 bg-emerald/10 text-emerald text-[10px] font-black tracking-widest rounded-full uppercase mb-4 inline-block">Subject</span>
+                        <h2 id="reading-title" class="text-3xl md:text-4xl font-serif font-black text-oxford mb-8 pb-4 border-b border-slate/10">Module Title</h2>
+                        
+                        <div id="reading-theory" class="text-slate text-lg leading-relaxed mb-12">
+                            </div>
+
+                        <div class="mt-12 pt-8 border-t border-slate/10 text-center pb-20">
+                            <a id="reading-practice-btn" href="#" class="inline-flex items-center justify-center px-8 py-4 bg-oxford text-white rounded-xl font-bold tracking-wide hover:bg-emerald shadow-lg transition-all">
+                                Test Your Knowledge in the Arena &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="js/auth-guard.js"></script>
+    <script src="js/curriculum.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const tocContainer = document.getElementById('toc-container');
+            const welcomeState = document.getElementById('welcome-state');
+            const contentState = document.getElementById('content-state');
+            
+            const badgeEl = document.getElementById('reading-badge');
+            const titleEl = document.getElementById('reading-title');
+            const theoryEl = document.getElementById('reading-theory');
+            const practiceBtn = document.getElementById('reading-practice-btn');
+
+            let currentlyActiveButton = null;
+
+            // Load Admin Link if needed
+            const { data: { user } } = await window.supabaseClient.auth.getUser();
+            if (user) {
+                const { data: profile } = await window.supabaseClient.from('profiles').select('is_admin').eq('id', user.id).single();
+                if (profile && profile.is_admin) {
+                    document.getElementById('admin-link-container').innerHTML = `<a href="admin-hub.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-red-500/10 text-red-600 font-bold mt-8"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg><span>System Overlord</span></a>`;
+                }
+            }
+
+            if (!window.NEXAL_CURRICULUM) {
+                tocContainer.innerHTML = `<p class="text-red-500">Curriculum Error.</p>`;
+                return;
+            }
+
+            // Generate Table of Contents
+            Object.keys(window.NEXAL_CURRICULUM).forEach(subjectId => {
+                const subject = window.NEXAL_CURRICULUM[subjectId];
+                
+                const subjectGroup = document.createElement('div');
+                subjectGroup.className = "mb-6";
+                subjectGroup.innerHTML = `<h3 class="text-sm font-bold text-oxford mb-2 px-2">${subject.title}</h3>`;
+                
+                const moduleList = document.createElement('ul');
+                moduleList.className = "space-y-1";
+
+                subject.syllabus.forEach(chapter => {
+                    chapter.modules.forEach(mod => {
+                        const li = document.createElement('li');
+                        const btn = document.createElement('button');
+                        btn.className = "w-full text-left px-3 py-2 rounded-lg text-sm text-slate hover:bg-slate/10 hover:text-oxford transition-colors border border-transparent";
+                        btn.textContent = mod.name;
+                        
+                        btn.addEventListener('click', () => {
+                            if(currentlyActiveButton) currentlyActiveButton.classList.remove('toc-active');
+                            btn.classList.add('toc-active');
+                            currentlyActiveButton = btn;
+
+                            welcomeState.classList.add('hidden');
+                            contentState.classList.remove('hidden');
+                            
+                            badgeEl.textContent = subject.title;
+                            badgeEl.className = `px-3 py-1 bg-${subject.color}/10 text-${subject.color} text-[10px] font-black tracking-widest rounded-full uppercase mb-4 inline-block`;
+                            
+                            titleEl.textContent = mod.name;
+                            
+                            if (mod.theory) {
+                                theoryEl.innerHTML = mod.theory;
+                                // Render Math
+                                theoryEl.querySelectorAll('.math-render').forEach(el => {
+                                    katex.render(el.textContent, el, { displayMode: !el.classList.contains('inline-math'), throwOnError: false });
+                                });
+                            } else {
+                                theoryEl.innerHTML = "<p>Detailed notes for this module are currently being formulated by the academic matrix.</p>";
+                            }
+
+                            practiceBtn.href = `arena.html?subject=${subjectId}&module=${mod.id}&name=${encodeURIComponent(mod.name)}`;
+                        });
+
+                        li.appendChild(btn);
+                        moduleList.appendChild(li);
+                    });
+                });
+                
+                subjectGroup.appendChild(moduleList);
+                tocContainer.appendChild(subjectGroup);
+            });
+        });
+    </script>
+</body>
+</html>
