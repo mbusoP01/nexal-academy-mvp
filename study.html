@@ -18,6 +18,7 @@
 </head>
 <body class="font-sans text-slate antialiased h-screen flex overflow-hidden">
 
+    <!-- STATIC SIDEBAR -->
     <aside class="w-64 bg-oxford text-white/80 flex flex-col h-full shadow-2xl z-20 hidden md:flex relative shrink-0">
         <div class="p-8 border-b border-white/10">
             <span class="text-[10px] font-bold tracking-widest uppercase text-emerald">Global Standard</span>
@@ -26,7 +27,7 @@
         <nav id="sidebar-nav" class="flex-1 p-6 space-y-3 overflow-y-auto">
             <p class="text-xs font-bold tracking-widest uppercase text-white/40 mb-4 ml-2">Learning Hub</p>
             <a href="dashboard.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
                 <span>Dashboard</span>
             </a>
             <a href="study.html" class="flex items-center space-x-3 p-3 rounded-xl bg-white text-oxford font-medium shadow-sm transition-all">
@@ -67,15 +68,19 @@
         
         <header class="p-6 md:p-10 border-b border-slate/10 bg-white shadow-sm shrink-0">
             <h1 class="text-3xl md:text-4xl font-serif font-black text-oxford">Digital Textbook</h1>
-            <p class="text-slate mt-2 text-sm md:text-base">Comprehensive theoretical notes, formulas, and principles across all registered disciplines.</p>
+            <p class="text-slate mt-2 text-sm md:text-base">Comprehensive theoretical notes, formulas, and principles for your enrolled disciplines.</p>
         </header>
 
+        <!-- Split Screen Layout -->
         <div class="flex-1 flex flex-col md:flex-row overflow-hidden">
             
+            <!-- Left Side: Table of Contents -->
             <div class="w-full md:w-1/3 lg:w-1/4 bg-slate/5 border-r border-slate/10 overflow-y-auto p-4 shrink-0" id="toc-container">
                 <p class="text-xs font-bold tracking-widest uppercase text-slate/50 mb-4 ml-2">Table of Contents</p>
-                </div>
+                <!-- Subjects and Modules injected here dynamically -->
+            </div>
 
+            <!-- Right Side: Reading Pane -->
             <div class="w-full md:w-2/3 lg:w-3/4 bg-white overflow-y-auto p-6 md:p-12 relative" id="reading-pane">
                 <div class="max-w-3xl mx-auto">
                     <div id="welcome-state" class="text-center py-20">
@@ -83,12 +88,14 @@
                         <h2 class="text-2xl font-serif font-bold text-slate/50">Select a module from the index to begin reading.</h2>
                     </div>
 
+                    <!-- Dynamic Content -->
                     <div id="content-state" class="hidden">
                         <span id="reading-badge" class="px-3 py-1 bg-emerald/10 text-emerald text-[10px] font-black tracking-widest rounded-full uppercase mb-4 inline-block">Subject</span>
                         <h2 id="reading-title" class="text-3xl md:text-4xl font-serif font-black text-oxford mb-8 pb-4 border-b border-slate/10">Module Title</h2>
                         
                         <div id="reading-theory" class="text-slate text-lg leading-relaxed mb-12">
-                            </div>
+                            <!-- Theory inserted here -->
+                        </div>
 
                         <div class="mt-12 pt-8 border-t border-slate/10 text-center pb-20">
                             <a id="reading-practice-btn" href="#" class="inline-flex items-center justify-center px-8 py-4 bg-oxford text-white rounded-xl font-bold tracking-wide hover:bg-emerald shadow-lg transition-all">
@@ -120,22 +127,49 @@
 
             let currentlyActiveButton = null;
 
-            // Load Admin Link if needed
+            // 1. Authenticate and Fetch Profile
             const { data: { user } } = await window.supabaseClient.auth.getUser();
-            if (user) {
-                const { data: profile } = await window.supabaseClient.from('profiles').select('is_admin').eq('id', user.id).single();
-                if (profile && profile.is_admin) {
-                    document.getElementById('admin-link-container').innerHTML = `<a href="admin-hub.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-red-500/10 text-red-600 font-bold mt-8"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg><span>System Overlord</span></a>`;
-                }
-            }
-
-            if (!window.NEXAL_CURRICULUM) {
-                tocContainer.innerHTML = `<p class="text-red-500">Curriculum Error.</p>`;
+            if (!user) {
+                window.location.replace('login.html');
                 return;
             }
 
-            // Generate Table of Contents
+            const { data: profile } = await window.supabaseClient.from('profiles').select('is_admin, subjects').eq('id', user.id).single();
+            const enrolledSubjects = profile?.subjects || [];
+
+            // 2. Admin Check
+            if (profile && profile.is_admin) {
+                document.getElementById('admin-link-container').innerHTML = `
+                    <a href="admin-hub.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-red-500/10 text-red-600 font-bold mt-8 transition-all">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        <span>System Overlord</span>
+                    </a>
+                `;
+            }
+
+            // 3. Fallback Errors
+            if (!window.NEXAL_CURRICULUM) {
+                tocContainer.innerHTML += `<p class="text-red-500 text-sm font-bold px-2 mt-4">Curriculum Matrix Offline.</p>`;
+                return;
+            }
+
+            if (enrolledSubjects.length === 0) {
+                tocContainer.innerHTML += `
+                    <div class="bg-oxford/10 p-4 rounded-xl mt-4 border border-oxford/20">
+                        <p class="text-oxford text-sm font-bold mb-2">No Active Subjects.</p>
+                        <p class="text-slate text-xs mb-3">You are not enrolled in any disciplines for this term.</p>
+                        <a href="library.html" class="text-emerald text-xs font-bold hover:underline">Browse Library &rarr;</a>
+                    </div>
+                `;
+                return;
+            }
+
+            // 4. Generate Table of Contents (Filtered by Enrollment)
             Object.keys(window.NEXAL_CURRICULUM).forEach(subjectId => {
+                
+                // THE CHAOS FIX: Only display subjects the user has actually enrolled in
+                if (!enrolledSubjects.includes(subjectId)) return;
+
                 const subject = window.NEXAL_CURRICULUM[subjectId];
                 
                 const subjectGroup = document.createElement('div');
@@ -161,7 +195,7 @@
                             contentState.classList.remove('hidden');
                             
                             badgeEl.textContent = subject.title;
-                            badgeEl.className = `px-3 py-1 bg-${subject.color}/10 text-${subject.color} text-[10px] font-black tracking-widest rounded-full uppercase mb-4 inline-block`;
+                            badgeEl.className = `px-3 py-1 bg-${subject.color || 'emerald'}/10 text-${subject.color || 'emerald'} text-[10px] font-black tracking-widest rounded-full uppercase mb-4 inline-block`;
                             
                             titleEl.textContent = mod.name;
                             
