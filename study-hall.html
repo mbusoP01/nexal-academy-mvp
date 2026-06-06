@@ -7,14 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { theme: { extend: { colors: { oxford: '#002147', slate: '#475569', ivory: '#FDFBF7', emerald: '#2E8B57' } } } }</script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <style>
         body { background-color: #FDFBF7; background-image: linear-gradient(to right, rgba(71, 85, 105, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(71, 85, 105, 0.05) 1px, transparent 1px); background-size: 40px 40px; }
         ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .katex { font-size: 1.15em; } /* Slightly larger math for readability */
     </style>
 </head>
 <body class="font-sans text-slate antialiased min-h-screen flex flex-col">
 
-    <!-- Navbar -->
     <nav class="w-full py-4 px-8 flex justify-between items-center bg-white/80 backdrop-blur-md border-b border-slate/10 sticky top-0 z-50 shadow-sm">
         <div class="flex items-center space-x-4">
             <a href="dashboard.html" class="text-sm font-bold text-slate hover:text-oxford flex items-center transition-colors bg-slate/5 px-4 py-2 rounded-lg">
@@ -27,7 +28,6 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main class="flex-grow max-w-4xl mx-auto w-full px-6 py-12 flex flex-col">
         
         <header class="mb-10 text-center">
@@ -43,35 +43,29 @@
             </div>
         </div>
 
-        <!-- Placeholder for Written Theory -->
+        <!-- Dynamic Theory Content -->
         <div class="bg-white rounded-3xl border border-slate/10 shadow-lg p-8 md:p-12 mb-12">
             <div class="flex items-center space-x-3 mb-6 border-b border-slate/10 pb-4">
                 <svg class="w-6 h-6 text-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
                 <h3 class="text-2xl font-serif font-bold text-oxford">Core Principles</h3>
             </div>
             
-            <div class="space-y-4 text-slate text-lg leading-relaxed">
-                <p>Welcome to the theoretical phase of this module. The video lecture above contains the primary instruction required to master this topic.</p>
-                <p><strong>Success Protocol:</strong></p>
-                <ul class="list-disc pl-6 space-y-2">
-                    <li>Watch the lecture entirely without interruptions.</li>
-                    <li>Use the digital scratchpad in the Arena to work through complex calculations.</li>
-                    <li>Remember that the Practice Arena is highly procedural; memorizing answers will not work. You must understand the underlying mechanics.</li>
-                </ul>
+            <div id="theory-content" class="text-slate text-lg leading-relaxed">
+                <!-- Quality content injected here by JS -->
+                <p>Retrieving academic records...</p>
             </div>
         </div>
 
-        <!-- Action Area -->
         <div class="text-center pb-20">
             <p class="text-sm font-bold text-slate uppercase tracking-widest mb-6">Ready to test your knowledge?</p>
             <a id="enter-arena-btn" href="#" class="inline-flex items-center justify-center px-10 py-5 bg-emerald text-white rounded-2xl font-bold text-lg tracking-wide hover:bg-emerald/90 shadow-xl hover:-translate-y-1 transition-all">
                 Enter Practice Arena &rarr;
             </a>
         </div>
-
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script src="js/supabase-config.js"></script>
     <script src="js/auth-guard.js"></script>
     <script src="js/curriculum.js"></script>
@@ -87,36 +81,50 @@
             const badgeEl = document.getElementById('subject-badge');
             const arenaBtn = document.getElementById('enter-arena-btn');
             const videoSection = document.getElementById('video-section');
+            const theoryContent = document.getElementById('theory-content');
 
-            // 1. Populate Text
             if (moduleName) titleEl.textContent = decodeURIComponent(moduleName);
             if (subjectId && window.NEXAL_CURRICULUM[subjectId]) {
                 badgeEl.textContent = window.NEXAL_CURRICULUM[subjectId].title;
             }
 
-            // 2. Set Up the Arena Routing Link
-            // This grabs the exact parameters from the Study Hall and passes them to the Arena!
+            // Route to Arena
             arenaBtn.href = `arena.html?subject=${subjectId}&module=${moduleId}&name=${encodeURIComponent(moduleName)}`;
 
-            // 3. YouTube Video Logic
             let videoId = null;
+            let theoryText = null;
+
             if (subjectId && moduleId && window.NEXAL_CURRICULUM) {
                 const subject = window.NEXAL_CURRICULUM[subjectId];
                 if (subject) {
                     for (const chapter of subject.syllabus) {
                         const mod = chapter.modules.find(m => m.id === moduleId);
-                        if (mod && mod.video_id) {
-                            videoId = mod.video_id;
+                        if (mod) {
+                            if (mod.video_id) videoId = mod.video_id;
+                            if (mod.theory) theoryText = mod.theory;
                             break;
                         }
                     }
                 }
             }
 
+            // Render Quality Theory Content
+            if (theoryText) {
+                theoryContent.innerHTML = theoryText;
+                // Parse the math formulas
+                document.querySelectorAll('.math-render').forEach(el => {
+                    katex.render(el.textContent, el, { 
+                        displayMode: !el.classList.contains('inline-math'),
+                        throwOnError: false
+                    });
+                });
+            } else {
+                theoryContent.innerHTML = `<p>Watch the detailed video lecture to master the core concepts. Remember that the Practice Arena is highly procedural; memorizing answers will not work. You must understand the underlying mechanics.</p>`;
+            }
+
+            // Render Video
             if (videoId) {
                 videoSection.classList.remove('hidden');
-                
-                // Load YouTube API
                 const tag = document.createElement('script');
                 tag.src = "https://www.youtube.com/iframe_api";
                 const firstScriptTag = document.getElementsByTagName('script')[0];
