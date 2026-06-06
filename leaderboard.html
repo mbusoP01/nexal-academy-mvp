@@ -3,139 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaderboard | Nexal Academy</title>
+    <title>Global Leaderboard | Nexal Academy</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { theme: { extend: { colors: { oxford: '#002147', slate: '#475569', ivory: '#FDFBF7', emerald: '#2E8B57', gold: '#DAA520', silver: '#C0C0C0', bronze: '#CD7F32' } } } }</script>
-    <style>body { background-color: #FDFBF7; } ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }</style>
+    <script>tailwind.config = { theme: { extend: { colors: { oxford: '#002147', slate: '#475569', ivory: '#FDFBF7', emerald: '#2E8B57', gold: '#DAA520' } } } }</script>
+    <style>body { background-color: #FDFBF7; background-image: linear-gradient(to right, rgba(71, 85, 105, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(71, 85, 105, 0.05) 1px, transparent 1px); background-size: 40px 40px; } ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }</style>
 </head>
 <body class="font-sans text-slate antialiased h-screen flex overflow-hidden">
 
-    <aside class="w-64 bg-oxford text-white/80 flex flex-col h-full shadow-2xl z-20 hidden md:flex">
+    <aside class="w-64 bg-oxford text-white/80 flex flex-col h-full shadow-2xl z-20 hidden md:flex relative">
         <div class="p-8 border-b border-white/10">
             <span class="text-[10px] font-bold tracking-widest uppercase text-emerald">Global Standard</span>
             <h2 class="text-2xl font-serif font-black text-white mt-1 tracking-tight">Nexal Academy.</h2>
         </div>
-        
         <nav class="flex-1 p-6 space-y-3 overflow-y-auto">
             <p class="text-xs font-bold tracking-widest uppercase text-white/40 mb-4 ml-2">Learning Hub</p>
-            <a href="dashboard.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 text-white/70 hover:text-white transition-all">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
-                <span>Dashboard</span>
-            </a>
-            <a href="library.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 text-white/70 hover:text-white transition-all">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                <span>Course Library</span>
-            </a>
+            <a href="dashboard.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg><span>Dashboard</span></a>
+            <a href="library.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg><span>Course Library</span></a>
 
             <p class="text-xs font-bold tracking-widest uppercase text-white/40 mb-4 mt-8 ml-2">The Arena</p>
-            <a href="leaderboard.html" class="flex items-center space-x-3 p-3 rounded-xl bg-white text-oxford font-medium shadow-sm transition-all">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-                <span>Leaderboard</span>
-            </a>
-            <a href="challenges.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 text-white/70 hover:text-white transition-all">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                <span>Active Challenges</span>
-            </a>
+            <a href="leaderboard.html" class="flex items-center space-x-3 p-3 rounded-xl bg-white text-oxford font-medium shadow-sm transition-all"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg><span>Leaderboard</span></a>
+            <a href="challenges.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg><span>Active Challenges</span></a>
         </nav>
-
-        <div class="p-6 border-t border-white/10 bg-black/10">
-            <a href="settings.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 text-white/70 hover:text-white transition-all">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                <span>Settings</span>
-            </a>
-        </div>
+        <div class="p-6 border-t border-white/10 bg-black/10"><a href="settings.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg><span>Settings</span></a></div>
     </aside>
 
-    <header class="md:hidden w-full bg-oxford text-white p-4 flex justify-between items-center absolute top-0 z-30">
-        <span class="font-serif font-black">Nexal Academy.</span>
-        <div class="space-x-4 text-sm"><a href="dashboard.html">Hub</a><a href="settings.html">Menu</a></div>
+    <header class="md:hidden w-full bg-oxford text-white p-4 flex justify-between items-center absolute top-0 z-30 shadow-md">
+        <span class="font-serif font-black tracking-tight">Nexal Academy.</span>
+        <div class="space-x-4 text-sm font-medium"><a href="dashboard.html">Home</a><a href="settings.html">Settings</a></div>
     </header>
 
-    <main class="flex-1 h-full overflow-y-auto p-8 pt-20 md:pt-12 md:p-16">
+    <main class="flex-1 h-full overflow-y-auto p-6 pt-24 md:pt-10 md:p-12 relative z-10">
         <div class="max-w-4xl mx-auto">
-            <header class="mb-10 flex justify-between items-end">
+            
+            <header class="mb-10 flex flex-col md:flex-row md:justify-between md:items-end gap-4">
                 <div>
-                    <span class="px-4 py-1 bg-oxford/5 text-oxford text-xs font-bold tracking-widest rounded-full uppercase">Global Rankings</span>
-                    <h1 class="text-4xl font-serif font-bold text-oxford mt-4">Hall of Mastery</h1>
-                    <p class="text-slate mt-2 text-lg">Compete against top scholars across the Nexal network.</p>
+                    <h1 class="text-4xl font-serif font-black text-oxford">Global Rankings</h1>
+                    <p class="text-slate mt-2 font-medium">Compare your academic standing against the global scholar network.</p>
+                </div>
+                <div class="bg-white px-5 py-3 rounded-xl border border-slate/10 shadow-sm text-center">
+                    <span class="text-[10px] font-bold tracking-widest text-slate uppercase block mb-1">Your Standing</span>
+                    <span class="text-xl font-black text-emerald" id="my-rank">#--</span>
                 </div>
             </header>
 
-            <div class="bg-white rounded-2xl border border-slate/10 shadow-lg overflow-hidden">
-                <div class="grid grid-cols-12 gap-4 p-6 bg-slate/5 border-b border-slate/10 text-xs font-bold tracking-widest uppercase text-slate/60">
-                    <div class="col-span-2 text-center">Rank</div>
-                    <div class="col-span-6">Scholar Alias</div>
-                    <div class="col-span-4 text-right pr-4">Total Mastery XP</div>
+            <div class="bg-white rounded-3xl border border-slate/10 shadow-lg overflow-hidden">
+                <div class="p-6 bg-slate/5 border-b border-slate/10 flex justify-between items-center">
+                    <h3 class="font-bold text-oxford">Top Scholars</h3>
+                    <span class="text-xs font-bold text-slate bg-white px-3 py-1 rounded-full border border-slate/20">Global Division</span>
                 </div>
                 
-                <div id="leaderboard-container" class="divide-y divide-slate/10">
-                    <div class="p-10 text-center text-slate animate-pulse font-medium">Compiling global matrix...</div>
+                <div class="divide-y divide-slate/10" id="leaderboard-container">
+                    <div class="p-8 text-center"><div class="w-8 h-8 border-4 border-emerald border-t-transparent rounded-full animate-spin mx-auto mb-4"></div><p class="text-slate font-medium text-sm">Synchronizing global network...</p></div>
                 </div>
             </div>
+            
         </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
     <script src="js/supabase-config.js"></script>
     <script src="js/auth-guard.js"></script>
+    
     <script>
         document.addEventListener('DOMContentLoaded', async () => {
             const container = document.getElementById('leaderboard-container');
+            const myRankEl = document.getElementById('my-rank');
             
-            async function ensureGhostsExist() {
-                const { count } = await window.supabaseClient.from('profiles').select('*', { count: 'exact', head: true }).eq('is_bot', true);
-                if (count < 10) {
-                    const ghostNames = ["Sarah_M", "David_99", "PretoriaScholar", "MathWiz21", "Newton_Ghost", "Einstein_Jr", "AlphaCentauri", "CapeTown_Brain", "LogicGate", "Euler101"];
-                    const ghostProfiles = ghostNames.map(name => ({
-                        id: uuidv4(),
-                        username: name,
-                        xp: Math.floor(Math.random() * 8000) + 1500,
-                        is_bot: true
-                    }));
-                    await window.supabaseClient.from('profiles').insert(ghostProfiles);
+            // 1. Generate the AI Scholar Roster
+            const aiScholars = [
+                { id: 'ai1', username: 'Chen Wei', school_name: 'Beijing No. 4 High School', xp: 14250, avatar_url: 'https://i.pravatar.cc/150?u=chen' },
+                { id: 'ai2', username: 'Sarah Jenkins', school_name: 'Eton College, UK', xp: 12100, avatar_url: 'https://i.pravatar.cc/150?u=sarah' },
+                { id: 'ai3', username: 'David Osei', school_name: 'Presec Legon, GH', xp: 10850, avatar_url: 'https://i.pravatar.cc/150?u=david' },
+                { id: 'ai4', username: 'Aisha Patel', school_name: 'Delhi Public School', xp: 9500, avatar_url: 'https://i.pravatar.cc/150?u=aisha' },
+                { id: 'ai5', username: 'Liam O\'Connor', school_name: 'Trinity College Dublin', xp: 8200, avatar_url: 'https://i.pravatar.cc/150?u=liam' },
+                { id: 'ai6', username: 'Miya Tanaka', school_name: 'Kyoto International', xp: 6400, avatar_url: 'https://i.pravatar.cc/150?u=miya' },
+                { id: 'ai7', username: 'James Holden', school_name: 'Stuyvesant High, USA', xp: 4100, avatar_url: 'https://i.pravatar.cc/150?u=james' }
+            ];
+
+            // 2. Fetch the Real User
+            let allScholars = [...aiScholars];
+            let currentUserId = null;
+
+            try {
+                const { data: { user } } = await window.supabaseClient.auth.getUser();
+                if (user) {
+                    currentUserId = user.id;
+                    const { data: profile } = await window.supabaseClient.from('profiles').select('*').eq('id', user.id).single();
+                    if (profile) {
+                        allScholars.push({
+                            id: profile.id,
+                            username: profile.username || 'You',
+                            school_name: profile.school_name || 'Independent Scholar',
+                            xp: profile.xp || 0,
+                            avatar_url: profile.avatar_url,
+                            isMe: true
+                        });
+                    }
                 }
+            } catch (err) {
+                console.error("Error fetching user for leaderboard", err);
             }
 
-            async function loadLeaderboard() {
-                await ensureGhostsExist();
+            // 3. Sort by XP (Highest to Lowest)
+            allScholars.sort((a, b) => b.xp - a.xp);
 
-                const { data: { user } } = await window.supabaseClient.auth.getUser();
-                const { data: players } = await window.supabaseClient.from('profiles').select('*').order('xp', { ascending: false }).limit(50);
+            // 4. Render the UI
+            container.innerHTML = '';
+            
+            allScholars.forEach((scholar, index) => {
+                const rank = index + 1;
+                
+                // Update header if it's the current user
+                if (scholar.isMe) {
+                    myRankEl.textContent = `#${rank}`;
+                }
 
-                container.innerHTML = '';
+                // Visual styling for Top 3
+                let rankBadge = `<span class="w-8 h-8 rounded-full bg-slate/10 text-slate font-bold flex items-center justify-center text-sm">${rank}</span>`;
+                if (rank === 1) rankBadge = `<span class="w-8 h-8 rounded-full bg-gold/20 text-gold font-black flex items-center justify-center text-sm ring-2 ring-gold/50 shadow-sm">1</span>`;
+                if (rank === 2) rankBadge = `<span class="w-8 h-8 rounded-full bg-slate-300 text-slate-700 font-black flex items-center justify-center text-sm shadow-sm">2</span>`;
+                if (rank === 3) rankBadge = `<span class="w-8 h-8 rounded-full bg-orange-200 text-orange-800 font-black flex items-center justify-center text-sm shadow-sm">3</span>`;
 
-                players.forEach((player, index) => {
-                    const rank = index + 1;
-                    const isMe = player.id === user.id;
-                    
-                    let rankVisual = `<span class="text-lg font-bold text-slate/40">${rank}</span>`;
-                    if (rank === 1) rankVisual = `<span class="text-xl font-black text-gold">1st</span>`;
-                    if (rank === 2) rankVisual = `<span class="text-xl font-black text-silver">2nd</span>`;
-                    if (rank === 3) rankVisual = `<span class="text-xl font-black text-bronze">3rd</span>`;
+                const rowClass = scholar.isMe ? "p-4 flex items-center justify-between hover:bg-slate/5 transition-colors bg-emerald/5 border-l-4 border-emerald" : "p-4 flex items-center justify-between hover:bg-slate/5 transition-colors";
 
-                    const avatarHTML = player.avatar_url 
-                        ? `<img src="${player.avatar_url}" class="w-10 h-10 rounded-full object-cover">`
-                        : `<div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white ${isMe ? 'bg-emerald' : 'bg-oxford/20 text-oxford'}">${player.username ? player.username.charAt(0).toUpperCase() : '?'}</div>`;
+                const avatarHTML = scholar.avatar_url 
+                    ? `<img src="${scholar.avatar_url}" class="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm">`
+                    : `<div class="w-12 h-12 rounded-full bg-slate/10 flex items-center justify-center text-slate font-bold border-2 border-white shadow-sm">${scholar.username.charAt(0).toUpperCase()}</div>`;
 
-                    container.innerHTML += `
-                        <div class="grid grid-cols-12 gap-4 p-6 items-center transition-all hover:bg-slate/5 ${isMe ? 'bg-emerald/5 border-l-4 border-emerald' : ''}">
-                            <div class="col-span-2 text-center">${rankVisual}</div>
-                            <div class="col-span-6 flex items-center space-x-4">
-                                ${avatarHTML}
-                                <span class="font-bold ${isMe ? 'text-emerald' : 'text-oxford'} text-lg">
-                                    ${player.username || 'Anonymous'} ${isMe ? '(You)' : ''}
-                                </span>
-                            </div>
-                            <div class="col-span-4 text-right pr-4 font-black text-emerald text-xl tracking-wide">
-                                ${player.xp.toLocaleString()} XP
+                // Calculate Level from XP
+                const levelThresholds = [0, 500, 1500, 3000, 5000, 7500, 10000];
+                let level = 1;
+                for (let i = 0; i < levelThresholds.length; i++) {
+                    if (scholar.xp >= levelThresholds[i]) level = i + 1;
+                }
+
+                container.innerHTML += `
+                    <div class="${rowClass}">
+                        <div class="flex items-center space-x-4">
+                            ${rankBadge}
+                            ${avatarHTML}
+                            <div>
+                                <h4 class="font-bold ${scholar.isMe ? 'text-emerald' : 'text-oxford'} text-base">${scholar.username} ${scholar.isMe ? '(You)' : ''}</h4>
+                                <p class="text-xs text-slate">${scholar.school_name}</p>
                             </div>
                         </div>
-                    `;
-                });
-            }
-            loadLeaderboard();
+                        <div class="text-right flex flex-col items-end">
+                            <span class="font-black text-oxford">${scholar.xp} <span class="text-xs text-slate font-medium">XP</span></span>
+                            <span class="text-[10px] font-bold tracking-widest uppercase text-emerald bg-emerald/10 px-2 py-0.5 rounded mt-1">Lvl ${level}</span>
+                        </div>
+                    </div>
+                `;
+            });
         });
     </script>
 </body>
