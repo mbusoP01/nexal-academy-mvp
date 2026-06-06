@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library | Nexal Academy</title>
+    <title>Course Library | Nexal Academy</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { theme: { extend: { colors: { oxford: '#002147', slate: '#475569', ivory: '#FDFBF7', emerald: '#2E8B57' } } } }</script>
-    <style>body { background-color: #FDFBF7; background-image: linear-gradient(to right, rgba(71, 85, 105, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(71, 85, 105, 0.05) 1px, transparent 1px); background-size: 40px 40px; } ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: transparent; } ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }</style>
+    <script>tailwind.config = { theme: { extend: { colors: { oxford: '#002147', slate: '#475569', ivory: '#FDFBF7', emerald: '#2E8B57', gold: '#DAA520' } } } }</script>
+    <style>
+        body { background-color: #FDFBF7; background-image: linear-gradient(to right, rgba(71, 85, 105, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(71, 85, 105, 0.05) 1px, transparent 1px); background-size: 40px 40px; }
+        ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: transparent; } ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    </style>
 </head>
 <body class="font-sans text-slate antialiased h-screen flex overflow-hidden">
 
-    <aside class="w-64 bg-oxford text-white/80 flex flex-col h-full shadow-2xl z-20 hidden md:flex">
+    <aside class="w-64 bg-oxford text-white/80 flex flex-col h-full shadow-2xl z-20 hidden md:flex relative">
         <div class="p-8 border-b border-white/10">
             <span class="text-[10px] font-bold tracking-widest uppercase text-emerald">Global Standard</span>
             <h2 class="text-2xl font-serif font-black text-white mt-1 tracking-tight">Nexal Academy.</h2>
         </div>
-        
-        <nav class="flex-1 p-6 space-y-3 overflow-y-auto">
+        <nav id="sidebar-nav" class="flex-1 p-6 space-y-3 overflow-y-auto">
             <p class="text-xs font-bold tracking-widest uppercase text-white/40 mb-4 ml-2">Learning Hub</p>
-            <a href="dashboard.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 text-white/70 hover:text-white transition-all">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+            <a href="dashboard.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
                 <span>Dashboard</span>
             </a>
             <a href="library.html" class="flex items-center space-x-3 p-3 rounded-xl bg-white text-oxford font-medium shadow-sm transition-all">
@@ -29,39 +31,45 @@
             </a>
 
             <p class="text-xs font-bold tracking-widest uppercase text-white/40 mb-4 mt-8 ml-2">The Arena</p>
-            <a href="leaderboard.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 text-white/70 hover:text-white transition-all">
+            <a href="leaderboard.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                 <span>Leaderboard</span>
             </a>
-            <a href="challenges.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 text-white/70 hover:text-white transition-all">
+            <a href="challenges.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                 <span>Active Challenges</span>
             </a>
+            
+            <div id="admin-link-container"></div>
         </nav>
-
         <div class="p-6 border-t border-white/10 bg-black/10">
-            <a href="settings.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 text-white/70 hover:text-white transition-all">
+            <a href="settings.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                 <span>Settings</span>
             </a>
         </div>
     </aside>
 
-    <header class="md:hidden w-full bg-oxford text-white p-4 flex justify-between items-center absolute top-0 z-30">
-        <span class="font-serif font-black">Nexal Academy.</span>
-        <div class="space-x-4 text-sm"><a href="dashboard.html">Hub</a><a href="library.html">Library</a><a href="settings.html">Menu</a></div>
+    <header class="md:hidden w-full bg-oxford text-white p-4 flex justify-between items-center absolute top-0 z-30 shadow-md">
+        <span class="font-serif font-black tracking-tight">Nexal Academy.</span>
+        <div class="space-x-4 text-sm font-medium"><a href="dashboard.html">Dashboard</a><a href="settings.html">Settings</a></div>
     </header>
 
-    <main class="flex-1 h-full overflow-y-auto p-8 pt-20 md:pt-12 md:p-16 relative">
+    <main class="flex-1 h-full overflow-y-auto p-6 pt-24 md:pt-10 md:p-12 relative z-10">
         <div class="max-w-6xl mx-auto">
+            
             <header class="mb-12">
-                <span class="px-4 py-1 bg-oxford/5 text-oxford text-xs font-bold tracking-widest rounded-full uppercase">Global Curriculum Directory</span>
-                <h1 class="text-4xl font-serif font-bold text-oxford mt-6">Available Subjects</h1>
-                <p class="text-slate mt-3 text-lg">Integrate international standard modules into your dashboard.</p>
+                <h1 class="text-4xl font-serif font-black text-oxford">Global Master Library</h1>
+                <p class="text-slate mt-2 text-lg">Access the complete, internationally benchmarked curriculum matrix.</p>
             </header>
-            <div id="library-modules" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div id="library-loading" class="col-span-full text-center py-20 text-slate animate-pulse">Accessing central database...</div>
+
+            <div id="full-library-container" class="space-y-12">
+                <div class="text-center py-12">
+                    <div class="w-8 h-8 border-4 border-emerald border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                    <p class="text-slate font-medium">Downloading academic matrix...</p>
+                </div>
             </div>
+
         </div>
     </main>
 
@@ -69,45 +77,71 @@
     <script src="js/supabase-config.js"></script>
     <script src="js/auth-guard.js"></script>
     <script src="js/curriculum.js"></script>
+    
     <script>
-        async function initializeCatalog() {
-            const catalogContainer = document.getElementById('library-modules');
-            try {
-                const { data: { user } } = await window.supabaseClient.auth.getUser();
-                const { data: enrollments } = await window.supabaseClient.from('user_enrollments').select('subject_id').eq('user_id', user.id);
-                const enrolledIds = enrollments.map(e => e.subject_id.toString());
+        document.addEventListener('DOMContentLoaded', async () => {
+            const { data: { user } } = await window.supabaseClient.auth.getUser();
+            if (!user) return;
+
+            const { data: profile } = await window.supabaseClient.from('profiles').select('is_admin').eq('id', user.id).single();
+            if (profile && profile.is_admin) {
+                document.getElementById('admin-link-container').innerHTML = `
+                    <p class="text-xs font-bold tracking-widest uppercase text-red-500 mb-4 mt-8 ml-2">Classified Access</p>
+                    <a href="admin-hub.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-red-500/10 text-red-600 font-bold transition-all shadow-sm">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        <span>System Overlord</span>
+                    </a>
+                `;
+            }
+
+            const container = document.getElementById('full-library-container');
+            container.innerHTML = ''; 
+
+            if (!window.NEXAL_CURRICULUM) {
+                container.innerHTML = `<p class="text-red-500 font-bold">Error: Curriculum Matrix Offline. Check network.</p>`;
+                return;
+            }
+
+            // Loop through all subjects in the curriculum
+            Object.keys(window.NEXAL_CURRICULUM).forEach(subjectId => {
+                const subject = window.NEXAL_CURRICULUM[subjectId];
                 
-                document.getElementById('library-loading').classList.add('hidden');
-
-                Object.values(NEXAL_CURRICULUM).forEach(subject => {
-                    const isEnrolled = enrolledIds.includes(subject.id.toString());
-                    catalogContainer.innerHTML += `
-                        <div class="bg-white p-8 rounded-2xl border border-slate/10 shadow-lg flex flex-col justify-between h-72 transition-all hover:-translate-y-1 hover:shadow-xl">
-                            <div>
-                                <span class="text-[10px] font-bold tracking-widest text-${subject.color} uppercase mb-3 block border-b border-slate/5 pb-2">${subject.badge}</span>
-                                <h3 class="text-2xl font-serif font-bold text-oxford leading-tight">${subject.title}</h3>
-                                <p class="text-slate text-sm mt-3 line-clamp-3 leading-relaxed">${subject.description}</p>
+                const section = document.createElement('section');
+                section.className = "bg-white rounded-3xl p-8 border border-slate/10 shadow-sm";
+                
+                let modulesHTML = '';
+                subject.syllabus.forEach(chapter => {
+                    chapter.modules.forEach(mod => {
+                        // THE FIX: Route specifically to study-hall.html
+                        modulesHTML += `
+                            <div onclick="window.location.href='study-hall.html?subject=${subjectId}&module=${mod.id}&name=${encodeURIComponent(mod.name)}'" class="group p-5 rounded-2xl border-2 border-slate/10 hover:border-${subject.color || 'emerald'} hover:bg-${subject.color || 'emerald'}/5 transition-all cursor-pointer shadow-sm hover:shadow-md flex items-center justify-between bg-white">
+                                <div>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate/50 mb-1 block">${chapter.title}</span>
+                                    <h4 class="font-bold text-oxford text-lg group-hover:text-${subject.color || 'emerald'} transition-colors">${mod.name}</h4>
+                                </div>
+                                <div class="w-10 h-10 rounded-full bg-slate/5 flex items-center justify-center group-hover:bg-${subject.color || 'emerald'}/10 transition-colors">
+                                    <svg class="w-5 h-5 text-slate/40 group-hover:text-${subject.color || 'emerald'}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                </div>
                             </div>
-                            <button id="btn-${subject.id}" onclick="executeEnrollment(${subject.id})" ${isEnrolled ? 'disabled' : ''} class="w-full mt-6 py-3 rounded-xl font-bold tracking-wide text-center transition-all ${isEnrolled ? 'bg-slate/10 text-slate/40 cursor-not-allowed border border-slate/20' : 'bg-oxford text-white hover:bg-oxford/90 shadow-md'}">
-                                ${isEnrolled ? 'Integrated ✓' : 'Add to Dashboard +'}
-                            </button>
-                        </div>
-                    `;
+                        `;
+                    });
                 });
-            } catch (err) { console.error(err); }
-        }
 
-        async function executeEnrollment(subjectId) {
-            const button = document.getElementById(`btn-${subjectId}`);
-            button.disabled = true; button.innerText = "Syncing...";
-            try {
-                const { data: { user } } = await window.supabaseClient.auth.getUser();
-                await window.supabaseClient.from('user_enrollments').insert([{ user_id: user.id, subject_id: subjectId }]);
-                button.innerText = "Success ✓";
-                setTimeout(() => { window.location.href = 'dashboard.html'; }, 600);
-            } catch (err) { alert("Enrollment failed."); button.disabled = false; button.innerText = "Add to Dashboard +"; }
-        }
-        document.addEventListener('DOMContentLoaded', initializeCatalog);
+                section.innerHTML = `
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-8 border-b border-slate/10 pb-6 gap-4">
+                        <div class="flex items-center space-x-4">
+                            <span class="px-3 py-1 bg-${subject.color || 'emerald'}/10 text-${subject.color || 'emerald'} text-xs font-black tracking-widest rounded-full uppercase">${subject.badge || 'Core'}</span>
+                            <h3 class="text-2xl font-serif font-black text-oxford">${subject.title}</h3>
+                        </div>
+                        <p class="text-sm text-slate md:w-1/2">${subject.description}</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        ${modulesHTML}
+                    </div>
+                `;
+                container.appendChild(section);
+            });
+        });
     </script>
 </body>
 </html>
