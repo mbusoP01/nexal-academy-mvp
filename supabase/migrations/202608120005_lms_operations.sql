@@ -110,6 +110,7 @@ revoke all on function public.admin_archive_class(uuid) from public,anon,authent
 revoke all on function public.teacher_create_assignment(uuid,text,text,text,text,timestamptz,boolean) from public,anon,authenticated;
 revoke all on function public.teacher_create_class_announcement(uuid,text,text,text,text,timestamptz,timestamptz) from public,anon,authenticated;
 revoke all on function public.admin_add_trusted_teacher(text) from public,anon,authenticated;
+revoke all on function public.admin_create_announcement(text,text,text,text,smallint,text,text,timestamptz,timestamptz,boolean,uuid) from public,anon,authenticated;
 grant execute on function public.admin_create_class(text,smallint,smallint,text) to authenticated;
 grant execute on function public.admin_add_class_member(uuid,uuid) to authenticated;
 grant execute on function public.admin_assign_teacher(uuid,uuid,text) to authenticated;
@@ -117,6 +118,7 @@ grant execute on function public.admin_archive_class(uuid) to authenticated;
 grant execute on function public.teacher_create_assignment(uuid,text,text,text,text,timestamptz,boolean) to authenticated;
 grant execute on function public.teacher_create_class_announcement(uuid,text,text,text,text,timestamptz,timestamptz) to authenticated;
 grant execute on function public.admin_add_trusted_teacher(text) to authenticated;
+grant execute on function public.admin_create_announcement(text,text,text,text,smallint,text,text,timestamptz,timestamptz,boolean,uuid) to authenticated;
 
 drop policy if exists "learners read targeted active announcements" on public.announcements;
 create policy "learners read targeted active announcements" on public.announcements for select to authenticated using (
