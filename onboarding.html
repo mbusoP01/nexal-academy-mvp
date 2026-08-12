@@ -85,6 +85,7 @@
                     <div>
                         <label class="block text-xs font-bold tracking-widest uppercase text-slate/70 mb-2">Grade</label>
                         <select id="input-grade" class="w-full bg-slate/5 border border-slate/20 rounded-xl px-4 py-3 text-oxford font-medium focus:border-emerald focus:outline-none">
+                            <option value="10">Grade 10</option>
                             <option value="11">Grade 11</option>
                             <option value="12">Grade 12 (Matric)</option>
                         </select>
@@ -93,7 +94,8 @@
 
                 <div>
                     <label class="block text-xs font-bold tracking-widest uppercase text-slate/70 mb-2">Profile Image (Optional)</label>
-                    <input type="file" id="input-avatar" accept="image/*" class="w-full text-sm text-slate file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-emerald/10 file:text-emerald hover:file:bg-emerald/20 transition-all cursor-pointer">
+                    <input type="file" id="input-avatar" accept="image/jpeg,image/png,image/webp" class="w-full text-sm text-slate file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-emerald/10 file:text-emerald hover:file:bg-emerald/20 transition-all cursor-pointer">
+                    <p id="avatar-warning" class="text-xs font-medium text-amber-600 mt-2 hidden"></p>
                 </div>
 
                 <button type="submit" id="submit-btn" class="w-full mt-8 bg-oxford text-white py-4 rounded-xl font-bold tracking-wide hover:bg-oxford/90 shadow-lg transition-all">
@@ -111,16 +113,19 @@
         let currentUser = null;
 
         document.addEventListener('DOMContentLoaded', async () => {
-            const { data: { user } } = await window.supabaseClient.auth.getUser();
-            if (!user) window.location.replace('login.html');
+            const { data: { user }, error } = await window.supabaseClient.auth.getUser();
+            if (error || !user) {
+                window.location.replace('login.html');
+                return;
+            }
             currentUser = user;
-            document.getElementById('input-email').value = user.email;
+            document.getElementById('input-email').value = user.email || '';
 
             const countrySelect = document.getElementById('input-country');
             const phoneInput = document.getElementById('input-phone');
             countrySelect.addEventListener('change', (e) => {
                 const prefix = e.target.options[e.target.selectedIndex].dataset.code;
-                phoneInput.value = prefix + " ";
+                phoneInput.value = prefix + ' ';
             });
         });
 
@@ -129,7 +134,7 @@
             document.getElementById('role-selection').classList.add('hidden');
             document.getElementById('profile-form').classList.remove('hidden');
             document.getElementById('selected-role-badge').textContent = role;
-            
+
             if (role === 'student') {
                 document.getElementById('student-fields').classList.remove('hidden');
             } else {
@@ -150,51 +155,86 @@
             e.preventDefault();
             const btn = document.getElementById('submit-btn');
             const errorMsg = document.getElementById('error-msg');
-            btn.disabled = true; btn.textContent = "Saving Profile..."; errorMsg.classList.add('hidden');
+            const avatarWarning = document.getElementById('avatar-warning');
+            btn.disabled = true;
+            btn.textContent = 'Saving Profile...';
+            errorMsg.classList.add('hidden');
+            avatarWarning.classList.add('hidden');
 
             try {
+                if (!currentUser?.id) throw new Error('Your session is no longer available. Please sign in again.');
+
                 const avatarFile = document.getElementById('input-avatar').files[0];
                 let avatarUrl = null;
+
                 if (avatarFile) {
-                    const fileExt = avatarFile.name.split('.').pop();
-                    const fileName = `${currentUser.id}.${fileExt}`;
-                    const { data: uploadData, error: uploadError } = await window.supabaseClient.storage
+                    const allowedTypes = new Set(['image/jpeg', 'image/png', 'image/webp']);
+                    if (!allowedTypes.has(avatarFile.type)) {
+                        throw new Error('Please choose a JPG, PNG, or WebP profile image.');
+                    }
+
+                    const extFromMime = {
+                        'image/jpeg': 'jpg',
+                        'image/png': 'png',
+                        'image/webp': 'webp'
+                    };
+                    const fileExt = extFromMime[avatarFile.type];
+                    const fileName = `${currentUser.id}/avatar.${fileExt}`;
+
+                    const { error: uploadError } = await window.supabaseClient.storage
                         .from('avatars')
-                        .upload(fileName, avatarFile, { upsert: true });
-                    if (uploadError) throw uploadError;
-                    const { data: { publicUrl } } = window.supabaseClient.storage.from('avatars').getPublicUrl(fileName);
-                    avatarUrl = publicUrl;
+                        .upload(fileName, avatarFile, {
+                            upsert: true,
+                            contentType: avatarFile.type,
+                            cacheControl: '3600'
+                        });
+
+                    if (uploadError) {
+                        console.error('Avatar upload failed:', uploadError);
+                        avatarWarning.textContent = 'Your profile photo could not be uploaded. Your profile will still be created and you can add a photo later.';
+                        avatarWarning.classList.remove('hidden');
+                    } else {
+                        const { data: { publicUrl } } = window.supabaseClient.storage
+                            .from('avatars')
+                            .getPublicUrl(fileName);
+                        avatarUrl = publicUrl;
+                    }
                 }
 
-                // Prepare Data Payload
                 const payload = {
                     id: currentUser.id,
                     role: currentRole,
                     username: document.getElementById('input-username').value.trim(),
+                    email: currentUser.email || null,
                     country: document.getElementById('input-country').value,
                     phone: document.getElementById('input-phone').value.trim(),
-                    school_name: document.getElementById('input-school').value.trim() || 'Independent Scholar', // Added School
+                    school_name: document.getElementById('input-school').value.trim() || 'Independent Scholar',
                     avatar_url: avatarUrl
                 };
 
                 if (currentRole === 'student') {
-                    payload.age = document.getElementById('input-age').value;
+                    payload.age = Number(document.getElementById('input-age').value) || null;
                     payload.grade = document.getElementById('input-grade').value;
                     payload.teacher_code = generateTeacherCode();
                 }
 
-                const { error: dbError } = await window.supabaseClient.from('profiles').upsert(payload);
+                const { error: dbError } = await window.supabaseClient
+                    .from('profiles')
+                    .upsert(payload, { onConflict: 'id' });
+
                 if (dbError) {
-                    if(dbError.message.includes('unique constraint')) throw new Error("Username is already taken.");
+                    if (dbError.message.includes('unique constraint')) throw new Error('Username is already taken.');
                     throw dbError;
                 }
 
                 if (currentRole === 'teacher') window.location.replace('teacher-hub.html');
                 else window.location.replace('dashboard.html');
-
             } catch (err) {
-                errorMsg.textContent = err.message; errorMsg.classList.remove('hidden');
-                btn.disabled = false; btn.textContent = "Initialize Profile";
+                console.error('Onboarding failed:', err);
+                errorMsg.textContent = err?.message || 'We could not finish creating your profile. Please try again.';
+                errorMsg.classList.remove('hidden');
+                btn.disabled = false;
+                btn.textContent = 'Initialize Profile';
             }
         });
     </script>
