@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const sql = fs.readFileSync(path.join(root, 'supabase/migrations/202608120005_lms_operations.sql'), 'utf8');
+const teacher = fs.readFileSync(path.join(root, 'teacher-hub.html'), 'utf8');
+const assignments = fs.readFileSync(path.join(root, 'assignments.html'), 'utf8');
+const admin = fs.readFileSync(path.join(root, 'admin-hub.html'), 'utf8');
+for (const token of ['classes', 'class_memberships', 'teacher_class_assignments', 'assignments', 'assignment_submissions', 'enable row level security', 'teacher_create_assignment', 'teacher_create_class_announcement', 'admin_add_trusted_teacher', 'grade does not match class', 'teacher authority required']) assert.match(sql, new RegExp(token, 'i'));
+assert.match(teacher, /teacher_class_assignments/);
+assert.match(teacher, /teacher_create_assignment/);
+assert.match(assignments, /from\('assignments'\)/);
+assert.match(assignments, /textContent/);
+assert.match(admin, /admin_create_class/);
+assert.match(admin, /admin_assign_teacher/);
+console.log('LMS operations security/UI tests passed');

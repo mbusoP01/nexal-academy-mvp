@@ -23,5 +23,6 @@
     ,"test:lms": "node tests/lms.test.mjs"
     ,"test:premium-ui": "node tests/premium-ui.test.mjs"
     ,"test:announcements": "node tests/announcements.test.mjs"
+    ,"test:operations": "node tests/operations.test.mjs"
   }
 }
