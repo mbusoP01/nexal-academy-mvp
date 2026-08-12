@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Completing sign in | Nexal Pathway</title><link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml"><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="js/supabase-config.js"></script></head>
+<body style="font-family:Inter,Arial,sans-serif;background:#fdfbf7;color:#002147;display:grid;place-items:center;min-height:100vh"><main aria-live="polite" style="text-align:center;padding:2rem"><h1>Completing sign in…</h1><p id="callback-status">Confirming your secure session.</p></main>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  const status = document.getElementById('callback-status');
+  try {
+    if (!window.supabaseClient) throw new Error('Authentication client unavailable.');
+    const { data: { session }, error } = await window.supabaseClient.auth.getSession();
+    if (error || !session) throw error || new Error('No session was returned by Google.');
+    const next = sessionStorage.getItem('nexal-auth-next') || '/dashboard.html';
+    sessionStorage.removeItem('nexal-auth-next');
+    window.location.replace(next.startsWith('/') && !next.startsWith('//') ? next : '/dashboard.html');
+  } catch (error) {
+    status.textContent = error.message || 'Sign-in could not be completed. Return to the sign-in page and try again.';
+    setTimeout(() => window.location.replace('login.html'), 3500);
+  }
+});
+</script></body></html>

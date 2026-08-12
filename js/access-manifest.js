@@ -1,0 +1,1 @@
+fetch('content/access-manifest.json').then(response => response.ok ? response.json() : null).then(manifest => { window.NEXAL_ACCESS_MANIFEST = manifest || { modules: {} }; }).catch(() => { window.NEXAL_ACCESS_MANIFEST = { modules: {} }; });

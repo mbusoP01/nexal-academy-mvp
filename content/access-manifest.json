@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "policy": "Catalog metadata and intentional previews are public; full Premium bodies require protected delivery before paid launch.",
+  "showcaseLessons": ["quadratics", "kinematics", "dna_rna"],
+  "modules": {
+    "quadratics": "free_full",
+    "kinematics": "free_full",
+    "dna_rna": "free_full",
+    "inequalities": "free_preview",
+    "limits": "free_preview",
+    "functions": "free_preview",
+    "trigonometry": "free_preview",
+    "newton": "free_preview",
+    "energy": "free_preview",
+    "chemical-reactions": "free_preview",
+    "genetics": "free_preview",
+    "ecology": "free_preview"
+  }
+}

@@ -12,7 +12,9 @@
     "project1:next": "node scripts/project1-next-batch.mjs",
     "validate:curriculum": "node scripts/validate-curriculum.mjs",
     "validate:assessments": "node scripts/validate-assessments.mjs",
-    "validate:calculations": "node scripts/validate-calculations.mjs"
-    ,"validate:batches": "node scripts/validate-batches.mjs"
+    "validate:calculations": "node scripts/validate-calculations.mjs",
+    "validate:batches": "node scripts/validate-batches.mjs",
+    "video:audit": "node scripts/video-audit.mjs",
+    "test:commercial": "node tests/commercialization.test.mjs"
   }
 }
