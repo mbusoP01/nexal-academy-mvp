@@ -42,10 +42,20 @@ create policy "learners read targeted active announcements"
       or (audience_type = 'GRADE_12' and grade = 12 and exists (select 1 from public.profiles p where p.id = (select auth.uid()) and p.grade = 12))
       or (audience_type = 'FREE' and plan = 'FREE' and not exists (select 1 from public.entitlements e where e.user_id = (select auth.uid()) and e.tier = 'PREMIUM' and e.status = 'active'))
       or (audience_type = 'PREMIUM' and plan = 'PREMIUM' and exists (select 1 from public.entitlements e where e.user_id = (select auth.uid()) and e.tier = 'PREMIUM' and e.status = 'active'))
-      or (audience_type = 'SUBJECT' and exists (select 1 from public.profiles p where p.id = (select auth.uid())))
+      or (
+        audience_type = 'SUBJECT'
+        and subject in ('mathematics','physical-sciences','life-sciences')
+        and exists (
+          select 1
+          from public.profiles p
+          where p.id = (select auth.uid())
+            and p.grade in (10,11,12)
+        )
+      )
     )
   );
 
 -- Management is intentionally restricted to server-side/admin tooling. No client role can write rows.
-revoke insert, update, delete on public.announcements from anon, authenticated;
+revoke all on public.announcements from anon;
+revoke insert, update, delete, truncate, references, trigger on public.announcements from authenticated;
 grant select on public.announcements to authenticated;
