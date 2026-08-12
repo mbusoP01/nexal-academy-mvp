@@ -232,6 +232,8 @@ Object.entries(v1Extensions).forEach(([subjectId, modules]) => {
   const subject = NEXAL_CURRICULUM[subjectId];
   if (subject) {
     modules.forEach(module => {
+      const diagramMap = { quadratics: 'content/diagrams/quadratic-parabola.svg', functions: 'content/diagrams/quadratic-parabola.svg', newton: 'content/diagrams/newton-free-body.svg', dna_rna: 'content/diagrams/dna-base-pairing.svg', genetics: 'content/diagrams/dna-base-pairing.svg' };
+      if (diagramMap[module.id]) module.diagram = diagramMap[module.id];
       if (!module.video_id) {
         module.video_status = 'SCRIPT_READY';
         module.video_script = {
@@ -244,5 +246,7 @@ Object.entries(v1Extensions).forEach(([subjectId, modules]) => {
     subject.syllabus.push({ title: 'V1 Core Topics', modules });
   }
 });
+const diagramMap = { quadratics: 'content/diagrams/quadratic-parabola.svg', functions: 'content/diagrams/quadratic-parabola.svg', newton: 'content/diagrams/newton-free-body.svg', dna_rna: 'content/diagrams/dna-base-pairing.svg', genetics: 'content/diagrams/dna-base-pairing.svg' };
+Object.values(NEXAL_CURRICULUM).forEach(subject => subject.syllabus.forEach(chapter => chapter.modules.forEach(module => { if (diagramMap[module.id]) module.diagram = diagramMap[module.id]; })));
 
 window.NEXAL_CURRICULUM = NEXAL_CURRICULUM;

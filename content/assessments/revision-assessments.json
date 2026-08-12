@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "label": "Nexal Academy Revision Assessments",
+  "note": "Original formative revision blueprints; not official DBE examination papers.",
+  "assessments": [
+    {"id":"revision-mathematics-foundation","subject":"mathematics","grade":"10-12","term":"foundation","title":"Mathematics Foundation Revision Assessment","marks":15,"questionRefs":["quadratics-q1","quadratics-q2","quadratics-q3","functions-q1","functions-q2","functions-q3","trigonometry-q1","trigonometry-q2","trigonometry-q3"],"memo":"Use the linked topic-quiz explanations as the marking memo."},
+    {"id":"revision-physical-sciences-foundation","subject":"physical-sciences","grade":"10-12","term":"foundation","title":"Physical Sciences Foundation Revision Assessment","marks":15,"questionRefs":["kinematics-q1","kinematics-q2","kinematics-q3","newton-q1","newton-q2","newton-q3","energy-q1","energy-q2","energy-q3","chemical-reactions-q1","chemical-reactions-q2","chemical-reactions-q3"],"memo":"Use the linked topic-quiz explanations as the marking memo."},
+    {"id":"revision-life-sciences-foundation","subject":"life-sciences","grade":"10-12","term":"foundation","title":"Life Sciences Foundation Revision Assessment","marks":15,"questionRefs":["dna_rna-q1","dna_rna-q2","dna_rna-q3","genetics-q1","genetics-q2","genetics-q3","ecology-q1","ecology-q2","ecology-q3"],"memo":"Use the linked topic-quiz explanations as the marking memo."}
+  ]
+}

@@ -37,7 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let questionNumber = 1;
     const MAX_QUESTIONS = 5;
     let currentSessionXP = 0;
-    const DUEL_BONUS = 250; 
+    const DUEL_BONUS = 250;
+    let curriculumPracticeIndex = 0;
 
     // ==========================================
     // 2. YOUTUBE THEORY VAULT LOGIC
@@ -121,7 +122,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } else {
             // Normal Dashboard Flow
-            if (subjectId === "1" && window.NexalMathEngine) {
+            // Prefer authored curriculum questions whenever a lesson has them.
+            // This keeps the practice surface aligned with the textbook instead
+            // of silently falling back to a generated question for newer modules.
+            let authoredModule = null;
+            const authoredSubject = subjectId && window.NEXAL_CURRICULUM
+                ? window.NEXAL_CURRICULUM[subjectId]
+                : null;
+            if (authoredSubject) {
+                for (const chapter of authoredSubject.syllabus || []) {
+                    authoredModule = (chapter.modules || []).find((candidate) => candidate.id === moduleId);
+                    if (authoredModule) break;
+                }
+            }
+            if (authoredModule && Array.isArray(authoredModule.practice) && authoredModule.practice.length) {
+                const practice = authoredModule.practice[curriculumPracticeIndex % authoredModule.practice.length];
+                curriculumPracticeIndex += 1;
+                const distractors = Array.isArray(practice.distractors) && practice.distractors.length
+                    ? practice.distractors
+                    : ['Review the definition and try again.', 'Check each step against the worked example.', 'Use the stated units and assumptions.']
+                        .filter((choice) => choice !== practice.answer);
+                qData = {
+                    question: practice.question,
+                    correct: String(practice.answer),
+                    distractors: distractors.map(String),
+                    displayType: 'text'
+                };
+            } else if (subjectId === "1" && window.NexalMathEngine) {
                 qData = window.NexalMathEngine.generate(moduleId);
             } else if (subjectId === "2" && window.NexalPhysicsEngine) {
                 qData = window.NexalPhysicsEngine.generate(moduleId);

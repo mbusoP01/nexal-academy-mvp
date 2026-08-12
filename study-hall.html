@@ -54,6 +54,7 @@
                 <!-- Quality content injected here by JS -->
                 <p>Retrieving academic records...</p>
             </div>
+            <div id="visual-content" class="mt-8" aria-live="polite"></div>
             <section class="mt-10 border-t border-slate/10 pt-8">
                 <h2 class="text-2xl font-serif font-bold text-oxford mb-4">Check your understanding</h2>
                 <div id="practice-content"><p class="text-slate text-sm">Practice questions for this lesson will appear here when available.</p></div>
@@ -89,6 +90,7 @@
             const videoSection = document.getElementById('video-section');
             const theoryContent = document.getElementById('theory-content');
             const practiceContent = document.getElementById('practice-content');
+            const visualContent = document.getElementById('visual-content');
             const completeButton = document.getElementById('complete-lesson-btn');
             const completionFeedback = document.getElementById('completion-feedback');
 
@@ -111,6 +113,7 @@
                         if (mod) {
                             if (mod.video_id) videoId = mod.video_id;
                             if (mod.theory) theoryText = mod.theory;
+                            if (visualContent && mod.diagram) visualContent.innerHTML = `<img src="${mod.diagram}" alt="Educational diagram for ${mod.name}" class="mx-auto w-full max-w-2xl rounded-xl border border-slate/10" loading="lazy">`;
                             if (practiceContent && mod.practice?.length) {
                                 practiceContent.innerHTML = mod.practice.map((item, index) => `<article class="bg-slate/5 rounded-xl p-5 mb-3"><p class="font-bold text-oxford">${index + 1}. ${item.question}</p><details class="mt-3"><summary class="cursor-pointer text-emerald font-bold text-sm">Reveal answer and explanation</summary><p class="mt-2 font-semibold">Answer: ${item.answer}</p><p class="mt-1 text-sm text-slate">${item.explanation}</p></details></article>`).join('');
                             }
