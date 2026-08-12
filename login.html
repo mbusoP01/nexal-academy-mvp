@@ -12,28 +12,22 @@
 </head>
 <body class="font-sans text-slate antialiased min-h-screen flex items-center justify-center p-4">
 
-    <!-- Back to Home -->
     <a href="index.html" class="absolute top-8 left-8 text-sm font-bold text-slate hover:text-oxford flex items-center transition-colors">
         <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-        Return to Academy
+        Return to Pathway
     </a>
 
-    <!-- Login Card -->
     <div class="max-w-md w-full bg-white rounded-3xl shadow-2xl border border-slate/10 overflow-hidden">
-        
-        <!-- Header -->
         <div class="bg-oxford p-10 text-center text-white relative overflow-hidden">
             <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 20px 20px;"></div>
-            <span class="text-[10px] font-bold tracking-widest uppercase text-emerald block mb-2 relative z-10">Secure Gateway</span>
+            <span class="text-[10px] font-bold tracking-widest uppercase text-emerald block mb-2 relative z-10">Secure sign in</span>
             <h1 class="text-3xl font-serif font-black relative z-10">Nexal Pathway.</h1>
         </div>
 
-        <!-- Body -->
         <div class="p-10 text-center">
-            <h2 class="text-xl font-bold text-oxford mb-2">Access Your Matrix</h2>
-            <p class="text-sm text-slate mb-8">Sign in with your institutional or personal Google account to synchronize your progression.</p>
+            <h2 class="text-xl font-bold text-oxford mb-2">Continue your learning</h2>
+            <p class="text-sm text-slate mb-8">Sign in with your personal or school Google account to continue securely.</p>
 
-            <!-- Google OAuth Button -->
             <button id="google-login-btn" type="button" aria-label="Continue with Google" class="w-full flex items-center justify-center px-6 py-4 bg-white border-2 border-slate/10 rounded-xl text-oxford font-bold hover:bg-slate/5 hover:border-slate/20 transition-all shadow-sm group">
                 <svg class="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
@@ -43,17 +37,14 @@
                 </svg>
                 Continue with Google
             </button>
-            
             <p id="login-status" class="mt-6 text-sm font-bold text-red-500 hidden"></p>
         </div>
-        
-        <!-- Footer -->
+
         <div class="bg-slate/5 p-6 text-center border-t border-slate/10">
-            <p class="text-xs font-medium text-slate/60">By authenticating, you agree to the Nexal Academy Terms of Service and Academic Integrity Policy.</p>
+            <p class="text-xs font-medium text-slate/60">By authenticating, you agree to the Nexal Pathway Terms of Service and Academic Integrity Policy.</p>
         </div>
     </div>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js/runtime-fallback.js"></script>
     <script src="js/supabase-config.js"></script>
@@ -63,38 +54,48 @@
             const googleBtn = document.getElementById('google-login-btn');
             const statusText = document.getElementById('login-status');
 
+            function appBase() {
+                return window.location.pathname.replace(/login\.html$/, '');
+            }
+
+            function safeNextPath(value) {
+                const base = appBase();
+                const fallback = `${base}dashboard.html`;
+                if (!value) return fallback;
+                try {
+                    const candidate = new URL(value, window.location.origin);
+                    if (candidate.origin !== window.location.origin) return fallback;
+                    if (!candidate.pathname.startsWith(base)) return fallback;
+                    return `${candidate.pathname}${candidate.search}${candidate.hash}`;
+                } catch (_) {
+                    return fallback;
+                }
+            }
+
             if (googleBtn) {
                 googleBtn.addEventListener('click', async () => {
                     try {
                         if (!window.supabaseClient) throw new Error('Authentication is temporarily unavailable.');
                         googleBtn.disabled = true;
                         googleBtn.setAttribute('aria-busy', 'true');
-                        googleBtn.innerHTML = "Connecting to Google…";
+                        googleBtn.innerHTML = 'Connecting to Google…';
                         statusText.classList.add('hidden');
 
-                        // THE FIX: dynamically swap the URL so it keeps the GitHub Pages folder structure intact
-                        // We split by '?' and '#' to ensure we don't accidentally include URL parameters or hashes in the base path replacement.
                         const next = new URLSearchParams(window.location.search).get('next');
-                        const safeNext = next && next.startsWith('/') && !next.startsWith('//') ? next : '/dashboard.html';
-                        sessionStorage.setItem('nexal-auth-next', safeNext);
-                        const redirectUrl = `${window.location.origin}${window.location.pathname.replace(/login\.html$/, 'auth-callback.html')}`;
+                        sessionStorage.setItem('nexal-auth-next', safeNextPath(next));
+                        const redirectUrl = `${window.location.origin}${appBase()}auth-callback.html`;
 
                         const { data, error } = await window.supabaseClient.auth.signInWithOAuth({
                             provider: 'google',
-                            options: {
-                                redirectTo: redirectUrl
-                            }
+                            options: { redirectTo: redirectUrl }
                         });
 
                         if (error) throw error;
                         if (!data?.url) throw new Error('Google sign-in did not return an authorization URL.');
-                        
                     } catch (error) {
-                        console.error("Login error:", error);
-                        statusText.textContent = error.message || "Google sign-in could not start. Check your connection or try again.";
+                        console.error('Login error:', error);
+                        statusText.textContent = error.message || 'Google sign-in could not start. Check your connection or try again.';
                         statusText.classList.remove('hidden');
-                        
-                        // Reset button
                         googleBtn.disabled = false;
                         googleBtn.removeAttribute('aria-busy');
                         googleBtn.innerHTML = `
@@ -104,8 +105,7 @@
                                 <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
                                 <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
                             </svg>
-                            Continue with Google
-                        `;
+                            Continue with Google`;
                     }
                 });
             }
