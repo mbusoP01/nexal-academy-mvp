@@ -7,6 +7,7 @@
     "validate:content": "node js/validate-content.js",
     "check:syntax": "node --check app.js && node --check js/auth-guard.js && node --check js/curriculum.js && node --check js/arena-engine.js",
     "test:content": "node tests/content.test.js",
+    "project1:guard": "node scripts/project1-repo-guard.mjs",
     "project1:status": "node scripts/project1-status.mjs",
     "project1:next": "node scripts/project1-next-batch.mjs",
     "validate:curriculum": "node scripts/validate-curriculum.mjs",
