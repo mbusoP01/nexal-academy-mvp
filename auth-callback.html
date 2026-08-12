@@ -5,6 +5,21 @@
 <script>
 document.addEventListener('DOMContentLoaded', async () => {
   const status = document.getElementById('callback-status');
+  const appBase = window.location.pathname.replace(/auth-callback\.html$/, '');
+  const defaultNext = `${appBase}dashboard.html`;
+
+  function safeReturnPath(value) {
+    if (!value) return defaultNext;
+    try {
+      const candidate = new URL(value, window.location.origin);
+      if (candidate.origin !== window.location.origin) return defaultNext;
+      if (!candidate.pathname.startsWith(appBase)) return defaultNext;
+      return `${candidate.pathname}${candidate.search}${candidate.hash}`;
+    } catch (_) {
+      return defaultNext;
+    }
+  }
+
   try {
     if (!window.supabaseClient) throw new Error('Authentication service is unavailable.');
     const { data: { session }, error } = await Promise.race([
@@ -12,9 +27,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       new Promise((_, reject) => setTimeout(() => reject(new Error('Authentication timed out.')), 7000))
     ]);
     if (error || !session) throw error || new Error('No session was returned by Google.');
-    const next = sessionStorage.getItem('nexal-auth-next') || '/dashboard.html';
+    const next = safeReturnPath(sessionStorage.getItem('nexal-auth-next'));
     sessionStorage.removeItem('nexal-auth-next');
-    window.location.replace(next.startsWith('/') && !next.startsWith('//') ? next : '/dashboard.html');
+    window.location.replace(next);
   } catch (error) {
     status.textContent = `${error.message || 'Sign-in could not be completed.'} Try again or return to Login.`;
   }
