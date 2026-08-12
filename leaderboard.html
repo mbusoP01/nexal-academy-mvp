@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Leaderboard | Nexal Academy</title>
+    <title>Progress Board | Nexal Pathway</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { theme: { extend: { colors: { oxford: '#002147', slate: '#475569', ivory: '#FDFBF7', emerald: '#2E8B57', gold: '#DAA520' } } } }</script>
@@ -13,7 +13,7 @@
 
     <aside class="w-64 bg-oxford text-white/80 flex flex-col h-full shadow-2xl z-20 hidden md:flex relative">
         <div class="p-8 border-b border-white/10">
-            <span class="text-[10px] font-bold tracking-widest uppercase text-emerald">Global Standard</span>
+                <span class="text-[10px] font-bold tracking-widest uppercase text-emerald">Learner progress</span>
             <h2 class="text-2xl font-serif font-black text-white mt-1 tracking-tight">Nexal Academy.</h2>
         </div>
         <nav class="flex-1 p-6 space-y-3 overflow-y-auto">
@@ -38,19 +38,19 @@
             
             <header class="mb-10 flex flex-col md:flex-row md:justify-between md:items-end gap-4">
                 <div>
-                    <h1 class="text-4xl font-serif font-black text-oxford">Global Rankings</h1>
-                    <p class="text-slate mt-2 font-medium">Compare your academic standing against the global scholar network.</p>
+                    <h1 class="text-4xl font-serif font-black text-oxford">Progress Board</h1>
+                    <p class="text-slate mt-2 font-medium">See stored learning progress. Community rankings will appear as real learners participate.</p>
                 </div>
                 <div class="bg-white px-5 py-3 rounded-xl border border-slate/10 shadow-sm text-center">
                     <span class="text-[10px] font-bold tracking-widest text-slate uppercase block mb-1">Your Standing</span>
-                    <span class="text-xl font-black text-emerald" id="my-rank">#--</span>
+                    <span class="text-xl font-black text-emerald" id="my-rank">—</span>
                 </div>
             </header>
 
             <div class="bg-white rounded-3xl border border-slate/10 shadow-lg overflow-hidden">
                 <div class="p-6 bg-slate/5 border-b border-slate/10 flex justify-between items-center">
-                    <h3 class="font-bold text-oxford">Top Scholars</h3>
-                    <span class="text-xs font-bold text-slate bg-white px-3 py-1 rounded-full border border-slate/20">Global Division</span>
+                    <h3 class="font-bold text-oxford">Learners</h3>
+                    <span class="text-xs font-bold text-slate bg-white px-3 py-1 rounded-full border border-slate/20">Real stored XP only</span>
                 </div>
                 
                 <div class="divide-y divide-slate/10" id="leaderboard-container">
@@ -70,19 +70,8 @@
             const container = document.getElementById('leaderboard-container');
             const myRankEl = document.getElementById('my-rank');
             
-            // 1. Generate the AI Scholar Roster
-            const aiScholars = [
-                { id: 'ai1', username: 'Chen Wei', school_name: 'Beijing No. 4 High School', xp: 14250, avatar_url: 'https://i.pravatar.cc/150?u=chen' },
-                { id: 'ai2', username: 'Sarah Jenkins', school_name: 'Eton College, UK', xp: 12100, avatar_url: 'https://i.pravatar.cc/150?u=sarah' },
-                { id: 'ai3', username: 'David Osei', school_name: 'Presec Legon, GH', xp: 10850, avatar_url: 'https://i.pravatar.cc/150?u=david' },
-                { id: 'ai4', username: 'Aisha Patel', school_name: 'Delhi Public School', xp: 9500, avatar_url: 'https://i.pravatar.cc/150?u=aisha' },
-                { id: 'ai5', username: 'Liam O\'Connor', school_name: 'Trinity College Dublin', xp: 8200, avatar_url: 'https://i.pravatar.cc/150?u=liam' },
-                { id: 'ai6', username: 'Miya Tanaka', school_name: 'Kyoto International', xp: 6400, avatar_url: 'https://i.pravatar.cc/150?u=miya' },
-                { id: 'ai7', username: 'James Holden', school_name: 'Stuyvesant High, USA', xp: 4100, avatar_url: 'https://i.pravatar.cc/150?u=james' }
-            ];
-
-            // 2. Fetch the Real User
-            let allScholars = [...aiScholars];
+            // Fetch only real stored learner data; never fabricate a global roster.
+            let allScholars = [];
             let currentUserId = null;
 
             try {
@@ -105,12 +94,16 @@
                 console.error("Error fetching user for leaderboard", err);
             }
 
-            // 3. Sort by XP (Highest to Lowest)
+            // Sort only real records returned by the authorized data source.
             allScholars.sort((a, b) => b.xp - a.xp);
 
             // 4. Render the UI
             container.innerHTML = '';
             
+            if (!allScholars.length) {
+                container.innerHTML = '<div class="p-10 text-center"><p class="font-bold text-oxford">Your progress board is ready.</p><p class="mt-2 text-sm text-slate">Complete lessons to start building your learning history. Community rankings will appear as real learners participate.</p></div>';
+                return;
+            }
             allScholars.forEach((scholar, index) => {
                 const rank = index + 1;
                 
