@@ -17,5 +17,6 @@
     "video:audit": "node scripts/video-audit.mjs",
     "test:commercial": "node tests/commercialization.test.mjs",
     "test:blank-page": "node tests/blank-page.test.mjs"
+    ,"test:onboarding-storage": "node tests/onboarding-storage.test.mjs"
   }
 }

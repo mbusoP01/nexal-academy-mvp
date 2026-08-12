@@ -285,9 +285,11 @@
                 statusText.textContent = "Uploading image..."; statusText.className = "text-sm font-bold text-blue-500 block";
                 
                 try {
-                    const fileExt = file.name.split('.').pop();
-                    const fileName = `${user.id}.${fileExt}`;
-                    const { error: uploadError } = await window.supabaseClient.storage.from('avatars').upload(fileName, file, { upsert: true });
+                    const allowed = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp' };
+                    const fileExt = allowed[file.type];
+                    if (!fileExt || file.size > 5 * 1024 * 1024) throw new Error('Choose a JPG, PNG or WebP image up to 5 MB.');
+                    const fileName = `${user.id}/avatar.${fileExt}`;
+                    const { error: uploadError } = await window.supabaseClient.storage.from('avatars').upload(fileName, file, { upsert: true, contentType: file.type, cacheControl: '3600' });
                     if (uploadError) throw uploadError;
                     
                     const { data: { publicUrl } } = window.supabaseClient.storage.from('avatars').getPublicUrl(fileName);

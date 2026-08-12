@@ -105,15 +105,21 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/runtime-fallback.js"></script>
     <script src="js/supabase-config.js"></script>
     <script>
         let currentRole = '';
         let currentUser = null;
 
         document.addEventListener('DOMContentLoaded', async () => {
-            const { data: { user } } = await window.supabaseClient.auth.getUser();
-            if (!user) window.location.replace('login.html');
-            currentUser = user;
+            if (!window.supabaseClient) return showOnboardingError('Account service unavailable. Return to Login and try again.');
+            try {
+                const { data: { user }, error } = await window.supabaseClient.auth.getUser();
+                if (error || !user) return window.location.replace('login.html');
+                currentUser = user;
+            } catch (error) {
+                return showOnboardingError('Unable to load your account right now. Please retry.');
+            }
             document.getElementById('input-email').value = user.email;
 
             const countrySelect = document.getElementById('input-country');
@@ -123,6 +129,12 @@
                 phoneInput.value = prefix + " ";
             });
         });
+
+        function showOnboardingError(message) {
+            const errorMsg = document.getElementById('error-msg');
+            errorMsg.textContent = message;
+            errorMsg.classList.remove('hidden');
+        }
 
         function selectRole(role) {
             currentRole = role;
@@ -156,20 +168,30 @@
                 const avatarFile = document.getElementById('input-avatar').files[0];
                 let avatarUrl = null;
                 if (avatarFile) {
-                    const fileExt = avatarFile.name.split('.').pop();
-                    const fileName = `${currentUser.id}.${fileExt}`;
+                    const allowed = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp' };
+                    const fileExt = allowed[avatarFile.type];
+                    if (!fileExt || avatarFile.size > 5 * 1024 * 1024) throw new Error('Choose a JPG, PNG or WebP image up to 5 MB.');
+                    const fileName = `${currentUser.id}/avatar.${fileExt}`;
                     const { data: uploadData, error: uploadError } = await window.supabaseClient.storage
                         .from('avatars')
-                        .upload(fileName, avatarFile, { upsert: true });
-                    if (uploadError) throw uploadError;
-                    const { data: { publicUrl } } = window.supabaseClient.storage.from('avatars').getPublicUrl(fileName);
-                    avatarUrl = publicUrl;
+                        .upload(fileName, avatarFile, { upsert: true, contentType: avatarFile.type, cacheControl: '3600' });
+                    if (uploadError) {
+                        console.warn('[Nexal] Optional avatar upload failed:', uploadError.message);
+                        const { data: { publicUrl } } = window.supabaseClient.storage.from('avatars').getPublicUrl(fileName);
+                        avatarUrl = null;
+                        document.getElementById('completion-feedback')?.remove();
+                        errorMsg.textContent = 'Your profile will be created without the photo. You can add it later.';
+                        errorMsg.classList.remove('hidden');
+                    } else {
+                        const { data: { publicUrl } } = window.supabaseClient.storage.from('avatars').getPublicUrl(fileName);
+                        avatarUrl = publicUrl;
+                    }
                 }
 
                 // Prepare Data Payload
                 const payload = {
                     id: currentUser.id,
-                    role: currentRole,
+                    role: currentRole === 'teacher' ? 'teacher' : 'student',
                     username: document.getElementById('input-username').value.trim(),
                     country: document.getElementById('input-country').value,
                     phone: document.getElementById('input-phone').value.trim(),
@@ -193,7 +215,11 @@
                 else window.location.replace('dashboard.html');
 
             } catch (err) {
-                errorMsg.textContent = err.message; errorMsg.classList.remove('hidden');
+                console.error('[Nexal] Profile initialization failed:', err);
+                errorMsg.textContent = err.message?.includes('row-level security')
+                    ? 'We could not save this profile with the current account permissions. Please retry or contact support.'
+                    : (err.message || 'We could not initialize your profile. Please retry.');
+                errorMsg.classList.remove('hidden');
                 btn.disabled = false; btn.textContent = "Initialize Profile";
             }
         });
