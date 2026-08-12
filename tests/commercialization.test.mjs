@@ -14,7 +14,8 @@ assert.ok(access.modules.quadratics && access.modules.kinematics && access.modul
 assert.ok(!entitlementSource.includes('premium=true'), 'query parameters must never grant Premium');
 assert.ok(audit.totalModules >= 12, 'video audit must cover the curriculum foundation');
 assert.equal(audit.safeExternal, 0, 'no unverified external video may be labelled commercial-safe');
-assert.ok(audit.scriptReadyOnly + audit.reviewRequired === audit.totalModules, 'every audited video must have a truthful status');
+assert.equal(audit.reviewRequired, audit.legacyReviewRequired, 'legacy external references must remain visibly review-required');
+assert.ok(audit.scriptReadyOnly === audit.totalModules, 'every CAPS unit has a script-ready package');
 assert.ok(fs.existsSync(path.join(root, 'pricing.html')), 'pricing page exists');
 assert.ok(fs.existsSync(path.join(root, 'auth-callback.html')), 'auth callback exists');
 console.log(`COMMERCIALIZATION_TEST_PASS showcases=${access.showcaseLessons.length} videoModules=${audit.totalModules}`);

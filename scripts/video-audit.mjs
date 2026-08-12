@@ -20,6 +20,7 @@ const authoritativeRows = caps.units.map(unit => existing.get(unit.id) || ({
   scriptReady: true,
   commercialUseVerified: false
 }));
-const summary = { auditedAt: new Date().toISOString(), policy: 'No external licence is claimed without verification.', totalModules: authoritativeRows.length, safeExternal: authoritativeRows.filter(row => row.commercialUseVerified).length, scriptReadyOnly: authoritativeRows.filter(row => row.status === 'ORIGINAL_SCRIPT_READY').length, reviewRequired: authoritativeRows.filter(row => row.status.includes('UNVERIFIED')).length, legacyStaticModulesAudited: rows.length, modules: authoritativeRows };
+const legacyReviewRequired = rows.filter(row => row.status.includes('UNVERIFIED')).length;
+const summary = { auditedAt: new Date().toISOString(), policy: 'No external licence is claimed without verification.', totalModules: authoritativeRows.length, safeExternal: authoritativeRows.filter(row => row.commercialUseVerified).length, scriptReadyOnly: authoritativeRows.filter(row => row.status === 'ORIGINAL_SCRIPT_READY').length, reviewRequired: legacyReviewRequired, legacyStaticModulesAudited: rows.length, legacyReviewRequired, modules: authoritativeRows };
 fs.writeFileSync(path.join(root, 'content', 'video-audit.json'), JSON.stringify(summary, null, 2) + '\n');
 console.log(`VIDEO_AUDIT total=${summary.totalModules} safeExternal=${summary.safeExternal} scriptReadyOnly=${summary.scriptReadyOnly} reviewRequired=${summary.reviewRequired}`);

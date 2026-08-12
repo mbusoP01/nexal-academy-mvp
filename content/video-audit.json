@@ -1,11 +1,12 @@
 {
-  "auditedAt": "2026-08-12T15:25:30.817Z",
+  "auditedAt": "2026-08-12T15:32:28.886Z",
   "policy": "No external licence is claimed without verification.",
   "totalModules": 54,
   "safeExternal": 0,
   "scriptReadyOnly": 54,
-  "reviewRequired": 0,
+  "reviewRequired": 6,
   "legacyStaticModulesAudited": 12,
+  "legacyReviewRequired": 6,
   "modules": [
     {
       "module": "mathematics-g10-algebra",
