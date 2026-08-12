@@ -4,6 +4,7 @@
   const path = window.location.pathname.toLowerCase();
   const file = path.split('/').pop() || 'index.html';
   const publicRoute = ['', 'index.html', 'login.html', 'pricing.html', 'about.html', 'contact.html', 'auth-callback.html'].includes(file);
+  const localFixture = window.location.hostname === 'localhost' && new URLSearchParams(window.location.search).has('fixture');
 
   function showAuthError(message) {
     document.body.innerHTML = `<main style="min-height:100vh;display:grid;place-items:center;padding:2rem;background:#fdfbf7;color:#002147;font-family:Inter,Arial,sans-serif"><section style="max-width:34rem;text-align:center"><p style="font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#2e8b57">Nexal Pathway</p><h1 style="font-size:2rem;margin:.75rem 0">Account service unavailable</h1><p style="line-height:1.6;color:#475569">${message}</p><div style="display:flex;gap:.75rem;justify-content:center;margin-top:1.5rem"><button type="button" id="nexal-auth-retry" style="padding:.75rem 1.2rem;border:0;border-radius:.7rem;background:#002147;color:#fff;font-weight:700">Retry</button><a href="index.html" style="padding:.75rem 1.2rem;border-radius:.7rem;border:1px solid #cbd5e1;color:#002147;text-decoration:none;font-weight:700">Return Home</a></div></section></main>`;
@@ -11,7 +12,7 @@
   }
 
   document.addEventListener('DOMContentLoaded', async () => {
-    if (publicRoute) return;
+    if (publicRoute || localFixture) return;
     const client = window.supabaseClient;
     if (!client) return showAuthError('Unable to connect to the account service right now. Your public learning pages remain available.');
     const loading = document.createElement('div');
