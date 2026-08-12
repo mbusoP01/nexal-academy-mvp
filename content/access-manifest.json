@@ -1,11 +1,21 @@
 {
-  "version": "1.0",
-  "policy": "Catalog metadata and intentional previews are public; full Premium bodies require protected delivery before paid launch.",
-  "showcaseLessons": ["quadratics", "kinematics", "dna_rna"],
+  "version": "2.0",
+  "policy": "Free users may browse the full catalog and open intentional previews. Only the three showcase units are free-full by default. Trusted active Premium entitlements unlock all curriculum units in the product UI.",
+  "showcaseLessons": [
+    "quadratics",
+    "kinematics",
+    "dna_rna",
+    "mathematics-g10-functions",
+    "physical-sciences-g10-mechanics",
+    "life-sciences-g11-dna"
+  ],
   "modules": {
     "quadratics": "free_full",
     "kinematics": "free_full",
     "dna_rna": "free_full",
+    "mathematics-g10-functions": "free_full",
+    "physical-sciences-g10-mechanics": "free_full",
+    "life-sciences-g11-dna": "free_full",
     "inequalities": "free_preview",
     "limits": "free_preview",
     "functions": "free_preview",
