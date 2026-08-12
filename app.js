@@ -1,6 +1,7 @@
 const SUPABASE_URL = 'https://szqpkxlatzvwcxpwmewt.supabase.co/rest/v1/';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN6cXBreGxhdHp2d2N4cHdtZXd0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4Njg4MjYsImV4cCI6MjA5NTQ0NDgyNn0.OFvGOyU0bZrDX-48PlXGGZeO7hhWJoXhb37JtTQ9pzY';
-const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const supabaseClient = window.supabaseClient || window.supabase?.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const supabase = supabaseClient;
 
 const viewIds = ['home-view', 'about-view', 'contact-view', 'login-view', 'dashboard-view', 'arena-view'];
 const defaultRoute = '/';

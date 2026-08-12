@@ -54,6 +54,10 @@
                 <!-- Quality content injected here by JS -->
                 <p>Retrieving academic records...</p>
             </div>
+            <section class="mt-10 border-t border-slate/10 pt-8">
+                <h2 class="text-2xl font-serif font-bold text-oxford mb-4">Check your understanding</h2>
+                <div id="practice-content"><p class="text-slate text-sm">Practice questions for this lesson will appear here when available.</p></div>
+            </section>
         </div>
 
         <div class="text-center pb-20">
@@ -82,6 +86,7 @@
             const arenaBtn = document.getElementById('enter-arena-btn');
             const videoSection = document.getElementById('video-section');
             const theoryContent = document.getElementById('theory-content');
+            const practiceContent = document.getElementById('practice-content');
 
             if (moduleName) titleEl.textContent = decodeURIComponent(moduleName);
             if (subjectId && window.NEXAL_CURRICULUM[subjectId]) {
@@ -102,6 +107,9 @@
                         if (mod) {
                             if (mod.video_id) videoId = mod.video_id;
                             if (mod.theory) theoryText = mod.theory;
+                            if (practiceContent && mod.practice?.length) {
+                                practiceContent.innerHTML = mod.practice.map((item, index) => `<article class="bg-slate/5 rounded-xl p-5 mb-3"><p class="font-bold text-oxford">${index + 1}. ${item.question}</p><details class="mt-3"><summary class="cursor-pointer text-emerald font-bold text-sm">Reveal answer and explanation</summary><p class="mt-2 font-semibold">Answer: ${item.answer}</p><p class="mt-1 text-sm text-slate">${item.explanation}</p></details></article>`).join('');
+                            }
                             break;
                         }
                     }
@@ -119,7 +127,7 @@
                     });
                 });
             } else {
-                theoryContent.innerHTML = `<p>Watch the detailed video lecture to master the core concepts. Remember that the Practice Arena is highly procedural; memorizing answers will not work. You must understand the underlying mechanics.</p>`;
+                theoryContent.innerHTML = `<p>No written lesson is available for this topic yet. Use the linked video when available, or return to the library for another lesson.</p>`;
             }
 
             // Render Video
