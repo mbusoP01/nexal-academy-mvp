@@ -15,6 +15,7 @@
     "validate:calculations": "node scripts/validate-calculations.mjs",
     "validate:batches": "node scripts/validate-batches.mjs",
     "video:audit": "node scripts/video-audit.mjs",
-    "test:commercial": "node tests/commercialization.test.mjs"
+    "test:commercial": "node tests/commercialization.test.mjs",
+    "test:blank-page": "node tests/blank-page.test.mjs"
   }
 }
