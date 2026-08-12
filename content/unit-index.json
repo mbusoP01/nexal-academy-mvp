@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "freeShowcaseUnits": [
     "mathematics-g10-functions",
     "physical-sciences-g10-mechanics",
@@ -44,11 +44,11 @@
     "physical-sciences-g12-acids-redox": {"file":"content/caps-batches/physical-sciences-grade12-chemistry.json","access":"free_preview"},
     "life-sciences-g10-cells": {"file":"content/caps-batches/life-sciences-grade10-foundation.json","access":"free_preview"},
     "life-sciences-g10-molecules": {"file":"content/caps-batches/life-sciences-grade10-foundation.json","access":"free_preview"},
-    "life-sciences-g10-cell-division": {"file":"content/caps-batches/life-sciences-grade10-foundation.json","access":"free_preview"},
-    "life-sciences-g10-plant-structure": {"file":"content/caps-batches/life-sciences-grade10-foundation.json","access":"free_preview"},
+    "life-sciences-g10-cell-division": {"file":"content/caps-batches/life-sciences-grade10-ecosystems.json","access":"free_preview"},
+    "life-sciences-g10-plant-structure": {"file":"content/caps-batches/life-sciences-grade10-ecosystems.json","access":"free_preview"},
     "life-sciences-g10-ecology": {"file":"content/caps-batches/life-sciences-grade10-ecosystems.json","access":"free_preview"},
-    "life-sciences-g10-human-systems": {"file":"content/caps-batches/life-sciences-grade10-foundation.json","access":"free_preview"},
-    "life-sciences-g11-genetics": {"file":"content/caps-batches/life-sciences-grade11-foundation.json","access":"free_preview"},
+    "life-sciences-g10-human-systems": {"file":"content/caps-batches/life-sciences-grade10-ecosystems.json","access":"free_preview"},
+    "life-sciences-g11-genetics": {"file":"content/caps-batches/life-sciences-grade10-ecosystems.json","access":"free_preview"},
     "life-sciences-g11-dna": {"file":"content/caps-batches/life-sciences-grade11-foundation.json","access":"free_full"},
     "life-sciences-g11-reproduction": {"file":"content/caps-batches/life-sciences-grade11-foundation.json","access":"free_preview"},
     "life-sciences-g11-evolution": {"file":"content/caps-batches/life-sciences-grade11-foundation.json","access":"free_preview"},
