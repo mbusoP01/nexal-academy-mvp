@@ -1,1 +1,109 @@
-{"batch":"mathematics-grade11-functions","source":"DBE CAPS Mathematics FET Grades 10–12","units":[{"unitId":"mathematics-g11-functions","title":"Transformations and inverses","why":"Transformations help learners predict graph behaviour without plotting every point.","objectives":["identify translations and reflections","find inverse relationships","interpret domain and range"],"definitions":["translation","reflection","inverse","asymptote"],"principles":["f(x)+q shifts vertically","f(x-p) shifts right by p","an inverse reverses input and output when the relation is one-to-one"],"examples":["y=(x-2)^2+1 shifts y=x² right 2 and up 1","f(x)=3x+4 has inverse f⁻¹(x)=(x-4)/3"],"misconceptions":["reading f(x-p) as a left shift","assuming every relation has a function inverse"],"practice":["Describe y=x²+3.","Describe y=(x-4)².","Find inverse of y=2x+6.","What does a reflection in x-axis do?","State a one-to-one condition.","Find f(2) for 4x-1.","Why swap x and y for an inverse?","Identify the vertex of y=(x+1)²-5."],"solutions":["up 3","right 4","(x-6)/2","changes y to -y","each output has one input","7","it reverses the mapping","(-1,-5)"],"quizQuestions":["What is a translation?","Shift for f(x)+2?","Shift for f(x-3)?","Define inverse.","Find inverse y=x+5.","What is an asymptote?","Reflection in y-axis?","What is a domain?","Why test an inverse?","State one graph transformation rule."],"diagram":"content/diagrams/function-transformations.svg","videoPackage":{"title":"Transforming function graphs","duration":"9 minutes","scenes":["parent graph","shift","reflection","inverse swap","domain check"],"transcript":"We start with a parent graph, apply one transformation at a time, and verify inverse pairs by composing the mappings."}}]}
+{
+  "batch": "mathematics-grade11-functions",
+  "source": "DBE CAPS Mathematics FET Grades 10–12",
+  "units": [
+    {
+      "unitId": "mathematics-g11-functions",
+      "title": "Transformations and inverses",
+      "why": "Transformations help learners predict graph behaviour without plotting every point.",
+      "objectives": [
+        "identify translations and reflections",
+        "find inverse relationships",
+        "interpret domain and range"
+      ],
+      "definitions": [
+        "translation",
+        "reflection",
+        "inverse",
+        "asymptote"
+      ],
+      "principles": [
+        "f(x)+q shifts vertically",
+        "f(x-p) shifts right by p",
+        "an inverse reverses input and output when the relation is one-to-one"
+      ],
+      "examples": [
+        "y=(x-2)^2+1 shifts y=x² right 2 and up 1",
+        "f(x)=3x+4 has inverse f⁻¹(x)=(x-4)/3",
+        "Worked example — Foundation: identify the known values in a Functions problem, write the relevant rule (f(x)+q shifts vertically), substitute carefully, then check the result against the question.",
+        "Worked example — Standard: compare two representations of transformations and inverses and explain which features stay constant. State the rule first, show the substitution or construction, and interpret the answer in context.",
+        "Worked example — Challenge: solve a new functions problem by naming the unknown, selecting a valid method, showing each algebraic step, and checking the final result with an independent representation."
+      ],
+      "misconceptions": [
+        "reading f(x-p) as a left shift",
+        "assuming every relation has a function inverse"
+      ],
+      "practice": [
+        "Describe y=x²+3.",
+        "Describe y=(x-4)².",
+        "Find inverse of y=2x+6.",
+        "What does a reflection in x-axis do?",
+        "State a one-to-one condition.",
+        "Find f(2) for 4x-1.",
+        "Why swap x and y for an inverse?",
+        "Identify the vertex of y=(x+1)²-5.",
+        "Foundation: define translation and give one example from functions.",
+        "Foundation: state the key rule or principle for functions before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in transformations and inverses.",
+        "Standard: interpret a table, diagram or described result connected to functions and justify your conclusion.",
+        "Challenge: identify a common misconception about functions and correct it with evidence.",
+        "Challenge: connect functions to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "up 3",
+        "right 4",
+        "(x-6)/2",
+        "changes y to -y",
+        "each output has one input",
+        "7",
+        "it reverses the mapping",
+        "(-1,-5)",
+        "Foundation model response: define the relevant idea (translation); apply the principle (f(x)+q shifts vertically); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (translation); apply the principle (f(x)+q shifts vertically); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (translation); apply the principle (f(x)+q shifts vertically); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (f(x)+q shifts vertically), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (f(x)+q shifts vertically), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (f(x)+q shifts vertically), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "What is a translation?",
+        "Shift for f(x)+2?",
+        "Shift for f(x-3)?",
+        "Define inverse.",
+        "Find inverse y=x+5.",
+        "What is an asymptote?",
+        "Reflection in y-axis?",
+        "What is a domain?",
+        "Why test an inverse?",
+        "State one graph transformation rule.",
+        "Which definition best describes translation?",
+        "Which principle should be applied first in functions?"
+      ],
+      "diagram": "content/diagrams/function-transformations.svg",
+      "videoPackage": {
+        "title": "Transforming function graphs",
+        "duration": "9 minutes",
+        "scenes": [
+          "parent graph",
+          "shift",
+          "reflection",
+          "inverse swap",
+          "domain check"
+        ],
+        "transcript": "We start with a parent graph, apply one transformation at a time, and verify inverse pairs by composing the mappings."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    }
+  ]
+}

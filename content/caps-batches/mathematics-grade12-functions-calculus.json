@@ -1,2 +1,209 @@
-{"batch":"mathematics-grade12-functions-calculus","source":"DBE CAPS Mathematics FET Grades 10–12","units":[{"unitId":"mathematics-g12-functions","title":"Polynomial, exponential and logarithmic functions","why":"Advanced functions model growth, decay and relationships in further study and applied sciences.","objectives":["compare function families","interpret asymptotes","solve exponential and logarithmic equations"],"definitions":["asymptote","exponential","logarithm","inverse"],"principles":["a^x and log_a x are inverse functions","log(ab)=log a+log b","horizontal asymptotes describe limiting behaviour"],"examples":["2^x=8 gives x=3","log₂(x)=4 gives x=16"],"misconceptions":["taking logs of a sum as a sum of logs","ignoring domain restrictions"],"practice":["Solve 3^x=27.","Evaluate log10(1000).","State the inverse of exponential growth.","Identify asymptote y=2+3^x.","Explain domain of log x.","Use log laws to combine terms.","Compare linear and exponential growth.","Why check a solution in original equation."],"solutions":["x=3","3","logarithmic function","y=2","x>0","log(ab)","exponential eventually grows faster","domain restrictions can reject answers"],"quizQuestions":["Define asymptote.","Solve 2^x=16.","What is log inverse?","State product log law.","Domain of log x?","What is exponential growth?","Why graph scales matter?","Solve log10 x=2.","Name a modelled process.","State one log misconception."],"diagram":"content/diagrams/function-families.svg","videoPackage":{"title":"Function families and inverses","duration":"10 minutes","scenes":["family comparison","asymptotes","exponential-log inverse","domain"],"transcript":"We compare function families, use inverse operations carefully, and respect domain restrictions when solving."}},
-{"unitId":"mathematics-g12-calculus","title":"Differential calculus","why":"Calculus measures instantaneous change and supports optimisation and motion models.","objectives":["interpret derivative","differentiate basic functions","find stationary points"],"definitions":["derivative","gradient function","stationary point","second derivative"],"principles":["d(x^n)/dx=nx^(n-1)","stationary points have f'(x)=0","second derivative helps classify turning points"],"examples":["d(x³)/dx=3x²","For f=x²-4x, f'=2x-4 and stationary x=2"],"misconceptions":["confusing function value with gradient"],"practice":["Differentiate x⁴.","Differentiate 5x²-3x.","Find stationary x for x²-6x.","State derivative of a constant.","What does f'(x)>0 mean?","Classify using second derivative.","Explain first principles idea.","Give one optimisation use."],"solutions":["4x³","10x-3","x=3","0","increasing","positive indicates local minimum","limit of difference quotient","maximise area or minimise cost"],"quizQuestions":["Define derivative.","d(x⁵)/dx?","Stationary condition?","Derivative of 7?","What does negative gradient mean?","Second derivative use?","Why units matter?","Differentiate 2x³.","Name an application.","State one calculus check."],"diagram":"content/diagrams/calculus-gradient.svg","videoPackage":{"title":"Instantaneous change","duration":"10 minutes","scenes":["secant to tangent","derivative rule","stationary point","classification"],"transcript":"We move from average change to instantaneous gradient, differentiate with rules, and interpret stationary points in context."}}]}
+{
+  "batch": "mathematics-grade12-functions-calculus",
+  "source": "DBE CAPS Mathematics FET Grades 10–12",
+  "units": [
+    {
+      "unitId": "mathematics-g12-functions",
+      "title": "Polynomial, exponential and logarithmic functions",
+      "why": "Advanced functions model growth, decay and relationships in further study and applied sciences.",
+      "objectives": [
+        "compare function families",
+        "interpret asymptotes",
+        "solve exponential and logarithmic equations"
+      ],
+      "definitions": [
+        "asymptote",
+        "exponential",
+        "logarithm",
+        "inverse"
+      ],
+      "principles": [
+        "a^x and log_a x are inverse functions",
+        "log(ab)=log a+log b",
+        "horizontal asymptotes describe limiting behaviour"
+      ],
+      "examples": [
+        "2^x=8 gives x=3",
+        "log₂(x)=4 gives x=16",
+        "Worked example — Foundation: identify the known values in a Functions problem, write the relevant rule (a^x and log_a x are inverse functions), substitute carefully, then check the result against the question.",
+        "Worked example — Standard: compare two representations of polynomial, exponential and logarithmic functions and explain which features stay constant. State the rule first, show the substitution or construction, and interpret the answer in context.",
+        "Worked example — Challenge: solve a new functions problem by naming the unknown, selecting a valid method, showing each algebraic step, and checking the final result with an independent representation."
+      ],
+      "misconceptions": [
+        "taking logs of a sum as a sum of logs",
+        "ignoring domain restrictions"
+      ],
+      "practice": [
+        "Solve 3^x=27.",
+        "Evaluate log10(1000).",
+        "State the inverse of exponential growth.",
+        "Identify asymptote y=2+3^x.",
+        "Explain domain of log x.",
+        "Use log laws to combine terms.",
+        "Compare linear and exponential growth.",
+        "Why check a solution in original equation.",
+        "Foundation: define asymptote and give one example from functions.",
+        "Foundation: state the key rule or principle for functions before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in polynomial, exponential and logarithmic functions.",
+        "Standard: interpret a table, diagram or described result connected to functions and justify your conclusion.",
+        "Challenge: identify a common misconception about functions and correct it with evidence.",
+        "Challenge: connect functions to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "x=3",
+        "3",
+        "logarithmic function",
+        "y=2",
+        "x>0",
+        "log(ab)",
+        "exponential eventually grows faster",
+        "domain restrictions can reject answers",
+        "Foundation model response: define the relevant idea (asymptote); apply the principle (a^x and log_a x are inverse functions); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (asymptote); apply the principle (a^x and log_a x are inverse functions); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (asymptote); apply the principle (a^x and log_a x are inverse functions); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (a^x and log_a x are inverse functions), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (a^x and log_a x are inverse functions), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (a^x and log_a x are inverse functions), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Define asymptote.",
+        "Solve 2^x=16.",
+        "What is log inverse?",
+        "State product log law.",
+        "Domain of log x?",
+        "What is exponential growth?",
+        "Why graph scales matter?",
+        "Solve log10 x=2.",
+        "Name a modelled process.",
+        "State one log misconception.",
+        "Which definition best describes asymptote?",
+        "Which principle should be applied first in functions?"
+      ],
+      "diagram": "content/diagrams/function-families.svg",
+      "videoPackage": {
+        "title": "Function families and inverses",
+        "duration": "10 minutes",
+        "scenes": [
+          "family comparison",
+          "asymptotes",
+          "exponential-log inverse",
+          "domain"
+        ],
+        "transcript": "We compare function families, use inverse operations carefully, and respect domain restrictions when solving."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "mathematics-g12-calculus",
+      "title": "Differential calculus",
+      "why": "Calculus measures instantaneous change and supports optimisation and motion models.",
+      "objectives": [
+        "interpret derivative",
+        "differentiate basic functions",
+        "find stationary points"
+      ],
+      "definitions": [
+        "derivative",
+        "gradient function",
+        "stationary point",
+        "second derivative"
+      ],
+      "principles": [
+        "d(x^n)/dx=nx^(n-1)",
+        "stationary points have f'(x)=0",
+        "second derivative helps classify turning points"
+      ],
+      "examples": [
+        "d(x³)/dx=3x²",
+        "For f=x²-4x, f'=2x-4 and stationary x=2",
+        "Worked example — Foundation: identify the known values in a Calculus problem, write the relevant rule (d(x^n)/dx=nx^(n-1)), substitute carefully, then check the result against the question.",
+        "Worked example — Standard: compare two representations of differential calculus and explain which features stay constant. State the rule first, show the substitution or construction, and interpret the answer in context.",
+        "Worked example — Challenge: solve a new calculus problem by naming the unknown, selecting a valid method, showing each algebraic step, and checking the final result with an independent representation."
+      ],
+      "misconceptions": [
+        "confusing function value with gradient"
+      ],
+      "practice": [
+        "Differentiate x⁴.",
+        "Differentiate 5x²-3x.",
+        "Find stationary x for x²-6x.",
+        "State derivative of a constant.",
+        "What does f'(x)>0 mean?",
+        "Classify using second derivative.",
+        "Explain first principles idea.",
+        "Give one optimisation use.",
+        "Foundation: define derivative and give one example from calculus.",
+        "Foundation: state the key rule or principle for calculus before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in differential calculus.",
+        "Standard: interpret a table, diagram or described result connected to calculus and justify your conclusion.",
+        "Challenge: identify a common misconception about calculus and correct it with evidence.",
+        "Challenge: connect calculus to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "4x³",
+        "10x-3",
+        "x=3",
+        "0",
+        "increasing",
+        "positive indicates local minimum",
+        "limit of difference quotient",
+        "maximise area or minimise cost",
+        "Foundation model response: define the relevant idea (derivative); apply the principle (d(x^n)/dx=nx^(n-1)); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (derivative); apply the principle (d(x^n)/dx=nx^(n-1)); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (derivative); apply the principle (d(x^n)/dx=nx^(n-1)); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (d(x^n)/dx=nx^(n-1)), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (d(x^n)/dx=nx^(n-1)), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (d(x^n)/dx=nx^(n-1)), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Define derivative.",
+        "d(x⁵)/dx?",
+        "Stationary condition?",
+        "Derivative of 7?",
+        "What does negative gradient mean?",
+        "Second derivative use?",
+        "Why units matter?",
+        "Differentiate 2x³.",
+        "Name an application.",
+        "State one calculus check.",
+        "Which definition best describes derivative?",
+        "Which principle should be applied first in calculus?"
+      ],
+      "diagram": "content/diagrams/calculus-gradient.svg",
+      "videoPackage": {
+        "title": "Instantaneous change",
+        "duration": "10 minutes",
+        "scenes": [
+          "secant to tangent",
+          "derivative rule",
+          "stationary point",
+          "classification"
+        ],
+        "transcript": "We move from average change to instantaneous gradient, differentiate with rules, and interpret stationary points in context."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    }
+  ]
+}

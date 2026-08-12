@@ -1,18 +1,18 @@
 {
   "version": "2.0",
-  "policy": "Free users may browse the full catalog and open intentional previews. Only the three showcase units are free-full by default. Trusted active Premium entitlements unlock all curriculum units in the product UI.",
+  "policy": "Free users may browse their current-grade course catalogue and open one intentional showcase per subject and grade. Trusted active Premium entitlements unlock all 18 current-grade units in the product UI.",
   "showcaseLessons": [
-    "quadratics",
-    "kinematics",
-    "dna_rna",
     "mathematics-g10-functions",
+    "mathematics-g11-algebra",
+    "mathematics-g12-functions",
     "physical-sciences-g10-mechanics",
-    "life-sciences-g11-dna"
+    "physical-sciences-g11-newton",
+    "physical-sciences-g12-circuits",
+    "life-sciences-g10-cells",
+    "life-sciences-g11-dna",
+    "life-sciences-g12-nervous"
   ],
   "modules": {
-    "quadratics": "free_full",
-    "kinematics": "free_full",
-    "dna_rna": "free_full",
     "mathematics-g10-functions": "free_full",
     "physical-sciences-g10-mechanics": "free_full",
     "life-sciences-g11-dna": "free_full",

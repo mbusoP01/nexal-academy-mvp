@@ -1,6 +1,618 @@
-{"batch":"life-sciences-grade12-foundation","source":"DBE Life Sciences CAPS Grades 10–12","units":[{"unitId":"life-sciences-g12-nervous","title":"Nervous system and receptors","why":"Nervous coordination allows organisms to detect stimuli and respond rapidly.","objectives":["trace reflex arcs","identify neurone roles","relate receptors to stimuli"],"definitions":["stimulus","receptor","neurone","synapse","reflex"],"principles":["receptors detect specific stimuli","impulses travel along neurones","reflexes protect before conscious processing"],"examples":["withdrawal from heat is a reflex","synapses use neurotransmitters"],"misconceptions":["reflexes do not involve the nervous system"],"practice":["Define stimulus.","What is a receptor?","Trace a reflex arc.","Function of synapse?","Why reflex quick?","Name sensory neurone role.","What is response?","Explain receptor specificity."],"solutions":["change detected","detects change","receptor-sensory-interneuron-motor-effector","chemical transmission gap","short pathway","carries impulse to CNS","reaction to stimulus","different receptors respond to different stimuli"],"quizQuestions":["Define neurone.","Receptor role?","Reflex meaning?","Synapse function?","Why rapid?","Sensory direction?","Motor direction?","Name an effector.","What is a stimulus?","State one nervous-system misconception."],"diagram":"content/diagrams/reflex-arc.svg","videoPackage":{"title":"Fast responses","duration":"9 minutes","scenes":["stimulus","neurones","synapse","reflex"],"transcript":"We follow a stimulus through receptor, neurones and effector, explaining why reflex pathways protect the body quickly."}},
-{"unitId":"life-sciences-g12-endocrine","title":"Endocrine control and homeostasis","why":"Homeostasis keeps internal conditions within safe limits despite external change.","objectives":["explain feedback","identify hormones","trace temperature and glucose control"],"definitions":["hormone","endocrine gland","homeostasis","negative feedback","target organ"],"principles":["negative feedback reverses a deviation","hormones travel in blood","receptors and effectors coordinate control"],"examples":["insulin lowers blood glucose","sweating increases heat loss"],"misconceptions":["homeostasis means conditions never change"],"practice":["Define homeostasis.","Role of insulin?","What is negative feedback?","Name endocrine gland.","Why blood transport?","Explain sweating.","What is a target organ?","Compare nervous and endocrine control."],"solutions":["stable internal range","lowers glucose","response counters change","pancreas","hormones circulate","evaporative cooling","cells with matching receptors","nervous rapid/electrical; endocrine slower/hormonal"],"quizQuestions":["Homeostasis meaning?","Insulin effect?","Negative feedback?","Hormone definition?","Target organ?","Why sweating?","Endocrine example?","What changes in feedback?","Name gland.","State one homeostasis misconception."],"diagram":"content/diagrams/homeostasis-feedback.svg","videoPackage":{"title":"Keeping balance","duration":"9 minutes","scenes":["set point","glucose","temperature","feedback"],"transcript":"We trace a deviation, response and correction loop, using blood glucose and temperature as examples of negative feedback."}},
-{"unitId":"life-sciences-g12-genetics","title":"Meiosis, inheritance and variation","why":"Genetic variation explains family resemblance, diversity and inherited conditions.","objectives":["interpret meiosis","solve crosses","explain variation"],"definitions":["crossing over","independent assortment","mutation","genotype","variation"],"principles":["meiosis reshuffles alleles","mutations create new DNA variants","probability predicts expected inheritance"],"examples":["crossing over exchanges segments between homologues","a carrier can pass a recessive allele"],"misconceptions":["mutations are always harmful"],"practice":["Define mutation.","What is crossing over?","Why meiosis varies gametes?","Interpret carrier.","Name variation source.","What is independent assortment?","Why probabilities expected?","Explain beneficial mutation."],"solutions":["DNA sequence change","exchange between homologues","recombination and separation","heterozygous unaffected individual","mutation or recombination","chromosomes align independently","chance outcomes vary","may improve survival"],"quizQuestions":["Mutation definition?","Crossing over?","Variation source?","Carrier meaning?","Why meiosis?","Independent assortment?","Are all mutations harmful?","Genotype meaning?","Name inherited condition conceptually.","State one genetics misconception."],"diagram":"content/diagrams/meiosis-variation.svg","videoPackage":{"title":"Variation through meiosis","duration":"10 minutes","scenes":["homologues","crossing over","gametes","inheritance"],"transcript":"We track how meiosis reshuffles genetic material, then apply the result to inheritance and variation."}},
-{"unitId":"life-sciences-g12-evolution","title":"Human evolution and population change","why":"Evolutionary evidence helps interpret common ancestry and changing populations.","objectives":["evaluate evidence","describe selection","interpret population change"],"definitions":["common ancestor","fossil","homologous","natural selection","gene pool"],"principles":["shared features can indicate common ancestry","selection changes allele frequencies","evidence must be interpreted with context"],"examples":["homologous forelimbs share underlying structure","DNA similarities support relatedness"],"misconceptions":["humans evolved from modern monkeys"],"practice":["Define common ancestor.","What is homologous structure?","How selection changes gene pool?","Name evidence type.","Why fossils incomplete?","Explain DNA evidence.","What is allele frequency?","State careful claim rule."],"solutions":["shared ancestral population","same origin different function","survival/reproduction shifts alleles","fossil, DNA, anatomy","fossilisation rare","sequence similarities","proportion of allele","claim must match evidence"],"quizQuestions":["Common ancestor?","Homologous meaning?","Gene pool?","DNA evidence?","Why fossil gaps?","Selection effect?","Human evolution misconception?","What is allele frequency?","Name evidence.","State one evidence caution."],"diagram":"content/diagrams/evolution-evidence.svg","videoPackage":{"title":"Evidence for change","duration":"9 minutes","scenes":["fossils","anatomy","DNA","population"],"transcript":"We compare independent lines of evidence, avoid oversimplified ancestry claims, and connect selection to population allele frequencies."}},
-{"unitId":"life-sciences-g12-ecology","title":"Energy flow and human impact","why":"Ecological decisions depend on understanding energy, cycles and human pressure.","objectives":["interpret energy pyramids","describe nutrient cycles","evaluate impact"],"definitions":["energy pyramid","carbon cycle","eutrophication","sustainability","ecological footprint"],"principles":["energy decreases between trophic levels","matter cycles through ecosystems","human activities can alter carrying capacity"],"examples":["fertiliser runoff can cause algal blooms and oxygen loss","carbon combustion increases atmospheric CO₂"],"misconceptions":["energy is recycled indefinitely"],"practice":["Why energy pyramid narrows?","Describe carbon cycle step.","Define eutrophication.","How does deforestation affect carbon?","What is sustainability?","Name impact mitigation.","Why oxygen loss?","Interpret ecological footprint."],"solutions":["heat and metabolism loss","photosynthesis or respiration transfer","nutrient enrichment causing algal growth","reduces uptake and releases CO₂","meeting needs without depletion","restore habitat or reduce emissions","decomposition uses oxygen","resource demand measure"],"quizQuestions":["Energy flow direction?","Carbon-cycle process?","Eutrophication?","Human impact?","Sustainability meaning?","Why oxygen drops?","What is footprint?","Matter versus energy?","Name mitigation.","State one ecology misconception."],"diagram":"content/diagrams/carbon-cycle.svg","videoPackage":{"title":"Living within limits","duration":"10 minutes","scenes":["energy pyramid","carbon cycle","impact","solutions"],"transcript":"We connect energy loss, carbon movement and human impact, then evaluate practical sustainability choices."}},
-{"unitId":"life-sciences-g12-reproduction","title":"Reproductive health and development","why":"Understanding reproduction supports informed, respectful health decisions.","objectives":["trace reproductive cycles","describe development","explain prevention and health"],"definitions":["ovulation","fertilisation","implantation","placenta","contraception"],"principles":["hormones coordinate cycles","implantation follows early cell division","health choices affect outcomes"],"examples":["the placenta exchanges substances between mother and fetus","barrier contraception reduces sperm transfer"],"misconceptions":["all contraception prevents infections"],"practice":["Define ovulation.","What is implantation?","Placenta role?","Name contraception type.","Why hormones cycle?","Distinguish STI prevention.","What follows fertilisation?","Explain informed consent."],"solutions":["release of ovum","embedding in uterine lining","exchange and support","barrier or hormonal","coordinate reproductive organs","condoms reduce many STI risks","cleavage and embryo","respectful voluntary agreement"],"quizQuestions":["Ovulation meaning?","Implantation?","Placenta role?","Contraception purpose?","Hormone example?","STI prevention?","Development sequence?","Why informed choices?","Name a health resource.","State one reproductive-health misconception."],"diagram":"content/diagrams/reproductive-development.svg","videoPackage":{"title":"Reproduction and health","duration":"9 minutes","scenes":["cycle","fertilisation","implantation","health"],"transcript":"We trace the reproductive cycle and early development while separating contraception, STI prevention and respectful health decisions."}}]}
+{
+  "batch": "life-sciences-grade12-foundation",
+  "source": "DBE Life Sciences CAPS Grades 10–12",
+  "units": [
+    {
+      "unitId": "life-sciences-g12-nervous",
+      "title": "Nervous system and receptors",
+      "why": "Nervous coordination allows organisms to detect stimuli and respond rapidly.",
+      "objectives": [
+        "trace reflex arcs",
+        "identify neurone roles",
+        "relate receptors to stimuli"
+      ],
+      "definitions": [
+        "stimulus",
+        "receptor",
+        "neurone",
+        "synapse",
+        "reflex"
+      ],
+      "principles": [
+        "receptors detect specific stimuli",
+        "impulses travel along neurones",
+        "reflexes protect before conscious processing"
+      ],
+      "examples": [
+        "withdrawal from heat is a reflex",
+        "synapses use neurotransmitters",
+        "Worked example — Foundation: define stimulus in your own words, identify the structures or stages involved in human physiology, and connect each feature to its function.",
+        "Worked example — Standard: interpret a labelled diagram or data description for nervous system and receptors. Describe the pattern, cite evidence, and link it to the biological principle (receptors detect specific stimuli).",
+        "Worked example — Challenge: explain a novel human physiology scenario using correct terminology, a sequence of cause and effect, and a final statement that answers the command verb."
+      ],
+      "misconceptions": [
+        "reflexes do not involve the nervous system"
+      ],
+      "practice": [
+        "Define stimulus.",
+        "What is a receptor?",
+        "Trace a reflex arc.",
+        "Function of synapse?",
+        "Why reflex quick?",
+        "Name sensory neurone role.",
+        "What is response?",
+        "Explain receptor specificity.",
+        "Foundation: define stimulus and give one example from human physiology.",
+        "Foundation: state the key rule or principle for human physiology before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in nervous system and receptors.",
+        "Standard: interpret a table, diagram or described result connected to human physiology and justify your conclusion.",
+        "Challenge: identify a common misconception about human physiology and correct it with evidence.",
+        "Challenge: connect human physiology to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "change detected",
+        "detects change",
+        "receptor-sensory-interneuron-motor-effector",
+        "chemical transmission gap",
+        "short pathway",
+        "carries impulse to CNS",
+        "reaction to stimulus",
+        "different receptors respond to different stimuli",
+        "Foundation model response: define the relevant idea (stimulus); apply the principle (receptors detect specific stimuli); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (stimulus); apply the principle (receptors detect specific stimuli); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (stimulus); apply the principle (receptors detect specific stimuli); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (receptors detect specific stimuli), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (receptors detect specific stimuli), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (receptors detect specific stimuli), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Define neurone.",
+        "Receptor role?",
+        "Reflex meaning?",
+        "Synapse function?",
+        "Why rapid?",
+        "Sensory direction?",
+        "Motor direction?",
+        "Name an effector.",
+        "What is a stimulus?",
+        "State one nervous-system misconception.",
+        "Which definition best describes stimulus?",
+        "Which principle should be applied first in human physiology?"
+      ],
+      "diagram": "content/diagrams/reflex-arc.svg",
+      "videoPackage": {
+        "title": "Fast responses",
+        "duration": "9 minutes",
+        "scenes": [
+          "stimulus",
+          "neurones",
+          "synapse",
+          "reflex"
+        ],
+        "transcript": "We follow a stimulus through receptor, neurones and effector, explaining why reflex pathways protect the body quickly."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "life-sciences-g12-endocrine",
+      "title": "Endocrine control and homeostasis",
+      "why": "Homeostasis keeps internal conditions within safe limits despite external change.",
+      "objectives": [
+        "explain feedback",
+        "identify hormones",
+        "trace temperature and glucose control"
+      ],
+      "definitions": [
+        "hormone",
+        "endocrine gland",
+        "homeostasis",
+        "negative feedback",
+        "target organ"
+      ],
+      "principles": [
+        "negative feedback reverses a deviation",
+        "hormones travel in blood",
+        "receptors and effectors coordinate control"
+      ],
+      "examples": [
+        "insulin lowers blood glucose",
+        "sweating increases heat loss",
+        "Worked example — Foundation: define hormone in your own words, identify the structures or stages involved in homeostasis, and connect each feature to its function.",
+        "Worked example — Standard: interpret a labelled diagram or data description for endocrine control and homeostasis. Describe the pattern, cite evidence, and link it to the biological principle (negative feedback reverses a deviation).",
+        "Worked example — Challenge: explain a novel homeostasis scenario using correct terminology, a sequence of cause and effect, and a final statement that answers the command verb."
+      ],
+      "misconceptions": [
+        "homeostasis means conditions never change"
+      ],
+      "practice": [
+        "Define homeostasis.",
+        "Role of insulin?",
+        "What is negative feedback?",
+        "Name endocrine gland.",
+        "Why blood transport?",
+        "Explain sweating.",
+        "What is a target organ?",
+        "Compare nervous and endocrine control.",
+        "Foundation: define hormone and give one example from homeostasis.",
+        "Foundation: state the key rule or principle for homeostasis before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in endocrine control and homeostasis.",
+        "Standard: interpret a table, diagram or described result connected to homeostasis and justify your conclusion.",
+        "Challenge: identify a common misconception about homeostasis and correct it with evidence.",
+        "Challenge: connect homeostasis to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "stable internal range",
+        "lowers glucose",
+        "response counters change",
+        "pancreas",
+        "hormones circulate",
+        "evaporative cooling",
+        "cells with matching receptors",
+        "nervous rapid/electrical; endocrine slower/hormonal",
+        "Foundation model response: define the relevant idea (hormone); apply the principle (negative feedback reverses a deviation); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (hormone); apply the principle (negative feedback reverses a deviation); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (hormone); apply the principle (negative feedback reverses a deviation); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (negative feedback reverses a deviation), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (negative feedback reverses a deviation), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (negative feedback reverses a deviation), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Homeostasis meaning?",
+        "Insulin effect?",
+        "Negative feedback?",
+        "Hormone definition?",
+        "Target organ?",
+        "Why sweating?",
+        "Endocrine example?",
+        "What changes in feedback?",
+        "Name gland.",
+        "State one homeostasis misconception.",
+        "Which definition best describes hormone?",
+        "Which principle should be applied first in homeostasis?"
+      ],
+      "diagram": "content/diagrams/homeostasis-feedback.svg",
+      "videoPackage": {
+        "title": "Keeping balance",
+        "duration": "9 minutes",
+        "scenes": [
+          "set point",
+          "glucose",
+          "temperature",
+          "feedback"
+        ],
+        "transcript": "We trace a deviation, response and correction loop, using blood glucose and temperature as examples of negative feedback."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "life-sciences-g12-genetics",
+      "title": "Meiosis, inheritance and variation",
+      "why": "Genetic variation explains family resemblance, diversity and inherited conditions.",
+      "objectives": [
+        "interpret meiosis",
+        "solve crosses",
+        "explain variation"
+      ],
+      "definitions": [
+        "crossing over",
+        "independent assortment",
+        "mutation",
+        "genotype",
+        "variation"
+      ],
+      "principles": [
+        "meiosis reshuffles alleles",
+        "mutations create new DNA variants",
+        "probability predicts expected inheritance"
+      ],
+      "examples": [
+        "crossing over exchanges segments between homologues",
+        "a carrier can pass a recessive allele",
+        "Worked example — Foundation: define crossing over in your own words, identify the structures or stages involved in genetics, and connect each feature to its function.",
+        "Worked example — Standard: interpret a labelled diagram or data description for meiosis, inheritance and variation. Describe the pattern, cite evidence, and link it to the biological principle (meiosis reshuffles alleles).",
+        "Worked example — Challenge: explain a novel genetics scenario using correct terminology, a sequence of cause and effect, and a final statement that answers the command verb."
+      ],
+      "misconceptions": [
+        "mutations are always harmful"
+      ],
+      "practice": [
+        "Define mutation.",
+        "What is crossing over?",
+        "Why meiosis varies gametes?",
+        "Interpret carrier.",
+        "Name variation source.",
+        "What is independent assortment?",
+        "Why probabilities expected?",
+        "Explain beneficial mutation.",
+        "Foundation: define crossing over and give one example from genetics.",
+        "Foundation: state the key rule or principle for genetics before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in meiosis, inheritance and variation.",
+        "Standard: interpret a table, diagram or described result connected to genetics and justify your conclusion.",
+        "Challenge: identify a common misconception about genetics and correct it with evidence.",
+        "Challenge: connect genetics to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "DNA sequence change",
+        "exchange between homologues",
+        "recombination and separation",
+        "heterozygous unaffected individual",
+        "mutation or recombination",
+        "chromosomes align independently",
+        "chance outcomes vary",
+        "may improve survival",
+        "Foundation model response: define the relevant idea (crossing over); apply the principle (meiosis reshuffles alleles); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (crossing over); apply the principle (meiosis reshuffles alleles); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (crossing over); apply the principle (meiosis reshuffles alleles); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (meiosis reshuffles alleles), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (meiosis reshuffles alleles), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (meiosis reshuffles alleles), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Mutation definition?",
+        "Crossing over?",
+        "Variation source?",
+        "Carrier meaning?",
+        "Why meiosis?",
+        "Independent assortment?",
+        "Are all mutations harmful?",
+        "Genotype meaning?",
+        "Name inherited condition conceptually.",
+        "State one genetics misconception.",
+        "Which definition best describes crossing over?",
+        "Which principle should be applied first in genetics?"
+      ],
+      "diagram": "content/diagrams/meiosis-variation.svg",
+      "videoPackage": {
+        "title": "Variation through meiosis",
+        "duration": "10 minutes",
+        "scenes": [
+          "homologues",
+          "crossing over",
+          "gametes",
+          "inheritance"
+        ],
+        "transcript": "We track how meiosis reshuffles genetic material, then apply the result to inheritance and variation."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "life-sciences-g12-evolution",
+      "title": "Human evolution and population change",
+      "why": "Evolutionary evidence helps interpret common ancestry and changing populations.",
+      "objectives": [
+        "evaluate evidence",
+        "describe selection",
+        "interpret population change"
+      ],
+      "definitions": [
+        "common ancestor",
+        "fossil",
+        "homologous",
+        "natural selection",
+        "gene pool"
+      ],
+      "principles": [
+        "shared features can indicate common ancestry",
+        "selection changes allele frequencies",
+        "evidence must be interpreted with context"
+      ],
+      "examples": [
+        "homologous forelimbs share underlying structure",
+        "DNA similarities support relatedness",
+        "Worked example — Foundation: define common ancestor in your own words, identify the structures or stages involved in evolution, and connect each feature to its function.",
+        "Worked example — Standard: interpret a labelled diagram or data description for human evolution and population change. Describe the pattern, cite evidence, and link it to the biological principle (shared features can indicate common ancestry).",
+        "Worked example — Challenge: explain a novel evolution scenario using correct terminology, a sequence of cause and effect, and a final statement that answers the command verb."
+      ],
+      "misconceptions": [
+        "humans evolved from modern monkeys"
+      ],
+      "practice": [
+        "Define common ancestor.",
+        "What is homologous structure?",
+        "How selection changes gene pool?",
+        "Name evidence type.",
+        "Why fossils incomplete?",
+        "Explain DNA evidence.",
+        "What is allele frequency?",
+        "State careful claim rule.",
+        "Foundation: define common ancestor and give one example from evolution.",
+        "Foundation: state the key rule or principle for evolution before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in human evolution and population change.",
+        "Standard: interpret a table, diagram or described result connected to evolution and justify your conclusion.",
+        "Challenge: identify a common misconception about evolution and correct it with evidence.",
+        "Challenge: connect evolution to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "shared ancestral population",
+        "same origin different function",
+        "survival/reproduction shifts alleles",
+        "fossil, DNA, anatomy",
+        "fossilisation rare",
+        "sequence similarities",
+        "proportion of allele",
+        "claim must match evidence",
+        "Foundation model response: define the relevant idea (common ancestor); apply the principle (shared features can indicate common ancestry); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (common ancestor); apply the principle (shared features can indicate common ancestry); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (common ancestor); apply the principle (shared features can indicate common ancestry); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (shared features can indicate common ancestry), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (shared features can indicate common ancestry), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (shared features can indicate common ancestry), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Common ancestor?",
+        "Homologous meaning?",
+        "Gene pool?",
+        "DNA evidence?",
+        "Why fossil gaps?",
+        "Selection effect?",
+        "Human evolution misconception?",
+        "What is allele frequency?",
+        "Name evidence.",
+        "State one evidence caution.",
+        "Which definition best describes common ancestor?",
+        "Which principle should be applied first in evolution?"
+      ],
+      "diagram": "content/diagrams/evolution-evidence.svg",
+      "videoPackage": {
+        "title": "Evidence for change",
+        "duration": "9 minutes",
+        "scenes": [
+          "fossils",
+          "anatomy",
+          "DNA",
+          "population"
+        ],
+        "transcript": "We compare independent lines of evidence, avoid oversimplified ancestry claims, and connect selection to population allele frequencies."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "life-sciences-g12-ecology",
+      "title": "Energy flow and human impact",
+      "why": "Ecological decisions depend on understanding energy, cycles and human pressure.",
+      "objectives": [
+        "interpret energy pyramids",
+        "describe nutrient cycles",
+        "evaluate impact"
+      ],
+      "definitions": [
+        "energy pyramid",
+        "carbon cycle",
+        "eutrophication",
+        "sustainability",
+        "ecological footprint"
+      ],
+      "principles": [
+        "energy decreases between trophic levels",
+        "matter cycles through ecosystems",
+        "human activities can alter carrying capacity"
+      ],
+      "examples": [
+        "fertiliser runoff can cause algal blooms and oxygen loss",
+        "carbon combustion increases atmospheric CO₂",
+        "Worked example — Foundation: define energy pyramid in your own words, identify the structures or stages involved in ecology, and connect each feature to its function.",
+        "Worked example — Standard: interpret a labelled diagram or data description for energy flow and human impact. Describe the pattern, cite evidence, and link it to the biological principle (energy decreases between trophic levels).",
+        "Worked example — Challenge: explain a novel ecology scenario using correct terminology, a sequence of cause and effect, and a final statement that answers the command verb."
+      ],
+      "misconceptions": [
+        "energy is recycled indefinitely"
+      ],
+      "practice": [
+        "Why energy pyramid narrows?",
+        "Describe carbon cycle step.",
+        "Define eutrophication.",
+        "How does deforestation affect carbon?",
+        "What is sustainability?",
+        "Name impact mitigation.",
+        "Why oxygen loss?",
+        "Interpret ecological footprint.",
+        "Foundation: define energy pyramid and give one example from ecology.",
+        "Foundation: state the key rule or principle for ecology before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in energy flow and human impact.",
+        "Standard: interpret a table, diagram or described result connected to ecology and justify your conclusion.",
+        "Challenge: identify a common misconception about ecology and correct it with evidence.",
+        "Challenge: connect ecology to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "heat and metabolism loss",
+        "photosynthesis or respiration transfer",
+        "nutrient enrichment causing algal growth",
+        "reduces uptake and releases CO₂",
+        "meeting needs without depletion",
+        "restore habitat or reduce emissions",
+        "decomposition uses oxygen",
+        "resource demand measure",
+        "Foundation model response: define the relevant idea (energy pyramid); apply the principle (energy decreases between trophic levels); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (energy pyramid); apply the principle (energy decreases between trophic levels); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (energy pyramid); apply the principle (energy decreases between trophic levels); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (energy decreases between trophic levels), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (energy decreases between trophic levels), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (energy decreases between trophic levels), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Energy flow direction?",
+        "Carbon-cycle process?",
+        "Eutrophication?",
+        "Human impact?",
+        "Sustainability meaning?",
+        "Why oxygen drops?",
+        "What is footprint?",
+        "Matter versus energy?",
+        "Name mitigation.",
+        "State one ecology misconception.",
+        "Which definition best describes energy pyramid?",
+        "Which principle should be applied first in ecology?"
+      ],
+      "diagram": "content/diagrams/carbon-cycle.svg",
+      "videoPackage": {
+        "title": "Living within limits",
+        "duration": "10 minutes",
+        "scenes": [
+          "energy pyramid",
+          "carbon cycle",
+          "impact",
+          "solutions"
+        ],
+        "transcript": "We connect energy loss, carbon movement and human impact, then evaluate practical sustainability choices."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "life-sciences-g12-reproduction",
+      "title": "Reproductive health and development",
+      "why": "Understanding reproduction supports informed, respectful health decisions.",
+      "objectives": [
+        "trace reproductive cycles",
+        "describe development",
+        "explain prevention and health"
+      ],
+      "definitions": [
+        "ovulation",
+        "fertilisation",
+        "implantation",
+        "placenta",
+        "contraception"
+      ],
+      "principles": [
+        "hormones coordinate cycles",
+        "implantation follows early cell division",
+        "health choices affect outcomes"
+      ],
+      "examples": [
+        "the placenta exchanges substances between mother and fetus",
+        "barrier contraception reduces sperm transfer",
+        "Worked example — Foundation: define ovulation in your own words, identify the structures or stages involved in reproduction, and connect each feature to its function.",
+        "Worked example — Standard: interpret a labelled diagram or data description for reproductive health and development. Describe the pattern, cite evidence, and link it to the biological principle (hormones coordinate cycles).",
+        "Worked example — Challenge: explain a novel reproduction scenario using correct terminology, a sequence of cause and effect, and a final statement that answers the command verb."
+      ],
+      "misconceptions": [
+        "all contraception prevents infections"
+      ],
+      "practice": [
+        "Define ovulation.",
+        "What is implantation?",
+        "Placenta role?",
+        "Name contraception type.",
+        "Why hormones cycle?",
+        "Distinguish STI prevention.",
+        "What follows fertilisation?",
+        "Explain informed consent.",
+        "Foundation: define ovulation and give one example from reproduction.",
+        "Foundation: state the key rule or principle for reproduction before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in reproductive health and development.",
+        "Standard: interpret a table, diagram or described result connected to reproduction and justify your conclusion.",
+        "Challenge: identify a common misconception about reproduction and correct it with evidence.",
+        "Challenge: connect reproduction to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "release of ovum",
+        "embedding in uterine lining",
+        "exchange and support",
+        "barrier or hormonal",
+        "coordinate reproductive organs",
+        "condoms reduce many STI risks",
+        "cleavage and embryo",
+        "respectful voluntary agreement",
+        "Foundation model response: define the relevant idea (ovulation); apply the principle (hormones coordinate cycles); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (ovulation); apply the principle (hormones coordinate cycles); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (ovulation); apply the principle (hormones coordinate cycles); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (hormones coordinate cycles), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (hormones coordinate cycles), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (hormones coordinate cycles), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Ovulation meaning?",
+        "Implantation?",
+        "Placenta role?",
+        "Contraception purpose?",
+        "Hormone example?",
+        "STI prevention?",
+        "Development sequence?",
+        "Why informed choices?",
+        "Name a health resource.",
+        "State one reproductive-health misconception.",
+        "Which definition best describes ovulation?",
+        "Which principle should be applied first in reproduction?"
+      ],
+      "diagram": "content/diagrams/reproductive-development.svg",
+      "videoPackage": {
+        "title": "Reproduction and health",
+        "duration": "9 minutes",
+        "scenes": [
+          "cycle",
+          "fertilisation",
+          "implantation",
+          "health"
+        ],
+        "transcript": "We trace the reproductive cycle and early development while separating contraception, STI prevention and respectful health decisions."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    }
+  ]
+}

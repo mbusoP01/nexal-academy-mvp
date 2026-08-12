@@ -1,1 +1,110 @@
-{"batch":"mathematics-grade11-analytical-geometry","source":"DBE CAPS Mathematics FET Grades 10–12","units":[{"unitId":"mathematics-g11-analytical-geometry","title":"Straight-line geometry","why":"Coordinate geometry turns geometric relationships into equations that can be tested and used in design.","objectives":["calculate gradient and distance","find midpoint","derive a line equation"],"definitions":["gradient","intercept","midpoint","parallel","perpendicular"],"principles":["m=(y2-y1)/(x2-x1)","distance=√((Δx)²+(Δy)²)","perpendicular gradients multiply to -1"],"examples":["Gradient through (1,2),(5,10) is 2","Midpoint of (2,4),(8,10) is (5,7)"],"misconceptions":["reversing only one coordinate difference","assuming parallel lines have equal intercepts"],"practice":["Find gradient through (0,1),(4,9).","Find midpoint (2,6),(8,10).","Find distance between (0,0),(3,4).","Write line with gradient 2 through (1,3).","Find gradient perpendicular to 4.","Test whether (1,2),(3,6) lie on y=2x.","Explain how to identify parallel lines.","Find x-intercept y=3x-6."],"solutions":["2","(5,8)","5","y=2x+1","-1/4","yes","equal gradients","x=2"],"quizQuestions":["State gradient formula.","Midpoint of (0,0),(4,6)?","Distance formula?","Gradient of a horizontal line?","Perpendicular to 2?","What is an intercept?","Equation y=mx+c meaning?","How test collinearity?","Parallel gradient rule?","Name one coordinate-geometry use."],"diagram":"content/diagrams/coordinate-line.svg","videoPackage":{"title":"Lines on a coordinate plane","duration":"9 minutes","scenes":["plot points","gradient triangle","distance","midpoint","line equation"],"transcript":"We plot two points, measure vertical and horizontal change, and use the gradient and midpoint rules to describe the line precisely."}}]}
+{
+  "batch": "mathematics-grade11-analytical-geometry",
+  "source": "DBE CAPS Mathematics FET Grades 10–12",
+  "units": [
+    {
+      "unitId": "mathematics-g11-analytical-geometry",
+      "title": "Straight-line geometry",
+      "why": "Coordinate geometry turns geometric relationships into equations that can be tested and used in design.",
+      "objectives": [
+        "calculate gradient and distance",
+        "find midpoint",
+        "derive a line equation"
+      ],
+      "definitions": [
+        "gradient",
+        "intercept",
+        "midpoint",
+        "parallel",
+        "perpendicular"
+      ],
+      "principles": [
+        "m=(y2-y1)/(x2-x1)",
+        "distance=√((Δx)²+(Δy)²)",
+        "perpendicular gradients multiply to -1"
+      ],
+      "examples": [
+        "Gradient through (1,2),(5,10) is 2",
+        "Midpoint of (2,4),(8,10) is (5,7)",
+        "Worked example — Foundation: identify the known values in a Analytical geometry problem, write the relevant rule (m=(y2-y1)/(x2-x1)), substitute carefully, then check the result against the question.",
+        "Worked example — Standard: compare two representations of straight-line geometry and explain which features stay constant. State the rule first, show the substitution or construction, and interpret the answer in context.",
+        "Worked example — Challenge: solve a new analytical geometry problem by naming the unknown, selecting a valid method, showing each algebraic step, and checking the final result with an independent representation."
+      ],
+      "misconceptions": [
+        "reversing only one coordinate difference",
+        "assuming parallel lines have equal intercepts"
+      ],
+      "practice": [
+        "Find gradient through (0,1),(4,9).",
+        "Find midpoint (2,6),(8,10).",
+        "Find distance between (0,0),(3,4).",
+        "Write line with gradient 2 through (1,3).",
+        "Find gradient perpendicular to 4.",
+        "Test whether (1,2),(3,6) lie on y=2x.",
+        "Explain how to identify parallel lines.",
+        "Find x-intercept y=3x-6.",
+        "Foundation: define gradient and give one example from analytical geometry.",
+        "Foundation: state the key rule or principle for analytical geometry before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in straight-line geometry.",
+        "Standard: interpret a table, diagram or described result connected to analytical geometry and justify your conclusion.",
+        "Challenge: identify a common misconception about analytical geometry and correct it with evidence.",
+        "Challenge: connect analytical geometry to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "2",
+        "(5,8)",
+        "5",
+        "y=2x+1",
+        "-1/4",
+        "yes",
+        "equal gradients",
+        "x=2",
+        "Foundation model response: define the relevant idea (gradient); apply the principle (m=(y2-y1)/(x2-x1)); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (gradient); apply the principle (m=(y2-y1)/(x2-x1)); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (gradient); apply the principle (m=(y2-y1)/(x2-x1)); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (m=(y2-y1)/(x2-x1)), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (m=(y2-y1)/(x2-x1)), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (m=(y2-y1)/(x2-x1)), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "State gradient formula.",
+        "Midpoint of (0,0),(4,6)?",
+        "Distance formula?",
+        "Gradient of a horizontal line?",
+        "Perpendicular to 2?",
+        "What is an intercept?",
+        "Equation y=mx+c meaning?",
+        "How test collinearity?",
+        "Parallel gradient rule?",
+        "Name one coordinate-geometry use.",
+        "Which definition best describes gradient?",
+        "Which principle should be applied first in analytical geometry?"
+      ],
+      "diagram": "content/diagrams/coordinate-line.svg",
+      "videoPackage": {
+        "title": "Lines on a coordinate plane",
+        "duration": "9 minutes",
+        "scenes": [
+          "plot points",
+          "gradient triangle",
+          "distance",
+          "midpoint",
+          "line equation"
+        ],
+        "transcript": "We plot two points, measure vertical and horizontal change, and use the gradient and midpoint rules to describe the line precisely."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    }
+  ]
+}

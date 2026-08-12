@@ -1,0 +1,1222 @@
+{
+  "policy": "Nexal-authored explanations are original; curriculum placement follows DBE CAPS references.",
+  "sources": [
+    {
+      "sourceType": "DBE_SCOPE",
+      "sourceTitle": "DBE CAPS FET curriculum index",
+      "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+      "license": "Official curriculum reference; used for scope and placement, not reproduced prose.",
+      "attribution": "South African Department of Basic Education",
+      "adaptedOrReferenced": "referenced",
+      "retrievedAt": "2026-08-12"
+    },
+    {
+      "sourceType": "SIYAVULA_CC_BY",
+      "sourceTitle": "Siyavula open textbooks catalogue",
+      "sourceUrl": "https://www.siyavula.com/read",
+      "license": "CC BY (verify the individual chapter licence before adaptation)",
+      "attribution": "Siyavula Education",
+      "adaptedOrReferenced": "reference-only until chapter-level licence is recorded",
+      "retrievedAt": "2026-08-12"
+    },
+    {
+      "sourceType": "NEXAL_ORIGINAL",
+      "sourceTitle": "Nexal Pathway authored lesson content",
+      "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+      "license": "Original Nexal content",
+      "attribution": "Nexal Pathway by Nexal",
+      "adaptedOrReferenced": "original",
+      "retrievedAt": "2026-08-12"
+    }
+  ],
+  "units": {
+    "mathematics-g10-algebra": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Algebraic expressions and equations authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "mathematics-g10-number-patterns": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Number patterns authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "mathematics-g10-functions": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Linear and quadratic functions authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "mathematics-g10-geometry": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Euclidean geometry and measurement authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "mathematics-g10-trigonometry": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Trigonometric ratios authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "mathematics-g10-statistics": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Data handling and probability authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "mathematics-g11-algebra": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Exponents, surds and equations authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "mathematics-g11-sequences": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Sequences and series authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "mathematics-g11-functions": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Transformations and inverses authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "mathematics-g11-analytical-geometry": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Straight-line geometry authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "mathematics-g11-trigonometry": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Trigonometric identities and equations authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "mathematics-g11-finance": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Growth, decay and finance authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "mathematics-g12-functions": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Polynomial, exponential and logarithmic functions authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "mathematics-g12-calculus": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Differential calculus authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "mathematics-g12-probability": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Counting and probability authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "mathematics-g12-trigonometry": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "General solutions and graphs authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "mathematics-g12-geometry": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Circle geometry and proofs authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "mathematics-g12-statistics": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Regression, variance and distributions authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "physical-sciences-g10-mechanics": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Motion and forces authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "physical-sciences-g10-matter": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Particles and materials authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "physical-sciences-g10-energy": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Energy transfer and work authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "physical-sciences-g10-waves": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Sound and electromagnetic radiation authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "physical-sciences-g10-electricity": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Circuits and electrical safety authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "physical-sciences-g10-chemical-change": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Reactions and acids authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "physical-sciences-g11-vectors": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Vectors and motion authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "physical-sciences-g11-newton": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Newton's laws authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "physical-sciences-g11-momentum": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Momentum and impulse authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "physical-sciences-g11-energy": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Work, energy and power authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "physical-sciences-g11-chemical-bonding": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Chemical bonding and intermolecular forces authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "physical-sciences-g11-stoichiometry": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Mole concept and stoichiometry authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "physical-sciences-g12-electric-fields": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Electrostatics and electric fields authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "physical-sciences-g12-circuits": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Electric circuits and power authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "physical-sciences-g12-waves": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Doppler effect and wave phenomena authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "physical-sciences-g12-organic": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Organic molecules and reactions authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "physical-sciences-g12-rates": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Rates and equilibrium authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "physical-sciences-g12-acids-redox": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Acids, bases and redox authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "life-sciences-g10-cells": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Cell structure and organisation authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "life-sciences-g10-molecules": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Biological molecules authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "life-sciences-g10-cell-division": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Mitosis and meiosis foundations authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "life-sciences-g10-plant-structure": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Plant tissues and transport authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "life-sciences-g10-ecology": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Ecosystems and biodiversity authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "life-sciences-g10-human-systems": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Support and transport systems authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "life-sciences-g11-genetics": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Inheritance and genetic crosses authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "life-sciences-g11-dna": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "DNA, RNA and protein synthesis authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "life-sciences-g11-reproduction": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Human and plant reproduction authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "life-sciences-g11-evolution": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Natural selection and evidence authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "life-sciences-g11-biodiversity": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Classification and biodiversity authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "life-sciences-g11-ecology": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Population and community ecology authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "life-sciences-g12-nervous": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Nervous system and receptors authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "life-sciences-g12-endocrine": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Endocrine control and homeostasis authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "life-sciences-g12-genetics": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Meiosis, inheritance and variation authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "life-sciences-g12-evolution": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Human evolution and population change authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "life-sciences-g12-ecology": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Energy flow and human impact authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    },
+    "life-sciences-g12-reproduction": {
+      "sources": [
+        {
+          "sourceType": "DBE_SCOPE",
+          "sourceTitle": "DBE CAPS FET curriculum index",
+          "sourceUrl": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+          "license": "Scope reference; no prose reproduced",
+          "attribution": "South African Department of Basic Education",
+          "adaptedOrReferenced": "referenced",
+          "retrievedAt": "2026-08-12"
+        },
+        {
+          "sourceType": "NEXAL_ORIGINAL",
+          "sourceTitle": "Reproductive health and development authored lesson",
+          "sourceUrl": "https://mbusop01.github.io/nexal-academy-mvp/",
+          "license": "Original Nexal content",
+          "attribution": "Nexal Pathway by Nexal",
+          "adaptedOrReferenced": "original",
+          "retrievedAt": "2026-08-12"
+        }
+      ]
+    }
+  }
+}

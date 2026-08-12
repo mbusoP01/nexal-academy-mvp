@@ -1,5 +1,517 @@
-{"batch":"life-sciences-grade10-ecosystems","source":"DBE Life Sciences CAPS Grades 10–12","units":[{"unitId":"life-sciences-g10-cell-division","title":"Mitosis and meiosis foundations","why":"Cell division enables growth, repair and the production of reproductive cells.","objectives":["sequence mitosis","compare mitosis and meiosis","relate chromosome number"],"definitions":["chromosome","mitosis","meiosis","diploid","haploid"],"principles":["mitosis produces genetically similar diploid cells","meiosis halves chromosome number and creates variation","DNA replicates before division"],"examples":["skin repair uses mitosis","gametes are haploid after meiosis"],"misconceptions":["meiosis is simply two identical mitoses"],"practice":["Define diploid.","Purpose of mitosis?","Purpose of meiosis?","What happens before division?","Why gametes haploid?","Name a source of variation.","Compare products.","Explain chromosome number."],"solutions":["two chromosome sets","growth and repair","gamete production","DNA replication","fertilisation restores diploid","crossing over or independent assortment","mitosis two similar; meiosis four varied","halved in meiosis"],"quizQuestions":["Define chromosome.","Mitosis product?","Meiosis product?","Why replicate DNA?","Haploid meaning?","Variation source?","How many divisions meiosis?","What is diploid?","Name a tissue using mitosis.","State one division misconception."],"diagram":"content/diagrams/cell-division.svg","videoPackage":{"title":"Division with purpose","duration":"9 minutes","scenes":["chromosome","mitosis","meiosis","variation"],"transcript":"We follow chromosome behaviour through mitosis and meiosis and connect chromosome number to growth and reproduction."}},
-{"unitId":"life-sciences-g10-plant-structure","title":"Plant tissues and transport","why":"Plant structures distribute water, minerals and sugars while supporting growth.","objectives":["identify tissues","explain xylem and phloem","relate structure to transport"],"definitions":["xylem","phloem","transpiration","stoma","meristem"],"principles":["xylem carries water and minerals upward","phloem translocates sugars","stomata regulate gas exchange and water loss"],"examples":["root hairs increase absorptive surface","guard cells open and close stomata"],"misconceptions":["phloem only transports downward"],"practice":["Function of xylem?","Function of phloem?","Define transpiration.","Why root hairs?","What controls stomata?","Name plant meristem role.","Why water loss can increase?","Compare transport tissues."],"solutions":["water and minerals","sugars to sinks","water vapour loss","surface area","guard cells","growth","higher temperature or wind","xylem dead tubes; phloem living sieve tubes"],"quizQuestions":["Xylem function?","Phloem function?","Define stoma.","Root-hair advantage?","What is transpiration?","Guard-cell role?","Where growth occurs?","Why leaves lose water?","Name a vascular tissue.","State one transport misconception."],"diagram":"content/diagrams/plant-transport.svg","videoPackage":{"title":"Transport in plants","duration":"9 minutes","scenes":["root hairs","xylem","phloem","stomata"],"transcript":"We trace water from root hairs through xylem and sugars through phloem, then connect stomata to gas exchange and water loss."}},
-{"unitId":"life-sciences-g10-ecology","title":"Ecosystems and biodiversity","why":"Ecology explains interdependence and how biodiversity supports resilient environments.","objectives":["interpret food webs","describe energy flow","explain biodiversity"],"definitions":["ecosystem","producer","consumer","decomposer","trophic level"],"principles":["energy flows through trophic levels","matter cycles","biodiversity supports stability"],"examples":["grass→grasshopper→frog→snake","decomposers return nutrients to soil"],"misconceptions":["energy cycles in the same way as matter"],"practice":["Define producer.","Role of decomposer?","What is trophic level?","Why energy declines?","Describe food web.","Give biodiversity benefit.","Difference energy/matter?","Name an abiotic factor."],"solutions":["makes own food","recycles nutrients","feeding position","respiration and heat loss","linked food chains","resilience","energy flows; matter cycles","temperature or light"],"quizQuestions":["Define ecosystem.","Producer example?","Decomposer role?","Why energy pyramid narrows?","What is biodiversity?","Abiotic meaning?","Food web purpose?","Matter cycle?","Name trophic level.","State one ecology misconception."],"diagram":"content/diagrams/food-web.svg","videoPackage":{"title":"Energy through ecosystems","duration":"9 minutes","scenes":["producers","food web","energy pyramid","biodiversity"],"transcript":"We map who eats whom, follow energy loss between trophic levels, and distinguish cycling matter from one-way energy flow."}},
-{"unitId":"life-sciences-g10-human-systems","title":"Support and transport systems","why":"Human systems work together to move substances, support movement and maintain life.","objectives":["identify system roles","trace transport","relate structure to function"],"definitions":["skeleton","muscle","blood","circulation","gas exchange"],"principles":["systems are interdependent","surface area and thin barriers aid exchange","blood transports gases and nutrients"],"examples":["alveoli provide large surface for diffusion","red blood cells carry oxygen with haemoglobin"],"misconceptions":["blood is only a transport fluid"],"practice":["Function of skeleton?","What do red cells carry?","Why alveoli thin?","Define circulation.","Name a joint type.","What is gas exchange?","Why capillaries narrow?","Explain system dependence."],"solutions":["support and protection","oxygen","short diffusion path","movement of blood","hinge","diffusion of gases","cells close to tissues","organs rely on shared supplies"],"quizQuestions":["Skeleton role?","Red-cell function?","Alveoli adaptation?","Define circulation.","What is a capillary?","Gas-exchange direction?","Name support tissue.","Why systems cooperate?","Blood component?","State one anatomy misconception."],"diagram":"content/diagrams/human-transport.svg","videoPackage":{"title":"Systems working together","duration":"9 minutes","scenes":["skeleton","blood","alveoli","integration"],"transcript":"We connect support, transport and gas exchange, showing how structure and scale make human systems efficient."}},
-{"unitId":"life-sciences-g11-genetics","title":"Inheritance and genetic crosses","why":"Genetics explains variation, inheritance patterns and responsible interpretation of traits.","objectives":["use allele notation","complete genetic crosses","distinguish genotype and phenotype"],"definitions":["gene","allele","genotype","phenotype","dominant","recessive"],"principles":["alleles separate during gamete formation","phenotype reflects genotype and environment","probability predicts patterns, not certainty"],"examples":["Tt×Tt gives expected 1:2:1 genotype ratio","A recessive phenotype requires two recessive alleles"],"misconceptions":["dominant means more common or stronger"],"practice":["Define allele.","What is genotype?","Complete Tt×Tt conceptually.","Define phenotype.","Why carriers show no recessive trait?","State segregation idea.","Explain probability limitation.","Name environmental influence."],"solutions":["alternative gene form","allele combination","TT,Tt,Tt,tt","observable trait","heterozygous carrier","alleles separate","chance is not guarantee","nutrition or sunlight"],"quizQuestions":["Define gene.","Dominant meaning?","Recessive genotype?","Genotype versus phenotype?","Why carrier?","What separates?","What does 1:2:1 mean?","Environment role?","Name a genetic cross.","State one genetics misconception."],"diagram":"content/diagrams/punnett-square.svg","videoPackage":{"title":"Predicting inheritance","duration":"9 minutes","scenes":["alleles","gametes","Punnett square","probability"],"transcript":"We separate alleles into gametes, combine them in a Punnett square, and interpret expected genotype and phenotype ratios carefully."}}]}
+{
+  "batch": "life-sciences-grade10-ecosystems",
+  "source": "DBE Life Sciences CAPS Grades 10–12",
+  "units": [
+    {
+      "unitId": "life-sciences-g10-cell-division",
+      "title": "Mitosis and meiosis foundations",
+      "why": "Cell division enables growth, repair and the production of reproductive cells.",
+      "objectives": [
+        "sequence mitosis",
+        "compare mitosis and meiosis",
+        "relate chromosome number"
+      ],
+      "definitions": [
+        "chromosome",
+        "mitosis",
+        "meiosis",
+        "diploid",
+        "haploid"
+      ],
+      "principles": [
+        "mitosis produces genetically similar diploid cells",
+        "meiosis halves chromosome number and creates variation",
+        "DNA replicates before division"
+      ],
+      "examples": [
+        "skin repair uses mitosis",
+        "gametes are haploid after meiosis",
+        "Worked example — Foundation: define chromosome in your own words, identify the structures or stages involved in cell division, and connect each feature to its function.",
+        "Worked example — Standard: interpret a labelled diagram or data description for mitosis and meiosis foundations. Describe the pattern, cite evidence, and link it to the biological principle (mitosis produces genetically similar diploid cells).",
+        "Worked example — Challenge: explain a novel cell division scenario using correct terminology, a sequence of cause and effect, and a final statement that answers the command verb."
+      ],
+      "misconceptions": [
+        "meiosis is simply two identical mitoses"
+      ],
+      "practice": [
+        "Define diploid.",
+        "Purpose of mitosis?",
+        "Purpose of meiosis?",
+        "What happens before division?",
+        "Why gametes haploid?",
+        "Name a source of variation.",
+        "Compare products.",
+        "Explain chromosome number.",
+        "Foundation: define chromosome and give one example from cell division.",
+        "Foundation: state the key rule or principle for cell division before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in mitosis and meiosis foundations.",
+        "Standard: interpret a table, diagram or described result connected to cell division and justify your conclusion.",
+        "Challenge: identify a common misconception about cell division and correct it with evidence.",
+        "Challenge: connect cell division to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "two chromosome sets",
+        "growth and repair",
+        "gamete production",
+        "DNA replication",
+        "fertilisation restores diploid",
+        "crossing over or independent assortment",
+        "mitosis two similar; meiosis four varied",
+        "halved in meiosis",
+        "Foundation model response: define the relevant idea (chromosome); apply the principle (mitosis produces genetically similar diploid cells); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (chromosome); apply the principle (mitosis produces genetically similar diploid cells); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (chromosome); apply the principle (mitosis produces genetically similar diploid cells); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (mitosis produces genetically similar diploid cells), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (mitosis produces genetically similar diploid cells), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (mitosis produces genetically similar diploid cells), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Define chromosome.",
+        "Mitosis product?",
+        "Meiosis product?",
+        "Why replicate DNA?",
+        "Haploid meaning?",
+        "Variation source?",
+        "How many divisions meiosis?",
+        "What is diploid?",
+        "Name a tissue using mitosis.",
+        "State one division misconception.",
+        "Which definition best describes chromosome?",
+        "Which principle should be applied first in cell division?"
+      ],
+      "diagram": "content/diagrams/cell-division.svg",
+      "videoPackage": {
+        "title": "Division with purpose",
+        "duration": "9 minutes",
+        "scenes": [
+          "chromosome",
+          "mitosis",
+          "meiosis",
+          "variation"
+        ],
+        "transcript": "We follow chromosome behaviour through mitosis and meiosis and connect chromosome number to growth and reproduction."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "life-sciences-g10-plant-structure",
+      "title": "Plant tissues and transport",
+      "why": "Plant structures distribute water, minerals and sugars while supporting growth.",
+      "objectives": [
+        "identify tissues",
+        "explain xylem and phloem",
+        "relate structure to transport"
+      ],
+      "definitions": [
+        "xylem",
+        "phloem",
+        "transpiration",
+        "stoma",
+        "meristem"
+      ],
+      "principles": [
+        "xylem carries water and minerals upward",
+        "phloem translocates sugars",
+        "stomata regulate gas exchange and water loss"
+      ],
+      "examples": [
+        "root hairs increase absorptive surface",
+        "guard cells open and close stomata",
+        "Worked example — Foundation: define xylem in your own words, identify the structures or stages involved in plants, and connect each feature to its function.",
+        "Worked example — Standard: interpret a labelled diagram or data description for plant tissues and transport. Describe the pattern, cite evidence, and link it to the biological principle (xylem carries water and minerals upward).",
+        "Worked example — Challenge: explain a novel plants scenario using correct terminology, a sequence of cause and effect, and a final statement that answers the command verb."
+      ],
+      "misconceptions": [
+        "phloem only transports downward"
+      ],
+      "practice": [
+        "Function of xylem?",
+        "Function of phloem?",
+        "Define transpiration.",
+        "Why root hairs?",
+        "What controls stomata?",
+        "Name plant meristem role.",
+        "Why water loss can increase?",
+        "Compare transport tissues.",
+        "Foundation: define xylem and give one example from plants.",
+        "Foundation: state the key rule or principle for plants before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in plant tissues and transport.",
+        "Standard: interpret a table, diagram or described result connected to plants and justify your conclusion.",
+        "Challenge: identify a common misconception about plants and correct it with evidence.",
+        "Challenge: connect plants to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "water and minerals",
+        "sugars to sinks",
+        "water vapour loss",
+        "surface area",
+        "guard cells",
+        "growth",
+        "higher temperature or wind",
+        "xylem dead tubes; phloem living sieve tubes",
+        "Foundation model response: define the relevant idea (xylem); apply the principle (xylem carries water and minerals upward); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (xylem); apply the principle (xylem carries water and minerals upward); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (xylem); apply the principle (xylem carries water and minerals upward); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (xylem carries water and minerals upward), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (xylem carries water and minerals upward), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (xylem carries water and minerals upward), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Xylem function?",
+        "Phloem function?",
+        "Define stoma.",
+        "Root-hair advantage?",
+        "What is transpiration?",
+        "Guard-cell role?",
+        "Where growth occurs?",
+        "Why leaves lose water?",
+        "Name a vascular tissue.",
+        "State one transport misconception.",
+        "Which definition best describes xylem?",
+        "Which principle should be applied first in plants?"
+      ],
+      "diagram": "content/diagrams/plant-transport.svg",
+      "videoPackage": {
+        "title": "Transport in plants",
+        "duration": "9 minutes",
+        "scenes": [
+          "root hairs",
+          "xylem",
+          "phloem",
+          "stomata"
+        ],
+        "transcript": "We trace water from root hairs through xylem and sugars through phloem, then connect stomata to gas exchange and water loss."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "life-sciences-g10-ecology",
+      "title": "Ecosystems and biodiversity",
+      "why": "Ecology explains interdependence and how biodiversity supports resilient environments.",
+      "objectives": [
+        "interpret food webs",
+        "describe energy flow",
+        "explain biodiversity"
+      ],
+      "definitions": [
+        "ecosystem",
+        "producer",
+        "consumer",
+        "decomposer",
+        "trophic level"
+      ],
+      "principles": [
+        "energy flows through trophic levels",
+        "matter cycles",
+        "biodiversity supports stability"
+      ],
+      "examples": [
+        "grass→grasshopper→frog→snake",
+        "decomposers return nutrients to soil",
+        "Worked example — Foundation: define ecosystem in your own words, identify the structures or stages involved in ecology, and connect each feature to its function.",
+        "Worked example — Standard: interpret a labelled diagram or data description for ecosystems and biodiversity. Describe the pattern, cite evidence, and link it to the biological principle (energy flows through trophic levels).",
+        "Worked example — Challenge: explain a novel ecology scenario using correct terminology, a sequence of cause and effect, and a final statement that answers the command verb."
+      ],
+      "misconceptions": [
+        "energy cycles in the same way as matter"
+      ],
+      "practice": [
+        "Define producer.",
+        "Role of decomposer?",
+        "What is trophic level?",
+        "Why energy declines?",
+        "Describe food web.",
+        "Give biodiversity benefit.",
+        "Difference energy/matter?",
+        "Name an abiotic factor.",
+        "Foundation: define ecosystem and give one example from ecology.",
+        "Foundation: state the key rule or principle for ecology before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in ecosystems and biodiversity.",
+        "Standard: interpret a table, diagram or described result connected to ecology and justify your conclusion.",
+        "Challenge: identify a common misconception about ecology and correct it with evidence.",
+        "Challenge: connect ecology to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "makes own food",
+        "recycles nutrients",
+        "feeding position",
+        "respiration and heat loss",
+        "linked food chains",
+        "resilience",
+        "energy flows; matter cycles",
+        "temperature or light",
+        "Foundation model response: define the relevant idea (ecosystem); apply the principle (energy flows through trophic levels); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (ecosystem); apply the principle (energy flows through trophic levels); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (ecosystem); apply the principle (energy flows through trophic levels); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (energy flows through trophic levels), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (energy flows through trophic levels), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (energy flows through trophic levels), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Define ecosystem.",
+        "Producer example?",
+        "Decomposer role?",
+        "Why energy pyramid narrows?",
+        "What is biodiversity?",
+        "Abiotic meaning?",
+        "Food web purpose?",
+        "Matter cycle?",
+        "Name trophic level.",
+        "State one ecology misconception.",
+        "Which definition best describes ecosystem?",
+        "Which principle should be applied first in ecology?"
+      ],
+      "diagram": "content/diagrams/food-web.svg",
+      "videoPackage": {
+        "title": "Energy through ecosystems",
+        "duration": "9 minutes",
+        "scenes": [
+          "producers",
+          "food web",
+          "energy pyramid",
+          "biodiversity"
+        ],
+        "transcript": "We map who eats whom, follow energy loss between trophic levels, and distinguish cycling matter from one-way energy flow."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "life-sciences-g10-human-systems",
+      "title": "Support and transport systems",
+      "why": "Human systems work together to move substances, support movement and maintain life.",
+      "objectives": [
+        "identify system roles",
+        "trace transport",
+        "relate structure to function"
+      ],
+      "definitions": [
+        "skeleton",
+        "muscle",
+        "blood",
+        "circulation",
+        "gas exchange"
+      ],
+      "principles": [
+        "systems are interdependent",
+        "surface area and thin barriers aid exchange",
+        "blood transports gases and nutrients"
+      ],
+      "examples": [
+        "alveoli provide large surface for diffusion",
+        "red blood cells carry oxygen with haemoglobin",
+        "Worked example — Foundation: define skeleton in your own words, identify the structures or stages involved in human biology, and connect each feature to its function.",
+        "Worked example — Standard: interpret a labelled diagram or data description for support and transport systems. Describe the pattern, cite evidence, and link it to the biological principle (systems are interdependent).",
+        "Worked example — Challenge: explain a novel human biology scenario using correct terminology, a sequence of cause and effect, and a final statement that answers the command verb."
+      ],
+      "misconceptions": [
+        "blood is only a transport fluid"
+      ],
+      "practice": [
+        "Function of skeleton?",
+        "What do red cells carry?",
+        "Why alveoli thin?",
+        "Define circulation.",
+        "Name a joint type.",
+        "What is gas exchange?",
+        "Why capillaries narrow?",
+        "Explain system dependence.",
+        "Foundation: define skeleton and give one example from human biology.",
+        "Foundation: state the key rule or principle for human biology before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in support and transport systems.",
+        "Standard: interpret a table, diagram or described result connected to human biology and justify your conclusion.",
+        "Challenge: identify a common misconception about human biology and correct it with evidence.",
+        "Challenge: connect human biology to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "support and protection",
+        "oxygen",
+        "short diffusion path",
+        "movement of blood",
+        "hinge",
+        "diffusion of gases",
+        "cells close to tissues",
+        "organs rely on shared supplies",
+        "Foundation model response: define the relevant idea (skeleton); apply the principle (systems are interdependent); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (skeleton); apply the principle (systems are interdependent); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (skeleton); apply the principle (systems are interdependent); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (systems are interdependent), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (systems are interdependent), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (systems are interdependent), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Skeleton role?",
+        "Red-cell function?",
+        "Alveoli adaptation?",
+        "Define circulation.",
+        "What is a capillary?",
+        "Gas-exchange direction?",
+        "Name support tissue.",
+        "Why systems cooperate?",
+        "Blood component?",
+        "State one anatomy misconception.",
+        "Which definition best describes skeleton?",
+        "Which principle should be applied first in human biology?"
+      ],
+      "diagram": "content/diagrams/human-transport.svg",
+      "videoPackage": {
+        "title": "Systems working together",
+        "duration": "9 minutes",
+        "scenes": [
+          "skeleton",
+          "blood",
+          "alveoli",
+          "integration"
+        ],
+        "transcript": "We connect support, transport and gas exchange, showing how structure and scale make human systems efficient."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "life-sciences-g11-genetics",
+      "title": "Inheritance and genetic crosses",
+      "why": "Genetics explains variation, inheritance patterns and responsible interpretation of traits.",
+      "objectives": [
+        "use allele notation",
+        "complete genetic crosses",
+        "distinguish genotype and phenotype"
+      ],
+      "definitions": [
+        "gene",
+        "allele",
+        "genotype",
+        "phenotype",
+        "dominant",
+        "recessive"
+      ],
+      "principles": [
+        "alleles separate during gamete formation",
+        "phenotype reflects genotype and environment",
+        "probability predicts patterns, not certainty"
+      ],
+      "examples": [
+        "Tt×Tt gives expected 1:2:1 genotype ratio",
+        "A recessive phenotype requires two recessive alleles",
+        "Worked example — Foundation: define gene in your own words, identify the structures or stages involved in genetics, and connect each feature to its function.",
+        "Worked example — Standard: interpret a labelled diagram or data description for inheritance and genetic crosses. Describe the pattern, cite evidence, and link it to the biological principle (alleles separate during gamete formation).",
+        "Worked example — Challenge: explain a novel genetics scenario using correct terminology, a sequence of cause and effect, and a final statement that answers the command verb."
+      ],
+      "misconceptions": [
+        "dominant means more common or stronger"
+      ],
+      "practice": [
+        "Define allele.",
+        "What is genotype?",
+        "Complete Tt×Tt conceptually.",
+        "Define phenotype.",
+        "Why carriers show no recessive trait?",
+        "State segregation idea.",
+        "Explain probability limitation.",
+        "Name environmental influence.",
+        "Foundation: define gene and give one example from genetics.",
+        "Foundation: state the key rule or principle for genetics before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in inheritance and genetic crosses.",
+        "Standard: interpret a table, diagram or described result connected to genetics and justify your conclusion.",
+        "Challenge: identify a common misconception about genetics and correct it with evidence.",
+        "Challenge: connect genetics to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "alternative gene form",
+        "allele combination",
+        "TT,Tt,Tt,tt",
+        "observable trait",
+        "heterozygous carrier",
+        "alleles separate",
+        "chance is not guarantee",
+        "nutrition or sunlight",
+        "Foundation model response: define the relevant idea (gene); apply the principle (alleles separate during gamete formation); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (gene); apply the principle (alleles separate during gamete formation); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (gene); apply the principle (alleles separate during gamete formation); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (alleles separate during gamete formation), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (alleles separate during gamete formation), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (alleles separate during gamete formation), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Define gene.",
+        "Dominant meaning?",
+        "Recessive genotype?",
+        "Genotype versus phenotype?",
+        "Why carrier?",
+        "What separates?",
+        "What does 1:2:1 mean?",
+        "Environment role?",
+        "Name a genetic cross.",
+        "State one genetics misconception.",
+        "Which definition best describes gene?",
+        "Which principle should be applied first in genetics?"
+      ],
+      "diagram": "content/diagrams/punnett-square.svg",
+      "videoPackage": {
+        "title": "Predicting inheritance",
+        "duration": "9 minutes",
+        "scenes": [
+          "alleles",
+          "gametes",
+          "Punnett square",
+          "probability"
+        ],
+        "transcript": "We separate alleles into gametes, combine them in a Punnett square, and interpret expected genotype and phenotype ratios carefully."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    }
+  ]
+}

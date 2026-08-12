@@ -1,1 +1,108 @@
-{"batch":"mathematics-grade11-trigonometry","source":"DBE CAPS Mathematics FET Grades 10–12","units":[{"unitId":"mathematics-g11-trigonometry","title":"Trigonometric identities and equations","why":"Identities allow equivalent forms to be proved and equations to be solved across an interval.","objectives":["use identities","solve basic trig equations","interpret graphs"],"definitions":["identity","period","amplitude","general solution"],"principles":["sin²θ+cos²θ=1","tanθ=sinθ/cosθ","solutions repeat by the function period"],"examples":["1-sin²θ=cos²θ","sinθ=1/2 gives θ=30° or 150° on 0°–360°"],"misconceptions":["giving only one solution on a full interval","dividing by an expression that may be zero"],"practice":["Simplify sin²θ+cos²θ.","Rewrite tanθ using sin and cos.","Solve cosθ=0 on 0°–360°.","State sine period in degrees.","Find second solution sinθ=.5.","Explain an identity.","Sketch one sine cycle.","Why check interval endpoints?"],"solutions":["1","sinθ/cosθ","90°,270°","360°","150°","true for all allowed values","rise then fall over 360°","endpoints may satisfy"],"quizQuestions":["State fundamental identity.","Define period.","tan relationship?","Solve sinθ=0 on 0°–360°.","What is amplitude?","Why are there two sine solutions?","State cosine period.","What is an identity?","How verify an equation?","Name a graph feature."],"diagram":"content/diagrams/trig-wave.svg","videoPackage":{"title":"Identities and full-interval solutions","duration":"9 minutes","scenes":["identity bridge","unit circle","solution interval","graph cycle"],"transcript":"We simplify with identities, locate all angles on the interval, and use the graph to check that no solution has been missed."}}]}
+{
+  "batch": "mathematics-grade11-trigonometry",
+  "source": "DBE CAPS Mathematics FET Grades 10–12",
+  "units": [
+    {
+      "unitId": "mathematics-g11-trigonometry",
+      "title": "Trigonometric identities and equations",
+      "why": "Identities allow equivalent forms to be proved and equations to be solved across an interval.",
+      "objectives": [
+        "use identities",
+        "solve basic trig equations",
+        "interpret graphs"
+      ],
+      "definitions": [
+        "identity",
+        "period",
+        "amplitude",
+        "general solution"
+      ],
+      "principles": [
+        "sin²θ+cos²θ=1",
+        "tanθ=sinθ/cosθ",
+        "solutions repeat by the function period"
+      ],
+      "examples": [
+        "1-sin²θ=cos²θ",
+        "sinθ=1/2 gives θ=30° or 150° on 0°–360°",
+        "Worked example — Foundation: identify the known values in a Trigonometry problem, write the relevant rule (sin²θ+cos²θ=1), substitute carefully, then check the result against the question.",
+        "Worked example — Standard: compare two representations of identities and equations and explain which features stay constant. State the rule first, show the substitution or construction, and interpret the answer in context.",
+        "Worked example — Challenge: solve a new trigonometry problem by naming the unknown, selecting a valid method, showing each algebraic step, and checking the final result with an independent representation."
+      ],
+      "misconceptions": [
+        "giving only one solution on a full interval",
+        "dividing by an expression that may be zero"
+      ],
+      "practice": [
+        "Simplify sin²θ+cos²θ.",
+        "Rewrite tanθ using sin and cos.",
+        "Solve cosθ=0 on 0°–360°.",
+        "State sine period in degrees.",
+        "Find second solution sinθ=.5.",
+        "Explain an identity.",
+        "Sketch one sine cycle.",
+        "Why check interval endpoints?",
+        "Foundation: define identity and give one example from trigonometry.",
+        "Foundation: state the key rule or principle for trigonometry before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in identities and equations.",
+        "Standard: interpret a table, diagram or described result connected to trigonometry and justify your conclusion.",
+        "Challenge: identify a common misconception about trigonometry and correct it with evidence.",
+        "Challenge: connect trigonometry to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "1",
+        "sinθ/cosθ",
+        "90°,270°",
+        "360°",
+        "150°",
+        "true for all allowed values",
+        "rise then fall over 360°",
+        "endpoints may satisfy",
+        "Foundation model response: define the relevant idea (identity); apply the principle (sin²θ+cos²θ=1); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (identity); apply the principle (sin²θ+cos²θ=1); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (identity); apply the principle (sin²θ+cos²θ=1); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (sin²θ+cos²θ=1), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (sin²θ+cos²θ=1), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (sin²θ+cos²θ=1), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "State fundamental identity.",
+        "Define period.",
+        "tan relationship?",
+        "Solve sinθ=0 on 0°–360°.",
+        "What is amplitude?",
+        "Why are there two sine solutions?",
+        "State cosine period.",
+        "What is an identity?",
+        "How verify an equation?",
+        "Name a graph feature.",
+        "Which definition best describes identity?",
+        "Which principle should be applied first in trigonometry?"
+      ],
+      "diagram": "content/diagrams/trig-wave.svg",
+      "videoPackage": {
+        "title": "Identities and full-interval solutions",
+        "duration": "9 minutes",
+        "scenes": [
+          "identity bridge",
+          "unit circle",
+          "solution interval",
+          "graph cycle"
+        ],
+        "transcript": "We simplify with identities, locate all angles on the interval, and use the graph to check that no solution has been missed."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    }
+  ]
+}

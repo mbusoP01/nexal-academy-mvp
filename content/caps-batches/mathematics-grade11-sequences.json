@@ -1,1 +1,111 @@
-{"batch":"mathematics-grade11-sequences","source":"DBE CAPS Mathematics FET Grades 10–12","units":[{"unitId":"mathematics-g11-sequences","title":"Sequences and series","why":"Sequences model repeated change, finance and patterns that occur throughout mathematics and science.","objectives":["distinguish arithmetic and geometric sequences","derive a general term","calculate finite sums"],"definitions":["sequence","series","common difference","common ratio","arithmetic term","geometric term"],"principles":["Tn=a+(n-1)d","Tn=ar^(n-1)","Sn=n/2[2a+(n-1)d] for arithmetic sums"],"examples":["For 4,7,10, d=3 and Tn=3n+1","For 3,6,12, r=2 and Tn=3·2^(n-1)"],"misconceptions":["using an arithmetic formula for a geometric sequence","confusing a term with a sum"],"practice":["Find d in 8,13,18.","Find T10 for Tn=2n+1.","Find T6 when a=5,d=4.","Find r in 2,6,18.","Find T5 for a=3,r=2.","Find S5 for 2,5,8,11,14.","Explain the difference between sequence and series.","Which model fits repeated doubling?"],"solutions":["5","21","25","3","48","40","a sequence lists terms; a series adds terms","geometric"],"quizQuestions":["Define common difference.","Find T4 for Tn=3n-2.","What is a common ratio?","Classify 2,5,8.","Find T3 for 4·2^(n-1).","What does S5 mean?","State arithmetic general term.","Why check the ratio?","Find d in 10,7,4.","Name one application of sequences."],"diagram":"content/diagrams/sequences-comparison.svg","videoPackage":{"title":"Arithmetic and geometric sequences","duration":"9 minutes","scenes":["term table","difference test","ratio test","general term","sum model"],"transcript":"We compare changes between terms, select the correct model, derive the general term, and distinguish listing terms from adding them."}}]}
+{
+  "batch": "mathematics-grade11-sequences",
+  "source": "DBE CAPS Mathematics FET Grades 10–12",
+  "units": [
+    {
+      "unitId": "mathematics-g11-sequences",
+      "title": "Sequences and series",
+      "why": "Sequences model repeated change, finance and patterns that occur throughout mathematics and science.",
+      "objectives": [
+        "distinguish arithmetic and geometric sequences",
+        "derive a general term",
+        "calculate finite sums"
+      ],
+      "definitions": [
+        "sequence",
+        "series",
+        "common difference",
+        "common ratio",
+        "arithmetic term",
+        "geometric term"
+      ],
+      "principles": [
+        "Tn=a+(n-1)d",
+        "Tn=ar^(n-1)",
+        "Sn=n/2[2a+(n-1)d] for arithmetic sums"
+      ],
+      "examples": [
+        "For 4,7,10, d=3 and Tn=3n+1",
+        "For 3,6,12, r=2 and Tn=3·2^(n-1)",
+        "Worked example — Foundation: identify the known values in a Patterns problem, write the relevant rule (Tn=a+(n-1)d), substitute carefully, then check the result against the question.",
+        "Worked example — Standard: compare two representations of sequences and series and explain which features stay constant. State the rule first, show the substitution or construction, and interpret the answer in context.",
+        "Worked example — Challenge: solve a new patterns problem by naming the unknown, selecting a valid method, showing each algebraic step, and checking the final result with an independent representation."
+      ],
+      "misconceptions": [
+        "using an arithmetic formula for a geometric sequence",
+        "confusing a term with a sum"
+      ],
+      "practice": [
+        "Find d in 8,13,18.",
+        "Find T10 for Tn=2n+1.",
+        "Find T6 when a=5,d=4.",
+        "Find r in 2,6,18.",
+        "Find T5 for a=3,r=2.",
+        "Find S5 for 2,5,8,11,14.",
+        "Explain the difference between sequence and series.",
+        "Which model fits repeated doubling?",
+        "Foundation: define sequence and give one example from patterns.",
+        "Foundation: state the key rule or principle for patterns before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in sequences and series.",
+        "Standard: interpret a table, diagram or described result connected to patterns and justify your conclusion.",
+        "Challenge: identify a common misconception about patterns and correct it with evidence.",
+        "Challenge: connect patterns to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "5",
+        "21",
+        "25",
+        "3",
+        "48",
+        "40",
+        "a sequence lists terms; a series adds terms",
+        "geometric",
+        "Foundation model response: define the relevant idea (sequence); apply the principle (Tn=a+(n-1)d); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (sequence); apply the principle (Tn=a+(n-1)d); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (sequence); apply the principle (Tn=a+(n-1)d); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (Tn=a+(n-1)d), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (Tn=a+(n-1)d), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (Tn=a+(n-1)d), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Define common difference.",
+        "Find T4 for Tn=3n-2.",
+        "What is a common ratio?",
+        "Classify 2,5,8.",
+        "Find T3 for 4·2^(n-1).",
+        "What does S5 mean?",
+        "State arithmetic general term.",
+        "Why check the ratio?",
+        "Find d in 10,7,4.",
+        "Name one application of sequences.",
+        "Which definition best describes sequence?",
+        "Which principle should be applied first in patterns?"
+      ],
+      "diagram": "content/diagrams/sequences-comparison.svg",
+      "videoPackage": {
+        "title": "Arithmetic and geometric sequences",
+        "duration": "9 minutes",
+        "scenes": [
+          "term table",
+          "difference test",
+          "ratio test",
+          "general term",
+          "sum model"
+        ],
+        "transcript": "We compare changes between terms, select the correct model, derive the general term, and distinguish listing terms from adding them."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    }
+  ]
+}

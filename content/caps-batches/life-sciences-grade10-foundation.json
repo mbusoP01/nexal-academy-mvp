@@ -1,2 +1,210 @@
-{"batch":"life-sciences-grade10-foundation","source":"DBE Life Sciences CAPS Grades 10–12","units":[{"unitId":"life-sciences-g10-cells","title":"Cell structure and organisation","why":"Cells are the basic units of life and explain how tissues and organisms function.","objectives":["identify organelles","relate structure to function","compare plant and animal cells"],"definitions":["cell","organelle","tissue","diffusion","osmosis"],"principles":["structure supports function","membranes regulate movement","cells form tissues and organs"],"examples":["mitochondria release usable energy","root hair cells increase surface area"],"misconceptions":["all cells have identical organelles"],"practice":["Name organelle controlling activities.","Function of mitochondrion?","Compare plant and animal cells.","Define osmosis.","Why membrane selective?","Relate root hair shape.","What is a tissue?","Explain microscope scale."],"solutions":["nucleus","ATP-releasing respiration","plant has cell wall/chloroplast/large vacuole","water movement across membrane","controls substances","increases absorption area","group of similar cells","magnification changes apparent size"],"quizQuestions":["Define organelle.","Nucleus role?","Mitochondria function?","Osmosis meaning?","Plant-only structure?","Why membrane selective?","Cell hierarchy?","Name a specialised cell.","What is tissue?","State one microscope caution."],"diagram":"content/diagrams/cell-structure.svg","videoPackage":{"title":"Inside a cell","duration":"9 minutes","scenes":["cell overview","organelles","membrane","specialisation"],"transcript":"We tour a cell, connect each organelle to its job, and scale up from cells to tissues and organs."}},
-{"unitId":"life-sciences-g10-molecules","title":"Biological molecules","why":"Molecules provide energy, structure and information for living systems.","objectives":["identify biomolecule groups","relate structure to function","interpret food tests"],"definitions":["carbohydrate","lipid","protein","enzyme","nucleic acid"],"principles":["monomers join into polymers","enzymes lower activation energy","structure determines biological function"],"examples":["glucose is a carbohydrate used in respiration","proteins fold into functional shapes"],"misconceptions":["all fats are immediately harmful"],"practice":["Name a carbohydrate.","Function of lipid store?","What do enzymes do?","Define protein.","Why shape matters?","Name nucleic acid.","What is a polymer?","Give a food-test example."],"solutions":["glucose","long-term energy and membranes","speed reactions","amino-acid polymer","active site fit","DNA or RNA","large molecule from monomers","iodine for starch"],"quizQuestions":["Define enzyme.","Carbohydrate example?","Protein building block?","Lipid function?","What is a polymer?","Why enzymes specific?","Name nucleic acid.","Food test for starch?","Structure-function link?","State one nutrition caution."],"diagram":"content/diagrams/biomolecules.svg","videoPackage":{"title":"Molecules of life","duration":"8 minutes","scenes":["groups","monomers","enzymes","food tests"],"transcript":"We compare the major biomolecule groups, connect their structures to roles, and interpret simple food-test evidence."}}]}
+{
+  "batch": "life-sciences-grade10-foundation",
+  "source": "DBE Life Sciences CAPS Grades 10–12",
+  "units": [
+    {
+      "unitId": "life-sciences-g10-cells",
+      "title": "Cell structure and organisation",
+      "why": "Cells are the basic units of life and explain how tissues and organisms function.",
+      "objectives": [
+        "identify organelles",
+        "relate structure to function",
+        "compare plant and animal cells"
+      ],
+      "definitions": [
+        "cell",
+        "organelle",
+        "tissue",
+        "diffusion",
+        "osmosis"
+      ],
+      "principles": [
+        "structure supports function",
+        "membranes regulate movement",
+        "cells form tissues and organs"
+      ],
+      "examples": [
+        "mitochondria release usable energy",
+        "root hair cells increase surface area",
+        "Worked example — Foundation: define cell in your own words, identify the structures or stages involved in cells, and connect each feature to its function.",
+        "Worked example — Standard: interpret a labelled diagram or data description for cell structure and organisation. Describe the pattern, cite evidence, and link it to the biological principle (structure supports function).",
+        "Worked example — Challenge: explain a novel cells scenario using correct terminology, a sequence of cause and effect, and a final statement that answers the command verb."
+      ],
+      "misconceptions": [
+        "all cells have identical organelles"
+      ],
+      "practice": [
+        "Name organelle controlling activities.",
+        "Function of mitochondrion?",
+        "Compare plant and animal cells.",
+        "Define osmosis.",
+        "Why membrane selective?",
+        "Relate root hair shape.",
+        "What is a tissue?",
+        "Explain microscope scale.",
+        "Foundation: define cell and give one example from cells.",
+        "Foundation: state the key rule or principle for cells before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in cell structure and organisation.",
+        "Standard: interpret a table, diagram or described result connected to cells and justify your conclusion.",
+        "Challenge: identify a common misconception about cells and correct it with evidence.",
+        "Challenge: connect cells to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "nucleus",
+        "ATP-releasing respiration",
+        "plant has cell wall/chloroplast/large vacuole",
+        "water movement across membrane",
+        "controls substances",
+        "increases absorption area",
+        "group of similar cells",
+        "magnification changes apparent size",
+        "Foundation model response: define the relevant idea (cell); apply the principle (structure supports function); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (cell); apply the principle (structure supports function); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (cell); apply the principle (structure supports function); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (structure supports function), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (structure supports function), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (structure supports function), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Define organelle.",
+        "Nucleus role?",
+        "Mitochondria function?",
+        "Osmosis meaning?",
+        "Plant-only structure?",
+        "Why membrane selective?",
+        "Cell hierarchy?",
+        "Name a specialised cell.",
+        "What is tissue?",
+        "State one microscope caution.",
+        "Which definition best describes cell?",
+        "Which principle should be applied first in cells?"
+      ],
+      "diagram": "content/diagrams/cell-structure.svg",
+      "videoPackage": {
+        "title": "Inside a cell",
+        "duration": "9 minutes",
+        "scenes": [
+          "cell overview",
+          "organelles",
+          "membrane",
+          "specialisation"
+        ],
+        "transcript": "We tour a cell, connect each organelle to its job, and scale up from cells to tissues and organs."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "life-sciences-g10-molecules",
+      "title": "Biological molecules",
+      "why": "Molecules provide energy, structure and information for living systems.",
+      "objectives": [
+        "identify biomolecule groups",
+        "relate structure to function",
+        "interpret food tests"
+      ],
+      "definitions": [
+        "carbohydrate",
+        "lipid",
+        "protein",
+        "enzyme",
+        "nucleic acid"
+      ],
+      "principles": [
+        "monomers join into polymers",
+        "enzymes lower activation energy",
+        "structure determines biological function"
+      ],
+      "examples": [
+        "glucose is a carbohydrate used in respiration",
+        "proteins fold into functional shapes",
+        "Worked example — Foundation: define carbohydrate in your own words, identify the structures or stages involved in biochemistry, and connect each feature to its function.",
+        "Worked example — Standard: interpret a labelled diagram or data description for biological molecules. Describe the pattern, cite evidence, and link it to the biological principle (monomers join into polymers).",
+        "Worked example — Challenge: explain a novel biochemistry scenario using correct terminology, a sequence of cause and effect, and a final statement that answers the command verb."
+      ],
+      "misconceptions": [
+        "all fats are immediately harmful"
+      ],
+      "practice": [
+        "Name a carbohydrate.",
+        "Function of lipid store?",
+        "What do enzymes do?",
+        "Define protein.",
+        "Why shape matters?",
+        "Name nucleic acid.",
+        "What is a polymer?",
+        "Give a food-test example.",
+        "Foundation: define carbohydrate and give one example from biochemistry.",
+        "Foundation: state the key rule or principle for biochemistry before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in biological molecules.",
+        "Standard: interpret a table, diagram or described result connected to biochemistry and justify your conclusion.",
+        "Challenge: identify a common misconception about biochemistry and correct it with evidence.",
+        "Challenge: connect biochemistry to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "glucose",
+        "long-term energy and membranes",
+        "speed reactions",
+        "amino-acid polymer",
+        "active site fit",
+        "DNA or RNA",
+        "large molecule from monomers",
+        "iodine for starch",
+        "Foundation model response: define the relevant idea (carbohydrate); apply the principle (monomers join into polymers); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (carbohydrate); apply the principle (monomers join into polymers); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (carbohydrate); apply the principle (monomers join into polymers); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (monomers join into polymers), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (monomers join into polymers), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (monomers join into polymers), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Define enzyme.",
+        "Carbohydrate example?",
+        "Protein building block?",
+        "Lipid function?",
+        "What is a polymer?",
+        "Why enzymes specific?",
+        "Name nucleic acid.",
+        "Food test for starch?",
+        "Structure-function link?",
+        "State one nutrition caution.",
+        "Which definition best describes carbohydrate?",
+        "Which principle should be applied first in biochemistry?"
+      ],
+      "diagram": "content/diagrams/biomolecules.svg",
+      "videoPackage": {
+        "title": "Molecules of life",
+        "duration": "8 minutes",
+        "scenes": [
+          "groups",
+          "monomers",
+          "enzymes",
+          "food tests"
+        ],
+        "transcript": "We compare the major biomolecule groups, connect their structures to roles, and interpret simple food-test evidence."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    }
+  ]
+}

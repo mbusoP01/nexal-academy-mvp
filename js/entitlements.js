@@ -16,7 +16,8 @@
   };
 
   window.NEXAL_ENTITLEMENT_READY = (async () => {
-    const localFixture = window.location.hostname === 'localhost' && document.documentElement.dataset.entitlement;
+    const fixtureTier = window.location.hostname === 'localhost' ? new URLSearchParams(window.location.search).get('fixture') : null;
+    const localFixture = document.documentElement.dataset.entitlement || fixtureTier;
     if (localFixture === 'premium') {
       return publish({ tier: 'PREMIUM', status: 'active', source: 'LOCAL_FIXTURE', expiresAt: null });
     }

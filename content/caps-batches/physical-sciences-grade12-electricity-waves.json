@@ -1,3 +1,312 @@
-{"batch":"physical-sciences-grade12-electricity-waves","source":"DBE Physical Sciences CAPS Grades 10–12","units":[{"unitId":"physical-sciences-g12-electric-fields","title":"Electrostatics and electric fields","why":"Electric fields explain forces between charges and energy transfer in technology.","objectives":["describe electric fields","calculate force relationships","interpret field diagrams"],"definitions":["charge","electric field","potential","Coulomb force","field line"],"principles":["like charges repel and unlike charges attract","field direction is force on a positive test charge","F=kq₁q₂/r²"],"examples":["Doubling separation reduces Coulomb force by factor four","Field lines are denser where field magnitude is greater"],"misconceptions":["field lines are physical paths"],"practice":["State charge unit.","Describe field around positive charge.","What changes force with distance?","Explain test charge direction.","Why field lines do not cross?","Compare like charges.","State Coulomb relationship.","Check inverse-square reasoning."],"solutions":["coulomb","outward","inverse square","force on positive test charge","direction would be ambiguous","repel","F proportional q₁q₂/r²","r doubled gives quarter"],"quizQuestions":["Define field.","Coulomb law?","Charge unit?","Like charges?","Field direction convention?","Why lines dense?","Distance effect?","What is potential?","Name an electrostatic application.","State one field-diagram rule."],"diagram":"content/diagrams/electric-field.svg","videoPackage":{"title":"Seeing electric fields","duration":"9 minutes","scenes":["charge pairs","field lines","inverse square","applications"],"transcript":"We define field direction using a positive test charge, compare charge interactions, and read field diagrams without treating lines as tracks."}},
-{"unitId":"physical-sciences-g12-circuits","title":"Electric circuits and power","why":"Circuit analysis supports safe electrical design and energy efficiency.","objectives":["analyse series and parallel circuits","calculate power","interpret energy use"],"definitions":["emf","internal resistance","potential difference","current","power"],"principles":["V=IR","P=VI=I²R=V²/R","series current is common; parallel potential difference is common"],"examples":["12 V across 4 Ω gives I=3 A and P=36 W","Two equal resistors in series double total resistance"],"misconceptions":["parallel current is identical in all branches"],"practice":["Find I for 9V,3Ω.","Power for 2A at 12V.","Compare series current.","State parallel voltage rule.","Calculate energy 60W for 10s.","Why resistance heats?","Define emf.","Check power units."],"solutions":["3 A","24 W","same through each series component","same across branches","600 J","energy dissipates","energy supplied per charge","watt=joule per second"],"quizQuestions":["Ohm law?","Power formula?","Series current?","Parallel voltage?","Energy unit?","What is emf?","Calculate 6V/2Ω.","Why fuse?","State power relationship.","Name one efficiency improvement."],"diagram":"content/diagrams/circuit-parallel.svg","videoPackage":{"title":"Power in circuits","duration":"10 minutes","scenes":["series","parallel","Ohm law","power and energy"],"transcript":"We trace current through series and parallel paths, calculate power using consistent units, and distinguish energy from its rate of transfer."}},
-{"unitId":"physical-sciences-g12-waves","title":"Doppler effect and wave phenomena","why":"Wave phenomena explain sound, measurement, communication and astronomical observations.","objectives":["relate frequency and velocity","explain Doppler shifts","interpret wavefronts"],"definitions":["Doppler effect","relative motion","wavefront","interference","diffraction"],"principles":["approaching source raises observed frequency","receding source lowers observed frequency","v=fλ"],"examples":["A siren sounds higher as it approaches and lower as it recedes","Shorter wavelength at unchanged speed means higher frequency"],"misconceptions":["source frequency changes because observer hears it"],"practice":["State wave equation.","Describe approaching-source shift.","What changes for receding source?","Define wavefront.","Why does wavelength change?","Give astronomy application.","Compare interference and diffraction.","Check f=v/λ units."],"solutions":["v=fλ","observed frequency increases","decreases","line joining equal phase","relative motion changes spacing","galaxy redshift","overlap versus spreading","Hz=(m/s)/m"],"quizQuestions":["Define Doppler effect.","Approaching source?","Receding source?","Wave equation?","What is a wavefront?","Astronomy use?","What is diffraction?","Frequency unit?","Why relative motion?","Name a safe sound application."],"diagram":"content/diagrams/doppler-wavefronts.svg","videoPackage":{"title":"Waves in relative motion","duration":"9 minutes","scenes":["wavefronts","approach","recede","applications"],"transcript":"We compare wavefront spacing in front of and behind a moving source, then connect frequency shifts to sound and astronomy."}}]}
+{
+  "batch": "physical-sciences-grade12-electricity-waves",
+  "source": "DBE Physical Sciences CAPS Grades 10–12",
+  "units": [
+    {
+      "unitId": "physical-sciences-g12-electric-fields",
+      "title": "Electrostatics and electric fields",
+      "why": "Electric fields explain forces between charges and energy transfer in technology.",
+      "objectives": [
+        "describe electric fields",
+        "calculate force relationships",
+        "interpret field diagrams"
+      ],
+      "definitions": [
+        "charge",
+        "electric field",
+        "potential",
+        "Coulomb force",
+        "field line"
+      ],
+      "principles": [
+        "like charges repel and unlike charges attract",
+        "field direction is force on a positive test charge",
+        "F=kq₁q₂/r²"
+      ],
+      "examples": [
+        "Doubling separation reduces Coulomb force by factor four",
+        "Field lines are denser where field magnitude is greater",
+        "Worked example — Foundation: list the known quantities for a electricity calculation, convert them to SI units, write the governing relationship, and state the answer with its unit.",
+        "Worked example — Standard: draw or describe the system before calculating. Identify direction, sign convention and assumptions, then substitute into the relevant electricity relationship and interpret the result.",
+        "Worked example — Challenge: evaluate a multi-step electrostatics and electric fields scenario. Check dimensions, significant figures and whether the model's assumptions remain valid before reporting the conclusion."
+      ],
+      "misconceptions": [
+        "field lines are physical paths"
+      ],
+      "practice": [
+        "State charge unit.",
+        "Describe field around positive charge.",
+        "What changes force with distance?",
+        "Explain test charge direction.",
+        "Why field lines do not cross?",
+        "Compare like charges.",
+        "State Coulomb relationship.",
+        "Check inverse-square reasoning.",
+        "Foundation: define charge and give one example from electricity.",
+        "Foundation: state the key rule or principle for electricity before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in electrostatics and electric fields.",
+        "Standard: interpret a table, diagram or described result connected to electricity and justify your conclusion.",
+        "Challenge: identify a common misconception about electricity and correct it with evidence.",
+        "Challenge: connect electricity to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "coulomb",
+        "outward",
+        "inverse square",
+        "force on positive test charge",
+        "direction would be ambiguous",
+        "repel",
+        "F proportional q₁q₂/r²",
+        "r doubled gives quarter",
+        "Foundation model response: define the relevant idea (charge); apply the principle (like charges repel and unlike charges attract); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (charge); apply the principle (like charges repel and unlike charges attract); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (charge); apply the principle (like charges repel and unlike charges attract); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (like charges repel and unlike charges attract), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (like charges repel and unlike charges attract), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (like charges repel and unlike charges attract), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Define field.",
+        "Coulomb law?",
+        "Charge unit?",
+        "Like charges?",
+        "Field direction convention?",
+        "Why lines dense?",
+        "Distance effect?",
+        "What is potential?",
+        "Name an electrostatic application.",
+        "State one field-diagram rule.",
+        "Which definition best describes charge?",
+        "Which principle should be applied first in electricity?"
+      ],
+      "diagram": "content/diagrams/electric-field.svg",
+      "videoPackage": {
+        "title": "Seeing electric fields",
+        "duration": "9 minutes",
+        "scenes": [
+          "charge pairs",
+          "field lines",
+          "inverse square",
+          "applications"
+        ],
+        "transcript": "We define field direction using a positive test charge, compare charge interactions, and read field diagrams without treating lines as tracks."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "physical-sciences-g12-circuits",
+      "title": "Electric circuits and power",
+      "why": "Circuit analysis supports safe electrical design and energy efficiency.",
+      "objectives": [
+        "analyse series and parallel circuits",
+        "calculate power",
+        "interpret energy use"
+      ],
+      "definitions": [
+        "emf",
+        "internal resistance",
+        "potential difference",
+        "current",
+        "power"
+      ],
+      "principles": [
+        "V=IR",
+        "P=VI=I²R=V²/R",
+        "series current is common; parallel potential difference is common"
+      ],
+      "examples": [
+        "12 V across 4 Ω gives I=3 A and P=36 W",
+        "Two equal resistors in series double total resistance",
+        "Worked example — Foundation: list the known quantities for a electricity calculation, convert them to SI units, write the governing relationship, and state the answer with its unit.",
+        "Worked example — Standard: draw or describe the system before calculating. Identify direction, sign convention and assumptions, then substitute into the relevant electricity relationship and interpret the result.",
+        "Worked example — Challenge: evaluate a multi-step electric circuits and power scenario. Check dimensions, significant figures and whether the model's assumptions remain valid before reporting the conclusion."
+      ],
+      "misconceptions": [
+        "parallel current is identical in all branches"
+      ],
+      "practice": [
+        "Find I for 9V,3Ω.",
+        "Power for 2A at 12V.",
+        "Compare series current.",
+        "State parallel voltage rule.",
+        "Calculate energy 60W for 10s.",
+        "Why resistance heats?",
+        "Define emf.",
+        "Check power units.",
+        "Foundation: define emf and give one example from electricity.",
+        "Foundation: state the key rule or principle for electricity before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in electric circuits and power.",
+        "Standard: interpret a table, diagram or described result connected to electricity and justify your conclusion.",
+        "Challenge: identify a common misconception about electricity and correct it with evidence.",
+        "Challenge: connect electricity to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "3 A",
+        "24 W",
+        "same through each series component",
+        "same across branches",
+        "600 J",
+        "energy dissipates",
+        "energy supplied per charge",
+        "watt=joule per second",
+        "Foundation model response: define the relevant idea (emf); apply the principle (V=IR); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (emf); apply the principle (V=IR); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (emf); apply the principle (V=IR); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (V=IR), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (V=IR), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (V=IR), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Ohm law?",
+        "Power formula?",
+        "Series current?",
+        "Parallel voltage?",
+        "Energy unit?",
+        "What is emf?",
+        "Calculate 6V/2Ω.",
+        "Why fuse?",
+        "State power relationship.",
+        "Name one efficiency improvement.",
+        "Which definition best describes emf?",
+        "Which principle should be applied first in electricity?"
+      ],
+      "diagram": "content/diagrams/circuit-parallel.svg",
+      "videoPackage": {
+        "title": "Power in circuits",
+        "duration": "10 minutes",
+        "scenes": [
+          "series",
+          "parallel",
+          "Ohm law",
+          "power and energy"
+        ],
+        "transcript": "We trace current through series and parallel paths, calculate power using consistent units, and distinguish energy from its rate of transfer."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "physical-sciences-g12-waves",
+      "title": "Doppler effect and wave phenomena",
+      "why": "Wave phenomena explain sound, measurement, communication and astronomical observations.",
+      "objectives": [
+        "relate frequency and velocity",
+        "explain Doppler shifts",
+        "interpret wavefronts"
+      ],
+      "definitions": [
+        "Doppler effect",
+        "relative motion",
+        "wavefront",
+        "interference",
+        "diffraction"
+      ],
+      "principles": [
+        "approaching source raises observed frequency",
+        "receding source lowers observed frequency",
+        "v=fλ"
+      ],
+      "examples": [
+        "A siren sounds higher as it approaches and lower as it recedes",
+        "Shorter wavelength at unchanged speed means higher frequency",
+        "Worked example — Foundation: list the known quantities for a waves calculation, convert them to SI units, write the governing relationship, and state the answer with its unit.",
+        "Worked example — Standard: draw or describe the system before calculating. Identify direction, sign convention and assumptions, then substitute into the relevant waves relationship and interpret the result.",
+        "Worked example — Challenge: evaluate a multi-step doppler effect and wave phenomena scenario. Check dimensions, significant figures and whether the model's assumptions remain valid before reporting the conclusion."
+      ],
+      "misconceptions": [
+        "source frequency changes because observer hears it"
+      ],
+      "practice": [
+        "State wave equation.",
+        "Describe approaching-source shift.",
+        "What changes for receding source?",
+        "Define wavefront.",
+        "Why does wavelength change?",
+        "Give astronomy application.",
+        "Compare interference and diffraction.",
+        "Check f=v/λ units.",
+        "Foundation: define Doppler effect and give one example from waves.",
+        "Foundation: state the key rule or principle for waves before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in doppler effect and wave phenomena.",
+        "Standard: interpret a table, diagram or described result connected to waves and justify your conclusion.",
+        "Challenge: identify a common misconception about waves and correct it with evidence.",
+        "Challenge: connect waves to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "v=fλ",
+        "observed frequency increases",
+        "decreases",
+        "line joining equal phase",
+        "relative motion changes spacing",
+        "galaxy redshift",
+        "overlap versus spreading",
+        "Hz=(m/s)/m",
+        "Foundation model response: define the relevant idea (Doppler effect); apply the principle (approaching source raises observed frequency); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (Doppler effect); apply the principle (approaching source raises observed frequency); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (Doppler effect); apply the principle (approaching source raises observed frequency); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (approaching source raises observed frequency), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (approaching source raises observed frequency), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (approaching source raises observed frequency), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Define Doppler effect.",
+        "Approaching source?",
+        "Receding source?",
+        "Wave equation?",
+        "What is a wavefront?",
+        "Astronomy use?",
+        "What is diffraction?",
+        "Frequency unit?",
+        "Why relative motion?",
+        "Name a safe sound application.",
+        "Which definition best describes Doppler effect?",
+        "Which principle should be applied first in waves?"
+      ],
+      "diagram": "content/diagrams/doppler-wavefronts.svg",
+      "videoPackage": {
+        "title": "Waves in relative motion",
+        "duration": "9 minutes",
+        "scenes": [
+          "wavefronts",
+          "approach",
+          "recede",
+          "applications"
+        ],
+        "transcript": "We compare wavefront spacing in front of and behind a moving source, then connect frequency shifts to sound and astronomy."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    }
+  ]
+}

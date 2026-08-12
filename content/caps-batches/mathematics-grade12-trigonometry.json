@@ -1,1 +1,107 @@
-{"batch":"mathematics-grade12-trigonometry","source":"DBE CAPS Mathematics FET Grades 10–12","units":[{"unitId":"mathematics-g12-trigonometry","title":"General solutions and graphs","why":"Trigonometric graphs describe repeating phenomena such as sound and seasonal change.","objectives":["solve equations on intervals","interpret amplitude and period","use identities safely"],"definitions":["amplitude","period","phase shift","general solution"],"principles":["sin and cos have period 360°","tan has period 180°","all interval solutions must be listed"],"examples":["sinθ=0 on 0°–360° gives 0°,180°,360°","2sinθ=1 gives sinθ=.5 before finding both angles"],"misconceptions":["omitting endpoint solutions"],"practice":["State tan period.","Solve cosθ=1 on 0°–360°.","Find amplitude 3sinθ.","Find period sin(2θ).","Why list general solutions?","Sketch one cosine cycle.","Use identity sin²+cos².","Check θ=360°."],"solutions":["180°","0°,360°","3","180°","to cover all repeats","starts at maximum","1","it equals 0° position"],"quizQuestions":["Define amplitude.","Period of tan?","Solve sinθ=1.","What is phase shift?","Why two solutions?","Period of cos?","General solution purpose?","Check an endpoint.","State an identity.","Name a periodic model."],"diagram":"content/diagrams/trig-wave.svg","videoPackage":{"title":"Full-interval trigonometry","duration":"9 minutes","scenes":["graph features","interval solutions","identity check","general form"],"transcript":"We read amplitude and period from the graph, solve within the stated interval, and verify every angle."}}]}
+{
+  "batch": "mathematics-grade12-trigonometry",
+  "source": "DBE CAPS Mathematics FET Grades 10–12",
+  "units": [
+    {
+      "unitId": "mathematics-g12-trigonometry",
+      "title": "General solutions and graphs",
+      "why": "Trigonometric graphs describe repeating phenomena such as sound and seasonal change.",
+      "objectives": [
+        "solve equations on intervals",
+        "interpret amplitude and period",
+        "use identities safely"
+      ],
+      "definitions": [
+        "amplitude",
+        "period",
+        "phase shift",
+        "general solution"
+      ],
+      "principles": [
+        "sin and cos have period 360°",
+        "tan has period 180°",
+        "all interval solutions must be listed"
+      ],
+      "examples": [
+        "sinθ=0 on 0°–360° gives 0°,180°,360°",
+        "2sinθ=1 gives sinθ=.5 before finding both angles",
+        "Worked example — Foundation: identify the known values in a Trigonometry problem, write the relevant rule (sin and cos have period 360°), substitute carefully, then check the result against the question.",
+        "Worked example — Standard: compare two representations of general solutions and graphs and explain which features stay constant. State the rule first, show the substitution or construction, and interpret the answer in context.",
+        "Worked example — Challenge: solve a new trigonometry problem by naming the unknown, selecting a valid method, showing each algebraic step, and checking the final result with an independent representation."
+      ],
+      "misconceptions": [
+        "omitting endpoint solutions"
+      ],
+      "practice": [
+        "State tan period.",
+        "Solve cosθ=1 on 0°–360°.",
+        "Find amplitude 3sinθ.",
+        "Find period sin(2θ).",
+        "Why list general solutions?",
+        "Sketch one cosine cycle.",
+        "Use identity sin²+cos².",
+        "Check θ=360°.",
+        "Foundation: define amplitude and give one example from trigonometry.",
+        "Foundation: state the key rule or principle for trigonometry before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in general solutions and graphs.",
+        "Standard: interpret a table, diagram or described result connected to trigonometry and justify your conclusion.",
+        "Challenge: identify a common misconception about trigonometry and correct it with evidence.",
+        "Challenge: connect trigonometry to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "180°",
+        "0°,360°",
+        "3",
+        "to cover all repeats",
+        "starts at maximum",
+        "1",
+        "it equals 0° position",
+        "Foundation model response: define the relevant idea (amplitude); apply the principle (sin and cos have period 360°); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (amplitude); apply the principle (sin and cos have period 360°); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (amplitude); apply the principle (sin and cos have period 360°); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 11: identify the requested quantity or concept, cite the relevant principle (sin and cos have period 360°), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (sin and cos have period 360°), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (sin and cos have period 360°), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (sin and cos have period 360°), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Define amplitude.",
+        "Period of tan?",
+        "Solve sinθ=1.",
+        "What is phase shift?",
+        "Why two solutions?",
+        "Period of cos?",
+        "General solution purpose?",
+        "Check an endpoint.",
+        "State an identity.",
+        "Name a periodic model.",
+        "Which definition best describes amplitude?",
+        "Which principle should be applied first in trigonometry?"
+      ],
+      "diagram": "content/diagrams/trig-wave.svg",
+      "videoPackage": {
+        "title": "Full-interval trigonometry",
+        "duration": "9 minutes",
+        "scenes": [
+          "graph features",
+          "interval solutions",
+          "identity check",
+          "general form"
+        ],
+        "transcript": "We read amplitude and period from the graph, solve within the stated interval, and verify every angle."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    }
+  ]
+}

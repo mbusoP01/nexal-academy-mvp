@@ -1,3 +1,312 @@
-{"batch":"physical-sciences-grade12-chemistry","source":"DBE Physical Sciences CAPS Grades 10–12","units":[{"unitId":"physical-sciences-g12-organic","title":"Organic molecules and reactions","why":"Organic chemistry connects carbon structure to fuels, materials and biological molecules.","objectives":["identify functional groups","name basic compounds","relate structure to properties"],"definitions":["hydrocarbon","alkane","alkene","functional group","polymer"],"principles":["carbon forms four covalent bonds","alkenes contain a carbon-carbon double bond","addition reactions use unsaturation"],"examples":["ethene C₂H₄ can undergo addition polymerisation","methane is an alkane with formula CH₄"],"misconceptions":["all carbon compounds are hydrocarbons"],"practice":["Define hydrocarbon.","Formula for methane?","Identify double bond.","What is polymerisation?","Name an alkane.","Why carbon forms chains?","State combustion products.","Compare alkane and alkene."],"solutions":["compound of carbon and hydrogen","CH₄","alkene feature","joining monomers","methane","four valence bonds","CO₂ and H₂O","alkene has unsaturation"],"quizQuestions":["Define alkene.","Methane formula?","What is a functional group?","Combustion products?","Why carbon versatile?","Polymer meaning?","Double bond indicates?","Name a fuel hydrocarbon.","What is addition?","State one carbon safety note."],"diagram":"content/diagrams/organic-structures.svg","videoPackage":{"title":"Carbon structures","duration":"9 minutes","scenes":["carbon bonding","families","double bonds","polymers"],"transcript":"We identify carbon skeletons and functional groups, then connect structure to reactions and material properties."}},
-{"unitId":"physical-sciences-g12-rates","title":"Rates and equilibrium","why":"Reaction rates and equilibrium explain how chemical systems respond to conditions.","objectives":["interpret rate graphs","explain collision theory","describe dynamic equilibrium"],"definitions":["rate","activation energy","equilibrium","catalyst","reversible"],"principles":["effective collisions require sufficient energy and orientation","catalysts lower activation energy","at equilibrium forward and reverse rates are equal"],"examples":["Powdered solid reacts faster because surface area increases","A catalyst changes rate, not equilibrium position"],"misconceptions":["equilibrium means equal concentrations"],"practice":["Define rate.","Effect of temperature?","What does catalyst do?","Describe dynamic equilibrium.","Why surface area matters?","What is activation energy?","State concentration effect.","Explain reversible reaction."],"solutions":["change in concentration per time","increases effective collisions","lowers activation energy","both directions continue at equal rates","more collisions","minimum collision energy","changes collision frequency","products can reform reactants"],"quizQuestions":["Collision theory?","Catalyst role?","Define equilibrium.","Temperature effect?","Surface area effect?","Activation energy?","Why dynamic?","What does rate graph slope mean?","Concentration change?","State one equilibrium misconception."],"diagram":"content/diagrams/equilibrium-rates.svg","videoPackage":{"title":"Chemical systems in motion","duration":"9 minutes","scenes":["collisions","rate graph","catalyst","equilibrium"],"transcript":"We explain reaction rate with collisions, then show how reversible reactions can settle into dynamic equilibrium."}},
-{"unitId":"physical-sciences-g12-acids-redox","title":"Acids, bases and redox","why":"Acid-base and redox chemistry underpin batteries, biology and environmental processes.","objectives":["use pH","identify oxidation and reduction","balance redox reasoning"],"definitions":["acid","base","oxidation","reduction","oxidising agent"],"principles":["pH=-log[H⁺]","oxidation is loss of electrons","reduction is gain of electrons"],"examples":["pH 2 is more acidic than pH 4 by factor 100 in [H⁺]","In Zn→Zn²⁺+2e⁻ zinc is oxidised"],"misconceptions":["oxidation always requires oxygen"],"practice":["Classify pH 9.","Define oxidation.","What is reduction?","Identify electron loss.","Why pH scale logarithmic?","Name a base.","State redox pair.","Balance simple charge concept."],"solutions":["basic","loss of electrons","gain of electrons","oxidation","tenfold steps","OH⁻ donor or alkali","oxidation and reduction together","total charge conserved"],"quizQuestions":["pH formula?","Oxidation definition?","Reduction definition?","pH 3 versus pH 5?","What is an acid?","Electron donor?","Why balance charge?","Name a redox application.","What is an oxidising agent?","State one acid-safety rule."],"diagram":"content/diagrams/redox-transfer.svg","videoPackage":{"title":"Acid-base and electron transfer","duration":"10 minutes","scenes":["pH scale","protons","electron loss","redox cell"],"transcript":"We compare pH logarithmically, identify electron transfer, and keep charge and atoms balanced in redox reasoning."}}]}
+{
+  "batch": "physical-sciences-grade12-chemistry",
+  "source": "DBE Physical Sciences CAPS Grades 10–12",
+  "units": [
+    {
+      "unitId": "physical-sciences-g12-organic",
+      "title": "Organic molecules and reactions",
+      "why": "Organic chemistry connects carbon structure to fuels, materials and biological molecules.",
+      "objectives": [
+        "identify functional groups",
+        "name basic compounds",
+        "relate structure to properties"
+      ],
+      "definitions": [
+        "hydrocarbon",
+        "alkane",
+        "alkene",
+        "functional group",
+        "polymer"
+      ],
+      "principles": [
+        "carbon forms four covalent bonds",
+        "alkenes contain a carbon-carbon double bond",
+        "addition reactions use unsaturation"
+      ],
+      "examples": [
+        "ethene C₂H₄ can undergo addition polymerisation",
+        "methane is an alkane with formula CH₄",
+        "Worked example — Foundation: list the known quantities for a organic chemistry calculation, convert them to SI units, write the governing relationship, and state the answer with its unit.",
+        "Worked example — Standard: draw or describe the system before calculating. Identify direction, sign convention and assumptions, then substitute into the relevant organic chemistry relationship and interpret the result.",
+        "Worked example — Challenge: evaluate a multi-step organic molecules and reactions scenario. Check dimensions, significant figures and whether the model's assumptions remain valid before reporting the conclusion."
+      ],
+      "misconceptions": [
+        "all carbon compounds are hydrocarbons"
+      ],
+      "practice": [
+        "Define hydrocarbon.",
+        "Formula for methane?",
+        "Identify double bond.",
+        "What is polymerisation?",
+        "Name an alkane.",
+        "Why carbon forms chains?",
+        "State combustion products.",
+        "Compare alkane and alkene.",
+        "Foundation: define hydrocarbon and give one example from organic chemistry.",
+        "Foundation: state the key rule or principle for organic chemistry before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in organic molecules and reactions.",
+        "Standard: interpret a table, diagram or described result connected to organic chemistry and justify your conclusion.",
+        "Challenge: identify a common misconception about organic chemistry and correct it with evidence.",
+        "Challenge: connect organic chemistry to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "compound of carbon and hydrogen",
+        "CH₄",
+        "alkene feature",
+        "joining monomers",
+        "methane",
+        "four valence bonds",
+        "CO₂ and H₂O",
+        "alkene has unsaturation",
+        "Foundation model response: define the relevant idea (hydrocarbon); apply the principle (carbon forms four covalent bonds); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (hydrocarbon); apply the principle (carbon forms four covalent bonds); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (hydrocarbon); apply the principle (carbon forms four covalent bonds); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (carbon forms four covalent bonds), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (carbon forms four covalent bonds), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (carbon forms four covalent bonds), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Define alkene.",
+        "Methane formula?",
+        "What is a functional group?",
+        "Combustion products?",
+        "Why carbon versatile?",
+        "Polymer meaning?",
+        "Double bond indicates?",
+        "Name a fuel hydrocarbon.",
+        "What is addition?",
+        "State one carbon safety note.",
+        "Which definition best describes hydrocarbon?",
+        "Which principle should be applied first in organic chemistry?"
+      ],
+      "diagram": "content/diagrams/organic-structures.svg",
+      "videoPackage": {
+        "title": "Carbon structures",
+        "duration": "9 minutes",
+        "scenes": [
+          "carbon bonding",
+          "families",
+          "double bonds",
+          "polymers"
+        ],
+        "transcript": "We identify carbon skeletons and functional groups, then connect structure to reactions and material properties."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "physical-sciences-g12-rates",
+      "title": "Rates and equilibrium",
+      "why": "Reaction rates and equilibrium explain how chemical systems respond to conditions.",
+      "objectives": [
+        "interpret rate graphs",
+        "explain collision theory",
+        "describe dynamic equilibrium"
+      ],
+      "definitions": [
+        "rate",
+        "activation energy",
+        "equilibrium",
+        "catalyst",
+        "reversible"
+      ],
+      "principles": [
+        "effective collisions require sufficient energy and orientation",
+        "catalysts lower activation energy",
+        "at equilibrium forward and reverse rates are equal"
+      ],
+      "examples": [
+        "Powdered solid reacts faster because surface area increases",
+        "A catalyst changes rate, not equilibrium position",
+        "Worked example — Foundation: list the known quantities for a chemical systems calculation, convert them to SI units, write the governing relationship, and state the answer with its unit.",
+        "Worked example — Standard: draw or describe the system before calculating. Identify direction, sign convention and assumptions, then substitute into the relevant chemical systems relationship and interpret the result.",
+        "Worked example — Challenge: evaluate a multi-step rates and equilibrium scenario. Check dimensions, significant figures and whether the model's assumptions remain valid before reporting the conclusion."
+      ],
+      "misconceptions": [
+        "equilibrium means equal concentrations"
+      ],
+      "practice": [
+        "Define rate.",
+        "Effect of temperature?",
+        "What does catalyst do?",
+        "Describe dynamic equilibrium.",
+        "Why surface area matters?",
+        "What is activation energy?",
+        "State concentration effect.",
+        "Explain reversible reaction.",
+        "Foundation: define rate and give one example from chemical systems.",
+        "Foundation: state the key rule or principle for chemical systems before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in rates and equilibrium.",
+        "Standard: interpret a table, diagram or described result connected to chemical systems and justify your conclusion.",
+        "Challenge: identify a common misconception about chemical systems and correct it with evidence.",
+        "Challenge: connect chemical systems to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "change in concentration per time",
+        "increases effective collisions",
+        "lowers activation energy",
+        "both directions continue at equal rates",
+        "more collisions",
+        "minimum collision energy",
+        "changes collision frequency",
+        "products can reform reactants",
+        "Foundation model response: define the relevant idea (rate); apply the principle (effective collisions require sufficient energy and orientation); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (rate); apply the principle (effective collisions require sufficient energy and orientation); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (rate); apply the principle (effective collisions require sufficient energy and orientation); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (effective collisions require sufficient energy and orientation), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (effective collisions require sufficient energy and orientation), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (effective collisions require sufficient energy and orientation), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Collision theory?",
+        "Catalyst role?",
+        "Define equilibrium.",
+        "Temperature effect?",
+        "Surface area effect?",
+        "Activation energy?",
+        "Why dynamic?",
+        "What does rate graph slope mean?",
+        "Concentration change?",
+        "State one equilibrium misconception.",
+        "Which definition best describes rate?",
+        "Which principle should be applied first in chemical systems?"
+      ],
+      "diagram": "content/diagrams/equilibrium-rates.svg",
+      "videoPackage": {
+        "title": "Chemical systems in motion",
+        "duration": "9 minutes",
+        "scenes": [
+          "collisions",
+          "rate graph",
+          "catalyst",
+          "equilibrium"
+        ],
+        "transcript": "We explain reaction rate with collisions, then show how reversible reactions can settle into dynamic equilibrium."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "physical-sciences-g12-acids-redox",
+      "title": "Acids, bases and redox",
+      "why": "Acid-base and redox chemistry underpin batteries, biology and environmental processes.",
+      "objectives": [
+        "use pH",
+        "identify oxidation and reduction",
+        "balance redox reasoning"
+      ],
+      "definitions": [
+        "acid",
+        "base",
+        "oxidation",
+        "reduction",
+        "oxidising agent"
+      ],
+      "principles": [
+        "pH=-log[H⁺]",
+        "oxidation is loss of electrons",
+        "reduction is gain of electrons"
+      ],
+      "examples": [
+        "pH 2 is more acidic than pH 4 by factor 100 in [H⁺]",
+        "In Zn→Zn²⁺+2e⁻ zinc is oxidised",
+        "Worked example — Foundation: list the known quantities for a chemical systems calculation, convert them to SI units, write the governing relationship, and state the answer with its unit.",
+        "Worked example — Standard: draw or describe the system before calculating. Identify direction, sign convention and assumptions, then substitute into the relevant chemical systems relationship and interpret the result.",
+        "Worked example — Challenge: evaluate a multi-step acids, bases and redox scenario. Check dimensions, significant figures and whether the model's assumptions remain valid before reporting the conclusion."
+      ],
+      "misconceptions": [
+        "oxidation always requires oxygen"
+      ],
+      "practice": [
+        "Classify pH 9.",
+        "Define oxidation.",
+        "What is reduction?",
+        "Identify electron loss.",
+        "Why pH scale logarithmic?",
+        "Name a base.",
+        "State redox pair.",
+        "Balance simple charge concept.",
+        "Foundation: define acid and give one example from chemical systems.",
+        "Foundation: state the key rule or principle for chemical systems before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in acids, bases and redox.",
+        "Standard: interpret a table, diagram or described result connected to chemical systems and justify your conclusion.",
+        "Challenge: identify a common misconception about chemical systems and correct it with evidence.",
+        "Challenge: connect chemical systems to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "basic",
+        "loss of electrons",
+        "gain of electrons",
+        "oxidation",
+        "tenfold steps",
+        "OH⁻ donor or alkali",
+        "oxidation and reduction together",
+        "total charge conserved",
+        "Foundation model response: define the relevant idea (acid); apply the principle (pH=-log[H⁺]); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (acid); apply the principle (pH=-log[H⁺]); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (acid); apply the principle (pH=-log[H⁺]); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (pH=-log[H⁺]), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (pH=-log[H⁺]), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (pH=-log[H⁺]), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "pH formula?",
+        "Oxidation definition?",
+        "Reduction definition?",
+        "pH 3 versus pH 5?",
+        "What is an acid?",
+        "Electron donor?",
+        "Why balance charge?",
+        "Name a redox application.",
+        "What is an oxidising agent?",
+        "State one acid-safety rule.",
+        "Which definition best describes acid?",
+        "Which principle should be applied first in chemical systems?"
+      ],
+      "diagram": "content/diagrams/redox-transfer.svg",
+      "videoPackage": {
+        "title": "Acid-base and electron transfer",
+        "duration": "10 minutes",
+        "scenes": [
+          "pH scale",
+          "protons",
+          "electron loss",
+          "redox cell"
+        ],
+        "transcript": "We compare pH logarithmically, identify electron transfer, and keep charge and atoms balanced in redox reasoning."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    }
+  ]
+}

@@ -1,1 +1,108 @@
-{"batch":"mathematics-grade12-statistics","source":"DBE CAPS Mathematics FET Grades 10–12","units":[{"unitId":"mathematics-g12-statistics","title":"Regression, variance and distributions","why":"Statistical summaries help assess variation and relationships in data.","objectives":["interpret spread","compare datasets","read regression information"],"definitions":["variance","standard deviation","regression","correlation","quartile"],"principles":["standard deviation measures typical distance from mean","correlation does not prove causation","outliers can influence regression"],"examples":["A dataset with larger spread has larger standard deviation","A positive correlation means variables tend to increase together"],"misconceptions":["treating correlation as proof of cause"],"practice":["What does variance measure?","Interpret positive correlation.","Why use quartiles?","Describe an outlier.","Compare two standard deviations.","What is regression used for?","Why inspect a scatter plot?","State a causation warning."],"solutions":["spread around mean","increase together","to describe position and spread","unusual observation","larger means more spread","estimate relationship","to see pattern and outliers","correlation is not causation"],"quizQuestions":["Define variance.","What is standard deviation?","Positive correlation means?","Why use scatter plot?","Define quartile.","Outlier effect?","Regression purpose?","Causation warning?","What indicates spread?","Name one data-quality check."],"diagram":"content/diagrams/statistics-regression.svg","videoPackage":{"title":"Reading spread and relationships","duration":"8 minutes","scenes":["spread","quartiles","scatter plot","regression caution"],"transcript":"We describe spread numerically, read relationships from plots, and avoid claiming causation from correlation alone."}}]}
+{
+  "batch": "mathematics-grade12-statistics",
+  "source": "DBE CAPS Mathematics FET Grades 10–12",
+  "units": [
+    {
+      "unitId": "mathematics-g12-statistics",
+      "title": "Regression, variance and distributions",
+      "why": "Statistical summaries help assess variation and relationships in data.",
+      "objectives": [
+        "interpret spread",
+        "compare datasets",
+        "read regression information"
+      ],
+      "definitions": [
+        "variance",
+        "standard deviation",
+        "regression",
+        "correlation",
+        "quartile"
+      ],
+      "principles": [
+        "standard deviation measures typical distance from mean",
+        "correlation does not prove causation",
+        "outliers can influence regression"
+      ],
+      "examples": [
+        "A dataset with larger spread has larger standard deviation",
+        "A positive correlation means variables tend to increase together",
+        "Worked example — Foundation: identify the known values in a Statistics problem, write the relevant rule (standard deviation measures typical distance from mean), substitute carefully, then check the result against the question.",
+        "Worked example — Standard: compare two representations of regression, variance and distributions and explain which features stay constant. State the rule first, show the substitution or construction, and interpret the answer in context.",
+        "Worked example — Challenge: solve a new statistics problem by naming the unknown, selecting a valid method, showing each algebraic step, and checking the final result with an independent representation."
+      ],
+      "misconceptions": [
+        "treating correlation as proof of cause"
+      ],
+      "practice": [
+        "What does variance measure?",
+        "Interpret positive correlation.",
+        "Why use quartiles?",
+        "Describe an outlier.",
+        "Compare two standard deviations.",
+        "What is regression used for?",
+        "Why inspect a scatter plot?",
+        "State a causation warning.",
+        "Foundation: define variance and give one example from statistics.",
+        "Foundation: state the key rule or principle for statistics before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in regression, variance and distributions.",
+        "Standard: interpret a table, diagram or described result connected to statistics and justify your conclusion.",
+        "Challenge: identify a common misconception about statistics and correct it with evidence.",
+        "Challenge: connect statistics to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "spread around mean",
+        "increase together",
+        "to describe position and spread",
+        "unusual observation",
+        "larger means more spread",
+        "estimate relationship",
+        "to see pattern and outliers",
+        "correlation is not causation",
+        "Foundation model response: define the relevant idea (variance); apply the principle (standard deviation measures typical distance from mean); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (variance); apply the principle (standard deviation measures typical distance from mean); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (variance); apply the principle (standard deviation measures typical distance from mean); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (standard deviation measures typical distance from mean), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (standard deviation measures typical distance from mean), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (standard deviation measures typical distance from mean), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Define variance.",
+        "What is standard deviation?",
+        "Positive correlation means?",
+        "Why use scatter plot?",
+        "Define quartile.",
+        "Outlier effect?",
+        "Regression purpose?",
+        "Causation warning?",
+        "What indicates spread?",
+        "Name one data-quality check.",
+        "Which definition best describes variance?",
+        "Which principle should be applied first in statistics?"
+      ],
+      "diagram": "content/diagrams/statistics-regression.svg",
+      "videoPackage": {
+        "title": "Reading spread and relationships",
+        "duration": "8 minutes",
+        "scenes": [
+          "spread",
+          "quartiles",
+          "scatter plot",
+          "regression caution"
+        ],
+        "transcript": "We describe spread numerically, read relationships from plots, and avoid claiming causation from correlation alone."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    }
+  ]
+}

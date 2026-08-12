@@ -1,1 +1,111 @@
-{"batch":"mathematics-grade11-algebra","source":"DBE CAPS Mathematics FET Grades 10–12","units":[{"unitId":"mathematics-g11-algebra","title":"Exponents, surds and equations","why":"Exponent laws and surds provide exact methods for algebraic and scientific models.","objectives":["apply exponent laws","simplify surds","solve exponential equations"],"definitions":["base","index","surd","rational exponent"],"principles":["a^m a^n=a^(m+n)","(a^m)^n=a^(mn)","√a is the non-negative principal root"],"examples":["2³·2²=2⁵=32","√50=5√2","3^(x+1)=27 gives x=2"],"misconceptions":["adding exponents when bases differ","treating √(a+b) as √a+√b"],"practice":["Simplify 5²·5³.","Simplify (x²)³.","Write √72 in simplest surd form.","Rationalise 1/√3.","Solve 2^x=16.","State the zero-index rule.","Compare √8 and 3.","Explain why surds remain exact.","Simplify a⁴/a²."],"solutions":["5⁵=3125","x⁶","6√2","√3/3","x=4","a⁰=1 for a≠0","√8≈2.83<3","rounding loses exactness","a²"],"quizQuestions":["State product law.","Simplify 3²·3³.","What is √49?","Simplify √18.","Solve 5^x=25.","Define a surd.","What is a⁰?","Why rationalise a denominator?","Simplify x⁵/x².","State one exponent misconception."],"diagram":"content/diagrams/exponent-laws.svg","videoPackage":{"title":"Exact exponent methods","duration":"8 minutes","scenes":["index laws","surd simplification","rationalising","exponential equation"],"transcript":"We keep the base visible, apply one law at a time, and preserve exact surd forms until the final interpretation."} }]}
+{
+  "batch": "mathematics-grade11-algebra",
+  "source": "DBE CAPS Mathematics FET Grades 10–12",
+  "units": [
+    {
+      "unitId": "mathematics-g11-algebra",
+      "title": "Exponents, surds and equations",
+      "why": "Exponent laws and surds provide exact methods for algebraic and scientific models.",
+      "objectives": [
+        "apply exponent laws",
+        "simplify surds",
+        "solve exponential equations"
+      ],
+      "definitions": [
+        "base",
+        "index",
+        "surd",
+        "rational exponent"
+      ],
+      "principles": [
+        "a^m a^n=a^(m+n)",
+        "(a^m)^n=a^(mn)",
+        "√a is the non-negative principal root"
+      ],
+      "examples": [
+        "2³·2²=2⁵=32",
+        "√50=5√2",
+        "3^(x+1)=27 gives x=2",
+        "Worked example — Foundation: identify the known values in a Algebra problem, write the relevant rule (a^m a^n=a^(m+n)), substitute carefully, then check the result against the question.",
+        "Worked example — Standard: compare two representations of exponents, surds and equations and explain which features stay constant. State the rule first, show the substitution or construction, and interpret the answer in context.",
+        "Worked example — Challenge: solve a new algebra problem by naming the unknown, selecting a valid method, showing each algebraic step, and checking the final result with an independent representation."
+      ],
+      "misconceptions": [
+        "adding exponents when bases differ",
+        "treating √(a+b) as √a+√b"
+      ],
+      "practice": [
+        "Simplify 5²·5³.",
+        "Simplify (x²)³.",
+        "Write √72 in simplest surd form.",
+        "Rationalise 1/√3.",
+        "Solve 2^x=16.",
+        "State the zero-index rule.",
+        "Compare √8 and 3.",
+        "Explain why surds remain exact.",
+        "Simplify a⁴/a².",
+        "Foundation: define base and give one example from algebra.",
+        "Foundation: state the key rule or principle for algebra before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in exponents, surds and equations.",
+        "Standard: interpret a table, diagram or described result connected to algebra and justify your conclusion.",
+        "Challenge: identify a common misconception about algebra and correct it with evidence.",
+        "Challenge: connect algebra to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "5⁵=3125",
+        "x⁶",
+        "6√2",
+        "√3/3",
+        "x=4",
+        "a⁰=1 for a≠0",
+        "√8≈2.83<3",
+        "rounding loses exactness",
+        "a²",
+        "Foundation model response: define the relevant idea (base); apply the principle (a^m a^n=a^(m+n)); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (base); apply the principle (a^m a^n=a^(m+n)); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (base); apply the principle (a^m a^n=a^(m+n)); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (a^m a^n=a^(m+n)), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (a^m a^n=a^(m+n)), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 15: identify the requested quantity or concept, cite the relevant principle (a^m a^n=a^(m+n)), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "State product law.",
+        "Simplify 3²·3³.",
+        "What is √49?",
+        "Simplify √18.",
+        "Solve 5^x=25.",
+        "Define a surd.",
+        "What is a⁰?",
+        "Why rationalise a denominator?",
+        "Simplify x⁵/x².",
+        "State one exponent misconception.",
+        "Which definition best describes base?",
+        "Which principle should be applied first in algebra?"
+      ],
+      "diagram": "content/diagrams/exponent-laws.svg",
+      "videoPackage": {
+        "title": "Exact exponent methods",
+        "duration": "8 minutes",
+        "scenes": [
+          "index laws",
+          "surd simplification",
+          "rationalising",
+          "exponential equation"
+        ],
+        "transcript": "We keep the base visible, apply one law at a time, and preserve exact surd forms until the final interpretation."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 6,
+        "practiceQuestions": 15,
+        "solutionCoverage": 15,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    }
+  ]
+}

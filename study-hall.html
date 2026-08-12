@@ -101,6 +101,15 @@ document.addEventListener('DOMContentLoaded',async()=>{
     let record=masterId?await loadMasterUnit(masterId):loadLegacyUnit(params);
     if(!record) throw new Error('No lesson was selected. Return to Learn and choose a curriculum unit.');
 
+    const fixtureParams=new URLSearchParams(location.search);
+    let learnerProfile=null;
+    if(location.hostname==='localhost'&&fixtureParams.has('fixture')) learnerProfile={grade:Number(fixtureParams.get('grade')||11),role:fixtureParams.get('role')||'learner'};
+    else if(window.supabaseClient){const {data:{user}}=await window.supabaseClient.auth.getUser();if(user){const {data}=await window.supabaseClient.from('profiles').select('grade,role').eq('id',user.id).maybeSingle();learnerProfile=data;}}
+    const role=learnerProfile?.role||'learner';
+    if(record.grade && role==='learner' && Number(learnerProfile?.grade)!==Number(record.grade)){
+      loading.innerHTML=`<div class="mx-auto max-w-lg"><p class="text-xs font-bold uppercase tracking-wider text-mint">Course scope</p><h1 class="serif mt-3 text-2xl font-black text-ink">This lesson is outside your programme</h1><p class="mt-3 text-sm leading-7 text-ink2">This lesson belongs to Grade ${esc(record.grade)}. Your current learning programme is Grade ${esc(learnerProfile?.grade||'—')}.</p><a href="dashboard.html" class="mt-5 inline-flex rounded-xl bg-ink px-4 py-3 text-sm font-bold text-white">Return to My Courses</a></div>`;
+      return;
+    }
     const fullAccess=entitlement.isPremium||record.access==='free_full';
     document.getElementById('lesson-title').textContent=record.title;
     const subject=SUBJECT_LABELS[record.subject]||record.subject||'Lesson';

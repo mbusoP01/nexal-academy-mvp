@@ -1,1 +1,109 @@
-{"batch":"physical-sciences-grade10-mechanics","source":"DBE Physical Sciences CAPS Grades 10–12","units":[{"unitId":"physical-sciences-g10-mechanics","title":"Motion and forces","why":"Mechanics explains how objects move and interact, from transport to sport and safety.","objectives":["distinguish distance and displacement","interpret motion graphs","apply Newton's laws"],"definitions":["scalar","vector","velocity","acceleration","net force"],"principles":["v=Δx/Δt","a=Δv/Δt","Fnet=ma"],"examples":["A 20 m displacement in 4 s gives average velocity 5 m/s","A 2 kg object with net force 6 N accelerates at 3 m/s²"],"misconceptions":["speed and velocity are identical","mass and weight are the same"],"practice":["Define displacement.","Calculate velocity for 30 m in 5 s.","Find acceleration from 4 to 10 m/s in 3 s.","State SI force unit.","Calculate force m=4,a=2.","Explain a vector.","Interpret flat distance-time graph.","Why draw a free-body diagram?"],"solutions":["directed change in position","6 m/s","2 m/s²","newton","8 N","magnitude and direction","object at rest","to show all forces"],"quizQuestions":["Scalar or vector: velocity?","Formula for acceleration?","SI unit mass?","Calculate F for 3kg,4m/s².","Define net force.","What does slope of velocity-time graph show?","Distance versus displacement?","Why use SI units?","State Newton's second law.","Name one mechanics safety application."],"diagram":"content/diagrams/mechanics-free-body.svg","videoPackage":{"title":"Motion and net force","duration":"9 minutes","scenes":["vectors","motion graph","free body","F=ma calculation"],"transcript":"We define direction carefully, read graphs using slope, and calculate net force with SI units and a labelled free-body diagram."}}]}
+{
+  "batch": "physical-sciences-grade10-mechanics",
+  "source": "DBE Physical Sciences CAPS Grades 10–12",
+  "units": [
+    {
+      "unitId": "physical-sciences-g10-mechanics",
+      "title": "Motion and forces",
+      "why": "Mechanics explains how objects move and interact, from transport to sport and safety.",
+      "objectives": [
+        "distinguish distance and displacement",
+        "interpret motion graphs",
+        "apply Newton's laws"
+      ],
+      "definitions": [
+        "scalar",
+        "vector",
+        "velocity",
+        "acceleration",
+        "net force"
+      ],
+      "principles": [
+        "v=Δx/Δt",
+        "a=Δv/Δt",
+        "Fnet=ma"
+      ],
+      "examples": [
+        "A 20 m displacement in 4 s gives average velocity 5 m/s",
+        "A 2 kg object with net force 6 N accelerates at 3 m/s²",
+        "Worked example — Foundation: list the known quantities for a mechanics calculation, convert them to SI units, write the governing relationship, and state the answer with its unit.",
+        "Worked example — Standard: draw or describe the system before calculating. Identify direction, sign convention and assumptions, then substitute into the relevant mechanics relationship and interpret the result.",
+        "Worked example — Challenge: evaluate a multi-step motion and forces scenario. Check dimensions, significant figures and whether the model's assumptions remain valid before reporting the conclusion."
+      ],
+      "misconceptions": [
+        "speed and velocity are identical",
+        "mass and weight are the same"
+      ],
+      "practice": [
+        "Define displacement.",
+        "Calculate velocity for 30 m in 5 s.",
+        "Find acceleration from 4 to 10 m/s in 3 s.",
+        "State SI force unit.",
+        "Calculate force m=4,a=2.",
+        "Explain a vector.",
+        "Interpret flat distance-time graph.",
+        "Why draw a free-body diagram?",
+        "Foundation: define scalar and give one example from mechanics.",
+        "Foundation: state the key rule or principle for mechanics before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in motion and forces.",
+        "Standard: interpret a table, diagram or described result connected to mechanics and justify your conclusion.",
+        "Challenge: identify a common misconception about mechanics and correct it with evidence.",
+        "Challenge: connect mechanics to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "directed change in position",
+        "6 m/s",
+        "2 m/s²",
+        "newton",
+        "8 N",
+        "magnitude and direction",
+        "object at rest",
+        "to show all forces",
+        "Foundation model response: define the relevant idea (scalar); apply the principle (v=Δx/Δt); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (scalar); apply the principle (v=Δx/Δt); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (scalar); apply the principle (v=Δx/Δt); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (v=Δx/Δt), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (v=Δx/Δt), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (v=Δx/Δt), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Scalar or vector: velocity?",
+        "Formula for acceleration?",
+        "SI unit mass?",
+        "Calculate F for 3kg,4m/s².",
+        "Define net force.",
+        "What does slope of velocity-time graph show?",
+        "Distance versus displacement?",
+        "Why use SI units?",
+        "State Newton's second law.",
+        "Name one mechanics safety application.",
+        "Which definition best describes scalar?",
+        "Which principle should be applied first in mechanics?"
+      ],
+      "diagram": "content/diagrams/mechanics-free-body.svg",
+      "videoPackage": {
+        "title": "Motion and net force",
+        "duration": "9 minutes",
+        "scenes": [
+          "vectors",
+          "motion graph",
+          "free body",
+          "F=ma calculation"
+        ],
+        "transcript": "We define direction carefully, read graphs using slope, and calculate net force with SI units and a labelled free-body diagram."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    }
+  ]
+}

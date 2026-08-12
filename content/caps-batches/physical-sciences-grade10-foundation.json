@@ -1,5 +1,516 @@
-{"batch":"physical-sciences-grade10-foundation","source":"DBE Physical Sciences CAPS Grades 10–12","units":[{"unitId":"physical-sciences-g10-matter","title":"Particles and materials","why":"Particle models explain properties and changes of materials.","objectives":["distinguish states","relate particle motion to temperature","interpret material properties"],"definitions":["atom","molecule","solid","liquid","gas"],"principles":["particles are always moving","temperature reflects average kinetic energy","changes of state conserve substance identity"],"examples":["heating ice increases particle energy until melting","gas pressure changes when particle collisions change"],"misconceptions":["particles expand when heated rather than spacing changing"],"practice":["Name three states.","Describe solid particles.","What changes during melting?","Why compress gases?","Define diffusion.","Relate temperature to motion.","Why does mass remain?","Give one particle-model limitation."],"solutions":["solid liquid gas","closely packed vibrating particles","energy and arrangement","large spaces","net movement from high to low concentration","average kinetic energy","particles are conserved","model simplifies interactions"],"quizQuestions":["Define atom.","State gas property.","What is diffusion?","Why liquids flow?","What does heating increase?","State conservation idea.","Why pressure rises?","Name a phase change.","What is a model?","Give one material application."],"diagram":"content/diagrams/particle-states.svg","videoPackage":{"title":"Particles and materials","duration":"8 minutes","scenes":["particle model","states","heating","pressure"],"transcript":"We use a particle model to explain states, changes of state, diffusion and pressure without changing the substance identity."}},
-{"unitId":"physical-sciences-g10-energy","title":"Energy transfer and work","why":"Energy accounting connects machines, movement and efficiency.","objectives":["identify energy stores","calculate work","interpret efficiency"],"definitions":["work","energy","power","efficiency","system"],"principles":["W=FΔx parallel to force","P=W/t","efficiency=useful output/input×100"],"examples":["10 N over 3 m does 30 J","600 J in 20 s gives 30 W"],"misconceptions":["energy is used up rather than transferred"],"practice":["Calculate work 8N over 5m.","Power for 100J in 4s.","Efficiency 80J/100J.","Name a gravitational store.","Why is efficiency below 100%?","Define power.","State a system boundary.","Check units for work."],"solutions":["40 J","25 W","80%","gravitational potential","dissipation","rate of energy transfer","chosen objects/interactions","newton metre or joule"],"quizQuestions":["Work formula?","SI energy unit?","Define power.","Efficiency formula?","Why losses?","Name a store.","Calculate 50J/5s.","What is system?","Unit of force?","Give efficiency interpretation."],"diagram":"content/diagrams/energy-transfer.svg","videoPackage":{"title":"Energy accounting","duration":"8 minutes","scenes":["stores","work","power","efficiency"],"transcript":"We track transfers through a system, calculate work and power with units, and report efficiency honestly."}},
-{"unitId":"physical-sciences-g10-waves","title":"Sound and electromagnetic radiation","why":"Waves transfer energy and information through media and space.","objectives":["describe wave properties","relate frequency and period","compare sound and light"],"definitions":["wavelength","frequency","amplitude","transverse","longitudinal"],"principles":["v=fλ","frequency is cycles per second","sound requires a medium"],"examples":["f=5 Hz and λ=2 m gives v=10 m/s","higher amplitude sound is perceived as louder"],"misconceptions":["particles travel with a wave over its whole distance"],"practice":["Define wavelength.","Calculate v for f=4Hz,λ=3m.","Unit of frequency?","Describe transverse motion.","Why sound fails in vacuum?","What amplitude changes?","Compare light and sound.","Read period from frequency."],"solutions":["distance between matching points","12 m/s","hertz","perpendicular oscillation","no particles to interact","energy/intensity","light travels vacuum","T=1/f"],"quizQuestions":["Wave speed formula?","Define frequency.","Sound type?","What is amplitude?","Why medium?","Unit wavelength?","What does higher frequency mean?","Name EM wave.","State wave energy idea.","Give a safe sound application."],"diagram":"content/diagrams/wave-properties.svg","videoPackage":{"title":"Reading a wave","duration":"8 minutes","scenes":["crest and trough","frequency","speed","sound versus light"],"transcript":"We label wavelength, frequency and amplitude, then apply the wave equation while keeping the medium assumptions visible."}},
-{"unitId":"physical-sciences-g10-electricity","title":"Circuits and electrical safety","why":"Circuit reasoning supports safe design and responsible energy use.","objectives":["read circuit diagrams","use current and potential difference","explain safety devices"],"definitions":["current","potential difference","resistance","series","parallel"],"principles":["V=IR","charge flows in a closed circuit","parallel branches share potential difference"],"examples":["V=12V,R=4Ω gives I=3A","A fuse melts when current exceeds rating"],"misconceptions":["current is consumed by a resistor"],"practice":["Calculate I for 10V,5Ω.","State unit of resistance.","Why circuit must close?","Compare series and parallel.","Define potential difference.","Explain fuse purpose.","Why use earthing?","Check V=IR units."],"solutions":["2 A","ohm","charge needs continuous path","series one path; parallel branches","energy per charge","breaks excess current","safe fault path","volt=ampere×ohm"],"quizQuestions":["Ohm law?","Unit current?","What is resistance?","Fuse purpose?","Series path count?","Parallel voltage?","Why earthing?","Calculate 6V/2Ω.","What is a circuit?","Name one safety practice."],"diagram":"content/diagrams/simple-circuit.svg","videoPackage":{"title":"Safe circuit reasoning","duration":"8 minutes","scenes":["symbols","current","Ohm law","fuse"],"transcript":"We trace a closed path, define current and potential difference, calculate with Ohm's law, and identify safety controls."}},
-{"unitId":"physical-sciences-g10-chemical-change","title":"Reactions and acids","why":"Chemical change explains materials, reactions and safe everyday chemistry.","objectives":["identify reactants and products","balance simple equations","describe acids and bases"],"definitions":["reactant","product","acid","base","indicator"],"principles":["atoms are conserved","pH below 7 is acidic","coefficients balance equations without changing compounds"],"examples":["2H₂+O₂→2H₂O balances atoms","acid plus base can neutralise to salt and water"],"misconceptions":["changing subscripts to balance an equation"],"practice":["Identify reactants in A+B→C.","Balance H₂+Cl₂→HCl.","Classify pH 3.","Define neutralisation.","Why coefficients?","Name an indicator.","What is conserved?","State one acid safety rule."],"solutions":["A and B","H₂+Cl₂→2HCl","acidic","acid and base reaction","change quantities","litmus","atoms","wear eye protection"],"quizQuestions":["Define product.","What is pH 7?","Why balance?","Acid indicator colour?","What is neutralisation?","State conservation law.","Name a base.","How use coefficients?","What is a reactant?","Give safety step."],"diagram":"content/diagrams/chemical-reaction.svg","videoPackage":{"title":"Reading chemical change","duration":"9 minutes","scenes":["particle rearrangement","equation","balance","acid safety"],"transcript":"We track atoms as particles rearrange, balance with coefficients, and use pH and indicators safely."}}]}
+{
+  "batch": "physical-sciences-grade10-foundation",
+  "source": "DBE Physical Sciences CAPS Grades 10–12",
+  "units": [
+    {
+      "unitId": "physical-sciences-g10-matter",
+      "title": "Particles and materials",
+      "why": "Particle models explain properties and changes of materials.",
+      "objectives": [
+        "distinguish states",
+        "relate particle motion to temperature",
+        "interpret material properties"
+      ],
+      "definitions": [
+        "atom",
+        "molecule",
+        "solid",
+        "liquid",
+        "gas"
+      ],
+      "principles": [
+        "particles are always moving",
+        "temperature reflects average kinetic energy",
+        "changes of state conserve substance identity"
+      ],
+      "examples": [
+        "heating ice increases particle energy until melting",
+        "gas pressure changes when particle collisions change",
+        "Worked example — Foundation: list the known quantities for a matter calculation, convert them to SI units, write the governing relationship, and state the answer with its unit.",
+        "Worked example — Standard: draw or describe the system before calculating. Identify direction, sign convention and assumptions, then substitute into the relevant matter relationship and interpret the result.",
+        "Worked example — Challenge: evaluate a multi-step particles and materials scenario. Check dimensions, significant figures and whether the model's assumptions remain valid before reporting the conclusion."
+      ],
+      "misconceptions": [
+        "particles expand when heated rather than spacing changing"
+      ],
+      "practice": [
+        "Name three states.",
+        "Describe solid particles.",
+        "What changes during melting?",
+        "Why compress gases?",
+        "Define diffusion.",
+        "Relate temperature to motion.",
+        "Why does mass remain?",
+        "Give one particle-model limitation.",
+        "Foundation: define atom and give one example from matter.",
+        "Foundation: state the key rule or principle for matter before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in particles and materials.",
+        "Standard: interpret a table, diagram or described result connected to matter and justify your conclusion.",
+        "Challenge: identify a common misconception about matter and correct it with evidence.",
+        "Challenge: connect matter to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "solid liquid gas",
+        "closely packed vibrating particles",
+        "energy and arrangement",
+        "large spaces",
+        "net movement from high to low concentration",
+        "average kinetic energy",
+        "particles are conserved",
+        "model simplifies interactions",
+        "Foundation model response: define the relevant idea (atom); apply the principle (particles are always moving); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (atom); apply the principle (particles are always moving); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (atom); apply the principle (particles are always moving); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (particles are always moving), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (particles are always moving), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (particles are always moving), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Define atom.",
+        "State gas property.",
+        "What is diffusion?",
+        "Why liquids flow?",
+        "What does heating increase?",
+        "State conservation idea.",
+        "Why pressure rises?",
+        "Name a phase change.",
+        "What is a model?",
+        "Give one material application.",
+        "Which definition best describes atom?",
+        "Which principle should be applied first in matter?"
+      ],
+      "diagram": "content/diagrams/particle-states.svg",
+      "videoPackage": {
+        "title": "Particles and materials",
+        "duration": "8 minutes",
+        "scenes": [
+          "particle model",
+          "states",
+          "heating",
+          "pressure"
+        ],
+        "transcript": "We use a particle model to explain states, changes of state, diffusion and pressure without changing the substance identity."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "physical-sciences-g10-energy",
+      "title": "Energy transfer and work",
+      "why": "Energy accounting connects machines, movement and efficiency.",
+      "objectives": [
+        "identify energy stores",
+        "calculate work",
+        "interpret efficiency"
+      ],
+      "definitions": [
+        "work",
+        "energy",
+        "power",
+        "efficiency",
+        "system"
+      ],
+      "principles": [
+        "W=FΔx parallel to force",
+        "P=W/t",
+        "efficiency=useful output/input×100"
+      ],
+      "examples": [
+        "10 N over 3 m does 30 J",
+        "600 J in 20 s gives 30 W",
+        "Worked example — Foundation: list the known quantities for a energy calculation, convert them to SI units, write the governing relationship, and state the answer with its unit.",
+        "Worked example — Standard: draw or describe the system before calculating. Identify direction, sign convention and assumptions, then substitute into the relevant energy relationship and interpret the result.",
+        "Worked example — Challenge: evaluate a multi-step energy transfer and work scenario. Check dimensions, significant figures and whether the model's assumptions remain valid before reporting the conclusion."
+      ],
+      "misconceptions": [
+        "energy is used up rather than transferred"
+      ],
+      "practice": [
+        "Calculate work 8N over 5m.",
+        "Power for 100J in 4s.",
+        "Efficiency 80J/100J.",
+        "Name a gravitational store.",
+        "Why is efficiency below 100%?",
+        "Define power.",
+        "State a system boundary.",
+        "Check units for work.",
+        "Foundation: define work and give one example from energy.",
+        "Foundation: state the key rule or principle for energy before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in energy transfer and work.",
+        "Standard: interpret a table, diagram or described result connected to energy and justify your conclusion.",
+        "Challenge: identify a common misconception about energy and correct it with evidence.",
+        "Challenge: connect energy to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "40 J",
+        "25 W",
+        "80%",
+        "gravitational potential",
+        "dissipation",
+        "rate of energy transfer",
+        "chosen objects/interactions",
+        "newton metre or joule",
+        "Foundation model response: define the relevant idea (work); apply the principle (W=FΔx parallel to force); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (work); apply the principle (W=FΔx parallel to force); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (work); apply the principle (W=FΔx parallel to force); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (W=FΔx parallel to force), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (W=FΔx parallel to force), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (W=FΔx parallel to force), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Work formula?",
+        "SI energy unit?",
+        "Define power.",
+        "Efficiency formula?",
+        "Why losses?",
+        "Name a store.",
+        "Calculate 50J/5s.",
+        "What is system?",
+        "Unit of force?",
+        "Give efficiency interpretation.",
+        "Which definition best describes work?",
+        "Which principle should be applied first in energy?"
+      ],
+      "diagram": "content/diagrams/energy-transfer.svg",
+      "videoPackage": {
+        "title": "Energy accounting",
+        "duration": "8 minutes",
+        "scenes": [
+          "stores",
+          "work",
+          "power",
+          "efficiency"
+        ],
+        "transcript": "We track transfers through a system, calculate work and power with units, and report efficiency honestly."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "physical-sciences-g10-waves",
+      "title": "Sound and electromagnetic radiation",
+      "why": "Waves transfer energy and information through media and space.",
+      "objectives": [
+        "describe wave properties",
+        "relate frequency and period",
+        "compare sound and light"
+      ],
+      "definitions": [
+        "wavelength",
+        "frequency",
+        "amplitude",
+        "transverse",
+        "longitudinal"
+      ],
+      "principles": [
+        "v=fλ",
+        "frequency is cycles per second",
+        "sound requires a medium"
+      ],
+      "examples": [
+        "f=5 Hz and λ=2 m gives v=10 m/s",
+        "higher amplitude sound is perceived as louder",
+        "Worked example — Foundation: list the known quantities for a waves calculation, convert them to SI units, write the governing relationship, and state the answer with its unit.",
+        "Worked example — Standard: draw or describe the system before calculating. Identify direction, sign convention and assumptions, then substitute into the relevant waves relationship and interpret the result.",
+        "Worked example — Challenge: evaluate a multi-step sound and electromagnetic radiation scenario. Check dimensions, significant figures and whether the model's assumptions remain valid before reporting the conclusion."
+      ],
+      "misconceptions": [
+        "particles travel with a wave over its whole distance"
+      ],
+      "practice": [
+        "Define wavelength.",
+        "Calculate v for f=4Hz,λ=3m.",
+        "Unit of frequency?",
+        "Describe transverse motion.",
+        "Why sound fails in vacuum?",
+        "What amplitude changes?",
+        "Compare light and sound.",
+        "Read period from frequency.",
+        "Foundation: define wavelength and give one example from waves.",
+        "Foundation: state the key rule or principle for waves before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in sound and electromagnetic radiation.",
+        "Standard: interpret a table, diagram or described result connected to waves and justify your conclusion.",
+        "Challenge: identify a common misconception about waves and correct it with evidence.",
+        "Challenge: connect waves to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "distance between matching points",
+        "12 m/s",
+        "hertz",
+        "perpendicular oscillation",
+        "no particles to interact",
+        "energy/intensity",
+        "light travels vacuum",
+        "T=1/f",
+        "Foundation model response: define the relevant idea (wavelength); apply the principle (v=fλ); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (wavelength); apply the principle (v=fλ); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (wavelength); apply the principle (v=fλ); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (v=fλ), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (v=fλ), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (v=fλ), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Wave speed formula?",
+        "Define frequency.",
+        "Sound type?",
+        "What is amplitude?",
+        "Why medium?",
+        "Unit wavelength?",
+        "What does higher frequency mean?",
+        "Name EM wave.",
+        "State wave energy idea.",
+        "Give a safe sound application.",
+        "Which definition best describes wavelength?",
+        "Which principle should be applied first in waves?"
+      ],
+      "diagram": "content/diagrams/wave-properties.svg",
+      "videoPackage": {
+        "title": "Reading a wave",
+        "duration": "8 minutes",
+        "scenes": [
+          "crest and trough",
+          "frequency",
+          "speed",
+          "sound versus light"
+        ],
+        "transcript": "We label wavelength, frequency and amplitude, then apply the wave equation while keeping the medium assumptions visible."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "physical-sciences-g10-electricity",
+      "title": "Circuits and electrical safety",
+      "why": "Circuit reasoning supports safe design and responsible energy use.",
+      "objectives": [
+        "read circuit diagrams",
+        "use current and potential difference",
+        "explain safety devices"
+      ],
+      "definitions": [
+        "current",
+        "potential difference",
+        "resistance",
+        "series",
+        "parallel"
+      ],
+      "principles": [
+        "V=IR",
+        "charge flows in a closed circuit",
+        "parallel branches share potential difference"
+      ],
+      "examples": [
+        "V=12V,R=4Ω gives I=3A",
+        "A fuse melts when current exceeds rating",
+        "Worked example — Foundation: list the known quantities for a electricity calculation, convert them to SI units, write the governing relationship, and state the answer with its unit.",
+        "Worked example — Standard: draw or describe the system before calculating. Identify direction, sign convention and assumptions, then substitute into the relevant electricity relationship and interpret the result.",
+        "Worked example — Challenge: evaluate a multi-step circuits and electrical safety scenario. Check dimensions, significant figures and whether the model's assumptions remain valid before reporting the conclusion."
+      ],
+      "misconceptions": [
+        "current is consumed by a resistor"
+      ],
+      "practice": [
+        "Calculate I for 10V,5Ω.",
+        "State unit of resistance.",
+        "Why circuit must close?",
+        "Compare series and parallel.",
+        "Define potential difference.",
+        "Explain fuse purpose.",
+        "Why use earthing?",
+        "Check V=IR units.",
+        "Foundation: define current and give one example from electricity.",
+        "Foundation: state the key rule or principle for electricity before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in circuits and electrical safety.",
+        "Standard: interpret a table, diagram or described result connected to electricity and justify your conclusion.",
+        "Challenge: identify a common misconception about electricity and correct it with evidence.",
+        "Challenge: connect electricity to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "2 A",
+        "ohm",
+        "charge needs continuous path",
+        "series one path; parallel branches",
+        "energy per charge",
+        "breaks excess current",
+        "safe fault path",
+        "volt=ampere×ohm",
+        "Foundation model response: define the relevant idea (current); apply the principle (V=IR); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (current); apply the principle (V=IR); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (current); apply the principle (V=IR); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (V=IR), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (V=IR), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (V=IR), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Ohm law?",
+        "Unit current?",
+        "What is resistance?",
+        "Fuse purpose?",
+        "Series path count?",
+        "Parallel voltage?",
+        "Why earthing?",
+        "Calculate 6V/2Ω.",
+        "What is a circuit?",
+        "Name one safety practice.",
+        "Which definition best describes current?",
+        "Which principle should be applied first in electricity?"
+      ],
+      "diagram": "content/diagrams/simple-circuit.svg",
+      "videoPackage": {
+        "title": "Safe circuit reasoning",
+        "duration": "8 minutes",
+        "scenes": [
+          "symbols",
+          "current",
+          "Ohm law",
+          "fuse"
+        ],
+        "transcript": "We trace a closed path, define current and potential difference, calculate with Ohm's law, and identify safety controls."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "physical-sciences-g10-chemical-change",
+      "title": "Reactions and acids",
+      "why": "Chemical change explains materials, reactions and safe everyday chemistry.",
+      "objectives": [
+        "identify reactants and products",
+        "balance simple equations",
+        "describe acids and bases"
+      ],
+      "definitions": [
+        "reactant",
+        "product",
+        "acid",
+        "base",
+        "indicator"
+      ],
+      "principles": [
+        "atoms are conserved",
+        "pH below 7 is acidic",
+        "coefficients balance equations without changing compounds"
+      ],
+      "examples": [
+        "2H₂+O₂→2H₂O balances atoms",
+        "acid plus base can neutralise to salt and water",
+        "Worked example — Foundation: list the known quantities for a chemical change calculation, convert them to SI units, write the governing relationship, and state the answer with its unit.",
+        "Worked example — Standard: draw or describe the system before calculating. Identify direction, sign convention and assumptions, then substitute into the relevant chemical change relationship and interpret the result.",
+        "Worked example — Challenge: evaluate a multi-step reactions and acids scenario. Check dimensions, significant figures and whether the model's assumptions remain valid before reporting the conclusion."
+      ],
+      "misconceptions": [
+        "changing subscripts to balance an equation"
+      ],
+      "practice": [
+        "Identify reactants in A+B→C.",
+        "Balance H₂+Cl₂→HCl.",
+        "Classify pH 3.",
+        "Define neutralisation.",
+        "Why coefficients?",
+        "Name an indicator.",
+        "What is conserved?",
+        "State one acid safety rule.",
+        "Foundation: define reactant and give one example from chemical change.",
+        "Foundation: state the key rule or principle for chemical change before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in reactions and acids.",
+        "Standard: interpret a table, diagram or described result connected to chemical change and justify your conclusion.",
+        "Challenge: identify a common misconception about chemical change and correct it with evidence.",
+        "Challenge: connect chemical change to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "A and B",
+        "H₂+Cl₂→2HCl",
+        "acidic",
+        "acid and base reaction",
+        "change quantities",
+        "litmus",
+        "atoms",
+        "wear eye protection",
+        "Foundation model response: define the relevant idea (reactant); apply the principle (atoms are conserved); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (reactant); apply the principle (atoms are conserved); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (reactant); apply the principle (atoms are conserved); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (atoms are conserved), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (atoms are conserved), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (atoms are conserved), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Define product.",
+        "What is pH 7?",
+        "Why balance?",
+        "Acid indicator colour?",
+        "What is neutralisation?",
+        "State conservation law.",
+        "Name a base.",
+        "How use coefficients?",
+        "What is a reactant?",
+        "Give safety step.",
+        "Which definition best describes reactant?",
+        "Which principle should be applied first in chemical change?"
+      ],
+      "diagram": "content/diagrams/chemical-reaction.svg",
+      "videoPackage": {
+        "title": "Reading chemical change",
+        "duration": "9 minutes",
+        "scenes": [
+          "particle rearrangement",
+          "equation",
+          "balance",
+          "acid safety"
+        ],
+        "transcript": "We track atoms as particles rearrange, balance with coefficients, and use pH and indicators safely."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    }
+  ]
+}

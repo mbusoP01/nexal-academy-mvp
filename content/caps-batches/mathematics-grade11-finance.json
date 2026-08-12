@@ -1,1 +1,110 @@
-{"batch":"mathematics-grade11-finance","source":"DBE CAPS Mathematics FET Grades 10–12","units":[{"unitId":"mathematics-g11-finance","title":"Growth, decay and finance","why":"Financial mathematics supports responsible decisions about savings, loans and inflation.","objectives":["use percentage change","calculate simple and compound growth","interpret finance terms"],"definitions":["principal","interest","rate","term","inflation","depreciation"],"principles":["simple interest I=Prt","compound amount A=P(1+i)^n","percentage change is change/original×100"],"examples":["R2 000 at 5% simple interest for 2 years earns R200","R1 000 at 10% compounded annually becomes R1 210 after 2 years"],"misconceptions":["using percentage points as percentages","forgetting rate and term units must match"],"practice":["Find 10% of R500.","Simple interest on R2 000 at 6% for 3 years.","Compound amount R1 000 at 10% for 2 years.","A price rises R80 to R100: percentage increase?","Define depreciation.","Why convert monthly rate for annual term?","Compare simple and compound growth.","Explain inflation's effect on buying power."],"solutions":["R50","R360","R1 210","25%","loss of value over time","periods must match","compound includes interest on interest","same money buys fewer goods"],"quizQuestions":["Define principal.","Simple interest formula?","What is i?","10% of R800?","Why compound differs?","Define inflation.","What is a term?","Calculate change from 50 to 60.","What unit must rate use?","Name one responsible finance check."],"diagram":"content/diagrams/compound-growth.svg","videoPackage":{"title":"Making sense of growth","duration":"8 minutes","scenes":["percentage baseline","simple interest","compound table","inflation decision"],"transcript":"We keep the original amount as the percentage baseline, align rate and time units, and compare simple with compound growth."}}]}
+{
+  "batch": "mathematics-grade11-finance",
+  "source": "DBE CAPS Mathematics FET Grades 10–12",
+  "units": [
+    {
+      "unitId": "mathematics-g11-finance",
+      "title": "Growth, decay and finance",
+      "why": "Financial mathematics supports responsible decisions about savings, loans and inflation.",
+      "objectives": [
+        "use percentage change",
+        "calculate simple and compound growth",
+        "interpret finance terms"
+      ],
+      "definitions": [
+        "principal",
+        "interest",
+        "rate",
+        "term",
+        "inflation",
+        "depreciation"
+      ],
+      "principles": [
+        "simple interest I=Prt",
+        "compound amount A=P(1+i)^n",
+        "percentage change is change/original×100"
+      ],
+      "examples": [
+        "R2 000 at 5% simple interest for 2 years earns R200",
+        "R1 000 at 10% compounded annually becomes R1 210 after 2 years",
+        "Worked example — Foundation: identify the known values in a Finance problem, write the relevant rule (simple interest I=Prt), substitute carefully, then check the result against the question.",
+        "Worked example — Standard: compare two representations of growth, decay and finance and explain which features stay constant. State the rule first, show the substitution or construction, and interpret the answer in context.",
+        "Worked example — Challenge: solve a new finance problem by naming the unknown, selecting a valid method, showing each algebraic step, and checking the final result with an independent representation."
+      ],
+      "misconceptions": [
+        "using percentage points as percentages",
+        "forgetting rate and term units must match"
+      ],
+      "practice": [
+        "Find 10% of R500.",
+        "Simple interest on R2 000 at 6% for 3 years.",
+        "Compound amount R1 000 at 10% for 2 years.",
+        "A price rises R80 to R100: percentage increase?",
+        "Define depreciation.",
+        "Why convert monthly rate for annual term?",
+        "Compare simple and compound growth.",
+        "Explain inflation's effect on buying power.",
+        "Foundation: define principal and give one example from finance.",
+        "Foundation: state the key rule or principle for finance before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in growth, decay and finance.",
+        "Standard: interpret a table, diagram or described result connected to finance and justify your conclusion.",
+        "Challenge: identify a common misconception about finance and correct it with evidence.",
+        "Challenge: connect finance to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "R50",
+        "R360",
+        "R1 210",
+        "25%",
+        "loss of value over time",
+        "periods must match",
+        "compound includes interest on interest",
+        "same money buys fewer goods",
+        "Foundation model response: define the relevant idea (principal); apply the principle (simple interest I=Prt); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (principal); apply the principle (simple interest I=Prt); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (principal); apply the principle (simple interest I=Prt); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (simple interest I=Prt), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (simple interest I=Prt), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (simple interest I=Prt), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Define principal.",
+        "Simple interest formula?",
+        "What is i?",
+        "10% of R800?",
+        "Why compound differs?",
+        "Define inflation.",
+        "What is a term?",
+        "Calculate change from 50 to 60.",
+        "What unit must rate use?",
+        "Name one responsible finance check.",
+        "Which definition best describes principal?",
+        "Which principle should be applied first in finance?"
+      ],
+      "diagram": "content/diagrams/compound-growth.svg",
+      "videoPackage": {
+        "title": "Making sense of growth",
+        "duration": "8 minutes",
+        "scenes": [
+          "percentage baseline",
+          "simple interest",
+          "compound table",
+          "inflation decision"
+        ],
+        "transcript": "We keep the original amount as the percentage baseline, align rate and time units, and compare simple with compound growth."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    }
+  ]
+}

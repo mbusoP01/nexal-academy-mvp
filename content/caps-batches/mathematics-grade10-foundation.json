@@ -1,12 +1,613 @@
 {
-  "batch":"mathematics-grade10-foundation",
-  "source":"DBE CAPS FET curriculum index",
-  "units":[
-    {"unitId":"mathematics-g10-algebra","title":"Algebraic expressions and equations","why":"Algebra models unknown quantities and supports every later function topic.","objectives":["simplify expressions","solve linear equations","check solutions"],"definitions":["coefficient","constant","identity","equation"],"principles":["perform the same operation on both sides","factor out common factors","substitution checks a solution"],"examples":["3x+5=20 gives x=5","2(x-3)=10 gives x=8"],"misconceptions":["changing a sign without applying it to every term"],"practice":["Simplify 3x+2x-4.","Solve 4x-7=13.","Solve 2(x+5)=18.","Expand (x+3)(x+2).","Factor 6x+9.","Check x=4 in 3x+1=13.","Solve 5-2x=17.","Explain why division by zero is invalid."],"solutions":["5x-4","x=5","x=4","x²+5x+6","3(2x+3)","3(4)+1=13","x=-6","zero has no multiplicative inverse"],"quizQuestions":["What is a coefficient?","Solve 2x=14.","Expand x(x+4).","Factor 4x+8.","What is an identity?","Solve x-9=0.","Why check a solution?","Simplify 7a-a.","Solve 3(x-1)=12.","State one algebra safety rule."],"diagram":"content/diagrams/algebra-balance.svg","videoPackage":{"title":"Algebra foundations","duration":"7 minutes","scenes":["unknown balance","simplification","worked equations","check and recap"],"transcript":"We model an equation as a balance, simplify one legal step at a time, and substitute the answer to check it."}},
-    {"unitId":"mathematics-g10-number-patterns","title":"Number patterns","why":"Patterns prepare learners for sequences, functions and modelling change.","objectives":["identify common difference","write a rule","predict terms"],"definitions":["term","common difference","sequence","general term"],"principles":["constant first differences indicate an arithmetic pattern","a rule must work for every listed term"],"examples":["4,7,10 has difference 3 and rule Tn=3n+1","2,4,8 is geometric with ratio 2"],"misconceptions":["assuming every pattern is arithmetic"],"practice":["Find the difference in 5,9,13.","Write Tn for 2,5,8.","Find the next term: 3,6,12.","Find T5 for Tn=4n-1.","Describe a geometric ratio.","Test Tn=2n+3 at n=4.","Find the missing term 7,__,15.","Explain why two terms do not prove a rule."],"solutions":["4","3n-1","24","19","multiply by a constant","11","11","many rules can fit two points"],"quizQuestions":["What is a term?","Find the difference 8,12,16.","Find T3 for Tn=2n+1.","What is a ratio?","Next term 2,6,18?","What does n represent?","Why verify a rule?","Is 4,8,12 arithmetic?","Find T1 for 5n.","Name one sequence type."],"diagram":"content/diagrams/number-patterns.svg","videoPackage":{"title":"Reading number patterns","duration":"6 minutes","scenes":["term table","difference test","rule construction","prediction"],"transcript":"We compare neighbouring terms, identify the operation, and verify the rule against more than one term."}},
-    {"unitId":"mathematics-g10-functions","title":"Linear and quadratic functions","why":"Functions describe dependable input-output relationships in science and finance.","objectives":["evaluate a function","identify intercepts","compare linear and quadratic graphs"],"definitions":["domain","range","intercept","gradient"],"principles":["a function assigns one output to each allowed input","the gradient measures change in y per unit x"],"examples":["f(x)=2x+1 gives f(3)=7","y=x²-4 has x-intercepts -2 and 2"],"misconceptions":["confusing an input with an output"],"practice":["Evaluate f(4) for f(x)=3x-2.","Find the gradient through (0,2) and (3,8).","Find the y-intercept of y=5x-1.","Solve x²-9=0.","Describe a parabola's turning point.","Make a value table for y=x+2 at x=0,1,2.","State the range restriction for a square root.","Explain why a vertical line is not a function."],"solutions":["10","2","-1","x=±3","maximum or minimum","2,3,4","x≥0 for √x","one input would have multiple outputs"],"quizQuestions":["What is f(0)?","Define gradient.","Find y-intercept y=2x+4.","Solve x²-1=0.","What is a domain?","Evaluate 2x+3 at x=5.","What shape is y=x²?","Why use a table?","What is an intercept?","State the function rule idea."],"diagram":"content/diagrams/quadratic-parabola.svg","videoPackage":{"title":"Functions as machines","duration":"8 minutes","scenes":["input-output machine","table","line graph","parabola"],"transcript":"A function maps an allowed input to exactly one output; tables and graphs make the rule visible."}},
-    {"unitId":"mathematics-g10-geometry","title":"Euclidean geometry and measurement","why":"Geometry gives a language for space, proof and measurement.","objectives":["use angle relationships","calculate perimeter and area","justify a conclusion"],"definitions":["parallel","transversal","congruent","similar"],"principles":["angles on a straight line sum to 180°","similar figures have proportional corresponding sides"],"examples":["a triangle with angles 50° and 60° has third angle 70°","rectangle 8×3 has area 24 square units"],"misconceptions":["using perimeter units for area"],"practice":["Find the third angle 40°,65°.","Area of a 7 by 4 rectangle.","Perimeter of a square side 6.","Convert 2.5 m to cm.","State vertically opposite angle property.","Find circumference using π=3.14 for r=5.","Explain similarity.","Choose units for area."],"solutions":["75°","28 square units","24 units","250 cm","equal","31.4 units","same shape with proportional sides","square units"],"quizQuestions":["Angles on a line?","Area triangle formula?","What is parallel?","Perimeter of 5×2 rectangle?","Define congruent.","Convert 1 m² to cm².","What is a transversal?","Why label diagrams?","Circle radius meaning?","State triangle angle sum."],"diagram":"content/diagrams/geometry-triangle.svg","videoPackage":{"title":"Proof through measurement","duration":"7 minutes","scenes":["angle facts","labelled triangle","area model","reasoned conclusion"],"transcript":"We label known angles and lengths, apply one theorem at a time, and attach units to every measurement."}},
-    {"unitId":"mathematics-g10-trigonometry","title":"Trigonometric ratios","why":"Trigonometry connects angles and distances in surveying, construction and physics.","objectives":["identify opposite adjacent hypotenuse","select a ratio","solve a right triangle"],"definitions":["opposite","adjacent","hypotenuse","angle of elevation"],"principles":["sin θ=opposite/hypotenuse","cos θ=adjacent/hypotenuse","tan θ=opposite/adjacent"],"examples":["opposite 3, hypotenuse 5 gives sinθ=0.6","tanθ=4/3 gives θ≈53.1°"],"misconceptions":["using the wrong side relative to the chosen angle"],"practice":["State tanθ ratio.","Find sinθ when opposite=6,hypotenuse=10.","Find adjacent when cosθ=.8 and hypotenuse=15.","Why must calculator mode be checked?","Label the hypotenuse.","Find θ when tanθ=1.","Write the Pythagorean theorem.","Give one real use of trigonometry."],"solutions":["opposite/adjacent","0.6","12","degrees or radians change results","side opposite the right angle","45°","a²+b²=c²","height or distance measurement"],"quizQuestions":["What is sin?","What is the hypotenuse?","State cos ratio.","When use tan?","Find sin for 3/5.","Why label angle?","What is an angle of elevation?","Pythagorean theorem?","What mode for 30°?","Name one application."],"diagram":"content/diagrams/trig-right-triangle.svg","videoPackage":{"title":"Choosing a trig ratio","duration":"8 minutes","scenes":["right triangle labels","ratio choice","worked height","calculator check"],"transcript":"We name the sides from the chosen angle, choose the ratio containing the known and unknown sides, and check units."}},
-    {"unitId":"mathematics-g10-statistics","title":"Data handling and probability","why":"Statistics helps learners interpret evidence, uncertainty and decisions in everyday life.","objectives":["organise data","calculate mean median and range","interpret probability"],"definitions":["population","sample","mean","median","mode","range","probability"],"principles":["mean=sum of values ÷ number of values","median is the middle ordered value","probability lies from 0 to 1"],"examples":["For 2,4,5,9 the mean is 5 and range is 7","A fair die has P(even)=3/6=1/2"],"misconceptions":["finding the median before ordering values","treating a sample as the whole population"],"practice":["Find the mean of 3,5,7.","Find the median of 2,9,4,6,1.","Find the mode of 2,2,3,4.","Find the range of 12,8,15,10.","What is P(heads) for a fair coin?","Why use a sample?","Describe an outlier.","Choose a suitable graph for categories."],"solutions":["5","4","2","7","1/2","to estimate a population efficiently","an unusually distant observation","bar graph"],"quizQuestions":["Define mean.","What must be done before a median?","Range of 4,9,10?","P(impossible event)?","What is a mode?","Name a measure of spread.","Why label graph axes?","What is a sample?","P(even die)?","How can an outlier affect mean?"],"diagram":"content/diagrams/statistics-summary.svg","videoPackage":{"title":"From data to evidence","duration":"8 minutes","scenes":["ordered list","mean median mode","spread","probability scale"],"transcript":"We organise a small dataset, calculate centre and spread, then communicate what probability tells us and what it cannot guarantee."}}
+  "batch": "mathematics-grade10-foundation",
+  "source": "DBE CAPS FET curriculum index",
+  "units": [
+    {
+      "unitId": "mathematics-g10-algebra",
+      "title": "Algebraic expressions and equations",
+      "why": "Algebra models unknown quantities and supports every later function topic.",
+      "objectives": [
+        "simplify expressions",
+        "solve linear equations",
+        "check solutions"
+      ],
+      "definitions": [
+        "coefficient",
+        "constant",
+        "identity",
+        "equation"
+      ],
+      "principles": [
+        "perform the same operation on both sides",
+        "factor out common factors",
+        "substitution checks a solution"
+      ],
+      "examples": [
+        "3x+5=20 gives x=5",
+        "2(x-3)=10 gives x=8",
+        "Worked example — Foundation: identify the known values in a Algebra problem, write the relevant rule (perform the same operation on both sides), substitute carefully, then check the result against the question.",
+        "Worked example — Standard: compare two representations of algebraic expressions and equations and explain which features stay constant. State the rule first, show the substitution or construction, and interpret the answer in context.",
+        "Worked example — Challenge: solve a new algebra problem by naming the unknown, selecting a valid method, showing each algebraic step, and checking the final result with an independent representation."
+      ],
+      "misconceptions": [
+        "changing a sign without applying it to every term"
+      ],
+      "practice": [
+        "Simplify 3x+2x-4.",
+        "Solve 4x-7=13.",
+        "Solve 2(x+5)=18.",
+        "Expand (x+3)(x+2).",
+        "Factor 6x+9.",
+        "Check x=4 in 3x+1=13.",
+        "Solve 5-2x=17.",
+        "Explain why division by zero is invalid.",
+        "Foundation: define coefficient and give one example from algebra.",
+        "Foundation: state the key rule or principle for algebra before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in algebraic expressions and equations.",
+        "Standard: interpret a table, diagram or described result connected to algebra and justify your conclusion.",
+        "Challenge: identify a common misconception about algebra and correct it with evidence.",
+        "Challenge: connect algebra to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "5x-4",
+        "x=5",
+        "x=4",
+        "x²+5x+6",
+        "3(2x+3)",
+        "3(4)+1=13",
+        "x=-6",
+        "zero has no multiplicative inverse",
+        "Foundation model response: define the relevant idea (coefficient); apply the principle (perform the same operation on both sides); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (coefficient); apply the principle (perform the same operation on both sides); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (coefficient); apply the principle (perform the same operation on both sides); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (perform the same operation on both sides), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (perform the same operation on both sides), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (perform the same operation on both sides), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "What is a coefficient?",
+        "Solve 2x=14.",
+        "Expand x(x+4).",
+        "Factor 4x+8.",
+        "What is an identity?",
+        "Solve x-9=0.",
+        "Why check a solution?",
+        "Simplify 7a-a.",
+        "Solve 3(x-1)=12.",
+        "State one algebra safety rule.",
+        "Which definition best describes coefficient?",
+        "Which principle should be applied first in algebra?"
+      ],
+      "diagram": "content/diagrams/algebra-balance.svg",
+      "videoPackage": {
+        "title": "Algebra foundations",
+        "duration": "7 minutes",
+        "scenes": [
+          "unknown balance",
+          "simplification",
+          "worked equations",
+          "check and recap"
+        ],
+        "transcript": "We model an equation as a balance, simplify one legal step at a time, and substitute the answer to check it."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "mathematics-g10-number-patterns",
+      "title": "Number patterns",
+      "why": "Patterns prepare learners for sequences, functions and modelling change.",
+      "objectives": [
+        "identify common difference",
+        "write a rule",
+        "predict terms"
+      ],
+      "definitions": [
+        "term",
+        "common difference",
+        "sequence",
+        "general term"
+      ],
+      "principles": [
+        "constant first differences indicate an arithmetic pattern",
+        "a rule must work for every listed term"
+      ],
+      "examples": [
+        "4,7,10 has difference 3 and rule Tn=3n+1",
+        "2,4,8 is geometric with ratio 2",
+        "Worked example — Foundation: identify the known values in a Patterns problem, write the relevant rule (constant first differences indicate an arithmetic pattern), substitute carefully, then check the result against the question.",
+        "Worked example — Standard: compare two representations of number patterns and explain which features stay constant. State the rule first, show the substitution or construction, and interpret the answer in context.",
+        "Worked example — Challenge: solve a new patterns problem by naming the unknown, selecting a valid method, showing each algebraic step, and checking the final result with an independent representation."
+      ],
+      "misconceptions": [
+        "assuming every pattern is arithmetic"
+      ],
+      "practice": [
+        "Find the difference in 5,9,13.",
+        "Write Tn for 2,5,8.",
+        "Find the next term: 3,6,12.",
+        "Find T5 for Tn=4n-1.",
+        "Describe a geometric ratio.",
+        "Test Tn=2n+3 at n=4.",
+        "Find the missing term 7,__,15.",
+        "Explain why two terms do not prove a rule.",
+        "Foundation: define term and give one example from patterns.",
+        "Foundation: state the key rule or principle for patterns before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in number patterns.",
+        "Standard: interpret a table, diagram or described result connected to patterns and justify your conclusion.",
+        "Challenge: identify a common misconception about patterns and correct it with evidence.",
+        "Challenge: connect patterns to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "4",
+        "3n-1",
+        "24",
+        "19",
+        "multiply by a constant",
+        "11",
+        "many rules can fit two points",
+        "Foundation model response: define the relevant idea (term); apply the principle (constant first differences indicate an arithmetic pattern); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (term); apply the principle (constant first differences indicate an arithmetic pattern); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (term); apply the principle (constant first differences indicate an arithmetic pattern); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 11: identify the requested quantity or concept, cite the relevant principle (constant first differences indicate an arithmetic pattern), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (constant first differences indicate an arithmetic pattern), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (constant first differences indicate an arithmetic pattern), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (constant first differences indicate an arithmetic pattern), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "What is a term?",
+        "Find the difference 8,12,16.",
+        "Find T3 for Tn=2n+1.",
+        "What is a ratio?",
+        "Next term 2,6,18?",
+        "What does n represent?",
+        "Why verify a rule?",
+        "Is 4,8,12 arithmetic?",
+        "Find T1 for 5n.",
+        "Name one sequence type.",
+        "Which definition best describes term?",
+        "Which principle should be applied first in patterns?"
+      ],
+      "diagram": "content/diagrams/number-patterns.svg",
+      "videoPackage": {
+        "title": "Reading number patterns",
+        "duration": "6 minutes",
+        "scenes": [
+          "term table",
+          "difference test",
+          "rule construction",
+          "prediction"
+        ],
+        "transcript": "We compare neighbouring terms, identify the operation, and verify the rule against more than one term."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "mathematics-g10-functions",
+      "title": "Linear and quadratic functions",
+      "why": "Functions describe dependable input-output relationships in science and finance.",
+      "objectives": [
+        "evaluate a function",
+        "identify intercepts",
+        "compare linear and quadratic graphs"
+      ],
+      "definitions": [
+        "domain",
+        "range",
+        "intercept",
+        "gradient"
+      ],
+      "principles": [
+        "a function assigns one output to each allowed input",
+        "the gradient measures change in y per unit x"
+      ],
+      "examples": [
+        "f(x)=2x+1 gives f(3)=7",
+        "y=x²-4 has x-intercepts -2 and 2",
+        "Worked example — Foundation: identify the known values in a Functions problem, write the relevant rule (a function assigns one output to each allowed input), substitute carefully, then check the result against the question.",
+        "Worked example — Standard: compare two representations of linear and quadratic functions and explain which features stay constant. State the rule first, show the substitution or construction, and interpret the answer in context.",
+        "Worked example — Challenge: solve a new functions problem by naming the unknown, selecting a valid method, showing each algebraic step, and checking the final result with an independent representation."
+      ],
+      "misconceptions": [
+        "confusing an input with an output"
+      ],
+      "practice": [
+        "Evaluate f(4) for f(x)=3x-2.",
+        "Find the gradient through (0,2) and (3,8).",
+        "Find the y-intercept of y=5x-1.",
+        "Solve x²-9=0.",
+        "Describe a parabola's turning point.",
+        "Make a value table for y=x+2 at x=0,1,2.",
+        "State the range restriction for a square root.",
+        "Explain why a vertical line is not a function.",
+        "Foundation: define domain and give one example from functions.",
+        "Foundation: state the key rule or principle for functions before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in linear and quadratic functions.",
+        "Standard: interpret a table, diagram or described result connected to functions and justify your conclusion.",
+        "Challenge: identify a common misconception about functions and correct it with evidence.",
+        "Challenge: connect functions to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "10",
+        "2",
+        "-1",
+        "x=±3",
+        "maximum or minimum",
+        "2,3,4",
+        "x≥0 for √x",
+        "one input would have multiple outputs",
+        "Foundation model response: define the relevant idea (domain); apply the principle (a function assigns one output to each allowed input); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (domain); apply the principle (a function assigns one output to each allowed input); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (domain); apply the principle (a function assigns one output to each allowed input); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (a function assigns one output to each allowed input), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (a function assigns one output to each allowed input), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (a function assigns one output to each allowed input), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "What is f(0)?",
+        "Define gradient.",
+        "Find y-intercept y=2x+4.",
+        "Solve x²-1=0.",
+        "What is a domain?",
+        "Evaluate 2x+3 at x=5.",
+        "What shape is y=x²?",
+        "Why use a table?",
+        "What is an intercept?",
+        "State the function rule idea.",
+        "Which definition best describes domain?",
+        "Which principle should be applied first in functions?"
+      ],
+      "diagram": "content/diagrams/quadratic-parabola.svg",
+      "videoPackage": {
+        "title": "Functions as machines",
+        "duration": "8 minutes",
+        "scenes": [
+          "input-output machine",
+          "table",
+          "line graph",
+          "parabola"
+        ],
+        "transcript": "A function maps an allowed input to exactly one output; tables and graphs make the rule visible."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "mathematics-g10-geometry",
+      "title": "Euclidean geometry and measurement",
+      "why": "Geometry gives a language for space, proof and measurement.",
+      "objectives": [
+        "use angle relationships",
+        "calculate perimeter and area",
+        "justify a conclusion"
+      ],
+      "definitions": [
+        "parallel",
+        "transversal",
+        "congruent",
+        "similar"
+      ],
+      "principles": [
+        "angles on a straight line sum to 180°",
+        "similar figures have proportional corresponding sides"
+      ],
+      "examples": [
+        "a triangle with angles 50° and 60° has third angle 70°",
+        "rectangle 8×3 has area 24 square units",
+        "Worked example — Foundation: identify the known values in a Geometry problem, write the relevant rule (angles on a straight line sum to 180°), substitute carefully, then check the result against the question.",
+        "Worked example — Standard: compare two representations of euclidean geometry and measurement and explain which features stay constant. State the rule first, show the substitution or construction, and interpret the answer in context.",
+        "Worked example — Challenge: solve a new geometry problem by naming the unknown, selecting a valid method, showing each algebraic step, and checking the final result with an independent representation."
+      ],
+      "misconceptions": [
+        "using perimeter units for area"
+      ],
+      "practice": [
+        "Find the third angle 40°,65°.",
+        "Area of a 7 by 4 rectangle.",
+        "Perimeter of a square side 6.",
+        "Convert 2.5 m to cm.",
+        "State vertically opposite angle property.",
+        "Find circumference using π=3.14 for r=5.",
+        "Explain similarity.",
+        "Choose units for area.",
+        "Foundation: define parallel and give one example from geometry.",
+        "Foundation: state the key rule or principle for geometry before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in euclidean geometry and measurement.",
+        "Standard: interpret a table, diagram or described result connected to geometry and justify your conclusion.",
+        "Challenge: identify a common misconception about geometry and correct it with evidence.",
+        "Challenge: connect geometry to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "75°",
+        "28 square units",
+        "24 units",
+        "250 cm",
+        "equal",
+        "31.4 units",
+        "same shape with proportional sides",
+        "square units",
+        "Foundation model response: define the relevant idea (parallel); apply the principle (angles on a straight line sum to 180°); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (parallel); apply the principle (angles on a straight line sum to 180°); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (parallel); apply the principle (angles on a straight line sum to 180°); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (angles on a straight line sum to 180°), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (angles on a straight line sum to 180°), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (angles on a straight line sum to 180°), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Angles on a line?",
+        "Area triangle formula?",
+        "What is parallel?",
+        "Perimeter of 5×2 rectangle?",
+        "Define congruent.",
+        "Convert 1 m² to cm².",
+        "What is a transversal?",
+        "Why label diagrams?",
+        "Circle radius meaning?",
+        "State triangle angle sum.",
+        "Which definition best describes parallel?",
+        "Which principle should be applied first in geometry?"
+      ],
+      "diagram": "content/diagrams/geometry-triangle.svg",
+      "videoPackage": {
+        "title": "Proof through measurement",
+        "duration": "7 minutes",
+        "scenes": [
+          "angle facts",
+          "labelled triangle",
+          "area model",
+          "reasoned conclusion"
+        ],
+        "transcript": "We label known angles and lengths, apply one theorem at a time, and attach units to every measurement."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "mathematics-g10-trigonometry",
+      "title": "Trigonometric ratios",
+      "why": "Trigonometry connects angles and distances in surveying, construction and physics.",
+      "objectives": [
+        "identify opposite adjacent hypotenuse",
+        "select a ratio",
+        "solve a right triangle"
+      ],
+      "definitions": [
+        "opposite",
+        "adjacent",
+        "hypotenuse",
+        "angle of elevation"
+      ],
+      "principles": [
+        "sin θ=opposite/hypotenuse",
+        "cos θ=adjacent/hypotenuse",
+        "tan θ=opposite/adjacent"
+      ],
+      "examples": [
+        "opposite 3, hypotenuse 5 gives sinθ=0.6",
+        "tanθ=4/3 gives θ≈53.1°",
+        "Worked example — Foundation: identify the known values in a Trigonometry problem, write the relevant rule (sin θ=opposite/hypotenuse), substitute carefully, then check the result against the question.",
+        "Worked example — Standard: compare two representations of trigonometric ratios and explain which features stay constant. State the rule first, show the substitution or construction, and interpret the answer in context.",
+        "Worked example — Challenge: solve a new trigonometry problem by naming the unknown, selecting a valid method, showing each algebraic step, and checking the final result with an independent representation."
+      ],
+      "misconceptions": [
+        "using the wrong side relative to the chosen angle"
+      ],
+      "practice": [
+        "State tanθ ratio.",
+        "Find sinθ when opposite=6,hypotenuse=10.",
+        "Find adjacent when cosθ=.8 and hypotenuse=15.",
+        "Why must calculator mode be checked?",
+        "Label the hypotenuse.",
+        "Find θ when tanθ=1.",
+        "Write the Pythagorean theorem.",
+        "Give one real use of trigonometry.",
+        "Foundation: define opposite and give one example from trigonometry.",
+        "Foundation: state the key rule or principle for trigonometry before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in trigonometric ratios.",
+        "Standard: interpret a table, diagram or described result connected to trigonometry and justify your conclusion.",
+        "Challenge: identify a common misconception about trigonometry and correct it with evidence.",
+        "Challenge: connect trigonometry to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "opposite/adjacent",
+        "0.6",
+        "12",
+        "degrees or radians change results",
+        "side opposite the right angle",
+        "45°",
+        "a²+b²=c²",
+        "height or distance measurement",
+        "Foundation model response: define the relevant idea (opposite); apply the principle (sin θ=opposite/hypotenuse); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (opposite); apply the principle (sin θ=opposite/hypotenuse); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (opposite); apply the principle (sin θ=opposite/hypotenuse); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (sin θ=opposite/hypotenuse), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (sin θ=opposite/hypotenuse), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (sin θ=opposite/hypotenuse), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "What is sin?",
+        "What is the hypotenuse?",
+        "State cos ratio.",
+        "When use tan?",
+        "Find sin for 3/5.",
+        "Why label angle?",
+        "What is an angle of elevation?",
+        "Pythagorean theorem?",
+        "What mode for 30°?",
+        "Name one application.",
+        "Which definition best describes opposite?",
+        "Which principle should be applied first in trigonometry?"
+      ],
+      "diagram": "content/diagrams/trig-right-triangle.svg",
+      "videoPackage": {
+        "title": "Choosing a trig ratio",
+        "duration": "8 minutes",
+        "scenes": [
+          "right triangle labels",
+          "ratio choice",
+          "worked height",
+          "calculator check"
+        ],
+        "transcript": "We name the sides from the chosen angle, choose the ratio containing the known and unknown sides, and check units."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    },
+    {
+      "unitId": "mathematics-g10-statistics",
+      "title": "Data handling and probability",
+      "why": "Statistics helps learners interpret evidence, uncertainty and decisions in everyday life.",
+      "objectives": [
+        "organise data",
+        "calculate mean median and range",
+        "interpret probability"
+      ],
+      "definitions": [
+        "population",
+        "sample",
+        "mean",
+        "median",
+        "mode",
+        "range",
+        "probability"
+      ],
+      "principles": [
+        "mean=sum of values ÷ number of values",
+        "median is the middle ordered value",
+        "probability lies from 0 to 1"
+      ],
+      "examples": [
+        "For 2,4,5,9 the mean is 5 and range is 7",
+        "A fair die has P(even)=3/6=1/2",
+        "Worked example — Foundation: identify the known values in a Statistics problem, write the relevant rule (mean=sum of values ÷ number of values), substitute carefully, then check the result against the question.",
+        "Worked example — Standard: compare two representations of data handling and probability and explain which features stay constant. State the rule first, show the substitution or construction, and interpret the answer in context.",
+        "Worked example — Challenge: solve a new statistics problem by naming the unknown, selecting a valid method, showing each algebraic step, and checking the final result with an independent representation."
+      ],
+      "misconceptions": [
+        "finding the median before ordering values",
+        "treating a sample as the whole population"
+      ],
+      "practice": [
+        "Find the mean of 3,5,7.",
+        "Find the median of 2,9,4,6,1.",
+        "Find the mode of 2,2,3,4.",
+        "Find the range of 12,8,15,10.",
+        "What is P(heads) for a fair coin?",
+        "Why use a sample?",
+        "Describe an outlier.",
+        "Choose a suitable graph for categories.",
+        "Foundation: define population and give one example from statistics.",
+        "Foundation: state the key rule or principle for statistics before applying it to a simple case.",
+        "Standard: explain how you would check an answer or observation in data handling and probability.",
+        "Standard: interpret a table, diagram or described result connected to statistics and justify your conclusion.",
+        "Challenge: identify a common misconception about statistics and correct it with evidence.",
+        "Challenge: connect statistics to a later CAPS concept or a realistic South African context."
+      ],
+      "solutions": [
+        "5",
+        "4",
+        "2",
+        "7",
+        "1/2",
+        "to estimate a population efficiently",
+        "an unusually distant observation",
+        "bar graph",
+        "Foundation model response: define the relevant idea (population); apply the principle (mean=sum of values ÷ number of values); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Standard model response: define the relevant idea (population); apply the principle (mean=sum of values ÷ number of values); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Challenge model response: define the relevant idea (population); apply the principle (mean=sum of values ÷ number of values); show the evidence or intermediate reasoning; then state a concise conclusion that answers the question.",
+        "Model solution 12: identify the requested quantity or concept, cite the relevant principle (mean=sum of values ÷ number of values), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 13: identify the requested quantity or concept, cite the relevant principle (mean=sum of values ÷ number of values), show the intermediate reasoning, and state a checked conclusion.",
+        "Model solution 14: identify the requested quantity or concept, cite the relevant principle (mean=sum of values ÷ number of values), show the intermediate reasoning, and state a checked conclusion."
+      ],
+      "quizQuestions": [
+        "Define mean.",
+        "What must be done before a median?",
+        "Range of 4,9,10?",
+        "P(impossible event)?",
+        "What is a mode?",
+        "Name a measure of spread.",
+        "Why label graph axes?",
+        "What is a sample?",
+        "P(even die)?",
+        "How can an outlier affect mean?",
+        "Which definition best describes population?",
+        "Which principle should be applied first in statistics?"
+      ],
+      "diagram": "content/diagrams/statistics-summary.svg",
+      "videoPackage": {
+        "title": "From data to evidence",
+        "duration": "8 minutes",
+        "scenes": [
+          "ordered list",
+          "mean median mode",
+          "spread",
+          "probability scale"
+        ],
+        "transcript": "We organise a small dataset, calculate centre and spread, then communicate what probability tells us and what it cannot guarantee."
+      },
+      "depth": {
+        "version": 1,
+        "progression": [
+          "Foundation",
+          "Standard",
+          "Challenge"
+        ],
+        "workedExamples": 5,
+        "practiceQuestions": 14,
+        "solutionCoverage": 14,
+        "note": "Nexal-authored scaffolding supplements the original topic examples; numerical answers remain subject to calculation QA."
+      }
+    }
   ]
 }

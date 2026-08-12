@@ -1,0 +1,9 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const root=process.cwd();
+const manifest=JSON.parse(fs.readFileSync(path.join(root,'content/caps-master-manifest.json'),'utf8'));
+const index=JSON.parse(fs.readFileSync(path.join(root,'content/unit-index.json'),'utf8'));
+const provenance=JSON.parse(fs.readFileSync(path.join(root,'content/CONTENT_PROVENANCE.json'),'utf8'));
+const errors=[];const stats={units:0,examples:0,practice:0,solutions:0,quiz:0};
+for(const meta of manifest.units){const entry=index.units?.[meta.id];if(!entry) {errors.push(`${meta.id}: missing unit-index entry`);continue;}const batch=JSON.parse(fs.readFileSync(path.join(root,entry.file),'utf8'));const unit=batch.units?.find(u=>u.unitId===meta.id);if(!unit){errors.push(`${meta.id}: missing content`);continue;}stats.units++;stats.examples+=(unit.examples||[]).length;stats.practice+=(unit.practice||[]).length;stats.solutions+=(unit.solutions||[]).length;stats.quiz+=(unit.quizQuestions||[]).length;if((unit.examples||[]).length<5) errors.push(`${meta.id}: fewer than 5 worked examples`);if((unit.practice||[]).length<12) errors.push(`${meta.id}: fewer than 12 practice questions`);if((unit.solutions||[]).length<(unit.practice||[]).length) errors.push(`${meta.id}: incomplete solution coverage`);if((unit.quizQuestions||[]).length<10) errors.push(`${meta.id}: fewer than 10 quiz prompts`);if(!unit.diagram) errors.push(`${meta.id}: missing diagram reference`);if(!provenance.units?.[meta.id]?.sources?.length) errors.push(`${meta.id}: missing provenance`);}
+console.log(`DEPTH_UNITS=${stats.units}`);console.log(`DEPTH_EXAMPLES=${stats.examples}`);console.log(`DEPTH_PRACTICE=${stats.practice}`);console.log(`DEPTH_SOLUTIONS=${stats.solutions}`);console.log(`DEPTH_QUIZ=${stats.quiz}`);if(errors.length){console.error(errors.join('\n'));process.exitCode=1;}else console.log('content depth: PASS');
