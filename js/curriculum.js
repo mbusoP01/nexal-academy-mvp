@@ -230,7 +230,19 @@ const v1Extensions = {
 };
 Object.entries(v1Extensions).forEach(([subjectId, modules]) => {
   const subject = NEXAL_CURRICULUM[subjectId];
-  if (subject) subject.syllabus.push({ title: 'V1 Core Topics', modules });
+  if (subject) {
+    modules.forEach(module => {
+      if (!module.video_id) {
+        module.video_status = 'SCRIPT_READY';
+        module.video_script = {
+          duration: '5–7 minutes',
+          narration: `Introduce ${module.name}, model the worked example, then pause for the practice question. Recap the key rule and invite the learner to enter the practice arena.`,
+          scenes: ['Learning objective', 'Concept visualisation', 'Worked example', 'Common mistake', 'Recap and practice prompt']
+        };
+      }
+    });
+    subject.syllabus.push({ title: 'V1 Core Topics', modules });
+  }
 });
 
 window.NEXAL_CURRICULUM = NEXAL_CURRICULUM;

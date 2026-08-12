@@ -61,6 +61,8 @@
         </div>
 
         <div class="text-center pb-20">
+            <button id="complete-lesson-btn" type="button" class="mb-5 inline-flex items-center justify-center px-8 py-3 bg-oxford text-white rounded-xl font-bold tracking-wide hover:bg-slate shadow-lg transition-all">Mark lesson complete</button>
+            <p id="completion-feedback" class="text-sm text-emerald font-semibold mb-5" role="status" aria-live="polite"></p>
             <p class="text-sm font-bold text-slate uppercase tracking-widest mb-6">Ready to test your knowledge?</p>
             <a id="enter-arena-btn" href="#" class="inline-flex items-center justify-center px-10 py-5 bg-emerald text-white rounded-2xl font-bold text-lg tracking-wide hover:bg-emerald/90 shadow-xl hover:-translate-y-1 transition-all">
                 Enter Practice Arena &rarr;
@@ -87,6 +89,8 @@
             const videoSection = document.getElementById('video-section');
             const theoryContent = document.getElementById('theory-content');
             const practiceContent = document.getElementById('practice-content');
+            const completeButton = document.getElementById('complete-lesson-btn');
+            const completionFeedback = document.getElementById('completion-feedback');
 
             if (moduleName) titleEl.textContent = decodeURIComponent(moduleName);
             if (subjectId && window.NEXAL_CURRICULUM[subjectId]) {
@@ -115,6 +119,18 @@
                     }
                 }
             }
+
+            const completionKey = `nexal-lesson-complete:${subjectId}:${moduleId}`;
+            if (localStorage.getItem(completionKey) === 'true') {
+                completeButton.textContent = 'Lesson completed';
+                completeButton.classList.add('bg-emerald');
+            }
+            completeButton.addEventListener('click', () => {
+                localStorage.setItem(completionKey, 'true');
+                completeButton.textContent = 'Lesson completed';
+                completeButton.classList.add('bg-emerald');
+                completionFeedback.textContent = 'Saved on this device. Your next practice step is ready.';
+            });
 
             // Render Quality Theory Content
             if (theoryText) {

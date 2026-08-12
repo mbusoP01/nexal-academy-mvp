@@ -1,0 +1,10 @@
+{
+  "name": "nexal-academy",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Nexal Academy static learning platform",
+  "scripts": {
+    "validate:content": "node js/validate-content.js",
+    "check:syntax": "node --check app.js && node --check js/auth-guard.js && node --check js/curriculum.js && node --check js/arena-engine.js"
+  }
+}
