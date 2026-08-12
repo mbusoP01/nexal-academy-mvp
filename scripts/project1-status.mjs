@@ -8,6 +8,12 @@ const manifest = JSON.parse(fs.readFileSync(path.join(root, 'content', 'caps-mas
 const quiz = JSON.parse(fs.readFileSync(path.join(root, 'content', 'assessments', 'topic-quizzes.json'), 'utf8'));
 const revision = JSON.parse(fs.readFileSync(path.join(root, 'content', 'assessments', 'revision-assessments.json'), 'utf8'));
 const ownerBlocked = JSON.parse(fs.readFileSync(path.join(root, 'OWNER_BLOCKED.json'), 'utf8'));
+const batchDir = path.join(root, 'content', 'caps-batches');
+const batchUnits = new Map();
+for (const file of fs.readdirSync(batchDir).filter(name => name.endsWith('.json'))) {
+  const batch = JSON.parse(fs.readFileSync(path.join(batchDir, file), 'utf8'));
+  for (const unit of batch.units || []) batchUnits.set(unit.unitId, unit);
+}
 const context = { window: {}, document: { addEventListener() {} } };
 vm.createContext(context);
 vm.runInContext(fs.readFileSync(path.join(root, 'js', 'curriculum.js'), 'utf8'), context);
@@ -53,6 +59,7 @@ const output = {
   REVISION_ASSESSMENTS_EXPECTED: revisionExpected, REVISION_ASSESSMENTS_COMPLETE: revisionComplete,
   VIDEO_PACKAGES_EXPECTED: videoExpected, VIDEO_PACKAGES_COMPLETE: videoComplete,
   DIAGRAM_REQUIREMENTS_EXPECTED: diagramExpected, DIAGRAM_REQUIREMENTS_COMPLETE: diagramComplete,
+  BATCH_AUTHORED_UNITS: batchUnits.size,
   LOCAL_EXECUTABLE_INCOMPLETE_COUNT: manifest.units.length - complete.length + (topicQuizExpected - topicQuizComplete) + (revisionExpected - revisionComplete) + (videoExpected - videoComplete) + (diagramExpected - diagramComplete),
   OWNER_BLOCKED_COUNT: (ownerBlocked.entries || []).length
 };
