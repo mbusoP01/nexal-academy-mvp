@@ -1,0 +1,32 @@
+{
+  "entries": [
+    {
+      "task": "Production Supabase authentication, RLS and progress persistence verification",
+      "why_owner_authority_is_required": "The local repository does not contain production administrative credentials or permission to inspect/alter the live project.",
+      "what_credential_or_action_is_missing": "Authorized Supabase project access and production test account.",
+      "exact_owner_action": "Provide authorized Supabase access or run the documented production smoke checklist.",
+      "what_local_work_is_already_complete": "Application auth guards, local content validation, and local learning-flow fixtures are present."
+    },
+    {
+      "task": "Enable Google OAuth in Supabase and Google Cloud",
+      "why_owner_authority_is_required": "Provider secrets and dashboard configuration are external to this repository and must not be committed.",
+      "what_credential_or_action_is_missing": "Google Web OAuth client ID/secret and Supabase dashboard access.",
+      "exact_owner_action": "Follow GOOGLE_AUTH_OWNER_SETUP.md: enable Google in Supabase Auth > Providers, add the client ID/secret, set Google callback https://szqpkxlatzvwcxpwmewt.supabase.co/auth/v1/callback, and allow the application callback origin used by deployment.",
+      "what_local_work_is_already_complete": "Continue with Google button, safe redirect restoration, auth-callback.html, loading/error handling, and session handoff are implemented."
+    },
+    {
+      "task": "Deploy protected Premium content tables and RLS",
+      "why_owner_authority_is_required": "The public static curriculum cannot be made a secure commercial paywall without authorized Supabase schema/RLS deployment.",
+      "what_credential_or_action_is_missing": "Supabase project admin/migration authority.",
+      "exact_owner_action": "Deploy the protected catalogue/preview/lesson-body schema described in PREMIUM_CONTENT_SECURITY.md, enable entitlement-backed RLS, then run the Free direct-access denial test.",
+      "what_local_work_is_already_complete": "Access manifest, showcase/free-preview metadata, entitlement fixture, pricing UX, migration guidance, and security tests/contracts are prepared."
+    },
+    {
+      "task": "Activate a real Premium payment provider",
+      "why_owner_authority_is_required": "A payment account, merchant terms, and production webhook secrets require owner/business authorization.",
+      "what_credential_or_action_is_missing": "Approved payment provider account, plan IDs, webhook endpoint and secrets.",
+      "exact_owner_action": "Choose and authorize a provider, set the central Premium price/plan configuration, connect checkout and webhook entitlement updates, then run a paid-to-entitlement smoke test.",
+      "what_local_work_is_already_complete": "Free/Premium comparison page, provider-independent upgrade boundary, honest pre-launch pricing state, and local entitlement fixtures are implemented."
+    }
+  ]
+}

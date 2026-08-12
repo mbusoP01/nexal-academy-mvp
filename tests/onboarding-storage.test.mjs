@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const html = fs.readFileSync(path.join(root, 'onboarding.html'), 'utf8');
+const settings = fs.readFileSync(path.join(root, 'settings.html'), 'utf8');
+const sql = fs.readFileSync(path.join(root, 'supabase/migrations/202608120001_secure_avatar_storage.sql'), 'utf8');
+assert.match(html, /\$\{currentUser\.id\}\/avatar\./);
+assert.match(html, /image\/jpeg/);
+assert.match(html, /5 \* 1024 \* 1024/);
+assert.match(html, /profile will be created without the photo/);
+assert.match(settings, /\$\{user\.id\}\/avatar\./);
+assert.match(sql, /avatars_insert_own_folder/);
+assert.match(sql, /avatars_update_own_folder/);
+assert.match(sql, /avatars_delete_own_folder/);
+assert.match(sql, /storage\.foldername\(name\)\)\[1\] = \(select auth\.uid\(\)::text\)/);
+console.log('ONBOARDING_STORAGE_TEST_PASS owner-path=present mime-size-validation=present optional-fallback=present policies=present');

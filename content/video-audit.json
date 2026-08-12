@@ -1,0 +1,444 @@
+{
+  "auditedAt": "2026-08-12T15:32:28.886Z",
+  "policy": "No external licence is claimed without verification.",
+  "totalModules": 54,
+  "safeExternal": 0,
+  "scriptReadyOnly": 54,
+  "reviewRequired": 6,
+  "legacyStaticModulesAudited": 12,
+  "legacyReviewRequired": 6,
+  "modules": [
+    {
+      "module": "mathematics-g10-algebra",
+      "title": "Algebra — Algebraic expressions and equations",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "mathematics-g10-number-patterns",
+      "title": "Patterns — Number patterns",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "mathematics-g10-functions",
+      "title": "Functions — Linear and quadratic functions",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "mathematics-g10-geometry",
+      "title": "Geometry — Euclidean geometry and measurement",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "mathematics-g10-trigonometry",
+      "title": "Trigonometry — Trigonometric ratios",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "mathematics-g10-statistics",
+      "title": "Statistics — Data handling and probability",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "mathematics-g11-algebra",
+      "title": "Algebra — Exponents, surds and equations",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "mathematics-g11-sequences",
+      "title": "Patterns — Sequences and series",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "mathematics-g11-functions",
+      "title": "Functions — Transformations and inverses",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "mathematics-g11-analytical-geometry",
+      "title": "Analytical geometry — Straight-line geometry",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "mathematics-g11-trigonometry",
+      "title": "Trigonometry — Identities and equations",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "mathematics-g11-finance",
+      "title": "Finance — Growth, decay and finance",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "mathematics-g12-functions",
+      "title": "Functions — Polynomial, exponential and logarithmic functions",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "mathematics-g12-calculus",
+      "title": "Calculus — Differential calculus",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "mathematics-g12-probability",
+      "title": "Probability — Counting and probability",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "mathematics-g12-trigonometry",
+      "title": "Trigonometry — General solutions and graphs",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "mathematics-g12-geometry",
+      "title": "Geometry — Circle geometry and proofs",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "mathematics-g12-statistics",
+      "title": "Statistics — Regression, variance and distributions",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "physical-sciences-g10-mechanics",
+      "title": "Mechanics — Motion and forces",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "physical-sciences-g10-matter",
+      "title": "Matter — Particles and materials",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "physical-sciences-g10-energy",
+      "title": "Energy — Energy transfer and work",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "physical-sciences-g10-waves",
+      "title": "Waves — Sound and electromagnetic radiation",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "physical-sciences-g10-electricity",
+      "title": "Electricity — Circuits and electrical safety",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "physical-sciences-g10-chemical-change",
+      "title": "Chemical change — Reactions and acids",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "physical-sciences-g11-vectors",
+      "title": "Mechanics — Vectors and motion",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "physical-sciences-g11-newton",
+      "title": "Mechanics — Newton's laws",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "physical-sciences-g11-momentum",
+      "title": "Mechanics — Momentum and impulse",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "physical-sciences-g11-energy",
+      "title": "Energy — Work, energy and power",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "physical-sciences-g11-chemical-bonding",
+      "title": "Chemistry — Chemical bonding and intermolecular forces",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "physical-sciences-g11-stoichiometry",
+      "title": "Chemistry — Mole concept and stoichiometry",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "physical-sciences-g12-electric-fields",
+      "title": "Electricity — Electrostatics and electric fields",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "physical-sciences-g12-circuits",
+      "title": "Electricity — Electric circuits and power",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "physical-sciences-g12-waves",
+      "title": "Waves — Doppler effect and wave phenomena",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "physical-sciences-g12-organic",
+      "title": "Organic chemistry — Organic molecules and reactions",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "physical-sciences-g12-rates",
+      "title": "Chemical systems — Rates and equilibrium",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "physical-sciences-g12-acids-redox",
+      "title": "Chemical systems — Acids, bases and redox",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "life-sciences-g10-cells",
+      "title": "Cells — Cell structure and organisation",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "life-sciences-g10-molecules",
+      "title": "Biochemistry — Biological molecules",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "life-sciences-g10-cell-division",
+      "title": "Cell division — Mitosis and meiosis foundations",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "life-sciences-g10-plant-structure",
+      "title": "Plants — Plant tissues and transport",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "life-sciences-g10-ecology",
+      "title": "Ecology — Ecosystems and biodiversity",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "life-sciences-g10-human-systems",
+      "title": "Human biology — Support and transport systems",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "life-sciences-g11-genetics",
+      "title": "Genetics — Inheritance and genetic crosses",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "life-sciences-g11-dna",
+      "title": "Molecular biology — DNA, RNA and protein synthesis",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "life-sciences-g11-reproduction",
+      "title": "Reproduction — Human and plant reproduction",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "life-sciences-g11-evolution",
+      "title": "Evolution — Natural selection and evidence",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "life-sciences-g11-biodiversity",
+      "title": "Biodiversity — Classification and biodiversity",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "life-sciences-g11-ecology",
+      "title": "Ecology — Population and community ecology",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "life-sciences-g12-nervous",
+      "title": "Human physiology — Nervous system and receptors",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "life-sciences-g12-endocrine",
+      "title": "Homeostasis — Endocrine control and homeostasis",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "life-sciences-g12-genetics",
+      "title": "Genetics — Meiosis, inheritance and variation",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "life-sciences-g12-evolution",
+      "title": "Evolution — Human evolution and population change",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "life-sciences-g12-ecology",
+      "title": "Ecology — Energy flow and human impact",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    },
+    {
+      "module": "life-sciences-g12-reproduction",
+      "title": "Reproduction — Reproductive health and development",
+      "status": "ORIGINAL_SCRIPT_READY",
+      "externalVideo": null,
+      "scriptReady": true,
+      "commercialUseVerified": false
+    }
+  ]
+}

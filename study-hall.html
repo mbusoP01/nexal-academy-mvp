@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study Hall | Nexal Academy</title>
+    <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { theme: { extend: { colors: { oxford: '#002147', slate: '#475569', ivory: '#FDFBF7', emerald: '#2E8B57' } } } }</script>
@@ -54,6 +55,7 @@
                 <!-- Quality content injected here by JS -->
                 <p>Retrieving academic records...</p>
             </div>
+            <div id="visual-content" class="mt-8" aria-live="polite"></div>
             <section class="mt-10 border-t border-slate/10 pt-8">
                 <h2 class="text-2xl font-serif font-bold text-oxford mb-4">Check your understanding</h2>
                 <div id="practice-content"><p class="text-slate text-sm">Practice questions for this lesson will appear here when available.</p></div>
@@ -61,6 +63,8 @@
         </div>
 
         <div class="text-center pb-20">
+            <button id="complete-lesson-btn" type="button" class="mb-5 inline-flex items-center justify-center px-8 py-3 bg-oxford text-white rounded-xl font-bold tracking-wide hover:bg-slate shadow-lg transition-all">Mark lesson complete</button>
+            <p id="completion-feedback" class="text-sm text-emerald font-semibold mb-5" role="status" aria-live="polite"></p>
             <p class="text-sm font-bold text-slate uppercase tracking-widest mb-6">Ready to test your knowledge?</p>
             <a id="enter-arena-btn" href="#" class="inline-flex items-center justify-center px-10 py-5 bg-emerald text-white rounded-2xl font-bold text-lg tracking-wide hover:bg-emerald/90 shadow-xl hover:-translate-y-1 transition-all">
                 Enter Practice Arena &rarr;
@@ -71,6 +75,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script src="js/supabase-config.js"></script>
+    <script src="js/access-manifest.js"></script>
+    <script src="js/entitlements.js"></script>
+    <script src="js/brand.js"></script>
     <script src="js/auth-guard.js"></script>
     <script src="js/curriculum.js"></script>
     
@@ -87,6 +94,9 @@
             const videoSection = document.getElementById('video-section');
             const theoryContent = document.getElementById('theory-content');
             const practiceContent = document.getElementById('practice-content');
+            const visualContent = document.getElementById('visual-content');
+            const completeButton = document.getElementById('complete-lesson-btn');
+            const completionFeedback = document.getElementById('completion-feedback');
 
             if (moduleName) titleEl.textContent = decodeURIComponent(moduleName);
             if (subjectId && window.NEXAL_CURRICULUM[subjectId]) {
@@ -98,6 +108,7 @@
 
             let videoId = null;
             let theoryText = null;
+            let moduleRecord = null;
 
             if (subjectId && moduleId && window.NEXAL_CURRICULUM) {
                 const subject = window.NEXAL_CURRICULUM[subjectId];
@@ -105,16 +116,27 @@
                     for (const chapter of subject.syllabus) {
                         const mod = chapter.modules.find(m => m.id === moduleId);
                         if (mod) {
+                            moduleRecord = mod;
                             if (mod.video_id) videoId = mod.video_id;
                             if (mod.theory) theoryText = mod.theory;
-                            if (practiceContent && mod.practice?.length) {
-                                practiceContent.innerHTML = mod.practice.map((item, index) => `<article class="bg-slate/5 rounded-xl p-5 mb-3"><p class="font-bold text-oxford">${index + 1}. ${item.question}</p><details class="mt-3"><summary class="cursor-pointer text-emerald font-bold text-sm">Reveal answer and explanation</summary><p class="mt-2 font-semibold">Answer: ${item.answer}</p><p class="mt-1 text-sm text-slate">${item.explanation}</p></details></article>`).join('');
-                            }
+                            if (visualContent && mod.diagram) visualContent.innerHTML = `<img src="${mod.diagram}" alt="Educational diagram for ${mod.name}" class="mx-auto w-full max-w-2xl rounded-xl border border-slate/10" loading="lazy">`;
                             break;
                         }
                     }
                 }
             }
+
+            const completionKey = `nexal-lesson-complete:${subjectId}:${moduleId}`;
+            if (localStorage.getItem(completionKey) === 'true') {
+                completeButton.textContent = 'Lesson completed';
+                completeButton.classList.add('bg-emerald');
+            }
+            completeButton.addEventListener('click', () => {
+                localStorage.setItem(completionKey, 'true');
+                completeButton.textContent = 'Lesson completed';
+                completeButton.classList.add('bg-emerald');
+                completionFeedback.textContent = 'Saved on this device. Your next practice step is ready.';
+            });
 
             // Render Quality Theory Content
             if (theoryText) {
@@ -130,8 +152,32 @@
                 theoryContent.innerHTML = `<p>No written lesson is available for this topic yet. Use the linked video when available, or return to the library for another lesson.</p>`;
             }
 
+            const accessMap = { quadratics: 'free_full', kinematics: 'free_full', dna_rna: 'free_full' };
+            const accessLevel = moduleRecord?.access || accessMap[moduleId] || 'free_preview';
+            const isPremium = window.NEXAL_ENTITLEMENT?.isPremium === true;
+            const fullAccess = isPremium || accessLevel === 'free_full';
+            const accessNotice = document.createElement('aside');
+            accessNotice.className = 'mt-8 rounded-2xl border border-emerald/20 bg-emerald/5 p-5';
+            accessNotice.setAttribute('aria-live', 'polite');
+            if (isPremium) {
+                accessNotice.innerHTML = '<p class="font-bold text-oxford">Premium access active</p><p class="mt-1 text-sm text-slate">You have the complete lesson, practice set and learning resources.</p>';
+            } else if (accessLevel === 'free_full') {
+                accessNotice.innerHTML = '<p class="font-bold text-oxford">Free showcase lesson</p><p class="mt-1 text-sm text-slate">Explore this complete sample lesson. Premium unlocks every topic, assessment and solution.</p><a class="mt-3 inline-flex font-bold text-emerald hover:underline" href="pricing.html">See what Premium adds →</a>';
+            } else {
+                accessNotice.innerHTML = '<p class="font-bold text-oxford">Free preview</p><p class="mt-1 text-sm text-slate">You are viewing the introduction and sample practice for this topic.</p><a class="mt-3 inline-flex font-bold text-emerald hover:underline" href="pricing.html">Unlock the full lesson →</a>';
+            }
+            theoryContent.parentElement.appendChild(accessNotice);
+
+            if (practiceContent && moduleRecord?.practice?.length) {
+                const practiceItems = fullAccess ? moduleRecord.practice : moduleRecord.practice.slice(0, 3);
+                practiceContent.innerHTML = practiceItems.map((item, index) => `<article class="bg-slate/5 rounded-xl p-5 mb-3"><p class="font-bold text-oxford">${index + 1}. ${item.question}</p><details class="mt-3"><summary class="cursor-pointer text-emerald font-bold text-sm">Reveal answer and explanation</summary><p class="mt-2 font-semibold">Answer: ${item.answer}</p><p class="mt-1 text-sm text-slate">${item.explanation}</p></details></article>`).join('');
+                if (!fullAccess && moduleRecord.practice.length > practiceItems.length) {
+                    practiceContent.insertAdjacentHTML('beforeend', '<div class="mt-4 rounded-xl border border-oxford/10 bg-oxford/5 p-4"><p class="font-bold text-oxford">Continue with the full practice set</p><p class="mt-1 text-sm text-slate">Premium includes every guided question, solution and topic quiz.</p><a class="mt-3 inline-flex font-bold text-emerald hover:underline" href="pricing.html">Unlock full practice →</a></div>');
+                }
+            }
+
             // Render Video
-            if (videoId) {
+            if (videoId && fullAccess) {
                 videoSection.classList.remove('hidden');
                 const tag = document.createElement('script');
                 tag.src = "https://www.youtube.com/iframe_api";
@@ -144,6 +190,9 @@
                         playerVars: { 'rel': 0, 'modestbranding': 1 }
                     });
                 };
+            } else if (videoId && !fullAccess) {
+                videoSection.classList.remove('hidden');
+                videoSection.innerHTML = '<div class="rounded-2xl bg-oxford p-8 text-center text-white"><p class="text-lg font-bold">Complete video lesson available with Premium</p><p class="mt-2 text-sm text-white/80">Start with the written preview, then unlock the full video catalogue.</p><a class="mt-4 inline-flex rounded-xl bg-emerald px-5 py-3 font-bold text-white hover:bg-emerald/90" href="pricing.html">Explore Premium</a></div>';
             }
         });
     </script>

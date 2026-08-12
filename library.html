@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Library | Nexal Academy</title>
+    <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { theme: { extend: { colors: { oxford: '#002147', slate: '#475569', ivory: '#FDFBF7', emerald: '#2E8B57', gold: '#DAA520' } } } }</script>
@@ -16,8 +17,8 @@
 
     <aside class="w-64 bg-oxford text-white/80 flex flex-col h-full shadow-2xl z-20 hidden md:flex relative">
         <div class="p-8 border-b border-white/10">
-            <span class="text-[10px] font-bold tracking-widest uppercase text-emerald">Global Standard</span>
-            <h2 class="text-2xl font-serif font-black text-white mt-1 tracking-tight">Nexal Academy.</h2>
+            <span class="text-[10px] font-bold tracking-widest uppercase text-emerald">Grades 10–12</span>
+            <h2 class="text-2xl font-serif font-black text-white mt-1 tracking-tight">Nexal Pathway.</h2>
         </div>
         <nav id="sidebar-nav" class="flex-1 p-6 space-y-3 overflow-y-auto">
             <p class="text-xs font-bold tracking-widest uppercase text-white/40 mb-4 ml-2">Learning Hub</p>
@@ -59,8 +60,9 @@
         <div class="max-w-6xl mx-auto">
             
             <header class="mb-12">
-                <h1 class="text-4xl font-serif font-black text-oxford">Global Master Library</h1>
-                <p class="text-slate mt-2 text-lg">Access the complete, internationally benchmarked curriculum matrix.</p>
+                <h1 class="text-4xl font-serif font-black text-oxford">CAPS Learning Library</h1>
+                <p class="text-slate mt-2 text-lg">Find a structured lesson by subject, chapter or topic.</p>
+                <label class="block mt-6 max-w-xl"><span class="sr-only">Search lessons</span><input id="library-search" type="search" placeholder="Search quadratic, Newton, DNA…" class="w-full rounded-xl border border-slate/20 bg-white px-4 py-3 text-oxford shadow-sm outline-none focus:border-emerald" /></label>
             </header>
 
             <div id="full-library-container" class="space-y-12">
@@ -75,6 +77,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js/supabase-config.js"></script>
+    <script src="js/access-manifest.js"></script>
+    <script src="js/entitlements.js"></script>
+    <script src="js/brand.js"></script>
     <script src="js/auth-guard.js"></script>
     <script src="js/curriculum.js"></script>
     
@@ -114,7 +119,7 @@
                     chapter.modules.forEach(mod => {
                         // THE FIX: Route specifically to study-hall.html
                         modulesHTML += `
-                            <div onclick="window.location.href='study-hall.html?subject=${subjectId}&module=${mod.id}&name=${encodeURIComponent(mod.name)}'" class="group p-5 rounded-2xl border-2 border-slate/10 hover:border-${subject.color || 'emerald'} hover:bg-${subject.color || 'emerald'}/5 transition-all cursor-pointer shadow-sm hover:shadow-md flex items-center justify-between bg-white">
+                            <div data-lesson-card role="link" tabindex="0" onclick="window.location.href='study-hall.html?subject=${subjectId}&module=${mod.id}&name=${encodeURIComponent(mod.name)}'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" class="group p-5 rounded-2xl border-2 border-slate/10 hover:border-${subject.color || 'emerald'} hover:bg-${subject.color || 'emerald'}/5 transition-all cursor-pointer shadow-sm hover:shadow-md flex items-center justify-between bg-white">
                                 <div>
                                     <span class="text-[10px] font-bold uppercase tracking-widest text-slate/50 mb-1 block">${chapter.title}</span>
                                     <h4 class="font-bold text-oxford text-lg group-hover:text-${subject.color || 'emerald'} transition-colors">${mod.name}</h4>
@@ -140,6 +145,20 @@
                     </div>
                 `;
                 container.appendChild(section);
+            });
+
+            const search = document.getElementById('library-search');
+            search.addEventListener('input', () => {
+                const query = search.value.trim().toLowerCase();
+                document.querySelectorAll('#full-library-container section').forEach(section => {
+                    let visible = 0;
+                    section.querySelectorAll('[data-lesson-card]').forEach(card => {
+                        const matches = !query || card.textContent.toLowerCase().includes(query);
+                        card.classList.toggle('hidden', !matches);
+                        if (matches) visible += 1;
+                    });
+                    section.classList.toggle('hidden', visible === 0);
+                });
             });
         });
     </script>

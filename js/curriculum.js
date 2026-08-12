@@ -230,7 +230,32 @@ const v1Extensions = {
 };
 Object.entries(v1Extensions).forEach(([subjectId, modules]) => {
   const subject = NEXAL_CURRICULUM[subjectId];
-  if (subject) subject.syllabus.push({ title: 'V1 Core Topics', modules });
+  if (subject) {
+    modules.forEach(module => {
+      const diagramMap = { quadratics: 'content/diagrams/quadratic-parabola.svg', functions: 'content/diagrams/quadratic-parabola.svg', newton: 'content/diagrams/newton-free-body.svg', dna_rna: 'content/diagrams/dna-base-pairing.svg', genetics: 'content/diagrams/dna-base-pairing.svg' };
+      if (diagramMap[module.id]) module.diagram = diagramMap[module.id];
+      if (!module.video_id) module.video_status = 'SCRIPT_READY';
+      else module.video_status = 'EXTERNAL_REFERENCED';
+      if (!module.video_script) {
+        module.video_script = {
+          duration: '5–7 minutes',
+          narration: `Introduce ${module.name}, model the worked example, then pause for the practice question. Recap the key rule and invite the learner to enter the practice arena.`,
+          scenes: ['Learning objective', 'Concept visualisation', 'Worked example', 'Common mistake', 'Recap and practice prompt']
+        };
+      }
+    });
+    subject.syllabus.push({ title: 'V1 Core Topics', modules });
+  }
 });
+const diagramMap = { quadratics: 'content/diagrams/quadratic-parabola.svg', functions: 'content/diagrams/quadratic-parabola.svg', newton: 'content/diagrams/newton-free-body.svg', dna_rna: 'content/diagrams/dna-base-pairing.svg', genetics: 'content/diagrams/dna-base-pairing.svg' };
+Object.values(NEXAL_CURRICULUM).forEach(subject => subject.syllabus.forEach(chapter => chapter.modules.forEach(module => {
+  if (diagramMap[module.id]) module.diagram = diagramMap[module.id];
+  if (!module.video_script) module.video_script = {
+    duration: '5–7 minutes',
+    narration: `Introduce ${module.name}, model the worked example, then pause for the practice question. Recap the key rule and invite the learner to enter the practice arena.`,
+    scenes: ['Learning objective', 'Concept visualisation', 'Worked example', 'Common mistake', 'Recap and practice prompt']
+  };
+  if (!module.video_status) module.video_status = module.video_id ? 'EXTERNAL_REFERENCED' : 'SCRIPT_READY';
+})));
 
 window.NEXAL_CURRICULUM = NEXAL_CURRICULUM;
