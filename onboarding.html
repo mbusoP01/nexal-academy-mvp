@@ -85,6 +85,7 @@
                     <div>
                         <label class="block text-xs font-bold tracking-widest uppercase text-slate/70 mb-2">Grade</label>
                         <select id="input-grade" class="w-full bg-slate/5 border border-slate/20 rounded-xl px-4 py-3 text-oxford font-medium focus:border-emerald focus:outline-none">
+                            <option value="10">Grade 10</option>
                             <option value="11">Grade 11</option>
                             <option value="12">Grade 12 (Matric)</option>
                         </select>
@@ -193,6 +194,7 @@
                     id: currentUser.id,
                     role: currentRole === 'teacher' ? 'teacher' : 'student',
                     username: document.getElementById('input-username').value.trim(),
+                    email: currentUser.email || null,
                     country: document.getElementById('input-country').value,
                     phone: document.getElementById('input-phone').value.trim(),
                     school_name: document.getElementById('input-school').value.trim() || 'Independent Scholar', // Added School
@@ -205,7 +207,7 @@
                     payload.teacher_code = generateTeacherCode();
                 }
 
-                const { error: dbError } = await window.supabaseClient.from('profiles').upsert(payload);
+                const { error: dbError } = await window.supabaseClient.from('profiles').upsert(payload, { onConflict: 'id' });
                 if (dbError) {
                     if(dbError.message.includes('unique constraint')) throw new Error("Username is already taken.");
                     throw dbError;
