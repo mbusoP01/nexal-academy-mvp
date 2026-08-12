@@ -1,10 +1,366 @@
 {
   "version": "1.0",
   "label": "Nexal Academy Revision Assessments",
-  "note": "Original formative revision blueprints; not official DBE examination papers.",
   "assessments": [
-    {"id":"revision-mathematics-foundation","subject":"mathematics","grade":"10-12","term":"foundation","title":"Mathematics Foundation Revision Assessment","marks":15,"questionRefs":["quadratics-q1","quadratics-q2","quadratics-q3","functions-q1","functions-q2","functions-q3","trigonometry-q1","trigonometry-q2","trigonometry-q3"],"memo":"Use the linked topic-quiz explanations as the marking memo."},
-    {"id":"revision-physical-sciences-foundation","subject":"physical-sciences","grade":"10-12","term":"foundation","title":"Physical Sciences Foundation Revision Assessment","marks":15,"questionRefs":["kinematics-q1","kinematics-q2","kinematics-q3","newton-q1","newton-q2","newton-q3","energy-q1","energy-q2","energy-q3","chemical-reactions-q1","chemical-reactions-q2","chemical-reactions-q3"],"memo":"Use the linked topic-quiz explanations as the marking memo."},
-    {"id":"revision-life-sciences-foundation","subject":"life-sciences","grade":"10-12","term":"foundation","title":"Life Sciences Foundation Revision Assessment","marks":15,"questionRefs":["dna_rna-q1","dna_rna-q2","dna_rna-q3","genetics-q1","genetics-q2","genetics-q3","ecology-q1","ecology-q2","ecology-q3"],"memo":"Use the linked topic-quiz explanations as the marking memo."}
+    {
+      "id": "revision-mathematics-10-1",
+      "subject": "mathematics",
+      "grade": 10,
+      "term": "1",
+      "title": "Nexal Academy mathematics Grade 10 Term 1 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-mathematics-10-2",
+      "subject": "mathematics",
+      "grade": 10,
+      "term": "2",
+      "title": "Nexal Academy mathematics Grade 10 Term 2 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-mathematics-10-3",
+      "subject": "mathematics",
+      "grade": 10,
+      "term": "3",
+      "title": "Nexal Academy mathematics Grade 10 Term 3 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-mathematics-10-4",
+      "subject": "mathematics",
+      "grade": 10,
+      "term": "4",
+      "title": "Nexal Academy mathematics Grade 10 Term 4 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-mathematics-11-1",
+      "subject": "mathematics",
+      "grade": 11,
+      "term": "1",
+      "title": "Nexal Academy mathematics Grade 11 Term 1 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-mathematics-11-2",
+      "subject": "mathematics",
+      "grade": 11,
+      "term": "2",
+      "title": "Nexal Academy mathematics Grade 11 Term 2 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-mathematics-11-3",
+      "subject": "mathematics",
+      "grade": 11,
+      "term": "3",
+      "title": "Nexal Academy mathematics Grade 11 Term 3 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-mathematics-11-4",
+      "subject": "mathematics",
+      "grade": 11,
+      "term": "4",
+      "title": "Nexal Academy mathematics Grade 11 Term 4 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-mathematics-12-1",
+      "subject": "mathematics",
+      "grade": 12,
+      "term": "1",
+      "title": "Nexal Academy mathematics Grade 12 Term 1 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-mathematics-12-2",
+      "subject": "mathematics",
+      "grade": 12,
+      "term": "2",
+      "title": "Nexal Academy mathematics Grade 12 Term 2 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-mathematics-12-3",
+      "subject": "mathematics",
+      "grade": 12,
+      "term": "3",
+      "title": "Nexal Academy mathematics Grade 12 Term 3 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-mathematics-12-4",
+      "subject": "mathematics",
+      "grade": 12,
+      "term": "4",
+      "title": "Nexal Academy mathematics Grade 12 Term 4 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-physical-sciences-10-1",
+      "subject": "physical-sciences",
+      "grade": 10,
+      "term": "1",
+      "title": "Nexal Academy physical-sciences Grade 10 Term 1 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-physical-sciences-10-2",
+      "subject": "physical-sciences",
+      "grade": 10,
+      "term": "2",
+      "title": "Nexal Academy physical-sciences Grade 10 Term 2 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-physical-sciences-10-3",
+      "subject": "physical-sciences",
+      "grade": 10,
+      "term": "3",
+      "title": "Nexal Academy physical-sciences Grade 10 Term 3 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-physical-sciences-10-4",
+      "subject": "physical-sciences",
+      "grade": 10,
+      "term": "4",
+      "title": "Nexal Academy physical-sciences Grade 10 Term 4 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-physical-sciences-11-1",
+      "subject": "physical-sciences",
+      "grade": 11,
+      "term": "1",
+      "title": "Nexal Academy physical-sciences Grade 11 Term 1 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-physical-sciences-11-2",
+      "subject": "physical-sciences",
+      "grade": 11,
+      "term": "2",
+      "title": "Nexal Academy physical-sciences Grade 11 Term 2 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-physical-sciences-11-3",
+      "subject": "physical-sciences",
+      "grade": 11,
+      "term": "3",
+      "title": "Nexal Academy physical-sciences Grade 11 Term 3 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-physical-sciences-11-4",
+      "subject": "physical-sciences",
+      "grade": 11,
+      "term": "4",
+      "title": "Nexal Academy physical-sciences Grade 11 Term 4 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-physical-sciences-12-1",
+      "subject": "physical-sciences",
+      "grade": 12,
+      "term": "1",
+      "title": "Nexal Academy physical-sciences Grade 12 Term 1 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-physical-sciences-12-2",
+      "subject": "physical-sciences",
+      "grade": 12,
+      "term": "2",
+      "title": "Nexal Academy physical-sciences Grade 12 Term 2 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-physical-sciences-12-3",
+      "subject": "physical-sciences",
+      "grade": 12,
+      "term": "3",
+      "title": "Nexal Academy physical-sciences Grade 12 Term 3 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-physical-sciences-12-4",
+      "subject": "physical-sciences",
+      "grade": 12,
+      "term": "4",
+      "title": "Nexal Academy physical-sciences Grade 12 Term 4 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-life-sciences-10-1",
+      "subject": "life-sciences",
+      "grade": 10,
+      "term": "1",
+      "title": "Nexal Academy life-sciences Grade 10 Term 1 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-life-sciences-10-2",
+      "subject": "life-sciences",
+      "grade": 10,
+      "term": "2",
+      "title": "Nexal Academy life-sciences Grade 10 Term 2 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-life-sciences-10-3",
+      "subject": "life-sciences",
+      "grade": 10,
+      "term": "3",
+      "title": "Nexal Academy life-sciences Grade 10 Term 3 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-life-sciences-10-4",
+      "subject": "life-sciences",
+      "grade": 10,
+      "term": "4",
+      "title": "Nexal Academy life-sciences Grade 10 Term 4 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-life-sciences-11-1",
+      "subject": "life-sciences",
+      "grade": 11,
+      "term": "1",
+      "title": "Nexal Academy life-sciences Grade 11 Term 1 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-life-sciences-11-2",
+      "subject": "life-sciences",
+      "grade": 11,
+      "term": "2",
+      "title": "Nexal Academy life-sciences Grade 11 Term 2 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-life-sciences-11-3",
+      "subject": "life-sciences",
+      "grade": 11,
+      "term": "3",
+      "title": "Nexal Academy life-sciences Grade 11 Term 3 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-life-sciences-11-4",
+      "subject": "life-sciences",
+      "grade": 11,
+      "term": "4",
+      "title": "Nexal Academy life-sciences Grade 11 Term 4 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-life-sciences-12-1",
+      "subject": "life-sciences",
+      "grade": 12,
+      "term": "1",
+      "title": "Nexal Academy life-sciences Grade 12 Term 1 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-life-sciences-12-2",
+      "subject": "life-sciences",
+      "grade": 12,
+      "term": "2",
+      "title": "Nexal Academy life-sciences Grade 12 Term 2 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-life-sciences-12-3",
+      "subject": "life-sciences",
+      "grade": 12,
+      "term": "3",
+      "title": "Nexal Academy life-sciences Grade 12 Term 3 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    },
+    {
+      "id": "revision-life-sciences-12-4",
+      "subject": "life-sciences",
+      "grade": 12,
+      "term": "4",
+      "title": "Nexal Academy life-sciences Grade 12 Term 4 Revision Assessment",
+      "marks": 30,
+      "questionRefs": [],
+      "memo": "Use the linked topic-quiz explanations as the marking memo."
+    }
   ]
 }

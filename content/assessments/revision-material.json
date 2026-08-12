@@ -1,0 +1,815 @@
+{
+  "version": "1.0",
+  "items": [
+    {
+      "unitId": "life-sciences-g10-cell-division",
+      "title": "Mitosis and meiosis foundations revision guide",
+      "summary": "Review Mitosis and meiosis foundations using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Mitosis and meiosis foundations.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Mitosis and meiosis foundations.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "life-sciences-g10-plant-structure",
+      "title": "Plant tissues and transport revision guide",
+      "summary": "Review Plant tissues and transport using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Plant tissues and transport.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Plant tissues and transport.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "life-sciences-g10-ecology",
+      "title": "Ecosystems and biodiversity revision guide",
+      "summary": "Review Ecosystems and biodiversity using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Ecosystems and biodiversity.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Ecosystems and biodiversity.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "life-sciences-g10-human-systems",
+      "title": "Support and transport systems revision guide",
+      "summary": "Review Support and transport systems using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Support and transport systems.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Support and transport systems.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "life-sciences-g11-genetics",
+      "title": "Inheritance and genetic crosses revision guide",
+      "summary": "Review Inheritance and genetic crosses using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Inheritance and genetic crosses.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Inheritance and genetic crosses.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "life-sciences-g10-cells",
+      "title": "Cell structure and organisation revision guide",
+      "summary": "Review Cell structure and organisation using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Cell structure and organisation.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Cell structure and organisation.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "life-sciences-g10-molecules",
+      "title": "Biological molecules revision guide",
+      "summary": "Review Biological molecules using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Biological molecules.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Biological molecules.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "life-sciences-g11-dna",
+      "title": "DNA, RNA and protein synthesis revision guide",
+      "summary": "Review DNA, RNA and protein synthesis using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in DNA, RNA and protein synthesis.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for DNA, RNA and protein synthesis.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "life-sciences-g11-reproduction",
+      "title": "Human and plant reproduction revision guide",
+      "summary": "Review Human and plant reproduction using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Human and plant reproduction.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Human and plant reproduction.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "life-sciences-g11-evolution",
+      "title": "Natural selection and evidence revision guide",
+      "summary": "Review Natural selection and evidence using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Natural selection and evidence.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Natural selection and evidence.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "life-sciences-g11-biodiversity",
+      "title": "Classification and biodiversity revision guide",
+      "summary": "Review Classification and biodiversity using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Classification and biodiversity.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Classification and biodiversity.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "life-sciences-g11-ecology",
+      "title": "Population and community ecology revision guide",
+      "summary": "Review Population and community ecology using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Population and community ecology.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Population and community ecology.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "life-sciences-g12-nervous",
+      "title": "Nervous system and receptors revision guide",
+      "summary": "Review Nervous system and receptors using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Nervous system and receptors.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Nervous system and receptors.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "life-sciences-g12-endocrine",
+      "title": "Endocrine control and homeostasis revision guide",
+      "summary": "Review Endocrine control and homeostasis using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Endocrine control and homeostasis.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Endocrine control and homeostasis.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "life-sciences-g12-genetics",
+      "title": "Meiosis, inheritance and variation revision guide",
+      "summary": "Review Meiosis, inheritance and variation using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Meiosis, inheritance and variation.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Meiosis, inheritance and variation.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "life-sciences-g12-evolution",
+      "title": "Human evolution and population change revision guide",
+      "summary": "Review Human evolution and population change using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Human evolution and population change.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Human evolution and population change.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "life-sciences-g12-ecology",
+      "title": "Energy flow and human impact revision guide",
+      "summary": "Review Energy flow and human impact using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Energy flow and human impact.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Energy flow and human impact.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "life-sciences-g12-reproduction",
+      "title": "Reproductive health and development revision guide",
+      "summary": "Review Reproductive health and development using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Reproductive health and development.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Reproductive health and development.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "mathematics-g10-algebra",
+      "title": "Algebraic expressions and equations revision guide",
+      "summary": "Review Algebraic expressions and equations using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Algebraic expressions and equations.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Algebraic expressions and equations.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "mathematics-g10-number-patterns",
+      "title": "Number patterns revision guide",
+      "summary": "Review Number patterns using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Number patterns.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Number patterns.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "mathematics-g10-functions",
+      "title": "Linear and quadratic functions revision guide",
+      "summary": "Review Linear and quadratic functions using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Linear and quadratic functions.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Linear and quadratic functions.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "mathematics-g10-geometry",
+      "title": "Euclidean geometry and measurement revision guide",
+      "summary": "Review Euclidean geometry and measurement using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Euclidean geometry and measurement.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Euclidean geometry and measurement.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "mathematics-g10-trigonometry",
+      "title": "Trigonometric ratios revision guide",
+      "summary": "Review Trigonometric ratios using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Trigonometric ratios.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Trigonometric ratios.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "mathematics-g10-statistics",
+      "title": "Data handling and probability revision guide",
+      "summary": "Review Data handling and probability using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Data handling and probability.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Data handling and probability.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "mathematics-g11-algebra",
+      "title": "Exponents, surds and equations revision guide",
+      "summary": "Review Exponents, surds and equations using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Exponents, surds and equations.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Exponents, surds and equations.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "mathematics-g11-analytical-geometry",
+      "title": "Straight-line geometry revision guide",
+      "summary": "Review Straight-line geometry using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Straight-line geometry.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Straight-line geometry.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "mathematics-g11-finance",
+      "title": "Growth, decay and finance revision guide",
+      "summary": "Review Growth, decay and finance using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Growth, decay and finance.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Growth, decay and finance.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "mathematics-g11-functions",
+      "title": "Transformations and inverses revision guide",
+      "summary": "Review Transformations and inverses using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Transformations and inverses.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Transformations and inverses.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "mathematics-g11-sequences",
+      "title": "Sequences and series revision guide",
+      "summary": "Review Sequences and series using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Sequences and series.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Sequences and series.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "mathematics-g11-trigonometry",
+      "title": "Trigonometric identities and equations revision guide",
+      "summary": "Review Trigonometric identities and equations using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Trigonometric identities and equations.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Trigonometric identities and equations.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "mathematics-g12-functions",
+      "title": "Polynomial, exponential and logarithmic functions revision guide",
+      "summary": "Review Polynomial, exponential and logarithmic functions using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Polynomial, exponential and logarithmic functions.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Polynomial, exponential and logarithmic functions.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "mathematics-g12-calculus",
+      "title": "Differential calculus revision guide",
+      "summary": "Review Differential calculus using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Differential calculus.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Differential calculus.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "mathematics-g12-geometry",
+      "title": "Circle geometry and proofs revision guide",
+      "summary": "Review Circle geometry and proofs using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Circle geometry and proofs.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Circle geometry and proofs.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "mathematics-g12-probability",
+      "title": "Counting and probability revision guide",
+      "summary": "Review Counting and probability using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Counting and probability.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Counting and probability.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "mathematics-g12-statistics",
+      "title": "Regression, variance and distributions revision guide",
+      "summary": "Review Regression, variance and distributions using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Regression, variance and distributions.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Regression, variance and distributions.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "mathematics-g12-trigonometry",
+      "title": "General solutions and graphs revision guide",
+      "summary": "Review General solutions and graphs using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in General solutions and graphs.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for General solutions and graphs.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "physical-sciences-g10-matter",
+      "title": "Particles and materials revision guide",
+      "summary": "Review Particles and materials using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Particles and materials.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Particles and materials.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "physical-sciences-g10-energy",
+      "title": "Energy transfer and work revision guide",
+      "summary": "Review Energy transfer and work using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Energy transfer and work.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Energy transfer and work.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "physical-sciences-g10-waves",
+      "title": "Sound and electromagnetic radiation revision guide",
+      "summary": "Review Sound and electromagnetic radiation using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Sound and electromagnetic radiation.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Sound and electromagnetic radiation.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "physical-sciences-g10-electricity",
+      "title": "Circuits and electrical safety revision guide",
+      "summary": "Review Circuits and electrical safety using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Circuits and electrical safety.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Circuits and electrical safety.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "physical-sciences-g10-chemical-change",
+      "title": "Reactions and acids revision guide",
+      "summary": "Review Reactions and acids using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Reactions and acids.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Reactions and acids.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "physical-sciences-g10-mechanics",
+      "title": "Motion and forces revision guide",
+      "summary": "Review Motion and forces using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Motion and forces.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Motion and forces.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "physical-sciences-g11-vectors",
+      "title": "Vectors and motion revision guide",
+      "summary": "Review Vectors and motion using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Vectors and motion.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Vectors and motion.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "physical-sciences-g11-newton",
+      "title": "Newton's laws revision guide",
+      "summary": "Review Newton's laws using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Newton's laws.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Newton's laws.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "physical-sciences-g11-momentum",
+      "title": "Momentum and impulse revision guide",
+      "summary": "Review Momentum and impulse using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Momentum and impulse.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Momentum and impulse.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "physical-sciences-g11-energy",
+      "title": "Work, energy and power revision guide",
+      "summary": "Review Work, energy and power using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Work, energy and power.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Work, energy and power.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "physical-sciences-g11-chemical-bonding",
+      "title": "Chemical bonding and intermolecular forces revision guide",
+      "summary": "Review Chemical bonding and intermolecular forces using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Chemical bonding and intermolecular forces.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Chemical bonding and intermolecular forces.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "physical-sciences-g11-stoichiometry",
+      "title": "Mole concept and stoichiometry revision guide",
+      "summary": "Review Mole concept and stoichiometry using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Mole concept and stoichiometry.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Mole concept and stoichiometry.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "physical-sciences-g12-organic",
+      "title": "Organic molecules and reactions revision guide",
+      "summary": "Review Organic molecules and reactions using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Organic molecules and reactions.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Organic molecules and reactions.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "physical-sciences-g12-rates",
+      "title": "Rates and equilibrium revision guide",
+      "summary": "Review Rates and equilibrium using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Rates and equilibrium.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Rates and equilibrium.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "physical-sciences-g12-acids-redox",
+      "title": "Acids, bases and redox revision guide",
+      "summary": "Review Acids, bases and redox using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Acids, bases and redox.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Acids, bases and redox.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "physical-sciences-g12-electric-fields",
+      "title": "Electrostatics and electric fields revision guide",
+      "summary": "Review Electrostatics and electric fields using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Electrostatics and electric fields.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Electrostatics and electric fields.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "physical-sciences-g12-circuits",
+      "title": "Electric circuits and power revision guide",
+      "summary": "Review Electric circuits and power using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Electric circuits and power.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Electric circuits and power.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    },
+    {
+      "unitId": "physical-sciences-g12-waves",
+      "title": "Doppler effect and wave phenomena revision guide",
+      "summary": "Review Doppler effect and wave phenomena using the worked examples and practice set.",
+      "checklist": [
+        "I can define the key terms in Doppler effect and wave phenomena.",
+        "I can complete a worked example without notes.",
+        "I can explain one common misconception."
+      ],
+      "retrieval": [
+        "Write the governing principle for Doppler effect and wave phenomena.",
+        "Solve or explain one foundation question.",
+        "Describe one real-world application."
+      ]
+    }
+  ]
+}

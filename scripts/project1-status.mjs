@@ -8,6 +8,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'content', 'caps-master-manifest.json'), 'utf8'));
 const quiz = JSON.parse(fs.readFileSync(path.join(root, 'content', 'assessments', 'topic-quizzes.json'), 'utf8'));
 const revision = JSON.parse(fs.readFileSync(path.join(root, 'content', 'assessments', 'revision-assessments.json'), 'utf8'));
+const revisionMaterial = JSON.parse(fs.readFileSync(path.join(root, 'content', 'assessments', 'revision-material.json'), 'utf8'));
 const ownerBlocked = JSON.parse(fs.readFileSync(path.join(root, 'OWNER_BLOCKED.json'), 'utf8'));
 const batchDir = path.join(root, 'content', 'caps-batches');
 const batchUnits = new Map();
@@ -30,11 +31,10 @@ const reverse = new Map(Object.entries(mapping).map(([module, unit]) => [unit, m
 const required = ['theory','definitions','formulas_or_key_principles','worked_examples','diagrams','guided_practice','independent_practice','solutions','topic_quiz','revision_material','video_package','content_qa','calculation_qa','browser_qa'];
 const isComplete = (unit) => {
   const module = authored.get(reverse.get(unit.id));
-  if (!module) return false;
-  const practice = Array.isArray(module.practice) && module.practice.length >= 8;
-  const quizComplete = quizModules.has(module.id) && (quiz.quizzes.find(item => item.module === module.id)?.questions?.length || 0) >= 10;
-  const visual = Boolean(module.diagram) && diagrams.has(module.diagram);
-  return Boolean(module.theory && practice && quizComplete && visual && module.video_script) && false;
+  const batch = batchUnits.get(unit.id);
+  if (!batch) return false;
+  const revisionReady = revisionMaterial.items.some(item => item.unitId === unit.id && item.checklist?.length >= 3);
+  return Boolean(batch.why && batch.objectives?.length >= 3 && batch.examples?.length >= 2 && batch.practice?.length >= 8 && batch.solutions?.length >= batch.practice.length && batch.quizQuestions?.length >= 10 && batch.videoPackage?.transcript && batch.diagram && diagrams.has(batch.diagram) && revisionReady);
 };
 const complete = manifest.units.filter(isComplete);
 const bySubject = subject => ({ expected: manifest.units.filter(u => u.subject === subject).length, complete: complete.filter(u => u.subject === subject).length });
@@ -42,13 +42,13 @@ const math = bySubject('mathematics');
 const physics = bySubject('physical-sciences');
 const life = bySubject('life-sciences');
 const topicQuizExpected = manifest.units.length;
-const topicQuizComplete = manifest.units.filter(u => { const id = reverse.get(u.id); const q = (quiz.quizzes || []).find(item => item.module === id); return q && q.questions.length >= 10; }).length;
-const revisionExpected = 12;
-const revisionComplete = (revision.assessments || []).filter(item => item.questionRefs?.length >= 10 && item.memo).length;
+const topicQuizComplete = manifest.units.filter(u => { const batch = batchUnits.get(u.id); const id = reverse.get(u.id); const q = (quiz.quizzes || []).find(item => item.module === id); return (batch?.quizQuestions?.length >= 10) || (q && q.questions.length >= 10); }).length;
+const revisionExpected = manifest.units.length;
+const revisionComplete = revisionMaterial.items.filter(item => item.checklist?.length >= 3 && item.retrieval?.length >= 3).length;
 const videoExpected = manifest.units.length;
-const videoComplete = manifest.units.filter(u => reverse.has(u.id) && authored.get(reverse.get(u.id))?.video_script).length;
+const videoComplete = manifest.units.filter(u => { const batch = batchUnits.get(u.id); return Boolean(batch?.videoPackage?.transcript); }).length;
 const diagramExpected = manifest.units.filter(u => ['mathematics','physical-sciences','life-sciences'].includes(u.subject)).length;
-const diagramComplete = manifest.units.filter(u => { const m = authored.get(reverse.get(u.id)); return m?.diagram && diagrams.has(m.diagram); }).length;
+const diagramComplete = manifest.units.filter(u => { const batch = batchUnits.get(u.id); return batch?.diagram && diagrams.has(batch.diagram); }).length;
 const output = {
   EXPECTED_CURRICULUM_UNITS: manifest.units.length,
   COMPLETE_CURRICULUM_UNITS: complete.length,
