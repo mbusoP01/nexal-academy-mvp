@@ -62,7 +62,7 @@ alter table public.announcements add constraint announcements_target_check check
   or (audience_type in ('GRADE_10','GRADE_11','GRADE_12') and grade is not null)
   or (audience_type = 'FREE' and plan = 'FREE')
   or (audience_type = 'PREMIUM' and plan = 'PREMIUM')
-  or (audience_type in ('ALL','SUBJECT','FREE','PREMIUM'))
+  or audience_type = 'ALL'
 );
 alter table public.announcements drop constraint if exists announcements_audience_type_check;
 alter table public.announcements add constraint announcements_audience_type_check check (audience_type in ('ALL','GRADE_10','GRADE_11','GRADE_12','SUBJECT','CLASS','FREE','PREMIUM'));
@@ -73,9 +73,9 @@ do $$ declare t text; begin
   end loop;
 end $$;
 
--- All writes go through authority-checked RPCs.
+-- Class/LMS authority writes use checked RPCs. Learner submission progress is limited to the learner's own row by RLS.
 revoke all on public.classes, public.class_memberships, public.teacher_class_assignments, public.assignments, public.assignment_submissions from anon;
-revoke insert, update, delete, truncate, references, trigger on public.classes, public.class_memberships, public.teacher_class_assignments, public.assignments from authenticated;
+revoke all on public.classes, public.class_memberships, public.teacher_class_assignments, public.assignments, public.assignment_submissions from authenticated;
 grant select on public.classes, public.class_memberships, public.teacher_class_assignments, public.assignments to authenticated;
 grant select, insert, update on public.assignment_submissions to authenticated;
 
