@@ -19,7 +19,7 @@ create table if not exists public.announcements (
     or (audience_type in ('GRADE_10','GRADE_11','GRADE_12') and grade is not null)
     or (audience_type = 'FREE' and plan = 'FREE')
     or (audience_type = 'PREMIUM' and plan = 'PREMIUM')
-    or (audience_type in ('ALL','SUBJECT','FREE','PREMIUM'))
+    or audience_type = 'ALL'
   )
 );
 
