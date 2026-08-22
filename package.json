@@ -24,6 +24,7 @@
     "test:premium-ui": "node tests/premium-ui.test.mjs",
     "test:announcements": "node tests/announcements.test.mjs",
     "test:operations": "node tests/operations.test.mjs",
+    "test:security": "node tests/security-boundaries.test.mjs",
     "project1:verify": "node scripts/project1-verify.mjs"
   }
 }
