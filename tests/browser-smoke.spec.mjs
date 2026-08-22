@@ -77,3 +77,26 @@ test('course library fixture shows only the selected learner grade', async ({ pa
     await page.screenshot({ path: `${artifacts}/library-desktop.png`, fullPage: true });
   });
 });
+
+test('verified challenges shell is readable on desktop', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await expectNoPageErrors(page, async () => {
+    await page.goto(`${BASE}/challenges.html?fixture=1`, { waitUntil: 'domcontentloaded' });
+    await expect(page.getByRole('heading', { level: 1 })).toContainText('Verified CAPS Challenges');
+    await expect(page.getByRole('button', { name: 'Send verified challenge' })).toBeVisible();
+    await expect(page.getByText('Server-verified competition')).toBeVisible();
+    await expectNoHorizontalOverflow(page);
+    await page.screenshot({ path: `${artifacts}/challenges-desktop.png`, fullPage: true });
+  });
+});
+
+test('verified challenges shell has no mobile overflow', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await expectNoPageErrors(page, async () => {
+    await page.goto(`${BASE}/challenges.html?fixture=1`, { waitUntil: 'domcontentloaded' });
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Send verified challenge' })).toBeVisible();
+    await expectNoHorizontalOverflow(page);
+    await page.screenshot({ path: `${artifacts}/challenges-mobile.png`, fullPage: true });
+  });
+});
