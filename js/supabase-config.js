@@ -2,7 +2,7 @@
 // project, or network is unavailable.
 (() => {
   const SUPABASE_URL = 'https://szqpkxlatzvwcxpwmewt.supabase.co';
-  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJIUzI1NiIsInJlZiI6InN6cXBreGxhdHp2d2N4cHdtZXd0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4Njg4MjYsImV4cCI6MjA5NTQ0NDgyNn0.OFvGOyU0bZrDX-48PlXGGZeO7hhWJoXhb37JtTQ9pzY';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN6cXBreGxhdHp2d2N4cHdtZXd0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4Njg4MjYsImV4cCI6MjA5NTQ0NDgyNn0.OFvGOyU0bZrDX-48PlXGGZeO7hhWJoXhb37JtTQ9pzY';
   const AVATAR_SCHEME = 'private://avatars/';
   const LEGACY_AVATAR_PATH = '/storage/v1/object/public/avatars/';
   window.supabaseClient = null;
