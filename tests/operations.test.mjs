@@ -27,6 +27,17 @@ assert.match(sql, /revoke all on public\.classes, public\.class_memberships, pub
 assert.match(sql, /grant select, insert, update on public\.assignment_submissions to authenticated/i);
 assert.doesNotMatch(sql, /grant[^;]*delete[^;]*assignment_submissions[^;]*authenticated/i);
 
+// Learners can only create/update submission rows for published assignments in an active class membership.
+assert.match(sql, /join\s+public\.class_memberships\s+m\s+on\s+m\.class_id\s*=\s*a\.class_id/i);
+assert.match(sql, /a\.id\s*=\s*assignment_submissions\.assignment_id/i);
+assert.match(sql, /a\.published/i);
+assert.match(sql, /m\.learner_id\s*=\s*\(select auth\.uid\(\)\)/i);
+assert.match(sql, /m\.status\s*=\s*'ACTIVE'/i);
+
+// Server-side assignment creation must bind the unit to both the selected subject and class grade.
+assert.match(sql, /p_unit_id\s*!~\s*\('\^'\s*\|\|\s*p_subject\s*\|\|\s*'-g'\s*\|\|\s*c\.grade::text\s*\|\|\s*'-'\)/i);
+assert.match(sql, /unit does not match class subject and grade/i);
+
 assert.match(teacher, /teacher_class_assignments/);
 assert.match(teacher, /teacher_create_assignment/);
 assert.match(teacher, /id=\"class-id\"[^>]*>\s*<option/);
