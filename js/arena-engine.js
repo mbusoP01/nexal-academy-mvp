@@ -1,6 +1,6 @@
 // Secure Arena engine. Competitive challenge questions are issued and scored
-// by Supabase RPCs; the browser never writes another learner's XP or challenge
-// result directly.
+// by Supabase RPCs; browser-generated practice remains local and cannot mutate
+// persistent leaderboard XP.
 
 document.addEventListener('DOMContentLoaded', async () => {
   const params = new URLSearchParams(window.location.search);
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       statusBadge.textContent = 'INCORRECT';
     }
     if (questionNumber >= MAX_QUESTIONS) {
-      nextBtn.textContent = challengeId ? 'Submit verified duel →' : 'Complete module & save progress →';
+      nextBtn.textContent = challengeId ? 'Submit verified duel →' : 'Complete practice →';
       if (challengeId) {
         nextBtn.classList.replace('bg-oxford', 'bg-gold');
         nextBtn.classList.add('text-oxford');
@@ -95,7 +95,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     openTheoryBtn.classList.remove('hidden');
     const tag = document.createElement('script');
     tag.src = 'https://www.youtube.com/iframe_api';
-    document.getElementsByTagName('script')[0]?.parentNode?.insertBefore(tag, document.getElementsByTagName('script')[0]);
+    const firstScript = document.getElementsByTagName('script')[0];
+    firstScript?.parentNode?.insertBefore(tag, firstScript);
     let ytPlayer = null;
     window.onYouTubeIframeAPIReady = () => {
       ytPlayer = new YT.Player('youtube-container', { videoId: currentVideoId, playerVars: { rel: 0, modestbranding: 1 } });
@@ -197,7 +198,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const qData = normalQuestion();
     if (!qData) return setFatal('No practice question is available for this lesson yet.');
-    instructionText.textContent = 'Choose the best answer.';
+    instructionText.textContent = 'Choose the best answer. Practice score stays on this device; verified challenge XP powers rankings.';
     if (qData.displayType === 'katex' && window.katex) {
       equationContainer.replaceChildren();
       window.katex.render(qData.question, equationContainer, { displayMode: true, throwOnError: false });
@@ -225,28 +226,28 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     nextBtn.disabled = true;
+    if (!challengeId) {
+      if (moduleId) localStorage.setItem(`nexal-lesson-complete:${moduleId}`, 'true');
+      localStorage.setItem('nexal-last-practice-score', String(currentSessionXP));
+      window.location.replace('dashboard.html');
+      return;
+    }
+
     nextBtn.textContent = 'Saving verified result…';
     try {
-      if (challengeId) {
-        const { data, error } = await window.supabaseClient.rpc('academy_submit_challenge_attempt', { p_attempt_id: challengeAttemptId });
-        if (error) throw error;
-        const outcome = data?.outcome;
-        if (outcome === 'won') alert(`Verified duel won: ${data.score} XP + ${data.winner_bonus || 0} bonus XP.`);
-        else if (outcome === 'lost') alert(`Verified duel complete: ${data.score} XP. Your opponent scored higher.`);
-        else if (outcome === 'tied') alert(`Verified duel tied at ${data.score} XP.`);
-        else alert(`Verified turn saved: ${data?.score ?? 0} XP. Waiting for your opponent.`);
-        window.location.replace('challenges.html');
-      } else {
-        const score = Math.max(0, Math.min(MAX_QUESTIONS * 50, currentSessionXP));
-        const { error } = await window.supabaseClient.rpc('academy_complete_practice', { p_score: score });
-        if (error) throw error;
-        window.location.replace('dashboard.html');
-      }
+      const { data, error } = await window.supabaseClient.rpc('academy_submit_challenge_attempt', { p_attempt_id: challengeAttemptId });
+      if (error) throw error;
+      const outcome = data?.outcome;
+      if (outcome === 'won') alert(`Verified duel won: ${data.score} XP + ${data.winner_bonus || 0} bonus XP.`);
+      else if (outcome === 'lost') alert(`Verified duel complete: ${data.score} XP. Your opponent scored higher.`);
+      else if (outcome === 'tied') alert(`Verified duel tied at ${data.score} XP.`);
+      else alert(`Verified turn saved: ${data?.score ?? 0} XP. Waiting for your opponent.`);
+      window.location.replace('challenges.html');
     } catch (error) {
       console.error('[Nexal] Arena result sync failed:', error);
       nextBtn.disabled = false;
       nextBtn.textContent = 'Retry secure save';
-      instructionText.textContent = 'Your result has not been saved yet. Retry before leaving this page.';
+      instructionText.textContent = 'Your verified duel result has not been saved yet. Retry before leaving this page.';
     }
   });
 
