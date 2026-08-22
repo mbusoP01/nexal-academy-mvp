@@ -24,6 +24,6 @@
     "test:premium-ui": "node tests/premium-ui.test.mjs",
     "test:announcements": "node tests/announcements.test.mjs",
     "test:operations": "node tests/operations.test.mjs",
-    "project1:verify": "npm run project1:guard && npm run check:syntax && npm run validate:content && npm run validate:curriculum && npm run validate:batches && npm run validate:assessments && npm run validate:calculations && npm run validate:depth && npm run test:content && npm run test:commercial && npm run test:blank-page && npm run test:onboarding-storage && npm run test:lms && npm run test:premium-ui && npm run test:announcements && npm run test:operations"
+    "project1:verify": "node scripts/project1-verify.mjs"
   }
 }
