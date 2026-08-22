@@ -119,18 +119,13 @@
       async function loadChallenges() {
         list.innerHTML = '<div class="p-8 text-center text-sm font-medium text-slate">Refreshing verified challenge state…</div>';
         try {
-          const { data, error } = await client.from('challenges').select(`
-            id,status,challenger_played,target_played,challenger_score,target_score,
-            challenger:profiles!challenges_challenger_id_fkey(id,username),
-            target:profiles!challenges_target_id_fkey(id,username)
-          `).in('status',['pending','accepted']).or(`target_id.eq.${user.id},challenger_id.eq.${user.id}`).order('id',{ascending:false});
+          const { data, error } = await client.rpc('academy_list_my_challenges');
           if (error) throw error;
-          if (!data?.length) return empty('No active challenges.', 'Send a verified challenge when you are ready to compete.');
+          if (!Array.isArray(data) || !data.length) return empty('No active challenges.', 'Send a verified challenge when you are ready to compete.');
 
           list.replaceChildren();
           data.forEach((challenge) => {
-            const isChallenger = challenge.challenger?.id === user.id;
-            const opponent = isChallenger ? challenge.target : challenge.challenger;
+            const isChallenger = challenge.is_challenger === true;
             const havePlayed = isChallenger ? challenge.challenger_played : challenge.target_played;
             const row = document.createElement('article');
             row.className = 'flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between';
@@ -138,7 +133,7 @@
             const identity = document.createElement('div');
             const name = document.createElement('h3');
             name.className = 'text-lg font-bold text-oxford';
-            name.textContent = opponent?.username || 'Academy learner';
+            name.textContent = challenge.opponent_username || 'Academy learner';
             const meta = document.createElement('p');
             meta.className = 'mt-1 text-xs font-bold uppercase tracking-[.12em] text-slate/60';
             meta.textContent = challenge.status === 'pending' ? (isChallenger ? 'Awaiting acceptance' : 'Challenge received') : (havePlayed ? 'Your verified turn is complete' : 'Accepted · ready to play');
