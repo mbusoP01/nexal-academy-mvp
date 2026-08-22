@@ -17,6 +17,7 @@ const gates = [
   ['premium UI', ['npm', ['run', 'test:premium-ui']]],
   ['announcements', ['npm', ['run', 'test:announcements']]],
   ['operations', ['npm', ['run', 'test:operations']]],
+  ['security boundaries', ['npm', ['run', 'test:security']]],
 ];
 
 const results = [];
