@@ -1,32 +1,39 @@
 {
   "entries": [
     {
-      "task": "Production Supabase authentication, RLS and progress persistence verification",
-      "why_owner_authority_is_required": "The local repository does not contain production administrative credentials or permission to inspect/alter the live project.",
-      "what_credential_or_action_is_missing": "Authorized Supabase project access and production test account.",
-      "exact_owner_action": "Provide authorized Supabase access or run the documented production smoke checklist.",
-      "what_local_work_is_already_complete": "Application auth guards, local content validation, and local learning-flow fixtures are present."
+      "task": "Wake and verify the live Academy Supabase database before any production schema change",
+      "why_owner_authority_is_required": "Connected project metadata is available, but the live database/security advisor currently reports the Academy project as hibernated. Waking or altering live compute is intentionally not performed without explicit production authorization.",
+      "what_credential_or_action_is_missing": "Explicit approval to wake the live Academy Supabase project and perform read-only production schema/RLS verification first.",
+      "exact_owner_action": "Explicitly authorize the Academy Supabase project to be woken for production verification, or wake Nexal Academy MVP in Supabase and confirm it is ready for inspection.",
+      "what_local_work_is_already_complete": "The configured project ref is verified, public client metadata is reachable, local auth guards are tested, avatar storage is private-by-default, LMS/announcement migrations are hardened, and local/browser quality gates pass."
     },
     {
-      "task": "Enable Google OAuth in Supabase and Google Cloud",
-      "why_owner_authority_is_required": "Provider secrets and dashboard configuration are external to this repository and must not be committed.",
-      "what_credential_or_action_is_missing": "Google Web OAuth client ID/secret and Supabase dashboard access.",
-      "exact_owner_action": "Follow GOOGLE_AUTH_OWNER_SETUP.md: enable Google in Supabase Auth > Providers, add the client ID/secret, set Google callback https://szqpkxlatzvwcxpwmewt.supabase.co/auth/v1/callback, and allow the application callback origin used by deployment.",
-      "what_local_work_is_already_complete": "Continue with Google button, safe redirect restoration, auth-callback.html, loading/error handling, and session handoff are implemented."
+      "task": "Enable and acceptance-test Google OAuth for Academy",
+      "why_owner_authority_is_required": "Google OAuth provider secrets and production redirect configuration are external account settings and must not be committed to the repository.",
+      "what_credential_or_action_is_missing": "Google Web OAuth client configuration plus permission to change the Academy Supabase Auth provider settings.",
+      "exact_owner_action": "Follow GOOGLE_AUTH_OWNER_SETUP.md, enable Google for the Academy Supabase project, configure the production callback/origin, then authorize a real login smoke test.",
+      "what_local_work_is_already_complete": "Google login UI, safe redirect restoration, auth-callback.html, loading/error handling, and session handoff logic are implemented."
     },
     {
-      "task": "Deploy protected Premium content tables and RLS",
-      "why_owner_authority_is_required": "The public static curriculum cannot be made a secure commercial paywall without authorized Supabase schema/RLS deployment.",
-      "what_credential_or_action_is_missing": "Supabase project admin/migration authority.",
-      "exact_owner_action": "Deploy the protected catalogue/preview/lesson-body schema described in PREMIUM_CONTENT_SECURITY.md, enable entitlement-backed RLS, then run the Free direct-access denial test.",
-      "what_local_work_is_already_complete": "Access manifest, showcase/free-preview metadata, entitlement fixture, pricing UX, migration guidance, and security tests/contracts are prepared."
+      "task": "Deploy and verify protected Premium content storage/RLS",
+      "why_owner_authority_is_required": "Premium lesson bodies cannot be securely monetized while full content remains in public static assets. Applying production schema/RLS is a live data-plane change.",
+      "what_credential_or_action_is_missing": "An awake/verified Academy database and explicit permission to apply the protected-content migration plan.",
+      "exact_owner_action": "After the live database audit is clean, authorize deployment of the protected catalogue/preview/lesson-body model described in PREMIUM_CONTENT_SECURITY.md and run Free-versus-Premium direct-access denial tests.",
+      "what_local_work_is_already_complete": "Access metadata, free-showcase rules, entitlement fixtures, pricing UX, curriculum coverage, and local security contracts are prepared."
     },
     {
       "task": "Activate a real Premium payment provider",
-      "why_owner_authority_is_required": "A payment account, merchant terms, and production webhook secrets require owner/business authorization.",
-      "what_credential_or_action_is_missing": "Approved payment provider account, plan IDs, webhook endpoint and secrets.",
-      "exact_owner_action": "Choose and authorize a provider, set the central Premium price/plan configuration, connect checkout and webhook entitlement updates, then run a paid-to-entitlement smoke test.",
-      "what_local_work_is_already_complete": "Free/Premium comparison page, provider-independent upgrade boundary, honest pre-launch pricing state, and local entitlement fixtures are implemented."
+      "why_owner_authority_is_required": "A merchant account, commercial terms, plan identifiers and production webhook secrets require owner/business authorization.",
+      "what_credential_or_action_is_missing": "Approved payment provider account, live plan/price identifiers, webhook endpoint and secrets.",
+      "exact_owner_action": "Choose and authorize the Academy payment provider, then allow checkout/webhook entitlement wiring and a paid-to-entitlement smoke test.",
+      "what_local_work_is_already_complete": "Free/Premium comparison, provider-independent upgrade boundary, honest pre-launch pricing state, and entitlement fixtures are implemented."
+    },
+    {
+      "task": "Confirm and verify the Academy production hosting target",
+      "why_owner_authority_is_required": "Browser QA now passes without deployment, but publishing or repointing a production host is a live release action. No Academy project is present in the currently connected Vercel account.",
+      "what_credential_or_action_is_missing": "The intended production hosting target and explicit release authorization.",
+      "exact_owner_action": "Confirm the authorized Academy production host when ready for release; do not repurpose another Nexal deployment.",
+      "what_local_work_is_already_complete": "CI serves the Academy locally and captures passing desktop/mobile browser evidence without requiring a production deployment."
     }
   ]
 }
