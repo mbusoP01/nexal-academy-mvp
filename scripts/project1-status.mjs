@@ -7,7 +7,6 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'content', 'caps-master-manifest.json'), 'utf8'));
 const quiz = JSON.parse(fs.readFileSync(path.join(root, 'content', 'assessments', 'topic-quizzes.json'), 'utf8'));
-const revision = JSON.parse(fs.readFileSync(path.join(root, 'content', 'assessments', 'revision-assessments.json'), 'utf8'));
 const revisionMaterial = JSON.parse(fs.readFileSync(path.join(root, 'content', 'assessments', 'revision-material.json'), 'utf8'));
 const ownerBlocked = JSON.parse(fs.readFileSync(path.join(root, 'OWNER_BLOCKED.json'), 'utf8'));
 const batchDir = path.join(root, 'content', 'caps-batches');
@@ -23,14 +22,11 @@ const authored = new Map();
 for (const subject of Object.values(context.window.NEXAL_CURRICULUM || {})) {
   for (const chapter of subject.syllabus || []) for (const module of chapter.modules || []) authored.set(module.id, module);
 }
-const quizModules = new Set((quiz.quizzes || []).map(item => item.module));
 const diagrams = new Set();
 for (const file of fs.readdirSync(path.join(root, 'content', 'diagrams'))) diagrams.add(`content/diagrams/${file}`);
 const mapping = { quadratics: 'mathematics-g10-algebra', functions: 'mathematics-g10-functions', trigonometry: 'mathematics-g10-trigonometry', limits: 'mathematics-g12-calculus', kinematics: 'physical-sciences-g10-mechanics', newton: 'physical-sciences-g11-newton', energy: 'physical-sciences-g11-energy', 'chemical-reactions': 'physical-sciences-g11-stoichiometry', dna_rna: 'life-sciences-g11-dna', genetics: 'life-sciences-g11-genetics', ecology: 'life-sciences-g10-ecology' };
 const reverse = new Map(Object.entries(mapping).map(([module, unit]) => [unit, module]));
-const required = ['theory','definitions','formulas_or_key_principles','worked_examples','diagrams','guided_practice','independent_practice','solutions','topic_quiz','revision_material','video_package','content_qa','calculation_qa','browser_qa'];
-const isComplete = (unit) => {
-  const module = authored.get(reverse.get(unit.id));
+const isComplete = unit => {
   const batch = batchUnits.get(unit.id);
   if (!batch) return false;
   const revisionReady = revisionMaterial.items.some(item => item.unitId === unit.id && item.checklist?.length >= 3);
@@ -46,9 +42,11 @@ const topicQuizComplete = manifest.units.filter(u => { const batch = batchUnits.
 const revisionExpected = manifest.units.length;
 const revisionComplete = revisionMaterial.items.filter(item => item.checklist?.length >= 3 && item.retrieval?.length >= 3).length;
 const videoExpected = manifest.units.length;
-const videoComplete = manifest.units.filter(u => { const batch = batchUnits.get(u.id); return Boolean(batch?.videoPackage?.transcript); }).length;
+const videoComplete = manifest.units.filter(u => Boolean(batchUnits.get(u.id)?.videoPackage?.transcript)).length;
 const diagramExpected = manifest.units.filter(u => ['mathematics','physical-sciences','life-sciences'].includes(u.subject)).length;
 const diagramComplete = manifest.units.filter(u => { const batch = batchUnits.get(u.id); return batch?.diagram && diagrams.has(batch.diagram); }).length;
+const localIncomplete = manifest.units.length - complete.length + (topicQuizExpected - topicQuizComplete) + (revisionExpected - revisionComplete) + (videoExpected - videoComplete) + (diagramExpected - diagramComplete);
+const ownerBlockedCount = (ownerBlocked.entries || []).length;
 const output = {
   EXPECTED_CURRICULUM_UNITS: manifest.units.length,
   COMPLETE_CURRICULUM_UNITS: complete.length,
@@ -61,7 +59,9 @@ const output = {
   VIDEO_PACKAGES_EXPECTED: videoExpected, VIDEO_PACKAGES_COMPLETE: videoComplete,
   DIAGRAM_REQUIREMENTS_EXPECTED: diagramExpected, DIAGRAM_REQUIREMENTS_COMPLETE: diagramComplete,
   BATCH_AUTHORED_UNITS: batchUnits.size,
-  LOCAL_EXECUTABLE_INCOMPLETE_COUNT: manifest.units.length - complete.length + (topicQuizExpected - topicQuizComplete) + (revisionExpected - revisionComplete) + (videoExpected - videoComplete) + (diagramExpected - diagramComplete),
-  OWNER_BLOCKED_COUNT: (ownerBlocked.entries || []).length
+  LOCAL_EXECUTABLE_INCOMPLETE_COUNT: localIncomplete,
+  LOCAL_CONTENT_READY: localIncomplete === 0 ? 'YES' : 'NO',
+  OWNER_BLOCKED_COUNT: ownerBlockedCount,
+  PROJECT_1_RELEASE_READY: localIncomplete === 0 && ownerBlockedCount === 0 ? 'YES' : 'NO'
 };
 console.log(Object.entries(output).map(([key, value]) => `${key}=${value}`).join('\n'));

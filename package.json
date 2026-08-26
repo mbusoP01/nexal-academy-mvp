@@ -5,7 +5,7 @@
   "description": "Nexal Academy static learning platform",
   "scripts": {
     "validate:content": "node js/validate-content.js",
-    "check:syntax": "node --check app.js && node --check js/auth-guard.js && node --check js/curriculum.js && node --check js/arena-engine.js",
+    "check:syntax": "node --check app.js && node --check js/supabase-config.js && node --check js/auth-guard.js && node --check js/curriculum.js && node --check js/arena-engine.js",
     "test:content": "node tests/content.test.js",
     "project1:guard": "node scripts/project1-repo-guard.mjs",
     "project1:status": "node scripts/project1-status.mjs",
@@ -16,13 +16,15 @@
     "validate:batches": "node scripts/validate-batches.mjs",
     "video:audit": "node scripts/video-audit.mjs",
     "test:commercial": "node tests/commercialization.test.mjs",
-    "test:blank-page": "node tests/blank-page.test.mjs"
-    ,"test:onboarding-storage": "node tests/onboarding-storage.test.mjs"
-    ,"content:enrich": "node scripts/enrich-content-depth.mjs"
-    ,"validate:depth": "node scripts/validate-depth.mjs"
-    ,"test:lms": "node tests/lms.test.mjs"
-    ,"test:premium-ui": "node tests/premium-ui.test.mjs"
-    ,"test:announcements": "node tests/announcements.test.mjs"
-    ,"test:operations": "node tests/operations.test.mjs"
+    "test:blank-page": "node tests/blank-page.test.mjs",
+    "test:onboarding-storage": "node tests/onboarding-storage.test.mjs",
+    "content:enrich": "node scripts/enrich-content-depth.mjs",
+    "validate:depth": "node scripts/validate-depth.mjs",
+    "test:lms": "node tests/lms.test.mjs",
+    "test:premium-ui": "node tests/premium-ui.test.mjs",
+    "test:announcements": "node tests/announcements.test.mjs",
+    "test:operations": "node tests/operations.test.mjs",
+    "test:security": "node tests/security-boundaries-v2.test.mjs && node tests/security-boundaries-v3.test.mjs && node tests/live-reconciliation.test.mjs && node tests/performance-reconciliation.test.mjs",
+    "project1:verify": "node scripts/project1-verify.mjs"
   }
 }

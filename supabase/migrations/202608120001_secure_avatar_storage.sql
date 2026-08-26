@@ -1,4 +1,18 @@
--- Nexal Academy avatar ownership policies. Safe to re-run.
+-- Nexal Academy avatar storage. Safe to re-run from a trusted migration context.
+-- Profile photos stay private; browser pages resolve owner-authorised signed URLs.
+insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
+values (
+  'avatars',
+  'avatars',
+  false,
+  5242880,
+  array['image/jpeg','image/png','image/webp']
+)
+on conflict (id) do update
+set public = false,
+    file_size_limit = excluded.file_size_limit,
+    allowed_mime_types = excluded.allowed_mime_types;
+
 drop policy if exists "avatars_insert_own_folder" on storage.objects;
 drop policy if exists "avatars_select_own_folder" on storage.objects;
 drop policy if exists "avatars_update_own_folder" on storage.objects;

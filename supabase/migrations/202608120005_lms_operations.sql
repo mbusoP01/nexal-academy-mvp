@@ -62,7 +62,7 @@ alter table public.announcements add constraint announcements_target_check check
   or (audience_type in ('GRADE_10','GRADE_11','GRADE_12') and grade is not null)
   or (audience_type = 'FREE' and plan = 'FREE')
   or (audience_type = 'PREMIUM' and plan = 'PREMIUM')
-  or (audience_type in ('ALL','SUBJECT','FREE','PREMIUM'))
+  or audience_type = 'ALL'
 );
 alter table public.announcements drop constraint if exists announcements_audience_type_check;
 alter table public.announcements add constraint announcements_audience_type_check check (audience_type in ('ALL','GRADE_10','GRADE_11','GRADE_12','SUBJECT','CLASS','FREE','PREMIUM'));
@@ -73,9 +73,9 @@ do $$ declare t text; begin
   end loop;
 end $$;
 
--- All writes go through authority-checked RPCs.
+-- Class/LMS authority writes use checked RPCs. Learner submission progress is limited to the learner's own row by RLS.
 revoke all on public.classes, public.class_memberships, public.teacher_class_assignments, public.assignments, public.assignment_submissions from anon;
-revoke insert, update, delete, truncate, references, trigger on public.classes, public.class_memberships, public.teacher_class_assignments, public.assignments from authenticated;
+revoke all on public.classes, public.class_memberships, public.teacher_class_assignments, public.assignments, public.assignment_submissions from authenticated;
 grant select on public.classes, public.class_memberships, public.teacher_class_assignments, public.assignments to authenticated;
 grant select, insert, update on public.assignment_submissions to authenticated;
 
@@ -90,13 +90,29 @@ create policy "staff read authorised class subjects" on public.teacher_class_ass
 drop policy if exists "assignment audience read" on public.assignments;
 create policy "assignment audience read" on public.assignments for select to authenticated using (public.nexal_is_admin() or exists (select 1 from public.class_memberships m where m.class_id=assignments.class_id and m.learner_id=(select auth.uid()) and m.status='ACTIVE' and assignments.published) or exists (select 1 from public.teacher_class_assignments a where a.class_id=assignments.class_id and a.teacher_id=(select auth.uid()) and a.subject=assignments.subject and a.active));
 drop policy if exists "learners manage own assignment submissions" on public.assignment_submissions;
-create policy "learners manage own assignment submissions" on public.assignment_submissions for all to authenticated using (learner_id=(select auth.uid()) or public.nexal_is_admin()) with check (learner_id=(select auth.uid()) or public.nexal_is_admin());
+create policy "learners manage own assignment submissions" on public.assignment_submissions for all to authenticated
+using (learner_id=(select auth.uid()) or public.nexal_is_admin())
+with check (
+  public.nexal_is_admin()
+  or (
+    learner_id=(select auth.uid())
+    and exists (
+      select 1
+      from public.assignments a
+      join public.class_memberships m on m.class_id=a.class_id
+      where a.id=assignment_submissions.assignment_id
+        and a.published
+        and m.learner_id=(select auth.uid())
+        and m.status='ACTIVE'
+    )
+  )
+);
 
 create or replace function public.admin_create_class(p_name text,p_grade smallint,p_academic_year smallint,p_school_name text default null) returns public.classes language plpgsql security definer set search_path=public,nexal_private as $$ declare result public.classes; begin if not public.nexal_is_admin() then raise exception 'admin authority required' using errcode='42501'; end if; insert into public.classes(name,grade,academic_year,school_name,created_by) values(trim(p_name),p_grade,p_academic_year,nullif(trim(p_school_name),''),(select auth.uid())) returning * into result; return result; end $$;
 create or replace function public.admin_add_class_member(p_class_id uuid,p_learner_id uuid) returns public.class_memberships language plpgsql security definer set search_path=public,nexal_private as $$ declare result public.class_memberships; begin if not public.nexal_is_admin() then raise exception 'admin authority required' using errcode='42501'; end if; if not exists(select 1 from public.classes c join public.profiles p on p.grade::text=c.grade::text where c.id=p_class_id and p.id=p_learner_id) then raise exception 'learner grade does not match class'; end if; insert into public.class_memberships(class_id,learner_id) values(p_class_id,p_learner_id) on conflict (class_id,learner_id) do update set status='ACTIVE' returning * into result; return result; end $$;
 create or replace function public.admin_assign_teacher(p_teacher_id uuid,p_class_id uuid,p_subject text) returns public.teacher_class_assignments language plpgsql security definer set search_path=public,nexal_private as $$ declare result public.teacher_class_assignments; begin if not public.nexal_is_admin() then raise exception 'admin authority required' using errcode='42501'; end if; if not exists(select 1 from nexal_private.trusted_staff s where s.user_id=p_teacher_id and s.staff_role='teacher') then raise exception 'teacher is not trusted'; end if; insert into public.teacher_class_assignments(teacher_id,class_id,subject) values(p_teacher_id,p_class_id,p_subject) on conflict (teacher_id,class_id,subject) do update set active=true returning * into result; return result; end $$;
 create or replace function public.admin_archive_class(p_class_id uuid) returns boolean language plpgsql security definer set search_path=public,nexal_private as $$ begin if not public.nexal_is_admin() then raise exception 'admin authority required' using errcode='42501'; end if; update public.classes set active=false,updated_at=now() where id=p_class_id; return found; end $$;
-create or replace function public.teacher_create_assignment(p_class_id uuid,p_subject text,p_unit_id text,p_title text,p_instructions text default '',p_due_at timestamptz default null,p_published boolean default false) returns public.assignments language plpgsql security definer set search_path=public,nexal_private as $$ declare c public.classes; result public.assignments; begin select * into c from public.classes where id=p_class_id and active; if c.id is null then raise exception 'class not found'; end if; if not exists(select 1 from public.teacher_class_assignments a where a.teacher_id=(select auth.uid()) and a.class_id=p_class_id and a.subject=p_subject and a.active) and not public.nexal_is_admin() then raise exception 'teacher authority required'; end if; if p_unit_id !~ ('-g' || c.grade::text || '-') then raise exception 'unit grade does not match class grade'; end if; insert into public.assignments(class_id,subject,unit_id,title,instructions,due_at,published,created_by) values(p_class_id,p_subject,trim(p_unit_id),trim(p_title),trim(p_instructions),p_due_at,p_published,(select auth.uid())) returning * into result; return result; end $$;
+create or replace function public.teacher_create_assignment(p_class_id uuid,p_subject text,p_unit_id text,p_title text,p_instructions text default '',p_due_at timestamptz default null,p_published boolean default false) returns public.assignments language plpgsql security definer set search_path=public,nexal_private as $$ declare c public.classes; result public.assignments; begin select * into c from public.classes where id=p_class_id and active; if c.id is null then raise exception 'class not found'; end if; if not exists(select 1 from public.teacher_class_assignments a where a.teacher_id=(select auth.uid()) and a.class_id=p_class_id and a.subject=p_subject and a.active) and not public.nexal_is_admin() then raise exception 'teacher authority required'; end if; if p_unit_id !~ ('^' || p_subject || '-g' || c.grade::text || '-') then raise exception 'unit does not match class subject and grade'; end if; insert into public.assignments(class_id,subject,unit_id,title,instructions,due_at,published,created_by) values(p_class_id,p_subject,trim(p_unit_id),trim(p_title),trim(p_instructions),p_due_at,p_published,(select auth.uid())) returning * into result; return result; end $$;
 create or replace function public.teacher_create_class_announcement(p_class_id uuid,p_subject text,p_title text,p_body text,p_priority text default 'NORMAL',p_starts_at timestamptz default now(),p_ends_at timestamptz default null) returns public.announcements language plpgsql security definer set search_path=public,nexal_private as $$ declare result public.announcements; begin if not exists(select 1 from public.teacher_class_assignments a where a.teacher_id=(select auth.uid()) and a.class_id=p_class_id and a.subject=p_subject and a.active) then raise exception 'teacher authority required' using errcode='42501'; end if; insert into public.announcements(title,body,priority,audience_type,class_id,subject,starts_at,ends_at,active,created_by,updated_by) values(trim(p_title),trim(p_body),p_priority,'CLASS',p_class_id,p_subject,p_starts_at,p_ends_at,true,(select auth.uid()),(select auth.uid())) returning * into result; return result; end $$;
 
 create or replace function public.admin_add_trusted_teacher(p_email text) returns uuid language plpgsql security definer set search_path=public,nexal_private as $$ declare uid uuid; begin if not public.nexal_is_admin() then raise exception 'admin authority required' using errcode='42501'; end if; select id into uid from auth.users where lower(email)=lower(trim(p_email)); if uid is null then raise exception 'user not found'; end if; insert into nexal_private.trusted_staff(user_id,staff_role,created_by) values(uid,'teacher',(select auth.uid())) on conflict(user_id) do update set staff_role='teacher'; return uid; end $$;

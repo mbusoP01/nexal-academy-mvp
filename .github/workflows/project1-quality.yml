@@ -1,0 +1,78 @@
+name: Project 1 Quality Gate
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches:
+      - 'chatgpt/project1-*'
+
+concurrency:
+  group: project1-quality-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verify Project 1
+        run: npm run project1:verify
+
+      - name: Print completion status
+        if: always()
+        run: npm run project1:status || true
+
+  browser-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install pinned browser test runner
+        run: npm install --no-save --ignore-scripts @playwright/test@1.62.1
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Start static Academy server
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/project1-http.log 2>&1 &
+          echo $! > /tmp/project1-http.pid
+          for attempt in {1..20}; do
+            if curl --fail --silent http://localhost:4173/index.html > /dev/null; then exit 0; fi
+            sleep 0.5
+          done
+          cat /tmp/project1-http.log
+          exit 1
+
+      - name: Run desktop and mobile browser QA
+        run: npx playwright test tests/browser-smoke.spec.mjs --reporter=line
+
+      - name: Upload browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: project1-browser-evidence
+          path: |
+            artifacts/browser
+            test-results
+          if-no-files-found: warn
+          retention-days: 14
